@@ -24,3 +24,6 @@ baseurl: /
 
 # govuk_template variables
 govuk_template_assets: /assets
+
+sass:
+  style: expanded
