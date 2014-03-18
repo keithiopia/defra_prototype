@@ -30,6 +30,10 @@
     font-weight: 700;
   }
 }
+// phase tag
+.phase-tag {
+  @include phase-tag;
+}
 
 // Main central container element (main element must be unique in the page):
 main {
