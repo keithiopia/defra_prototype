@@ -5,6 +5,7 @@
 @import 'assets/govuk_frontend_toolkit/stylesheets/conditionals';
 
 @import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/buttons';
+@import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/alpha-beta';
 
 // based on Whitehall - dept colours and logos
 @import 'departments';
@@ -22,22 +23,11 @@
 
 // phase banner
 .phase-banner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0.5em 15px;
-
-  @include core-16;
-
-  &.alpha {
-    background-color: $alpha-colour;
-  }
+  @include phase-banner;
 
   span {
     text-transform: uppercase;
     font-weight: 700;
-  }
-  a {
-    color: $black;
   }
 }
 
