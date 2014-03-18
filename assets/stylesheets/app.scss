@@ -4,6 +4,8 @@
 @import 'assets/govuk_frontend_toolkit/stylesheets/css3';
 @import 'assets/govuk_frontend_toolkit/stylesheets/conditionals';
 
+@import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/buttons';
+
 // based on Whitehall - dept colours and logos
 @import 'departments';
 
@@ -13,9 +15,35 @@
 // govuk_toolkit - media player styles
 @import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/media-player.scss';
 
+// general items
+.button {
+  @include button;
+}
+
+// phase banner
+.phase-banner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5em 15px;
+
+  @include core-16;
+
+  &.alpha {
+    background-color: $alpha-colour;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  a {
+    color: $black;
+  }
+}
+
 // Main central container element (main element must be unique in the page):
 main {
-  max-width: 60em;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 0.5em 15px;
 }
