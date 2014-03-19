@@ -20,10 +20,6 @@
 // govuk helper styles - see https://github.com/alphagov/design-patterns/tree/gh-pages/assets/sass/govuk-helper
 @import 'govuk-helper/govuk-helper';
 
-body {
-  @include copy-19;
-}
-
 //
 // phase banner
 //
@@ -46,5 +42,16 @@ body {
 // Main central container element (main element must be unique in the page):
 .main {
   max-width: 960px;
-  padding: $gutter $gutter $gutter*3 $gutter;
+  padding: $gutter;
+
+  @include core-19;
+}
+
+// "brief" details layout (no dt elements visible)
+dl.details {
+  margin-bottom: $gutter;
+
+  .compacted {
+    display: inline;
+  }
 }
