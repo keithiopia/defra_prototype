@@ -1,0 +1,29 @@
+.business-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    @extend %contain-floats;
+
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid $border-colour;
+
+    .info {
+      float: left;
+      width: 66%;
+
+      h3 {
+        padding-bottom: 0;
+      }
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .map-preview {
+      float: right;
+    }
+  }
+}
