@@ -1,15 +1,15 @@
-@import 'assets/govuk_frontend_toolkit/stylesheets/colours';
-@import 'assets/govuk_frontend_toolkit/stylesheets/conditionals';
-@import 'assets/govuk_frontend_toolkit/stylesheets/css3';
-@import 'assets/govuk_frontend_toolkit/stylesheets/device-pixels';
-@import 'assets/govuk_frontend_toolkit/stylesheets/font_stack';
-@import 'assets/govuk_frontend_toolkit/stylesheets/measurements';
-@import 'assets/govuk_frontend_toolkit/stylesheets/shims';
-@import 'assets/govuk_frontend_toolkit/stylesheets/typography';
+@import '../govuk_frontend_toolkit/stylesheets/colours';
+@import '../govuk_frontend_toolkit/stylesheets/conditionals';
+@import '../govuk_frontend_toolkit/stylesheets/css3';
+@import '../govuk_frontend_toolkit/stylesheets/device-pixels';
+@import '../govuk_frontend_toolkit/stylesheets/font_stack';
+@import '../govuk_frontend_toolkit/stylesheets/measurements';
+@import '../govuk_frontend_toolkit/stylesheets/shims';
+@import '../govuk_frontend_toolkit/stylesheets/typography';
 
-@import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/buttons';
-@import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/alpha-beta';
-@import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/media-player';
+@import '../govuk_frontend_toolkit/stylesheets/design-patterns/buttons';
+@import '../govuk_frontend_toolkit/stylesheets/design-patterns/alpha-beta';
+@import '../govuk_frontend_toolkit/stylesheets/design-patterns/media-player';
 
 // based on Whitehall - dept colours and logos
 @import 'departments';
@@ -17,18 +17,16 @@
 // match www.gov.uk footer links (_footer_top.html)
 @import 'alphagov-static-footer';
 
-// govuk_toolkit - media player styles
-@import 'assets/govuk_frontend_toolkit/stylesheets/design-patterns/media-player.scss';
+// govuk helper styles - see https://github.com/alphagov/design-patterns/tree/gh-pages/assets/sass/govuk-helper
+@import 'govuk-helper/govuk-helper';
 
-// general items
-.button {
-  @include button;
-}
-.button-secondary {
-  @include button($grey-3);
+body {
+  @include copy-19;
 }
 
+//
 // phase banner
+//
 .phase-banner {
   @include phase-banner;
 
@@ -37,14 +35,16 @@
     font-weight: 700;
   }
 }
+
+//
 // phase tag
+//
 .phase-tag {
   @include phase-tag;
 }
 
 // Main central container element (main element must be unique in the page):
-main {
+.main {
   max-width: 960px;
-  margin: 0 auto;
-  padding: 0.5em 15px;
+  padding: $gutter $gutter $gutter*3 $gutter;
 }
