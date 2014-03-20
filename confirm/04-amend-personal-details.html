@@ -4,68 +4,50 @@ layout: govuk_template
 header_class: with-proposition
 ---
 
-<main role="main">
-  <header class="page-header">
-    <h1>Amend personal details</h1>
+<main role="main" class="main govuk">
+  <header class="page-header text">
+    <h1 class="heading-48">Amend personal details</h1>
     <p>You can amend your personal details to ensure that the information we hold on you is correct when you apply for grants and schemes.</p>
   </header>
 
-  <form action="05-response-personal-details.html">
+  <form action="05-response-personal-details.html" class="form">
 
   <fieldset>
-    <h2>Personal details</h2>
+    <legend class="heading-36">
+      Your personal details
+    </legend>
 
-    <div>
-      <label>
-        Title
-        <select id="">
-          <option>Miss</option>
-          <option>Mr</option>
-          <option>Mrs</option>
-          <option>Ms</option>
-        </select>
-      </label>
+    <div class="form-group">
+      <label class="form-label" for="full-name">Full name</label>
+      <p class="form-hint">As shown on your birth certificate or passport</p>
+      <input type="text" class="form-control" id="full-name" />
     </div>
 
-    <div>
-      <label>
-        First name
-        <input type="text" value="Jackie" id="">
-      </label>
-    </div>
+    <fieldset class="date-of-birth">
 
-    <div>
-      <label>
-        Middle names
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <legend>
+        Date of birth<br />
+        Example: 31 12 1975
+      </legend>
+      <div class="form-group">
+        <label for="dob-day">Day</label>
+        <input type="text" class="form-control" pattern="[0-9]*" id="dob-day" />
+      </div>
+      <div class="form-group">
+        <label for="dob-month">Month</label>
+        <input type="text" class="form-control" id="dob-month" />
+      </div>
+      <div class="form-group form-group-year">
+        <label for="dob-year">Year</label>
+        <input type="text" class="form-control" pattern="[0-9]*" id="dob-year" />
+      </div>
 
-    <div>
-      <label>
-        Last name
-        <input type="text" value="Brown" id="">
-      </label>
-    </div>
+    </fieldset>
 
-    <div>
-      <label for="dob-day">Date of birth</label>
-      <select id="dob-day">
-        <option>1</option>
-      </select>
-      <select>
-        <option>January</option>
-      </select>
-      <select>
-        <option>1914</option>
-      </select>
-    </div>
-
-    <div>
-      <label>
-        National Insurance number
-        <input type="text" value="" id="" maxlength="9">
-      </label>
+    <div class="form-group">
+      <label class="form-label" for="ni-number">National Insurance number</label>
+      <p class="form-hint">Required to apply for <abbr title="European Union">EU</abbr> funding</p>
+      <input type="text" class="form-control form-control-1-4" id="ni-number" maxlength="9" />
     </div>
 
     <dl class="details">
@@ -76,134 +58,129 @@ header_class: with-proposition
   </fieldset>
 
   <fieldset>
-    <h3>Contact details</h3>
 
-    <div>
-      <label>
-        Address line 1
-        <input type="text" value="" id="">
-      </label>
-    </div>
+    <legend class="heading-36">
+      Your contact details
+    </legend>
 
-    <div>
-      <label>
-        Address line 2
-        <input type="text" value="" id="">
-      </label>
-    </div>
+    <fieldset>
 
-    <div>
-      <label>
-        Address line 3
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <legend class="visuallyhidden">
+        Your address
+      </legend>
 
-    <div>
-      <label>
-        Address line 4
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <div class="form-group form-group-compound">
+        <label class="form-label" for="address-line-1">Street address</label>
+        <input type="text" class="form-control" id="address-line-1" />
+      </div>
 
-    <div>
-      <label>
-        Town
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <div class="form-group-compound">
+        <label class="visuallyhidden" for="address-line-2">Second line of address</label>
+        <input type="text" class="form-control" id="address-line-2" />
+      </div>
 
-    <div>
-      <label>
-        County
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <div class="form-group-compound">
+        <label class="visuallyhidden" for="address-line-3">Third line of address</label>
+        <input type="text" class="form-control" id="address-line-3" />
+      </div>
 
-    <div>
-      <label>
-        Postcode
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <div class="form-group">
+        <label class="visuallyhidden" for="address-line-4">Fourth line of address</label>
+        <input type="text" class="form-control" id="address-line-4" />
+      </div>
 
-    <div>
-      <label>
-        Country
-        <select>
+      <div class="form-group">
+        <label class="form-label" for="address-town">Town or City</label>
+        <input type="text" class="form-control form-control-1-4" id="address-town" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="address-county">County</label>
+        <input type="text" class="form-control form-control-1-4" id="address-county" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="address-postcode">Postcode</label>
+        <input type="text" class="form-control form-control-1-8" id="address-postcode" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="address-country">Country</label>
+        <select class="form-control" id="address-country">
           <option>United Kingdom</option>
         </select>
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label>
-        Landline
-        <input type="text" value="" id="">
-      </label>
-    </div>
+    </fieldset>
 
-    <div>
-      <label>
-        Mobile
-        <input type="text" value="" id="">
-      </label>
-    </div>
+    <fieldset>
 
-    <div>
-      <label>
-        Fax
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <legend class="visuallyhidden">
+        Telephone, fax and email
+      </legend>
 
-    <div>
-      <label>
-        Fax
-        <input type="text" value="" id="">
-      </label>
-    </div>
+      <div class="form-group">
+        <label class="form-label" for="tel-landline">Landline</label>
+        <input type="tel" class="form-control form-control-1-4" id="tel-landline" />
+      </div>
 
-    <dl class="details">
-      <dt>Email</dt>
-      <dd>email.address@emailaddress.com</dd>
-    </dl>
+      <div class="form-group">
+        <label class="form-label" for="tel-mobile">Mobile</label>
+        <input type="tel" class="form-control form-control-1-4" id="tel-mobile" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="tel-fax">Fax</label>
+        <input type="tel" class="form-control form-control-1-4" id="tel-fax" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" class="form-control" id="email" />
+      </div>
+
+    </fieldset>
 
   </fieldset>
 
-  <fieldset>
-    <h3>Contact preferences</h3>
+  <fieldset class="form-group form-group-block">
 
-    <p>How would you like us to contact you?</p>
-    <div>
-      <label>
-        <input type="checkbox" id="" value="">
+    <legend class="heading-36">
+      Your contact preferences
+    </legend>
+
+    <p>How would you like us to keep in touch with you?</p>
+
+    <div class="form-checkbox">
+      <label for="checkbox-option-email" class="block-label">
+        <input id="checkbox-option-email" type="checkbox" value="" />
         Email
       </label>
     </div>
-    <div>
-      <label>
-        <input type="checkbox" id="" value="">
+    <div class="form-checkbox">
+      <label for="checkbox-option-landline" class="block-label">
+        <input id="checkbox-option-landline" type="checkbox" value="" />
         Landline
       </label>
     </div>
-    <div>
-      <label>
-        <input type="checkbox" id="" value="">
+    <div class="form-checkbox">
+      <label for="checkbox-option-mobile" class="block-label">
+        <input id="checkbox-option-mobile" type="checkbox" value="" />
         Mobile
       </label>
     </div>
-    <div>
-      <label>
-        <input type="checkbox" id="" value="">
+    <div class="form-checkbox">
+      <label for="checkbox-option-post" class="block-label">
+        <input id="checkbox-option-post" type="checkbox" value="" />
         Post
       </label>
     </div>
+  
   </fieldset>
 
   <div>
     <button type="submit" class="button">Submit changes</button>
-    <a href="#" class="button-secondary">Cancel</a>
+    <a href="#" class="button-link">Cancel</a>
   </div>
 
   </form>
