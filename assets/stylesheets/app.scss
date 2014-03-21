@@ -56,12 +56,35 @@
   @include core-19;
 }
 
-// "brief" details layout (no dt elements visible)
-dl.details {
-  margin-bottom: $gutter;
+.group {
+  @extend %contain-floats;
+}
 
-  .compacted {
-    display: inline;
+.govuk {
+
+  // "brief" details layout (no dt elements visible)
+  dl.details {
+    margin-bottom: $gutter;
+
+    .compacted {
+      display: inline;
+    }
+
+    dd {
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+  }
+
+  // display of personal details
+  .details-name {
+    font-weight: 400;
+  }
+
+  .helpful {
+    @include core-16;
+
+    color: $secondary-text-colour;
   }
 }
 
@@ -78,5 +101,12 @@ dl.details {
 
   a {
     color: $text-colour;
+  }
+
+  .helpful-inner {
+    margin-top: $gutter-one-third;
+    padding: $gutter-half $gutter-half 1px;
+    background-color: $grey-4;
+    border-left: 2px solid $grey-1;
   }
 }
