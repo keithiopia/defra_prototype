@@ -3,27 +3,36 @@ layout: govuk_template
 header_class: with-proposition
 ---
 
-<main role="main">
-  <div id="global-breadcrumb" class="header-context">
-    <nav role="navigation">
-      <ol class="group">
-        <li><a href="/">Your account</a></li>
-        <li><a href="/">Business details</a></li>
-      </ol>
-    </nav>
-  </div>
+<div id="global-breadcrumb" class="header-context">
+  <nav role="navigation">
+    <ol class="group">
+      <li><a href="/">Your account</a></li>
+      <li><a href="/">Business details</a></li>
+    </ol>
+  </nav>
+</div>
 
-  <header class="page-header">
+<main role="main" class="main govuk">
+  <header class="page-header text">
     <h1>Business details</h1>
   </header>
 
   <section class="group">
     <h2>Beech Farm</h2>
     <div class="col-50">
-
+      <dl>
+        <dd>Address</dd>
+        <dt>Beech Farm<br>
+          Pooley Bridge<br>
+          Penrith<br>
+          Cumbria<br>
+          CA10 2NP<br>
+          United Kingdom</dt>
+      </dl>
     </div>
-    <div class="col-50">
 
+    <div class="col-50">
+      <img src="/assets/images/map-preview-500x300.png" alt="" class="map-preview">
     </div>
   </section>
 
@@ -43,3 +52,4 @@ header_class: with-proposition
       </thead>
     </table>
   </section>
+</main>
