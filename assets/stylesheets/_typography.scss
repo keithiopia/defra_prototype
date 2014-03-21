@@ -1,40 +1,35 @@
-body {
-  @include core-19;
-}
-
-h1 {
-  @include heading-48;
-  font-weight: bold;
-}
-
-h2 {
-  @include heading-36;
-  font-weight: bold;
-}
-
-h3 {
-  @include heading-24;
-  font-weight: bold;
-}
-
-p {
-  @include copy-19;
-}
-
-dl {
-  min-width: 250px;
-  @extend %contain-floats;
-
-  dd {
-    margin: 0;
-    float: left;
+.govuk {
+  h1 {
+    @include heading-48;
     font-weight: bold;
-    width: 50%;
   }
 
-  dt {
-    float: left;
-    clear: right;
-    width: 50%;
+  h2 {
+    @include heading-36;
+    font-weight: bold;
+  }
+
+  h3 {
+    @include heading-24;
+    font-weight: bold;
+  }
+
+  dl {
+    min-width: 250px;
+    @extend %contain-floats;
+    margin-bottom: 1em;
+
+    dd {
+      margin: 0;
+      float: left;
+      font-weight: bold;
+      width: 50%;
+    }
+
+    dt {
+      float: left;
+      clear: right;
+      width: 50%;
+    }
   }
 }

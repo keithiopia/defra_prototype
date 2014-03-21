@@ -64,3 +64,19 @@ dl.details {
     display: inline;
   }
 }
+
+.details-overview {
+  h2 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.confirm {
+  clear: both;
+  background-color: $yellow-25;
+  padding: 0.5em 1em;
+
+  a {
+    color: $text-colour;
+  }
+}
