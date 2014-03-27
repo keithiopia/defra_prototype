@@ -6,8 +6,8 @@ header_class: with-proposition
 <div id="global-breadcrumb" class="header-context">
   <nav role="navigation">
     <ol class="group">
-      <li><a href="/">Your account</a></li>
-      <li><a href="/">Business details</a></li>
+      <li><a href="/new-flow/01-your-account.html">Your account</a></li>
+      <li><a href="/new-flow/02-business-details.html">Business details</a></li>
     </ol>
   </nav>
 </div>
@@ -34,22 +34,60 @@ header_class: with-proposition
     <div class="col-50">
       <img src="/assets/images/map-preview-500x300.png" alt="" class="map-preview">
     </div>
+
+
+    <p class="confirm group">Are these details correct? <a href="#">Yes, they're correct</a> <a href="#">No, they need editing</a></p>
+
   </section>
 
   <section class="group">
-    <ul class="tabs">
-      <li class="active">
-        <a href="">Parcels</a>
-      </li>
-      <li><a href="">People &amp; Permissions</a></li>
-    </ul>
+    <nav class="main-nav">
+      <a href="#" class="tab selected">Parcels</a>
+      <a href="#" class="tab">People &amp; Permissions</a>
+    </nav>
 
-    <table class="parcel-list">
-      <thead>
-        <tr>
-          <td></td>
-        </tr>
-      </thead>
-    </table>
+    <p class="confirm group">You have unconfirmed parcels. Click View parcel to view the details and confirm each parcel.</p>
+
+    <ul class="parcel-list">
+      <li>
+        <span class="parcel-ref">NZ1922 6320</span>
+        <span class="parcel-name">Top Field</span>
+        <span class="parcel-confirm">Unconfirmed</span>
+        <span class="parcel-preview">
+          <img src="/assets/images/parcel-preview-30x30.png" alt="">
+          <span class="parcel-link"><a href="#">View parcel</a></span>
+        </span>
+      </li>
+
+      <li>
+        <span class="parcel-ref">NZ1922 6320</span>
+        <span class="parcel-name">Top Field</span>
+        <span class="parcel-confirm">Unconfirmed</span>
+        <span class="parcel-preview">
+          <img src="/assets/images/parcel-preview-30x30.png" alt="">
+          <span class="parcel-link"><a href="#">View parcel</a></span>
+        </span>
+      </li>
+
+      <li>
+        <span class="parcel-ref">NZ1922 6320</span>
+        <span class="parcel-name">Top Field</span>
+        <span class="parcel-confirm">Unconfirmed</span>
+        <span class="parcel-preview">
+          <img src="/assets/images/parcel-preview-30x30.png" alt="">
+          <span class="parcel-link"><a href="#">View parcel</a></span>
+        </span>
+      </li>
+
+      <li>
+        <span class="parcel-ref">NZ1922 6320</span>
+        <span class="parcel-name">Top Field</span>
+        <span class="parcel-confirm">Unconfirmed</span>
+        <span class="parcel-preview">
+          <img src="/assets/images/parcel-preview-30x30.png" alt="">
+          <span class="parcel-link"><a href="#">View parcel</a></span>
+        </span>
+      </li>
+    </ul>
   </section>
 </main>

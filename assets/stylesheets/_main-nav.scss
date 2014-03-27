@@ -1,0 +1,21 @@
+.main-nav {
+  border-bottom: 1px solid #ccc;
+  margin: 2em 0;
+
+  .tab {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 19px;
+    position: relative;
+  }
+
+  .tab.selected {
+    border: 1px solid #ccc;
+    border-bottom: none;
+    padding: 12px 19px 13px 19px;
+    background: #fff;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: -1px;
+  }
+}
