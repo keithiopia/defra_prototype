@@ -47,25 +47,48 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+activate :directory_indexes
 
-set :js_dir, 'javascripts'
+# Path configs
+set :build_dir, 'tmp'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :partials_dir, 'includes'
 
-set :images_dir, 'images'
+# Dev-specific configuration
+configure :development do
+  activate :livereload
+
+ # compass_config do |config|
+  #  config.output_style = :expanded
+   # config.sass_options = {:debug_info => true}
+  #end
+
+end
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
 
-  # Minify Javascript on build
-  # activate :minify_javascript
+  compass_config do |config|
+    config.output_style = :expanded
+    config.sass_options = {:debug_info => false}
+    config.sass_options = {:line_comments => false}
+  end
+
+  #activate :minify_css
+  activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
+
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  # require "middleman-smusher"
+  # activate :smusher
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
