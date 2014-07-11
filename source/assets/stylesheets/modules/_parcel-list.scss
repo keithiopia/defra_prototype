@@ -1,0 +1,17 @@
+.parcel-list {
+  li {
+    padding: $gutter-one-third 0;
+    border-bottom: 1px solid $border-colour;
+
+    .status {
+      width: $gutter;
+      height: 100%;
+      display: block;
+      float: left;
+    }
+
+    .edit {
+      float: right;
+    }
+  }
+}

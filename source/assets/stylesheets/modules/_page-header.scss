@@ -1,0 +1,25 @@
+.page-header {
+  margin: $gutter-one-third 0 $gutter 0;
+  padding: 0 0 $gutter-two-thirds 0;
+
+  h1 {
+    @include bold-48;
+    color: $text-colour;
+    padding-top: $gutter-one-third;
+    padding-bottom: $gutter-two-thirds;
+  }
+
+  h2.subtitle{
+    margin: 0;
+    color: $secondary-text-colour;
+    @include core-24;
+  }
+
+  .metadata {
+    dd {
+      color: $secondary-text-colour;
+      display: inline-block;
+      margin-right: $gutter-one-third;
+    }
+  }
+}

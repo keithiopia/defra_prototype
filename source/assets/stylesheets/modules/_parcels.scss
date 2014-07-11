@@ -1,0 +1,27 @@
+table.parcels {
+  td {
+    vertical-align: top;
+  }
+
+  .parcel-status {
+    width: 10%;
+  }
+
+  .parcel-name {
+    width: 50%;
+  }
+
+  .parcel-cph {
+    width: 30%;
+  }
+
+  .parcel-area {
+    width: 10%;
+  }
+
+  .parcel-id {
+    @include core-14;
+    color: $secondary-text-colour;
+    display: block;
+  }
+}

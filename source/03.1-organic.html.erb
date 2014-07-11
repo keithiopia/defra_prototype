@@ -1,0 +1,66 @@
+---
+title: Welcome to Middleman
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <div class="back-link">
+    <a href="/">Back</a>
+  </div>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle">Primrose Farm: Alfafa field</h2>
+            <h1>Is this land certified organic?</h1>
+          </hgroup>
+        </header>
+
+        <form>
+          <div class="form-group">
+            <label for="organic-status-yes" class="block-label">
+              <input type="radio" name="organic-status" id="organic-status-yes" value="yes">
+              Yes
+            </label>
+            <label for="organic-status-no" class="block-label">
+              <input type="radio" name="organic-status" id="organic-status-no" value="no">
+              No
+            </label>
+            <label for="organic-status-in-progress" class="block-label">
+              <input type="radio" name="organic-status" id="organic-status-in-progress" value="in-progress">
+              It's currently in progress
+            </label>
+          </div>
+
+          <div class="panel-indent">
+            <div class="form-group">
+              <label for="organic-start-date" class="form-label">When will it be certified organic?</label>
+              <input type="number" name="organic-start-date-day" id="organic-start-date-day" class="form-control form-control-1-8" value="">
+              <input type="number" name="organic-start-date-month" id="organic-start-date-month" class="form-control form-control-1-8" value="">
+              <input type="number" name="organic-start-date-year" id="organic-start-date-year" class="form-control form-control-1-4" value="">
+            </div>
+
+            <div class="form-group">
+              <label for="organic-certification-body" class="form-label">Who will certify it?</label>
+              <select name="organic-certification-body" id="organic-certification-body" class="form-control">
+                <option value="">Soil Association</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <a href="03.2-buffer-strip" class="button">Next</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="map">
+
+    </div>
+  </div>
+</div>
+

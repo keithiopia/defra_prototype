@@ -1,0 +1,13 @@
+.words {
+  width: $half;
+  float: left;
+
+  .inner-block {
+    margin: 0 $gutter 0 0;
+  }
+}
+
+.map {
+  width: $half;
+  float: left;
+}
