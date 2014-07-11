@@ -1,0 +1,38 @@
+<% wrap_layout :govuk_template do %>
+
+  <% content_for :page_title do %><%= current_page.data.title || "CAP Prototype" %><% end %>
+
+  <% content_for :head do %>
+    <%= partial "template-head" %>
+  <% end %>
+
+  <% content_for :body_classes do %><%= page_classes %> <%=  current_page.data.body_classes %> <% end %>
+
+  <% content_for :after_header do %>
+    <div id="global-header-bar">
+      <div class="inner-block">
+        <div class="header-bar"></div>
+      </div>
+    </div>
+  <% end %>
+
+    <main id="wrapper" role="main">
+      <div id="content">
+        <%= partial "template-beta-banner" %>
+
+        <%= yield %>
+      </div>
+    </main>
+
+  <% content_for :footer_top do %>
+    <%= partial "template-footer" %>
+  <% end %>
+
+  <% content_for :footer_support_links do %>
+    <%= partial "template-footer-support-links" %>
+  <% end %>
+
+  <% content_for :body_end do %>
+    <%= partial "scripts-body" %>
+  <% end %>
+<% end %>

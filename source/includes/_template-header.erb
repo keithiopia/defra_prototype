@@ -1,0 +1,76 @@
+<%if current_page.data.isLoggedIn? %>
+<header role="banner" class="header">
+  <div class="l-constrained--header">
+    <h1 class="header__logo">
+      <a href="https://www.gov.uk/" title="Go to the gov.uk homepage" id="logo" class="content">
+  <%= image_tag 'govuk_logotype-2x.png', :alt=> 'GOV.UK'%>
+      </a>
+    </h1>
+    <nav class="header__menu" role="navigation">
+      <a href="#" class="js-header-toggle menu visuallyhidden">Menu</a>
+      <a href="/business-tax/accountoverview" class="header__menu__proposition-name">Your tax account</a>
+      <a href="/service-manual" class="phase-tag beta">Beta</a>
+      <ul class="header__menu__proposition-links">
+        <li><%= link_to "Account home", "/business-tax/accountoverview"%></li>
+        <!-- <li><%= link_to "Important dates", "/business-tax/calendar"%></li> -->
+        <li><%= link_to "Your details", "/business-tax/accountdetails"%></li>
+        <li><%= link_to "Contact HMRC", "/#"%></li>
+        <li><%= link_to "Sign out", "/business-tax/login"%></li>
+      </ul>
+    </nav>
+  </div>
+</header><!--end header-->
+
+<!-- <div class="beta-warning">
+  <p><b>BETA:</b> This is a prototype, designed to be simpler, clearer and faster. <a href="#">Find out more</a></p>
+</div> -->
+
+<% end %>
+
+<%if current_page.data.isFullMenu? %>
+<header role="banner" class="header">
+  <div class="l-constrained--header">
+    <h1 class="header__logo">
+      <a href="https://www.gov.uk/" title="Go to the gov.uk homepage" id="logo" class="content">
+  <%= image_tag 'govuk_logotype-2x.png', :alt=> 'GOV.UK'%>
+      </a>
+    </h1>
+    <nav class="header__menu" role="navigation">
+      <a href="#" class="js-header-toggle menu visuallyhidden">Menu</a>
+      <a href="/business-tax-full/accountoverview" class="header__menu__proposition-name">Your tax account</a>
+      <ul class="header__menu__proposition-links">
+        <li><%= link_to "Account home", "/business-tax-full/accountoverview"%></li>
+        <li><%= link_to "Important dates", "/business-tax-full/calendar"%></li>
+        <li><%= link_to "Your details", "/business-tax-full/accountdetails"%></li>
+        <li><%= link_to "Contact HMRC", "/#"%></li>
+        <li><%= link_to "Sign out", "/business-tax-full/login"%></li>
+      </ul>
+    </nav>
+  </div>
+</header><!--end header-->
+<% end %>
+
+
+<%if current_page.data.isAgent? %>
+<header role="banner" class="header">
+  <div class="l-constrained--header">
+    <h1 class="header__logo">
+      <a href="https://www.gov.uk/" title="Go to the gov.uk homepage" id="logo" class="content">
+  <%= image_tag 'govuk_logotype-2x.png', :alt=> 'GOV.UK'%>
+      </a>
+    </h1>
+    <a href="/service-manual" class="phase-tag beta">Beta</a>
+    <nav class="header__menu" role="navigation">
+      <a href="#" class="js-header-toggle menu visuallyhidden">Menu</a>
+      <a href="/agents" class="header__menu__proposition-name">Your tax agent account</a>
+      <ul class="header__menu__proposition-links">
+  <li><%= link_to "Account home", "/"%></li>
+  <li><%= link_to "Important dates", "/agents/calendar"%></li>
+  <li><%= link_to "Account details", "/agents/accountdetails"%></li>
+  <li><%= link_to "Contact HMRC", "/agents/#"%></li>
+  <li><%= link_to "Sign out", "/agents/login"%></li>
+      </ul>
+    </nav>
+  </div>
+</header><!--end header-->
+<% end %>
