@@ -1,22 +1,31 @@
 table.parcels {
-  td {
-    vertical-align: top;
-  }
+  margin: $gutter 0;
 
-  .parcel-status {
-    width: 10%;
+  tr:hover{
+    cursor: pointer;
+    background: $yellow-25;
   }
 
   .parcel-name {
-    width: 50%;
+    a{
+      @include core-19;
+      font-weight: bold;
+    }
   }
 
   .parcel-cph {
-    width: 30%;
+    display: none;
   }
 
   .parcel-area {
-    width: 10%;
+  }
+
+  .parcel-status {
+      width: 15%;
+      &.updated{
+        color: $green;
+        font-weight: bold;
+      }
   }
 
   .parcel-id {
