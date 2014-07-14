@@ -1,17 +1,19 @@
-.parcel-list {
+ul.parcel-list {
   li {
     padding: $gutter-one-third 0;
     border-bottom: 1px solid $border-colour;
 
-    .status {
-      width: $gutter;
-      height: 100%;
-      display: block;
-      float: left;
+    a{
+      font-weight: bold;
     }
 
-    .edit {
+    .status {
       float: right;
+      &.undefined{
+        color: $secondary-text-colour;
+        font-style: italic;
+      }
     }
+
   }
 }

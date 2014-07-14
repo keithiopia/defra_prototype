@@ -1,9 +1,9 @@
 table.parcels {
   margin: $gutter 0;
 
-  tr:hover{
-    cursor: pointer;
-    background: $yellow-25;
+  .js-enabled & tbody tr:hover{
+    //cursor: pointer;
+    //background: $yellow-25;
   }
 
   .parcel-name {
@@ -22,9 +22,13 @@ table.parcels {
 
   .parcel-status {
       width: 15%;
+      text-align: center;
       &.updated{
         color: $green;
         font-weight: bold;
+      }
+      &.not-updated{
+        color: $secondary-text-colour;
       }
   }
 

@@ -1,0 +1,18 @@
+table.parcel-details{
+  td{
+    @include core-19;
+  }
+  .detail-key{
+    width: 35%;
+    color: $secondary-text-colour;
+  }
+  .detail-value{
+    &.undefined{
+      color: $secondary-text-colour;
+      text-indent: -9999px;
+    }
+  }
+  .edit{
+    width: 10%;
+  }
+}

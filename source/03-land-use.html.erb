@@ -15,22 +15,22 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle">Primrose Farm: Alfafa field</h2>
-            <h1>What is this field used for?</h1>
+            <h1>What is this land parcel used for?</h1>
           </hgroup>
         </header>
 
-        <p>Use the box below to search for the type of land use.</p>
+        <p>
+          Search for types of land use in the box below.
+          You can select more than one type.
+        </p>
 
         <form>
           <div class="form-group">
             <label for="land-use" class="visuallyhidden">Select the land use</label>
-            <select name="land-use" id="land-use" class="form-control">
-              <option value="">Alfafa</option>
-              <option value="">Allotments - commerical</option>
-              <option value="">Almonds</option>
-              <option value="">Alder (Alnus)</option>
-              <option value="">Allotments</option>
-            </select>
+
+
+            <%= partial "partial-land-use-list" %>
+
           </div>
 
           <div class="form-group">

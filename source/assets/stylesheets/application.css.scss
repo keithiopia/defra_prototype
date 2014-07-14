@@ -1,6 +1,8 @@
-//
+// Vendor modules
+@import "../javascripts/vendor/chosen/chosen.css";
+
+
 // govuk_frontend_toolkit
-//
 @import "../govuk_frontend_toolkit/stylesheets/_colours";
 @import "../govuk_frontend_toolkit/stylesheets/_measurements";
 @import "../govuk_frontend_toolkit/stylesheets/_conditionals";
@@ -28,9 +30,11 @@
 @import "../govuk_elements/stylesheets/icons";
 @import "../govuk_elements/stylesheets/details";
 
+
 // Defra Modules
 @import "modules/page-header";
 @import "modules/phase-banner";
 @import "modules/layout";
 @import "modules/parcels";
-@import "modules/parcel-list";
+@import "modules/parcel-details";
+@import "modules/land-use-list";
