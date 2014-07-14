@@ -6,7 +6,7 @@ layout: layout_template_no_nav
 <div class="inner-block">
 
   <div class="back-link">
-    <a href="/">Back</a>
+    <a href="03.3-adjust-buffer-strip">Back</a>
   </div>
 
   <div class="group">
@@ -22,17 +22,19 @@ layout: layout_template_no_nav
         <form>
           <div class="form-group inline">
             <label for="hedges-yes" class="block-label">
-              <input type="radio" name="hedges" id="hedges-yes" value="yes">
+              <input type="radio" name="hedges" id="hedges-yes" value="yes" class="js-toggle" data-show="#hedge-details, .undo-redo-reset">
               Yes
             </label>
             <label for="hedges-no" class="block-label">
-              <input type="radio" name="hedges" id="hedges-no" value="no">
+              <input type="radio" name="hedges" id="hedges-no" value="no" class="js-toggle" data-hide="#hedge-details, .undo-redo-reset">
               No
             </label>
           </div>
 
-          <div class="panel-indent">
-            <p>Draw hedges on the map by marking their start and end points.</p>
+          <p class="js-hidden">If you answered yes...</p>
+
+          <div class="panel-indent js-hidden" id="hedge-details">
+            <p>Draw hedges on the map by marking their start and end points. Pres Escape to cancel drawing.</p>
           </div>
 
           <div class="form-group">
@@ -43,7 +45,11 @@ layout: layout_template_no_nav
       </div>
     </div>
     <div class="map">
-
+      <ul class="js-hidden undo-redo-reset">
+        <li><a href="">Undo</a></li>
+        <li><a href="">Redo</a></li>
+        <li><a href="">Reset</a></li>
+      </ul>
     </div>
   </div>
 </div>
