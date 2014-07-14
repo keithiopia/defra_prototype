@@ -15,40 +15,92 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle">Primrose Farm: Alfafa field</h2>
-            <h1>Is this land certified organic?</h1>
+            <h1>Is this land currently certified organic?</h1>
           </hgroup>
         </header>
 
-        <form>
-          <div class="form-group">
+        <form class="form">
+          <div class="form-group inline">
             <label for="organic-status-yes" class="block-label">
-              <input type="radio" name="organic-status" id="organic-status-yes" value="yes">
+              <input type="radio" name="organic-status" id="organic-status-yes" value="yes" class="js-toggle" data-show="#yes-details" data-hide="#no-details">
               Yes
             </label>
             <label for="organic-status-no" class="block-label">
-              <input type="radio" name="organic-status" id="organic-status-no" value="no">
+              <input type="radio" name="organic-status" id="organic-status-no" value="no" class="js-toggle" data-show="#no-details" data-hide="#yes-details">
               No
-            </label>
-            <label for="organic-status-in-progress" class="block-label">
-              <input type="radio" name="organic-status" id="organic-status-in-progress" value="in-progress">
-              It's currently in progress
             </label>
           </div>
 
-          <div class="panel-indent">
-            <div class="form-group">
-              <label for="organic-start-date" class="form-label">When will it be certified organic?</label>
-              <input type="number" name="organic-start-date-day" id="organic-start-date-day" class="form-control form-control-1-8" value="">
-              <input type="number" name="organic-start-date-month" id="organic-start-date-month" class="form-control form-control-1-8" value="">
-              <input type="number" name="organic-start-date-year" id="organic-start-date-year" class="form-control form-control-1-4" value="">
-            </div>
+          <div class="js-hidden panel-indent" id="yes-details">
 
             <div class="form-group">
-              <label for="organic-certification-body" class="form-label">Who will certify it?</label>
-              <select name="organic-certification-body" id="organic-certification-body" class="form-control">
+              <label for="organic-certification-body" class="form-label">Certified by</label>
+              <select name="organic-certification-body" id="organic-certification-body" class="form-control-select">
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
+                <option value="">Soil Association</option>
                 <option value="">Soil Association</option>
               </select>
             </div>
+
+            <fieldset>
+              <legend>Certification date</legend>
+              <%= partial 'partial-date', :locals => { :id => 'organic-start-date'} %>
+            </fieldset>
+
+            <fieldset>
+              <legend>Expiry date</legend>
+              <%= partial 'partial-date', :locals => { :id => 'organic-end-date'} %>
+            </fieldset>
+
+          </div>
+
+          <div class="js-hidden" id="no-details">
+
+          <h2 class="heading-medium">Will it be certified organic by Jan 2015?</h2>
+
+          <div class="form-group inline">
+            <label for="organic-future-yes" class="block-label">
+              <input type="radio" name="future-status" id="organic-future-yes" value="yes" class="js-toggle" data-show="#future-details">
+              Yes
+            </label>
+            <label for="organic-future-no" class="block-label">
+              <input type="radio" name="future-status" id="organic-future-no" value="no" class="js-toggle" data-hide="#future-details">
+              No
+            </label>
+          </div>
+
+            <div class="js-hidden panel-indent" id="future-details">
+              <div class="form-group">
+                <label for="organic-certification-body" class="form-label">Certified by</label>
+                <select name="organic-certification-body" id="organic-certification-body" class="form-control-select">
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                  <option value="">Soil Association</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>Certification date</legend>
+                <%= partial 'partial-date', :locals => { :id => 'organic-start-date'} %>
+              </fieldset>
+            </div>
+
           </div>
 
           <div class="form-group">

@@ -11,5 +11,8 @@ $(document).ready(function(){
   // Convert land-use list into an auto-suggest box
   $("#land-use-list").chosen();
 
+  // Initialise toggler
+  GOVUK.toggle.init();
+
 
 });
