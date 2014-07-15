@@ -1,0 +1,87 @@
+---
+title: Welcome to Middleman
+layout: layout_template_no_nav
+---
+
+<% parcel = data.business.parcels[0] %>
+
+<div class="inner-block">
+
+  <div class="back-link">
+    <a href="04-hedges">Back</a>
+  </div>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
+            <h1>Add a building or structure</h1>
+          </hgroup>
+        </header>
+
+        <p>Click on the map where the new building or structure is. Use the zoom controls for better accuracy.</p>
+
+        <form>
+
+          <div id="details" class="js-hidden">
+
+            <div class="panel-indent">
+              <h3 class="bold-small">Details</h3>
+
+              <div class="form-group">
+                <label for="feature-type" class="form-label">What kind of building or structure is this?</label>
+                <select name="feature-type" id="feature-type">
+                  <option value="">Select a type</option>
+                  <option value="0">Ascisco Ltd</option>
+                  <option value="1">Biodynamic Association</option>
+                  <option value="2">Global Trust Certification Ltd</option>
+                  <option value="3">Irish Organic Farmers and Growers Association (IOFGA)</option>
+                  <option value="4">Organic Farmers &amp; Growers Ltd</option>
+                  <option value="5">Organic Food Federation</option>
+                  <option value="6">Organic Trust Limited</option>
+                  <option value="7">Quality Welsh Food Certification Ltd</option>
+                  <option value="8">Scottish Food Quality Certification Ltd</option>
+                  <option value="9">Soil Association Certification Ltd</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>Date appeared on land</legend>
+                <%= partial 'partial-date', :locals => { :id => 'feature-start-date'} %>
+              </fieldset>
+
+              <div class="form-group">
+                <label for="feature-area" class="form-label">Area</label>
+                <input type="text" class="form-control form-control-1-8" id="feature-area"> ha
+              </div>
+
+              <p>Describe the shape and dimensions of this feature in the box below. Attach an image or document if it's helpful.</p>
+    <label for="notes-details" class="visuallyhidden">Enter details here</label>
+    <textarea class="form-control full-width" id="notes-details"></textarea>
+    <div>
+      <a href="#attachment" class="js-toggle">Attach file</a>
+      <input type="file" name="attachment" id="attachment" class="js-hidden">
+    </div>
+
+            </div>
+
+            <div class="form-group">
+              <a href="05-buildings-and-features" class="button">Next</a>
+            </div>
+
+          </div>
+
+
+
+        </form>
+
+      </div>
+    </div>
+    <div class="js-toggle" data-show="#details">
+      <%= partial "partial-parcel-map" %>
+    </div>
+  </div>
+</div>
+
