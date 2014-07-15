@@ -1,18 +1,21 @@
 table.parcel-details{
-  td{
-    @include core-19;
-  }
+  margin-bottom: $gutter;
   .detail-key{
-    width: 35%;
-    color: $secondary-text-colour;
+    width: 50%;
+    //color: $secondary-text-colour;
   }
   .detail-value{
+    display: none;
     &.undefined{
-      color: $secondary-text-colour;
-      text-indent: -9999px;
+      font-style: italic;
     }
   }
   .edit{
     width: 10%;
+  }
+  .detail-total{
+    td{
+      border-bottom: 2px solid $black;
+    }
   }
 }

@@ -8,12 +8,11 @@
 }
 
 .map {
-  position: relative;
   width: $half;
   float: left;
 
   .map-wrapper{
-    position: absolute;
+    position: relative;
     background: $grey-3;
     border: 1px solid $border-colour;
     cursor: crosshair;

@@ -1,7 +1,9 @@
 ---
-title: Primrose Farm - Alfafa field
+title: Rural payments prototype
 layout: layout_template_no_nav
 ---
+
+<% parcel = data.business.parcels[0] %>
 
 <div class="inner-block">
 
@@ -15,62 +17,68 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %></h2>
-            <h1>Alfafa field</h1>
+            <h1><%= parcel.name %></h1>
           </hgroup>
 
           <dl class="metadata">
-            <dt class="visuallyhidden">Parcel area</dt>
-            <dd>5.6ha</dd>
             <dt class="visuallyhidden">Parcel ID</dt>
-            <dd>SJ7555 1074</dd>
+            <dd>ID: <%= parcel.id %></dd>
+            <dt class="visuallyhidden">Organic status/dt>
+            <dd>Not organic</dd>
           </dl>
         </header>
-
-        <p>Update the details for this land parcel below.</p>
-
-
 
         <table class="parcel-details">
           <thead>
             <tr class="visuallyhidden">
               <th class="detail-key">Key</th>
-              <th class="details-value">Value</th>
+              <th class="details-area">Area</th>
               <th class="detail-status">Edit</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="detail-key">Name</td>
-              <td class="detail-value">Alfafa field</td>
-              <td class="edit"><a href="">Update</a></td>
+            <tr class="detail-total">
+              <td class="detail-key">Total area</td>
+              <td class="details-area"><%= parcel.area %>ha</td>
+              <td class="edit"></td>
             </tr>
             <tr>
-              <td class="detail-key">Land use</td>
-              <td class="detail-value undefined">Undefined</td>
-              <td class="edit"><a href="03-land-use">Update</a></td>
-            </tr>
-            <tr>
-              <td class="detail-key">Organic status</td>
-              <td class="detail-value undefined">Undefined</td>
-              <td class="edit"><a href="">Update</a></td>
+              <td class="detail-key">Crops</td>
+              <td class="details-area">0.00ha</td>
+              <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
               <td class="detail-key">Buffer strips</td>
-              <td class="detail-value undefined">Undefined</td>
-              <td class="edit"><a href="">Update</a></td>
+              <td class="details-area">0.00ha</td>
+              <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key">Hedges</td>
-              <td class="detail-value undefined">Undefined</td>
-              <td class="edit"><a href="">Update</a></td>
+              <td class="detail-key">Hedges and trees</td>
+              <td class="details-area">0.00ha</td>
+              <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key">Buildings and features</td>
-              <td class="detail-value undefined">Undefined</td>
-              <td class="edit"><a href="">Update</a></td>
+              <td class="detail-key">Buildings and structures</td>
+              <td class="details-area">0.00ha</td>
+              <td class="edit"><a href="">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="detail-key">Undeclared</td>
+              <td class="details-area"><%= parcel.area %>ha</td>
+              <td class="edit"></td>
             </tr>
           </tbody>
         </table>
+
+        <p class="alert">Enter more land use details to complete this parcel.</p>
+
+        <form>
+          <div class="form-group">
+            <a href="03.1-organic" class="button">Enter land use details</a>
+          </div>
+        </form>
+
+
       </div>
     </div>
     <%= partial "partial-parcel-map" %>

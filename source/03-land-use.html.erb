@@ -3,6 +3,8 @@ title: Welcome to Middleman
 layout: layout_template_no_nav
 ---
 
+<% parcel = data.business.parcels[0] %>
+
 <div class="inner-block">
 
   <div class="back-link">
@@ -14,7 +16,7 @@ layout: layout_template_no_nav
       <div class="inner-block">
         <header class="page-header">
           <hgroup>
-            <h2 class="subtitle"><%= data.business.name %>: Alfafa field</h2>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
             <h1>What is this land parcel used for?</h1>
           </hgroup>
         </header>

@@ -3,6 +3,8 @@ title: Welcome to Middleman
 layout: layout_template_no_nav
 ---
 
+<% parcel = data.business.parcels[0] %>
+
 <div class="inner-block">
 
   <div class="back-link">
@@ -14,7 +16,7 @@ layout: layout_template_no_nav
       <div class="inner-block">
         <header class="page-header">
           <hgroup>
-            <h2 class="subtitle"><%= data.business.name %>: Alfafa field</h2>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
             <h1>Is this land certified as organic?</h1>
           </hgroup>
         </header>
@@ -68,7 +70,7 @@ layout: layout_template_no_nav
             <div class="form-group">
               <label for="apply-all" class="label">
                 <input type="checkbox" name="apply-all" id="apply-all" value="yes">
-                This applies to all the land parcels
+                Apply this certificate to all land parcels
               </label>
             </div>
 
