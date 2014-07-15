@@ -1,0 +1,10 @@
+.notes{
+    @include core-16;
+  .open a{
+    text-decoration: none;
+    font-weight: bold;
+    color: $text-colour;
+  }
+  #help-area{
+  }
+}

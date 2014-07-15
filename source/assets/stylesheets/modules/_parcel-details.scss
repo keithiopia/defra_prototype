@@ -4,6 +4,9 @@ table.parcel-details{
     width: 50%;
     //color: $secondary-text-colour;
   }
+  .indented{
+    padding-left: $gutter-two-thirds;
+  }
   .detail-value{
     display: none;
     &.undefined{

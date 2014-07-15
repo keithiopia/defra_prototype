@@ -37,11 +37,12 @@ layout: layout_template_no_nav
 
           <div class="panel-indent js-hidden" id="buffer-strip-details">
 
-            <p>Click the numbers on the map to mark the border edges that have buffer strips.</p>
-
             <div class="form-group">
-              <label for="buffer-strip-width" class="form-label">Strip width: <input type="number" name="buffer-strip-width" id="buffer-strip-width" class="form-control form-control-1-8" value="6"> meters</label>
+              <label for="buffer-strip-width" class="form-label">What area is covered by buffer strips?</label>
+              <input type="text" name="buffer-strip-area" id="buffer-strip-area" class="form-control form-control-1-4" value="0.00"> ha
             </div>
+
+            <%= partial "partial-notes" %>
 
           </div>
 

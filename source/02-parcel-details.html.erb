@@ -22,9 +22,7 @@ layout: layout_template_no_nav
 
           <dl class="metadata">
             <dt class="visuallyhidden">Parcel ID</dt>
-            <dd>ID: <%= parcel.id %></dd>
-            <dt class="visuallyhidden">Organic status/dt>
-            <dd>Not organic</dd>
+            <dd>Parcel ID: <%= parcel.id %></dd>
           </dl>
         </header>
 
@@ -37,33 +35,38 @@ layout: layout_template_no_nav
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td class="detail-key">Certified organic</td>
+              <td class="details-area">No</td>
+              <td class="edit"><a href="">Edit</a></td>
+            </tr>
             <tr class="detail-total">
               <td class="detail-key">Total area</td>
               <td class="details-area"><%= parcel.area %>ha</td>
               <td class="edit"></td>
             </tr>
             <tr>
-              <td class="detail-key">Crops</td>
+              <td class="detail-key indented">Crops</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key">Buffer strips</td>
+              <td class="detail-key indented">Buffer strips</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key">Hedges and trees</td>
+              <td class="detail-key indented">Hedges and trees</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key">Buildings and structures</td>
+              <td class="detail-key indented">Buildings and structures</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key">Undeclared</td>
+              <td class="detail-key indented">Undeclared</td>
               <td class="details-area"><%= parcel.area %>ha</td>
               <td class="edit"></td>
             </tr>
