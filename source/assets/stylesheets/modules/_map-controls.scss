@@ -1,0 +1,48 @@
+
+// Generic map button styles
+.map-button{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    color: $secondary-text-colour;
+    background: $white;
+    border: 1px solid $border-colour;
+    @include core-14;
+    &:hover{
+        color: $text-colour;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    &.selected{
+      border: 1px solid $border-colour;
+      color: $text-colour;
+    }
+}
+
+// Undo/redo and map/photo buttons
+.map-photo,
+.undo-redo{
+  width: 50%;
+  margin: 0;
+  li{
+    width: 30%;
+  }
+}
+.map-photo{
+  float: right;
+  li{
+    float: right;
+    &:last-child{
+      margin-right: -1px;
+    }
+  }
+}
+.undo-redo{
+  float: left;
+  li{
+    float: left;
+    &:last-child{
+      margin-left: -1px;
+    }
+  }
+}

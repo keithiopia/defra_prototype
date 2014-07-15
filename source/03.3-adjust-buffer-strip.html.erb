@@ -15,12 +15,11 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle">Primrose Farm: Alfafa field</h2>
-            <h1>Adjust the buffer strip</h1>
+            <h1>Adjust the buffer strips</h1>
           </hgroup>
         </header>
 
-        <p>You can adjust the buffer strip by dragging the outline on the map.
-          If you get stuck you can <a href="#">reset the map</a>.</p>
+        <p>If you want to you can adjust the buffer strips by dragging their outlines on the map.</p>
 
 
         <div class="form-group">
@@ -30,7 +29,10 @@ layout: layout_template_no_nav
       </div>
     </div>
     <div class="map">
+      <%= partial "partial-map-controls" %>
+      <div class="map-wrapper">
 
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,16 @@
+table.parcel-features{
+  margin-bottom: $gutter;
+  td{
+    //@include core-19;
+  }
+  .feature-ref{
+    width: 5%;
+  }
+  .feature-name{
+  }
+  .feature-area{
+  }
+  .feature-check{
+    width: 10%;
+  }
+}

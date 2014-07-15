@@ -22,11 +22,11 @@ layout: layout_template_no_nav
         <form>
           <div class="form-group inline">
             <label for="buffer-strip-yes" class="block-label">
-              <input type="radio" name="buffer-strip" id="buffer-strip-yes" value="yes" class="js-toggle" data-show="#buffer-strip-details">
+              <input type="radio" name="buffer-strip" id="buffer-strip-yes" value="yes" class="js-toggle" data-show="#buffer-strip-details, .undo-redo">
               Yes
             </label>
             <label for="buffer-strip-no" class="block-label">
-              <input type="radio" name="buffer-strip" id="buffer-strip-no" value="no" class="js-toggle" data-hide="#buffer-strip-details">
+              <input type="radio" name="buffer-strip" id="buffer-strip-no" value="no" class="js-toggle" data-hide="#buffer-strip-details, .undo-redo">
               No
             </label>
           </div>
@@ -51,7 +51,10 @@ layout: layout_template_no_nav
       </div>
     </div>
     <div class="map">
+      <%= partial "partial-map-controls" %>
+      <div class="map-wrapper">
 
+      </div>
     </div>
   </div>
 </div>
