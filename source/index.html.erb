@@ -37,62 +37,31 @@ layout: layout_template_no_nav
             </tr>
           </thead>
           <tbody>
+
+            <% data.business.parcels.each do |f| %>
             <tr>
               <td class="parcel-name">
-                <a href="02-parcel-details">Alfafa field</a>
-                <span class="parcel-id">ID: SJ7555 1074</span>
+                <a href="02-parcel-details">
+                  <% if f.name %>
+                    <%= f.name %>
+                  <% else %>
+                    Untitled
+                  <% end %>
+                </a>
+                <span class="parcel-id">ID: <%= f.id %></span>
               </td>
-              <td class="parcel-cph">09 / 018 / 0085</td>
-              <td class="parcel-area">4.2ha</td>
+              <td class="parcel-area"><%= f.area %>ha</td>
               <td class="parcel-status not-updated">No</td>
             </tr>
-            <tr>
-              <td class="parcel-name">
-                <a href="02-parcel-details">Top paddock</a>
-                <span class="parcel-id">ID: SJ7555 1074</span>
-              </td>
-              <td class="parcel-cph">09 / 018 / 0085</td>
-              <td class="parcel-area">6.4ha</td>
-              <td class="parcel-status not-updated">No</td>
-            </tr>
-            <tr>
-              <td class="parcel-name">
-                <a href="02-parcel-details">Water meadow</a>
-                <span class="parcel-id">ID: SJ7555 1074</span>
-              </td>
-              <td class="parcel-cph">09 / 018 / 0085</td>
-              <td class="parcel-area">0.9ha</td>
-              <td class="parcel-status updated">Yes</td>
-            </tr>
-            <tr>
-              <td class="parcel-name">
-                <a href="02-parcel-details">Red barn</a>
-                <span class="parcel-id">ID: SJ7555 1074</span>
-              </td>
-              <td class="parcel-cph">09 / 018 / 0085</td>
-              <td class="parcel-area">12.7ha</td>
-              <td class="parcel-status not-updated">No</td>
-            </tr>
-            <tr>
-              <td class="parcel-name">
-                <a href="02-parcel-details">Wheat field</a>
-                <span class="parcel-id">ID: SJ7555 1074</span>
-              </td>
-              <td class="parcel-cph">09 / 018 / 0085</td>
-              <td class="parcel-area">4.8ha</td>
-              <td class="parcel-status not-updated">No</td>
-            </tr>
+            <% end %>
+
           </tbody>
         </table>
 
       </div>
     </div>
-    <div class="map">
-      <%= partial "partial-map-controls" %>
-      <div class="map-wrapper">
+    <%= partial "partial-business-map" %>
 
-      </div>
-    </div>
   </div>
 </div>
 

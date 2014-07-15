@@ -1,1 +1,80 @@
 name: Bodmin Agr Ltd.
+
+parcels:
+  - name:   Barley field
+    id:     SJ8063 3931
+    area:   11.09
+    use:
+      - type:   Barley
+        cover:  Arable
+        area:   1.00
+
+      - type:   Oak
+        cover:  Arable
+        area:   1.00
+
+  - name:
+    id:     SJ8063 5971
+    area:   3.05
+    use:
+      - type:   Barley
+        cover:  Arable
+        area:   1.00
+
+      - type:   Oak
+        cover:  Arable
+        area:   1.00
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+  - name:
+    id:     SJ8063 3931
+    area:   11.09
+
+

@@ -4,6 +4,7 @@
     display: block;
     text-align: center;
     padding: 5px;
+    margin: -1px;
     color: $secondary-text-colour;
     background: $white;
     border: 1px solid $border-colour;
@@ -19,9 +20,21 @@
     }
 }
 
+// Map image
+.map-image{
+  width: auto;
+  height: 100%;
+
+  .parcel-map &{
+    margin-left: -60px;
+  }
+}
+
 // Undo/redo and map/photo buttons
 .map-photo,
 .undo-redo{
+  position: absolute;
+  top: 0;
   width: 50%;
   margin: 0;
   li{
@@ -29,7 +42,7 @@
   }
 }
 .map-photo{
-  float: right;
+  right: 0;
   li{
     float: right;
     &:last-child{
@@ -38,7 +51,7 @@
   }
 }
 .undo-redo{
-  float: left;
+  left: 0;
   li{
     float: left;
     &:last-child{

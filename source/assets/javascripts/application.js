@@ -14,5 +14,7 @@ $(document).ready(function(){
   // Initialise toggler
   GOVUK.toggle.init();
 
+  $('.map-wrapper').fixer({ gap: 10 });
+
 
 });
