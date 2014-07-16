@@ -1,23 +1,16 @@
 table.parcels {
   margin: $gutter 0;
 
-  .js-enabled & tbody tr:hover{
-    //cursor: pointer;
-    //background: $yellow-25;
-  }
-
   .parcel-name {
-    a{
-      @include core-19;
-      font-weight: bold;
-    }
+    width: 40%;
   }
-
-  .parcel-cph {
-    display: none;
+  td.parcel-id {
+    width: 25%;
+    @include core-14;
+    color: $secondary-text-colour;
   }
-
   .parcel-area {
+    width: 20%;
   }
 
   .parcel-status {
@@ -32,9 +25,5 @@ table.parcels {
       }
   }
 
-  .parcel-id {
-    @include core-14;
-    color: $secondary-text-colour;
-    display: block;
-  }
+
 }

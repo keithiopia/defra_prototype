@@ -2,5 +2,8 @@
   &:hover{
     cursor: pointer;
     text-decoration: underline;
+    a{
+      font-weight: bold;
+    }
   }
 }

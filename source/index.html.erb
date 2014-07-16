@@ -22,17 +22,30 @@ layout: layout_template_no_nav
           </hgroup>
         </header>
 
+
+<!--
+        <div class="coverage-chart">
+          <div class="area total-area">
+            <div class="area declared-area">
+              <div class="area efa-area">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      -->
+
         <p>
           Update all your land parcels before applying for any schemes.
           Select a parcel from the list to update it.
         <p>
 
-        <table class="parcels">
+        <table class="parcels js-row-link">
           <thead>
             <tr>
               <th class="parcel-name">Parcel</th>
+              <th class="parcel-id">ID</th>
               <th class="parcel-area">Area</th>
-              <th class="parcel-cph">CPH</th>
               <th class="parcel-status">Updated</th>
             </tr>
           </thead>
@@ -48,8 +61,8 @@ layout: layout_template_no_nav
                     Untitled
                   <% end %>
                 </a>
-                <span class="parcel-id">ID: <%= f.id %></span>
               </td>
+              <td class="parcel-id"><%= f.id %></td>
               <td class="parcel-area"><%= f.area %>ha</td>
               <td class="parcel-status not-updated">No</td>
             </tr>
