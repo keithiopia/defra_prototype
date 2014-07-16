@@ -23,6 +23,7 @@ layout: layout_template_no_nav
           <dl class="metadata">
             <dt class="visuallyhidden">Parcel ID</dt>
             <dd>Parcel ID: <%= parcel.id %></dd>
+            <dd>Unverified</dd>
           </dl>
         </header>
 
@@ -66,18 +67,16 @@ layout: layout_template_no_nav
               <td class="edit"><a href="05-buildings-and-features">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key indented">Undefined</td>
+              <td class="detail-key indented">Unverified</td>
               <td class="details-area"><%= parcel.area %>ha</td>
               <td class="edit"></td>
             </tr>
           </tbody>
         </table>
 
-        <p class="alert">Enter more land use details to complete this parcel.</p>
-
         <form>
           <div class="form-group">
-            <a href="03.1-organic" class="button">Enter land use details</a>
+            <a href="03.1-organic" class="button">Verify this land parcel</a>
           </div>
         </form>
 

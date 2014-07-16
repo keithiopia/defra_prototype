@@ -1,6 +1,8 @@
-<div class="map feature-map">
+<div class="map-column feature-map">
   <div class="map-wrapper">
-    <%= partial "partial-map-controls" %>
-    <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    </div>
   </div>
 </div>

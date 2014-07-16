@@ -31,13 +31,13 @@ layout: layout_template_no_nav
 
           <p id="land-use-details" class="js-hidden panel-indent font-xsmall">
               You need to have defined at least 80% of your total area before you can qualify for a greening payment.
-              <br>
+              <br><br>
               <a href="#land-use-details" class="js-toggle" data-hide="#efa-details">Close</a>
           </p>
 
           <p id="efa-details" class="js-hidden panel-indent font-xsmall">
-              At least 5% of your land must be designated as ecological focus areas (EFAs) before you can qualify for a greening payment.
-              <br>
+              At least 5% of your land must be designated as ecological focus areas (EFAs) before you can qualify for a greening payment. <a href="">Find out more</a>.
+              <br><br>
               <a href="#efa-details" class="js-toggle" data-hide="#land-use-details">Close</a>
           </p>
 
@@ -56,9 +56,8 @@ layout: layout_template_no_nav
 
       -->
 
-        <p>
-          Update all your land parcels before applying for any schemes.
-          Select a parcel from the list to update it.
+        <p class="alert">
+          Verify all your land parcels before applying for any schemes.
         <p>
 
         <table class="parcels js-row-link">
@@ -67,7 +66,7 @@ layout: layout_template_no_nav
               <th class="parcel-name">Parcel</th>
               <th class="parcel-id">ID</th>
               <th class="parcel-area">Area</th>
-              <th class="parcel-status">Updated</th>
+              <th class="parcel-status">Verified</th>
             </tr>
           </thead>
           <tbody>
@@ -91,6 +90,10 @@ layout: layout_template_no_nav
 
           </tbody>
         </table>
+
+        <div class="form-group">
+          <a href="02-parcel-details" class="button">Verify land parcels</a>
+        </div>
 
       </div>
     </div>

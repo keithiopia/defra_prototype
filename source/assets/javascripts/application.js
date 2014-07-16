@@ -14,6 +14,8 @@ $(document).ready(function(){
   // Initialise toggler
   GOVUK.toggle.init();
 
+  GOVUK.stickAtTopWhenScrolling.init();
+
   // Notes
   $('.notes h3').click(function(){
     $(this).toggleClass('open');
