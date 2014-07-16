@@ -135,6 +135,17 @@ p {
   max-width: 30em;
 }
 
+// Link style
+.link-style {
+  display: inline;
+  color: $link-colour;
+  text-decoration: underline;
+  &:hover {
+    color: $link-hover-colour;
+    cursor: pointer;
+  }
+}
+
 
 // Code styles
 pre,
