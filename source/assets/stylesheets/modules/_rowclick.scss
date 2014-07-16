@@ -1,0 +1,6 @@
+.js-enabled .js-rowclick tr{
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

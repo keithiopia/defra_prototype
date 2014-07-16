@@ -1,8 +1,5 @@
 table.parcel-features{
   margin-bottom: $gutter;
-  td{
-    //@include core-19;
-  }
   .feature-ref{
     width: 5%;
   }
@@ -10,9 +7,26 @@ table.parcel-features{
   }
   .feature-area{
   }
-  .feature-check{
+  .feature-edit{
     width: 10%;
     text-align: right;
-    padding-right: 0;
   }
+  .feature-delete{
+    width: 5%;
+    text-align: right;
+    padding-right: 0;
+    a{
+      color: $text-colour;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.delete-link{
+  float: right;
+  @include core-16;
+  margin-top: $gutter-one-third;
 }

@@ -1,0 +1,62 @@
+---
+title: Welcome to Middleman
+layout: layout_template_no_nav
+---
+
+<% parcel = data.business.parcels[0] %>
+
+<div class="inner-block">
+
+  <div class="back-link">
+    <a href="05-buildings-and-features">Back</a>
+  </div>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
+            <h1>Unverified feature</h1>
+          </hgroup>
+        </header>
+
+        <p class="alert">Verify this feature by checking and editing the details below.</p>
+
+        <form>
+            <table class="feature-details">
+              <thead>
+                <tr class="visuallyhidden">
+                  <th class="feature-property">Property</th>
+                  <th class="feature-value">Value</th>
+                  <th class="feature-edit">Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="feature-property">Type</td>
+                  <td class="feature-value"><em>Unknown</em></td>
+                  <td class="feature-edit"><a href="">Edit</a></td>
+                </tr>
+                <tr>
+                  <td class="feature-property">Area</td>
+                  <td class="feature-value">0.2ha</td>
+                  <td class="feature-edit"><a href="">Edit</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+          <div class="form-group">
+            <a href="05.4-delete-feature" class="delete-link">Delete this feature</a>
+            <a href="05-buildings-and-features" class="button">Verify</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+      <%= partial "partial-feature-map" %>
+  </div>
+</div>
+

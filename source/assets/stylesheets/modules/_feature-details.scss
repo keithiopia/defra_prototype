@@ -1,0 +1,13 @@
+table.feature-details{
+  margin-bottom: $gutter;
+  .feature-detail{
+    width: 5%;
+  }
+  .feature-value{
+  }
+  .feature-edit{
+    width: 10%;
+    text-align: right;
+    padding-right: 0;
+  }
+}

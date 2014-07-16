@@ -1,0 +1,66 @@
+---
+title: Welcome to Middleman
+layout: layout_template_no_nav
+---
+
+<% parcel = data.business.parcels[0] %>
+
+<div class="inner-block">
+
+  <div class="back-link">
+    <a href="05-buildings-and-features">Back</a>
+  </div>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
+            <h1>Delete unverified feature</h1>
+          </hgroup>
+        </header>
+
+        <form>
+
+            <p>Why are you deleting this feature?</p>
+
+            <div id="remove-feature-details">
+              <div class="form-group">
+                <label for="remove-feature-reason-1" class="block-label">
+                  <input type="radio" name="remove-feature-reason" id="remove-feature-reason-1" value="not-there" class="js-toggle" data-show="#remove-feature-date, #past-date" data-hide="#future-date">
+                  It's no longer there
+                </label>
+                <label for="remove-feature-reason-2" class="block-label">
+                  <input type="radio" name="remove-feature-reason" id="remove-feature-reason-2" value="not-there" class="js-toggle" data-show="#remove-feature-date, #future-date" data-hide="#past-date">
+                  It going to be removed
+                </label>
+                <label for="remove-feature-reason-3" class="block-label">
+                  <input type="radio" name="remove-feature-reason" id="remove-feature-reason-3" value="error" class="js-toggle" data-show="" data-hide="#remove-feature-date">
+                  It's an error
+                </label>
+              </div>
+            </div>
+
+            <div id="remove-feature-date" class="panel-indent js-hidden">
+              <p id="past-date">When was it removed?</p>
+              <p class="visuallyhidden">Or</p>
+              <p id="future-date">When will it be removed?</p>
+              <%= partial "partial-date" %>
+            </div>
+
+
+
+
+
+          <div class="form-group">
+            <a href="05-buildings-and-features" class="button">Next</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+      <%= partial "partial-feature-map" %>
+  </div>
+</div>
+

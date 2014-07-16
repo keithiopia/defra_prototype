@@ -38,10 +38,12 @@
 @import "modules/parcels";
 @import "modules/parcel-details";
 @import "modules/parcel-features";
+@import "modules/feature-details";
 @import "modules/land-use-list";
 @import "modules/map-controls";
 @import "modules/alerts";
 @import "modules/notes";
+@import "modules/rowclick";
 
 .js-enabled .js-hidden {
   display: none;

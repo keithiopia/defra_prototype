@@ -21,7 +21,7 @@ layout: layout_template_no_nav
           </hgroup>
         </header>
 
-        <p class="alert">There are <strong>2 unverified features</strong> on this land parcel. Check them before adding any new features.</p>
+        <p class="alert">There are <strong>2 unverified features</strong> on this land parcel. <br>Verify or delete them before adding any new features.</p>
 
         <table class="parcel-features">
           <thead>
@@ -29,7 +29,8 @@ layout: layout_template_no_nav
               <th class="feature-ref">Number</th>
               <th class="feature-name">Feature</th>
               <th class="feature-area">Value</th>
-              <th class="feature-check">Check</th>
+              <th class="feature-edit">Edit</th>
+              <th class="feature-delete">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -37,19 +38,22 @@ layout: layout_template_no_nav
               <td class="feature-ref">1.</td>
               <td class="feature-name">Unverified pond</td>
               <td class="feature-area">0.2ha</td>
-              <td class="feature-check"><a href="05.2-check-feature">Edit</a></td>
+              <td class="feature-edit"><a href="05.3-verify-feature">Verify</a></td>
+              <td class="feature-delete"> <a href="05.4-delete-feature" title="Delete this feature">✕</a></td>
             </tr>
             <tr>
               <td class="feature-ref">2.</td>
               <td class="feature-name">Unverified feature</td>
               <td class="feature-area">0.1ha</td>
-              <td class="feature-check"><a href="05.2-check-feature">Edit</a></td>
+              <td class="feature-edit"><a href="05.3-verify-feature">Verify</a></td>
+              <td class="feature-delete"> <a href="05.4-delete-feature" title="Delete this feature">✕</a></td>
             </tr>
             <tr>
               <td class="feature-ref">3.</td>
               <td class="feature-name">Building</td>
               <td class="feature-area">0.3ha</td>
-              <td class="feature-check"><a href="05.2-check-feature">Edit</a></td>
+              <td class="feature-edit"><a href="05.2-check-feature">Edit</a></td>
+              <td class="feature-delete"> <a href="05.4-delete-feature" title="Delete this feature">✕</a></td>
             </tr>
           </tbody>
         </table>
@@ -60,7 +64,7 @@ layout: layout_template_no_nav
 
 
           <div class="form-group">
-            <a href="05-buildings-and-features" class="button">Next</a>
+            <a href="05-buildings-and-features" class="button">Save</a>
           </div>
         </form>
 
