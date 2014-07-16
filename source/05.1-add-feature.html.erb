@@ -17,47 +17,92 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>Add a building or structure</h1>
+            <h1>Add a building or feature</h1>
           </hgroup>
         </header>
 
-        <p>Click on the map where the new building or structure is. Use the zoom controls for better accuracy.</p>
+        <p>Click on the map where the new building or feature is. Use the zoom controls for better accuracy.</p>
 
         <form>
 
           <div id="details" class="js-hidden">
 
             <div class="panel-indent">
-              <h3 class="bold-small">Details</h3>
-
               <div class="form-group">
-                <label for="feature-type" class="form-label">What kind of building or structure is this?</label>
+                <label for="feature-type" class="form-label">What kind of building or feature is this?</label>
                 <select name="feature-type" id="feature-type">
-                  <option value="">Select a type</option>
-                  <option value="0">Ascisco Ltd</option>
-                  <option value="1">Biodynamic Association</option>
-                  <option value="2">Global Trust Certification Ltd</option>
-                  <option value="3">Irish Organic Farmers and Growers Association (IOFGA)</option>
-                  <option value="4">Organic Farmers &amp; Growers Ltd</option>
-                  <option value="5">Organic Food Federation</option>
-                  <option value="6">Organic Trust Limited</option>
-                  <option value="7">Quality Welsh Food Certification Ltd</option>
-                  <option value="8">Scottish Food Quality Certification Ltd</option>
-                  <option value="9">Soil Association Certification Ltd</option>
+
+                  <optgroup label="Buildings">
+                    <option value="2">Building</option>
+                    <option value="3">Building, rail</option>
+                    <option value="9">Glasshouse</option>
+                    <option value="10">Hard standing</option>
+                    <option value="31">Structure</option>
+                  </optgroup>
+                  <optgroup label="Roads, rails and paths">
+                    <option value="15">Man-made walkway</option>
+                    <option value="16">Metalled/surfaced track</option>
+                    <option value="20">Path</option>
+                    <option value="22">Rail</option>
+                    <option value="24">Road or track</option>
+                    <option value="26">Roadside</option>
+                  </optgroup>
+                  <optgroup label="Structures">
+                    <option value="4">Ditch or drain</option>
+                    <option value="5">Earth bank</option>
+                    <option value="11">Heap</option>
+                    <option value="28">Stone wall</option>
+                    <option value="29">Stone-faced hedgebank</option>
+                  </optgroup>
+                  <optgroup label="Land">
+                    <option value="6">General surface</option>
+                    <option value="7">General surface,road or track</option>
+                    <option value="8">Generic eligible area</option>
+                    <option value="17">Non agricultural land</option>
+                    <option value="18">Non-coppiced woodland</option>
+                    <option value="27">Scrub</option>
+                    <option value="35">Trees (notional)</option>
+                    <option value="36">Woodland</option>
+                  </optgroup>
+                  <optgroup label="Water">
+                    <option value="13">Inland water, man-made</option>
+                    <option value="14">Inland water, natural</option>
+                    <option value="21">Pond</option>
+                    <option value="23">River</option>
+                    <option value="30">Stream</option>
+                    <option value="34">Tidal water</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="19">Other</option>
+                  </optgroup>
                 </select>
               </div>
 
+              <p>Is this a planned or existing feature?</p>
+              <div class="form-group inline">
+                <label for="existing-feature-yes" class="label">
+                  <input type="radio" name="existing-feature" id="existing-feature-yes" value="yes" class="js-toggle" checked data-show="#existed-date" data-hide="#planned-date">
+                  Existing
+                </label>
+                <label for="existing-feature-no" class="label">
+                  <input type="radio" name="existing-feature" id="existing-feature-no" value="no" class="js-toggle" data-hide="#existed-date" data-show="#planned-date">
+                  Planned
+                </label>
+              </div>
+
+
               <fieldset>
-                <legend>Date appeared on land</legend>
+                <legend id="existed-date">Since when has it been on this land?</legend>
+                <legend id="planned-date" class="js-hidden">From when will it be on this land?</legend>
                 <%= partial 'partial-date', :locals => { :id => 'feature-start-date'} %>
               </fieldset>
 
               <div class="form-group">
-                <label for="feature-area" class="form-label">Area</label>
+                <label for="feature-area" class="form-label">Total area</label>
                 <input type="text" class="form-control form-control-1-8" id="feature-area"> ha
               </div>
 
-              <p>Describe the shape and dimensions of this feature in the box below. Attach an image or document if it's helpful.</p>
+              <p>Describe the shape and dimensions of the building or feature in the box below. Attach an image or document if it helps to describe it.</p>
     <label for="notes-details" class="visuallyhidden">Enter details here</label>
     <textarea class="form-control full-width" id="notes-details"></textarea>
     <div>
