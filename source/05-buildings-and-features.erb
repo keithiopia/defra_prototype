@@ -17,11 +17,11 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>Buildings and structures</h1>
+            <h1>Buildings and features</h1>
           </hgroup>
         </header>
 
-        <p>There are <strong>3 undefined features</strong> on this land parcel. Check them and add any new features.</p>
+        <p class="alert">There are <strong>2 unverified features</strong> on this land parcel. Check them before adding any new features.</p>
 
         <table class="parcel-features">
           <thead>
@@ -35,28 +35,28 @@ layout: layout_template_no_nav
           <tbody>
             <tr>
               <td class="feature-ref">1.</td>
-              <td class="feature-name"><em>Undefined</em></td>
+              <td class="feature-name">Unverified pond</td>
               <td class="feature-area">0.2ha</td>
-              <td class="feature-check"><a href="">Check</a></td>
+              <td class="feature-check"><a href="05.2-check-feature">Edit</a></td>
             </tr>
             <tr>
               <td class="feature-ref">2.</td>
-              <td class="feature-name"><em>Undefined</em></td>
+              <td class="feature-name">Unverified feature</td>
               <td class="feature-area">0.1ha</td>
-              <td class="feature-check"><a href="">Check</a></td>
+              <td class="feature-check"><a href="05.2-check-feature">Edit</a></td>
             </tr>
             <tr>
               <td class="feature-ref">3.</td>
-              <td class="feature-name"><em>Undefined</em></td>
+              <td class="feature-name">Building</td>
               <td class="feature-area">0.3ha</td>
-              <td class="feature-check"><a href="">Check</a></td>
+              <td class="feature-check"><a href="05.2-check-feature">Edit</a></td>
             </tr>
           </tbody>
         </table>
 
         <form>
 
-          <p><a href="05.1-add-feature">Add a new building or structure</a></p>
+          <p><a href="05.1-add-feature">Add a new feature</a></p>
 
 
           <div class="form-group">

@@ -8,7 +8,7 @@ layout: layout_template_no_nav
 <div class="inner-block">
 
   <div class="back-link">
-    <a href="04-hedges">Back</a>
+    <a href="05-buildings-and-features">Back</a>
   </div>
 
   <div class="group">
@@ -17,14 +17,12 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>Add a building or feature</h1>
+            <h1>Edit a building or feature</h1>
           </hgroup>
         </header>
 
-        <p>Click on the map where the new building or feature is. Use the zoom controls for better accuracy.</p>
-
         <form>
-          <div id="details" class="js-hidden">
+          <div id="details">
             <div class="panel-indent">
               <div class="form-group">
                 <label for="feature-type" class="form-label">What kind of building or feature is this?</label>
@@ -73,9 +71,7 @@ layout: layout_template_no_nav
 
       </div>
     </div>
-    <div class="js-toggle" data-show="#details, .undo-redo">
-      <%= partial "partial-parcel-map" %>
-    </div>
+      <%= partial "partial-feature-map" %>
   </div>
 </div>
 
