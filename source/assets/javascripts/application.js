@@ -21,8 +21,10 @@ $(document).ready(function(){
 
   // Rowclick - if a table row contains a link, make the whole row activate the link
   $('.js-row-link tr').click(function(){
-    var link = $(this).find('a').attr('href');
-    window.location = link;
+    //var link = $(this).find('a').attr('href');
+    //window.location = link;
+
+    $(this).find('a').click()
   });
 
 

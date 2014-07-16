@@ -23,8 +23,8 @@ layout: layout_template_no_nav
 
         <p class="alert">Verify this feature by checking and editing the details below.</p>
 
-        <form>
-            <table class="feature-details js-row-link">
+        <form class="form">
+            <table class="feature-details">
               <thead>
                 <tr class="visuallyhidden">
                   <th class="feature-property">Property</th>
@@ -35,18 +35,36 @@ layout: layout_template_no_nav
               <tbody>
                 <tr>
                   <td class="feature-property">Type</td>
-                  <td class="feature-value"><em>Unknown</em></td>
-                  <td class="feature-edit"><a href="#">Edit</a></td>
+                  <td class="feature-value">
+                      <%= partial "partial-feature-types" %>
+                  </td>
+                  <td class="feature-edit"></td>
                 </tr>
                 <tr>
                   <td class="feature-property">Area</td>
                   <td class="feature-value">0.2ha</td>
-                  <td class="feature-edit"><a href="#">Edit</a></td>
+                  <td class="feature-edit"><span class="js-toggle" data-toggle=".area-new">Edit</span></td>
+                </tr>
+                <tr class="js-hidden area-new">
+                  <td class="feature-property">
+                    <label for="">New area</label>
+                  </td>
+                  <td class="feature-value" colspan="2">
+                    <input type="text" name="area-new-value" id="area-new-value" class="form-control form-control-1-4"> ha
+                  </td>
                 </tr>
               </tbody>
             </table>
 
-
+            <div class="js-hidden area-new panel-indent">
+                <p>Why has the area of this feature changed?</p>
+                <label for="notes-details" class="visuallyhidden">Enter details</label>
+                <textarea class="form-control full-width" id="notes-details"></textarea>
+                <div>
+                  <a href="#attachment" class="js-toggle font-xsmall">Attach file</a>
+                  <input type="file" name="attachment" id="attachment" class="js-hidden">
+                </div>
+            </div>
 
           <div class="form-group">
             <a href="05.4-delete-feature" class="delete-link">Delete this feature</a>
