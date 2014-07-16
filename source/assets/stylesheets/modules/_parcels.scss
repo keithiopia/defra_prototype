@@ -2,7 +2,7 @@ table.parcels {
   margin: $gutter 0;
 
   .parcel-name {
-    width: 40%;
+    width: 45%;
   }
   td.parcel-id {
     width: 25%;
@@ -10,7 +10,7 @@ table.parcels {
     color: $secondary-text-colour;
   }
   .parcel-area {
-    width: 20%;
+    width: 15%;
   }
 
   .parcel-status {

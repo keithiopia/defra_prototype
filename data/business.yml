@@ -1,4 +1,6 @@
 name: Bodmin Agr Ltd.
+efa:  3.2
+land_use: 82
 
 parcels:
   - name:   Barley field

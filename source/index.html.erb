@@ -20,6 +20,27 @@ layout: layout_template_no_nav
             <h2 class="subtitle"><%= data.business.name %></h2>
             <h1>Land parcels</h1>
           </hgroup>
+
+          <dl class="metadata">
+            <dt class="visuallyhidden">Land use defined</dt>
+            <dd>Land use defined: <a href="#land-use-details" class="js-toggle" data-hide="#efa-details"><%= data.business.land_use %>%</a></dd>
+
+            <dt class="visuallyhidden">EFA coverage</dt>
+            <dd>EFA: <a href="#efa-details" class="js-toggle" data-hide="#land-use-details"><%= data.business.efa %>%</a></dd>
+          </dl>
+
+          <p id="land-use-details" class="js-hidden panel-indent font-xsmall">
+              You need to have defined at least 80% of your total area before you can qualify for a greening payment.
+              <br>
+              <a href="#land-use-details" class="js-toggle" data-hide="#efa-details">Close</a>
+          </p>
+
+          <p id="efa-details" class="js-hidden panel-indent font-xsmall">
+              At least 5% of your land must be designated as ecological focus areas (EFAs) before you can qualify for a greening payment.
+              <br>
+              <a href="#efa-details" class="js-toggle" data-hide="#land-use-details">Close</a>
+          </p>
+
         </header>
 
 
