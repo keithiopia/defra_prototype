@@ -3,9 +3,23 @@ efa:  3.2
 land_use: 82
 
 parcels:
-  - name:   Barley field
-    id:     SJ8063 5971
-    area:   11.09
+  - name:
+    checked:    false
+    id:         SJ8063 3931
+    area:       3.05
+    use:
+      - type:   Barley
+        cover:  Arable
+        area:   1.00
+
+      - type:   Oak
+        cover:  Arable
+        area:   1.00
+
+  - name:       Barley field
+    checked:    true
+    id:         SJ8063 5971
+    area:       11.09
     use:
       - type:   Barley
         cover:  Arable
@@ -16,18 +30,7 @@ parcels:
         area:   1.00
 
   - name:
-    id:     SJ8063 3931
-    area:   3.05
-    use:
-      - type:   Barley
-        cover:  Arable
-        area:   1.00
-
-      - type:   Oak
-        cover:  Arable
-        area:   1.00
-
-  - name:
+    checked:  false
     id:     SJ8063 3931
     area:   11.09
 

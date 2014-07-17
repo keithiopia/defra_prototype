@@ -57,8 +57,9 @@ layout: layout_template_no_nav
       -->
 
         <p class="alert">
-          Verify all your land parcels before applying for any schemes.
+          Check all your land parcels before applying for any schemes.
         <p>
+
 
         <table class="parcels js-row-link">
           <thead>
@@ -66,13 +67,15 @@ layout: layout_template_no_nav
               <th class="parcel-name">Parcel</th>
               <th class="parcel-id">ID</th>
               <th class="parcel-area">Area</th>
-              <th class="parcel-status">Verified</th>
+              <th class="parcel-status">Checked</th>
             </tr>
           </thead>
           <tbody>
 
             <% data.business.parcels.each do |f| %>
-            <tr>
+            <% statusClass = (f.checked ? "checked" : "not-checked") %>
+            <% statusName = (f.checked ? "Yes" : "No") %>
+            <tr class="<%= statusClass %>">
               <td class="parcel-name">
                 <a href="02-parcel-details">
                   <% if f.name %>
@@ -84,7 +87,7 @@ layout: layout_template_no_nav
               </td>
               <td class="parcel-id"><%= f.id %></td>
               <td class="parcel-area"><%= f.area %>ha</td>
-              <td class="parcel-status not-updated">No</td>
+              <td class="parcel-status"><%= statusName %></td>
             </tr>
             <% end %>
 
