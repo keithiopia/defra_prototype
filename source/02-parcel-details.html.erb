@@ -23,7 +23,6 @@ layout: layout_template_no_nav
           <dl class="metadata">
             <dt class="visuallyhidden">Parcel ID</dt>
             <dd>Parcel ID: <%= parcel.id %></dd>
-            <dd>Unverified</dd>
           </dl>
         </header>
 
@@ -67,7 +66,7 @@ layout: layout_template_no_nav
               <td class="edit"><a href="05-buildings-and-features">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key indented">Unverified</td>
+              <td class="detail-key indented">Unknown</td>
               <td class="details-area"><%= parcel.area %>ha</td>
               <td class="edit"></td>
             </tr>
@@ -76,7 +75,7 @@ layout: layout_template_no_nav
 
         <form>
           <div class="form-group">
-            <a href="03.1-organic" class="button">Verify this land parcel</a>
+            <a href="03.1-organic" class="button">Check this land parcel</a>
           </div>
         </form>
 
