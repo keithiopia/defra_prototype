@@ -17,57 +17,54 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %></h2>
-            <h1><%= parcel.name %></h1>
+            <h1 class="editable" contenteditable><%= parcel.name %></h1>
+            <!--<a class="edit-name" href="03.1-organic">Edit <span class="visuallyhidden">name</span></a>-->
           </hgroup>
 
           <dl class="metadata">
+            <dt class="visuallyhidden">Area</dt>
+            <dd>Area: <%= parcel.area %>ha</dd>
             <dt class="visuallyhidden">Parcel ID</dt>
-            <dd>Parcel ID: <%= parcel.id %></dd>
+            <dd>ID: <%= parcel.id %></dd>
+            <dd>Not organic</dd>
           </dl>
+          <a class="edit-organic-status" href="03.1-organic">Edit <span class="visuallyhidden">organic status</span></a>
         </header>
+
+        <p class="alert">Reduce your unknown land use to below 20%</p>
 
         <table class="parcel-details js-row-link">
           <thead>
-            <tr class="visuallyhidden">
-              <th class="detail-key">Key</th>
+            <tr>
+              <th class="details-land-use">Land use</th>
               <th class="details-area">Area</th>
-              <th class="detail-status">Edit</th>
+              <th class="detail-status"></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="detail-key">Certified organic</td>
-              <td class="details-area">No</td>
-              <td class="edit"><a href="03.1-organic">Edit</a></td>
-            </tr>
-            <tr class="detail-total">
-              <td class="detail-key">Total area</td>
-              <td class="details-area"><%= parcel.area %>ha</td>
-              <td class="edit"></td>
-            </tr>
-            <tr>
-              <td class="detail-key indented">Crops</td>
+              <td class="details-land-use">Crops</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="03-land-use">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key indented">Buffer strips</td>
+              <td class="details-land-use">Buffer strips</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="03.2-buffer-strip">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key indented">Hedges and trees</td>
+              <td class="details-land-use">Hedges and trees</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="04-hedges">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key indented">Buildings and structures</td>
+              <td class="details-land-use">Buildings and structures</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="05-buildings-and-features">Edit</a></td>
             </tr>
             <tr>
-              <td class="detail-key indented">Unknown</td>
-              <td class="details-area"><%= parcel.area %>ha</td>
+              <td class="details-land-use">Unknown</td>
+              <td class="details-area"><%= parcel.area %>ha <span class="percentage">100%</span></td>
               <td class="edit"></td>
             </tr>
           </tbody>
