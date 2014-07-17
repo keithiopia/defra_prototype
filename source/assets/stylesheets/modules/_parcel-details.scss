@@ -14,8 +14,8 @@
 
   &:after{
     content: "Edit";
-    float: right;
     text-decoration: underline;
+    float: right;
     padding-top: 10px;
     @include core-16;
     color: $link-active-colour;
@@ -24,7 +24,6 @@
 
 .editable:hover{
   cursor: pointer;
-  text-decoration: underline;
 }
 
 table.parcel-details{

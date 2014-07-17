@@ -5,7 +5,7 @@ land_use: 82
 parcels:
   - name:       Fallow field
     checked:    true
-    id:         SJ8063 3931
+    id:         SJ8063_3931
     area:       3.05
     use:
       - type:   Barley
@@ -18,7 +18,7 @@ parcels:
 
   - name:       Barley field
     checked:    false
-    id:         SJ8063 5971
+    id:         SJ8063_5971
     area:       11.09
     use:
       - type:   Barley
@@ -31,55 +31,55 @@ parcels:
 
   - name:
     checked:  false
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3932
+    area:   2.43
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   0.89
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   14.22
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   16.32
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   12.19
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   0.56
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   2.34
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   3.31
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   1.76
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   8.45
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   5.72
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   2.54
 
   - name:
-    id:     SJ8063 3931
-    area:   11.09
+    id:     SJ8063_3931
+    area:   2.17
 
 

@@ -1,13 +1,10 @@
-/*
+
 .js-enabled .js-row-link tbody tr{
   a{
   }
   &:hover{
     cursor: pointer;
-    text-decoration: underline;
-    a{
-      display: inline;
-    }
+    //text-decoration: underline;
+    background: $highlight-colour;
   }
 }
-*/

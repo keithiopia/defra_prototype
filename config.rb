@@ -28,6 +28,14 @@
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+# Assumes the file source/about/template.html.erb exists
+
+
+data.business.parcels.each do |parcel|
+  proxy "/parcel/#{parcel[:id]}.html", "/02-parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
+end
+
+
 ###
 # Helpers
 ###

@@ -3,7 +3,8 @@ title: Rural payments prototype
 layout: layout_template_no_nav
 ---
 
-<% parcel = data.business.parcels[0] %>
+<% #parcel = data.business.parcels[0] %>
+<% parcel = locals[:parcel] %>
 
 <div class="inner-block">
 
@@ -43,7 +44,7 @@ layout: layout_template_no_nav
           </thead>
           <tbody>
             <tr>
-              <td class="details-land-use">Crops</td>
+              <td class="details-land-use">Crops and grassland</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="03-land-use">Edit</a></td>
             </tr>
@@ -53,7 +54,7 @@ layout: layout_template_no_nav
               <td class="edit"><a href="03.2-buffer-strip">Edit</a></td>
             </tr>
             <tr>
-              <td class="details-land-use">Hedges and trees</td>
+              <td class="details-land-use">Hedges</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="04-hedges">Edit</a></td>
             </tr>
@@ -61,6 +62,11 @@ layout: layout_template_no_nav
               <td class="details-land-use">Buildings and structures</td>
               <td class="details-area">0.00ha</td>
               <td class="edit"><a href="05-buildings-and-features">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="details-land-use">Other features</td>
+              <td class="details-area">0.00ha</td>
+              <td class="edit"><a href="06-other-features">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Unknown</td>

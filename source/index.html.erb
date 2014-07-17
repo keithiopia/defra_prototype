@@ -43,19 +43,6 @@ layout: layout_template_no_nav
 
         </header>
 
-
-<!--
-        <div class="coverage-chart">
-          <div class="area total-area">
-            <div class="area declared-area">
-              <div class="area efa-area">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      -->
-
         <p class="alert">
           Check all your land parcels before applying for any schemes.
         <p>
@@ -77,7 +64,7 @@ layout: layout_template_no_nav
             <% statusName = (f.checked ? "Yes" : "No") %>
             <tr class="<%= statusClass %>">
               <td class="parcel-name">
-                <a href="02-parcel-details">
+                <a href="/parcel/<%= f.id %>">
                   <% if f.name %>
                     <%= f.name %>
                   <% else %>
