@@ -6,7 +6,7 @@ parcels:
   - name:       Fallow field
     checked:    true
     id:         SJ8063_3931
-    area:       3.05
+    area:       11.09
     use:
       - type:   Barley
         cover:  Arable
@@ -19,7 +19,20 @@ parcels:
   - name:       Barley field
     checked:    false
     id:         SJ8063_5971
-    area:       11.09
+    area:       3.05
+    use:
+      - type:   Barley
+        cover:  Arable
+        area:   1.00
+
+      - type:   Oak
+        cover:  Arable
+        area:   1.00
+
+  - name:       Temp
+    checked:    false
+    id:         SJ8063_4541
+    area:       0.49
     use:
       - type:   Barley
         cover:  Arable
@@ -30,56 +43,48 @@ parcels:
         area:   1.00
 
   - name:
-    checked:  false
-    id:     SJ8063_3932
-    area:   2.43
+    id:     SJ8063_3254
+    area:   0.72
 
   - name:
-    id:     SJ8063_3931
-    area:   0.89
+    id:     SJ8063_4248
+    area:   0.16
 
   - name:
-    id:     SJ8063_3931
-    area:   14.22
+    id:     SJ8063_1039
+    area:   10.82
 
   - name:
-    id:     SJ8063_3931
-    area:   16.32
+    id:     SJ8063_4485
+    area:   4.79
 
   - name:
-    id:     SJ8063_3931
-    area:   12.19
+    id:     SJ8063_4461
+    area:   0.49
 
   - name:
-    id:     SJ8063_3931
-    area:   0.56
+    id:     SJ8063_4369
+    area:   0.1
 
   - name:
-    id:     SJ8063_3931
-    area:   2.34
+    id:     SJ8063_4774
+    area:   0.12
 
   - name:
-    id:     SJ8063_3931
-    area:   3.31
+    id:     SJ8063_4066
+    area:   0.32
 
   - name:
-    id:     SJ8063_3931
-    area:   1.76
+    id:     SJ8063_7981
+    area:   7.26
 
   - name:
-    id:     SJ8063_3931
-    area:   8.45
+    id:     SJ8063_1674
+    area:   7.18
 
   - name:
-    id:     SJ8063_3931
-    area:   5.72
+    id:     SJ8063_3758
+    area:   0.75
 
-  - name:
-    id:     SJ8063_3931
-    area:   2.54
-
-  - name:
-    id:     SJ8063_3931
-    area:   2.17
 
 

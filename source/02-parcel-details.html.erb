@@ -3,8 +3,9 @@ title: Rural payments prototype
 layout: layout_template_no_nav
 ---
 
-<% #parcel = data.business.parcels[0] %>
 <% parcel = locals[:parcel] %>
+
+<% name = (parcel.name ? parcel.name : "Untitled") %>
 
 <div class="inner-block">
 
@@ -18,8 +19,9 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %></h2>
-            <h1 class="editable" contenteditable><%= parcel.name %></h1>
-            <!--<a class="edit-name" href="03.1-organic">Edit <span class="visuallyhidden">name</span></a>-->
+            <h1 class="editable" contenteditable><%= name %></h1>
+
+
           </hgroup>
 
           <dl class="metadata">

@@ -65,11 +65,7 @@ layout: layout_template_no_nav
             <tr class="<%= statusClass %>">
               <td class="parcel-name">
                 <a href="/parcel/<%= f.id %>">
-                  <% if f.name %>
-                    <%= f.name %>
-                  <% else %>
-                    Untitled
-                  <% end %>
+                  <%= (f.name ? f.name : "Untitled") %>
                 </a>
               </td>
               <td class="parcel-id"><%= f.id %></td>
