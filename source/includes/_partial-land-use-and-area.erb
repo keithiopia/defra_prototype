@@ -1,0 +1,22 @@
+<%
+  # Hide all but the first row by default
+  hideIt = (locals[:num] > 1 ? " js-hidden" : "")
+%>
+
+<tr class="crop-<%= locals[:num] %><%= hideIt %>">
+  <td class="land-use-name">
+    <label for="land-use" class="visuallyhidden">Select the land use</label>
+    <%= partial "partial-land-use-list" %>
+  </td>
+  <td class="land-use-area">
+    <label for="feature-area" class="visuallyhidden">Total area</label>
+    <input type="text" class="form-control form-control-3-4 area-field"> &nbsp;ha
+  </td>
+</tr>
+<tr class="crop-<%= locals[:num] %><%= hideIt %>" id="crop-<%= locals[:num] %>-link">
+  <td>
+    <span class="js-toggle link-style" data-show=".crop-<%= locals[:num] + 1 %>" data-hide="#crop-<%= locals[:num] %>-link">Add another crop</span>
+  </td>
+  <td class="running-total">
+  </td>
+</tr>

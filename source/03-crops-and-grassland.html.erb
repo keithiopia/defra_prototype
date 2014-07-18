@@ -25,28 +25,23 @@ layout: layout_template_no_nav
           Describe any crops and grassland in the table below.
         </p>
 
-        <form class="form">
-          <table class="crop-table">
+        <form class="form" id="land-use-form">
+          <table class="land-use-table">
             <thead>
               <tr>
-                <th class="feature-name">Crop</th>
-                <th class="feature-area">Area</th>
+                <th class="land-use-name">Crop</th>
+                <th class="land-use-area">Area</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="feature-name">
-                  <label for="land-use" class="visuallyhidden">Select the land use</label>
-                  <%= partial "partial-land-use-list" %>
-                </td>
-                <td class="feature-area">
-                  <label for="feature-area" class="visuallyhidden">Total area</label>
-                  <input type="text" class="form-control" id="feature-area"> &nbsp;ha
-                </td>
-              </tr>
+
+              <%= partial "partial-land-use-and-area", :locals => { :num=> 1 }%>
+              <%= partial "partial-land-use-and-area", :locals => { :num=> 2 }%>
+              <%= partial "partial-land-use-and-area", :locals => { :num=> 3 }%>
+              <%= partial "partial-land-use-and-area", :locals => { :num=> 4 }%>
+
             </tbody>
           </table>
-          <p><a href="">Add another crop</a></p>
 
           <div class="form-group">
             <a href="buffer-strips" class="button">Save and continue</a>

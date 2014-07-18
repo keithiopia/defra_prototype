@@ -8,8 +8,8 @@ $(document).ready(function(){
     var ref = $(this).find('a').attr('href');
   });
 
-  // Convert land-use list into an auto-suggest box
-  $("#land-use-list").chosen();
+  // Convert land-use lists into an auto-suggest box
+  $(".land-use-list").chosen();
 
   // Initialise toggler
   GOVUK.toggle.init();
@@ -25,6 +25,19 @@ $(document).ready(function(){
   $('.js-row-link tr').click(function(){
     var link = $(this).find('a').attr('href');
     window.location = link;
+  });
+
+  // Running total of areas in a land use table
+  var $table = $('.land-use-table'),
+  $summands = $table.find('.area-field'),
+  $sumDisplay = $('.running-total');
+  $table.delegate('.area-field', 'change', function (){
+        var sum = 0;
+        $summands.each(function (){
+            var value = Number($(this).val());
+            if (!isNaN(value)) sum += value;
+        });
+        $sumDisplay.text(sum+" ha");
   });
 
 });
