@@ -24,7 +24,10 @@ table.parcels {
       text-indent: -9999px;
     }
     tr.checked{
+
       .parcel-status{
+      //background: $grass-green-25;
+      //outline: 1px solid $green;
         &:after{
           content: " ";
           position: absolute;

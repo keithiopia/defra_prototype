@@ -1,5 +1,5 @@
 ---
-title: Welcome to Middleman
+title: Rural payments prototype
 layout: layout_template_no_nav
 ---
 
@@ -7,21 +7,19 @@ layout: layout_template_no_nav
 
 <div class="inner-block">
 
-  <div class="back-link">
-    <a href="03-land-use">Back</a>
-  </div>
+  <%= partial "partial-breadcrumbs", :locals => { :parcel => parcel} %>
 
   <div class="group">
     <div class="words">
       <div class="inner-block">
         <header class="page-header">
           <hgroup>
-            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>Is this land certified as organic?</h1>
+
+            <h1>Is this land parcel certified as organic?</h1>
           </hgroup>
         </header>
 
-        <p>Answer yes if the land is currently certified or will be certified by January 2015.</p>
+        <p>Answer yes if the land parcel is currently certified or will be certified by January 2015.</p>
 
         <form class="form">
           <div class="form-group inline">

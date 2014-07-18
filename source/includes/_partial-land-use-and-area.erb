@@ -1,7 +1,10 @@
 
-<% for i in 1..10 do
+<% for i in 1..6 do
 
+# Stick 6 rows in the page, but only show the first one initially
 hideIt = (i == 1 ? "" : " js-hidden")
+
+# Only give a running total from row 2 onwards
 showTotal = (i == 1 ? "" : "running-total")
 
 %>

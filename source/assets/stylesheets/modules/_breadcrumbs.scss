@@ -1,0 +1,31 @@
+// Breadcrumbs
+
+#breadcrumb {
+  margin: 0;
+
+  ol {
+    margin: 0;
+
+    li {
+      //@include core-16;
+      background-image: url('/assets/images/separator.png');
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+      float: left;
+      list-style: none;
+
+      margin-right: 10px;
+      padding-right: 15px;
+
+      @include device-pixel-ratio() {
+        background-image: url('/assets/images/separator-2x.png');
+        background-size: 6px 11px;
+      }
+
+      &:last-child {
+        background-image: none;
+        margin-right: 0
+      }
+    }
+  }
+}

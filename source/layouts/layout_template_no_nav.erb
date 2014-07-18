@@ -8,6 +8,18 @@
 
   <% content_for :body_classes do %><%= page_classes %> <%=  current_page.data.body_classes %> <% end %>
 
+  <% content_for :header_class do %> class="with-proposition"<% end %>
+
+  <% content_for :proposition_header do %>
+    <div class="header-proposition">
+      <div class="content">
+        <nav id="proposition-menu">
+          <a href="/" id="proposition-name">Apply for Rural Payments</a>
+        </nav>
+      </div>
+    </div>
+  <% end %>
+
   <% content_for :after_header do %>
     <div id="global-header-bar">
       <div class="inner-block">

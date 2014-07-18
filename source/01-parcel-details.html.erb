@@ -7,8 +7,10 @@ layout: layout_template_no_nav
 
 <div class="inner-block">
 
-  <div class="back-link">
-    <a href="/">Back</a>
+  <div id="breadcrumb">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/"><%= data.business.name %></a></li>
+    </ol>
   </div>
 
   <div class="group">
@@ -16,10 +18,7 @@ layout: layout_template_no_nav
       <div class="inner-block">
         <header class="page-header">
           <hgroup>
-            <h2 class="subtitle"><%= data.business.name %></h2>
             <h1 class="editable" contenteditable><%= parcel.name ? parcel.name : "Untitled" %></h1>
-
-
           </hgroup>
 
           <dl class="metadata">
@@ -78,7 +77,7 @@ layout: layout_template_no_nav
 
         <form>
           <div class="form-group">
-            <a href="<%= parcel.id %>/organic-status" class="button">Check this land parcel</a>
+            <a href="<%= parcel.id %>/organic-status" class="button">Start checking this land parcel</a>
           </div>
         </form>
 
