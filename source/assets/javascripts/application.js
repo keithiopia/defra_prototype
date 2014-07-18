@@ -37,7 +37,7 @@ $(document).ready(function(){
             var value = Number($(this).val());
             if (!isNaN(value)) sum += value;
         });
-        $sumDisplay.text(sum+" ha");
+        $sumDisplay.text(sum.toFixed(2)+" ha");
   });
 
 });
