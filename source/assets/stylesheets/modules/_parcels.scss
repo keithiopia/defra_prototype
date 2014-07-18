@@ -1,3 +1,21 @@
+.check-parcels{
+  a{
+    color: $green;
+  }
+}
+
+.icon-tick{
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 5px;
+  height: 10px;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  border-color: $green;
+  -webkit-transform: rotate(45deg);
+}
+
 table.parcels {
   margin: $gutter 0;
 
@@ -26,8 +44,6 @@ table.parcels {
     tr.checked{
 
       .parcel-status{
-      //background: $grass-green-25;
-      //outline: 1px solid $green;
         &:after{
           content: " ";
           position: absolute;
