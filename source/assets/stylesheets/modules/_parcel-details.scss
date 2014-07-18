@@ -11,12 +11,13 @@
 }
 
 .editable{
-
+  display: inline-block;
   &:after{
     content: "Edit";
     text-decoration: underline;
     float: right;
-    padding-top: 10px;
+    padding-top: 16px;
+    padding-left: 10px;
     @include core-16;
     color: $link-active-colour;
   }

@@ -1,0 +1,16 @@
+table.crop-table{
+  margin-bottom: $gutter;
+  th, td{
+    border: 0;
+  }
+  td{
+    padding: 0 10px 0 0;
+  }
+
+  .feature-name{
+    width: 66%;
+  }
+  .feature-area{
+    width: 33%;
+  }
+}

@@ -1,0 +1,61 @@
+---
+title: Welcome to Middleman
+layout: layout_template_no_nav
+---
+
+<% parcel = locals[:parcel] %>
+
+<div class="inner-block">
+
+  <div class="back-link">
+    <a href="02-parcel-details">Back</a>
+  </div>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
+            <h1>Crops and grassland</h1>
+          </hgroup>
+        </header>
+
+        <p>
+          Describe any crops and grassland in the table below.
+        </p>
+
+        <form class="form">
+          <table class="crop-table">
+            <thead>
+              <tr>
+                <th class="feature-name">Crop</th>
+                <th class="feature-area">Area</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-name">
+                  <label for="land-use" class="visuallyhidden">Select the land use</label>
+                  <%= partial "partial-land-use-list" %>
+                </td>
+                <td class="feature-area">
+                  <label for="feature-area" class="visuallyhidden">Total area</label>
+                  <input type="text" class="form-control" id="feature-area"> &nbsp;ha
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p><a href="">Add another crop</a></p>
+
+          <div class="form-group">
+            <a href="buffer-strips" class="button">Save and continue</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <%= partial "partial-parcel-map" %>
+  </div>
+</div>
+

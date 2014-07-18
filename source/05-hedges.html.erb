@@ -3,12 +3,12 @@ title: Welcome to Middleman
 layout: layout_template_no_nav
 ---
 
-<% parcel = data.business.parcels[0] %>
+<% parcel = locals[:parcel] %>
 
 <div class="inner-block">
 
   <div class="back-link">
-    <a href="02-parcel-details">Back</a>
+    <a href="03.2-buffer-strip">Back</a>
   </div>
 
   <div class="group">
@@ -17,26 +17,15 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>What is this land parcel used for?</h1>
+            <h1>Hedges</h1>
           </hgroup>
         </header>
 
-        <p>
-          Search for types of land use in the box below.
-          You can select more than one type.
-        </p>
+        <p>Draw any hedges on the map by clicking their start and end points. Press Escape to cancel drawing.</p>
 
         <form>
           <div class="form-group">
-            <label for="land-use" class="visuallyhidden">Select the land use</label>
-
-
-            <%= partial "partial-land-use-list" %>
-
-          </div>
-
-          <div class="form-group">
-            <a href="03.1-organic" class="button">Next</a>
+            <a href="buildings-and-structures" class="button">Save and continue</a>
           </div>
         </form>
 

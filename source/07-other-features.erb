@@ -1,0 +1,36 @@
+---
+title: Welcome to Middleman
+layout: layout_template_no_nav
+---
+
+<% parcel = locals[:parcel] %>
+
+<div class="inner-block">
+
+  <div class="back-link">
+    <a href="04-trees">Back</a>
+  </div>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
+            <h1>Other features</h1>
+          </hgroup>
+        </header>
+
+        <form>
+
+          <div class="form-group">
+            <a href="../<%= parcel.id %>" class="button">Save and continue</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <%= partial "partial-parcel-map" %>
+  </div>
+</div>
+

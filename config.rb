@@ -25,14 +25,16 @@
 # end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
-
-# Assumes the file source/about/template.html.erb exists
-
+# Set up proxies for each of the parcel-specific pages
 
 data.business.parcels.each do |parcel|
-  proxy "/parcel/#{parcel[:id]}.html", "/02-parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}.html", "/01-parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/organic-status.html", "/02-organic-status.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/crops-and-grassland.html", "/03-crops-and-grassland.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/buffer-strips.html", "/04-buffer-strips.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/hedges.html", "/05-hedges.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/buildings-and-structures.html", "/06-buildings-and-structures.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/other-features.html", "/07-other-features.html", :locals => { :parcel => parcel }, :ignore => true
 end
 
 
@@ -42,11 +44,6 @@ end
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
-
-# Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
 
 # Methods defined in the helpers block are available in templates
 # helpers do

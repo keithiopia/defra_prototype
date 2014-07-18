@@ -29,7 +29,7 @@ parcels:
         cover:  Arable
         area:   1.00
 
-  - name:       Temp
+  - name:
     checked:    false
     id:         SJ8063_4541
     area:       0.49

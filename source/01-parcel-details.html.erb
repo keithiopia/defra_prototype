@@ -5,8 +5,6 @@ layout: layout_template_no_nav
 
 <% parcel = locals[:parcel] %>
 
-<% name = (parcel.name ? parcel.name : "Untitled") %>
-
 <div class="inner-block">
 
   <div class="back-link">
@@ -19,7 +17,7 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %></h2>
-            <h1 class="editable" contenteditable><%= name %></h1>
+            <h1 class="editable" contenteditable><%= parcel.name ? parcel.name : "Untitled" %></h1>
 
 
           </hgroup>
@@ -31,7 +29,7 @@ layout: layout_template_no_nav
             <dd>ID: <%= parcel.id %></dd>
             <dd>Not organic</dd>
           </dl>
-          <a class="edit-organic-status" href="03.1-organic">Edit <span class="visuallyhidden">organic status</span></a>
+          <a class="edit-organic-status" href="<%= parcel.id %>/organic-status">Edit <span class="visuallyhidden">organic status</span></a>
         </header>
 
         <p class="alert">Reduce your unknown land use to below 20%</p>
@@ -48,27 +46,27 @@ layout: layout_template_no_nav
             <tr>
               <td class="details-land-use">Crops and grassland</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"><a href="03-land-use">Edit</a></td>
+              <td class="edit"><a href="<%= parcel.id %>/crops-and-grassland">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Buffer strips</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"><a href="03.2-buffer-strip">Edit</a></td>
+              <td class="edit"><a href="<%= parcel.id %>/buffer-strips">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Hedges</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"><a href="04-hedges">Edit</a></td>
+              <td class="edit"><a href="<%= parcel.id %>/hedges">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Buildings and structures</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"><a href="05-buildings-and-features">Edit</a></td>
+              <td class="edit"><a href="<%= parcel.id %>/buildings-and-structures">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Other features</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"><a href="06-other-features">Edit</a></td>
+              <td class="edit"><a href="<%= parcel.id %>/other-features">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Unknown</td>
@@ -80,7 +78,7 @@ layout: layout_template_no_nav
 
         <form>
           <div class="form-group">
-            <a href="03.1-organic" class="button">Check this land parcel</a>
+            <a href="<%= parcel.id %>/organic-status" class="button">Check this land parcel</a>
           </div>
         </form>
 

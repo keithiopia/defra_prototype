@@ -3,7 +3,7 @@ title: Welcome to Middleman
 layout: layout_template_no_nav
 ---
 
-<% parcel = data.business.parcels[0] %>
+<% parcel = locals[:parcel] %>
 
 <div class="inner-block">
 
@@ -17,9 +17,11 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>Are there buffer strips on this land?</h1>
+            <h1>Buffer strips</h1>
           </hgroup>
         </header>
+
+        <p>Are there any buffer strips on this land?</p>
 
         <form>
           <div class="form-group inline">
@@ -38,8 +40,9 @@ layout: layout_template_no_nav
           <div class="panel-indent js-hidden" id="buffer-strip-details">
 
             <div class="form-group">
-              <label for="buffer-strip-width" class="form-label">What area is covered by buffer strips?</label>
+              <label for="buffer-strip-width" class="form-label">Total area:
               <input type="text" name="buffer-strip-area" id="buffer-strip-area" class="form-control form-control-1-4" value="0.00"> ha
+              </label>
             </div>
 
             <%= partial "partial-notes" %>
@@ -47,7 +50,7 @@ layout: layout_template_no_nav
           </div>
 
           <div class="form-group">
-            <a href="04-hedges" class="button">Next</a>
+            <a href="hedges" class="button">Save and continue</a>
           </div>
         </form>
 

@@ -64,7 +64,7 @@ layout: layout_template_no_nav
             <% statusName = (f.checked ? "Yes" : "No") %>
             <tr class="<%= statusClass %>">
               <td class="parcel-name">
-                <a href="/parcel/<%= f.id %>">
+                <a href="/<%= f.id %>">
                   <%= (f.name ? f.name : "Untitled") %>
                 </a>
               </td>

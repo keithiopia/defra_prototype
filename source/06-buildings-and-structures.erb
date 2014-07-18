@@ -3,7 +3,7 @@ title: Welcome to Middleman
 layout: layout_template_no_nav
 ---
 
-<% parcel = data.business.parcels[0] %>
+<% parcel = locals[:parcel] %>
 
 <div class="inner-block">
 
@@ -17,7 +17,7 @@ layout: layout_template_no_nav
         <header class="page-header">
           <hgroup>
             <h2 class="subtitle"><%= data.business.name %>: <%= parcel.name %></h2>
-            <h1>Buildings and features</h1>
+            <h1>Buildings and structures</h1>
           </hgroup>
         </header>
 
@@ -60,7 +60,7 @@ layout: layout_template_no_nav
 
 
           <div class="form-group">
-            <a href="05-buildings-and-features" class="button">Save</a>
+            <a href="other-features" class="button">Save and continue</a>
           </div>
         </form>
 
