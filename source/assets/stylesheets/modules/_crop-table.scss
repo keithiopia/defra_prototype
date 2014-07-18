@@ -15,8 +15,8 @@ table.land-use-table{
   }
   .use-controls td{
     padding: 5px 0;
-    &.running-total{
-      padding-left: 5px;
-    }
+  }
+  .total{
+    float: right;
   }
 }
