@@ -51,7 +51,7 @@ parcels:
     area:   0.16
 
   - name:
-    checked:    true
+    checked:    false
     id:         SJ8063_1039
     area:       10.82
 
