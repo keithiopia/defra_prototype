@@ -28,11 +28,10 @@ layout: layout_template_no_nav
             <dd>ID: <%= parcel.id %></dd>
             <dd>Not organic</dd>
           </dl>
+          <a class="edit-organic-status" href="<%= parcel.id %>/organic-status">Edit <span class="visuallyhidden">organic status</span></a>
         </header>
 
-        <!--<p class="alert">Reduce your unknown land use to below 20%</p>-->
-
-        <table class="parcel-details">
+        <table class="parcel-details js-row-link">
           <thead>
             <tr>
               <th class="details-land-use">Land use</th>
@@ -44,27 +43,27 @@ layout: layout_template_no_nav
             <tr>
               <td class="details-land-use">Crops and grassland</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="edit"><a href="<%= parcel.id %>/crops-and-grassland">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Buffer strips</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="edit"><a href="<%= parcel.id %>/buffer-strips">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Hedges</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="edit"><a href="<%= parcel.id %>/hedges">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Buildings and structures</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="edit"><a href="<%= parcel.id %>/buildings-and-structures">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Other features</td>
               <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="edit"><a href="<%= parcel.id %>/other-features">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Unknown</td>
@@ -73,12 +72,6 @@ layout: layout_template_no_nav
             </tr>
           </tbody>
         </table>
-
-        <form>
-          <div class="form-group">
-            <a href="<%= parcel.id %>/organic-status" class="button">Check this land parcel</a>
-          </div>
-        </form>
 
       </div>
     </div>
