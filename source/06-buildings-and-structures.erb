@@ -18,35 +18,31 @@ layout: layout_template_no_nav
           </hgroup>
         </header>
 
-        <p class="alert">There are <strong>2 unverified features</strong> on this land parcel. <br>Verify them before adding any new features.</p>
+        <p>Check the existing features on this land and add any missing ones.</p>
 
         <table class="parcel-features js-row-link">
           <thead>
-            <tr class="visuallyhidden">
-              <th class="feature-ref">Number</th>
+            <tr>
               <th class="feature-name">Feature</th>
-              <th class="feature-area">Value</th>
-              <th class="feature-edit">Edit</th>
+              <th class="feature-area">Area</th>
+              <th class="feature-status">Checked</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="feature-ref">1.</td>
-              <td class="feature-name">Unverified pond</td>
+            <tr class="not-checked">
+              <td class="feature-name"><a href="check-feature">Pond</a></td>
               <td class="feature-area">0.2ha</td>
-              <td class="feature-edit"><a href="verify-feature">Verify</a></td>
+              <td class="feature-status">No</td>
             </tr>
-            <tr>
-              <td class="feature-ref">2.</td>
-              <td class="feature-name">Unverified feature</td>
+            <tr class="not-checked">
+              <td class="feature-name"><a href="check-feature">Feature</a></td>
               <td class="feature-area">0.1ha</td>
-              <td class="feature-edit"><a href="verify-feature">Verify</a></td>
+              <td class="feature-status">No</td>
             </tr>
-            <tr>
-              <td class="feature-ref">3.</td>
-              <td class="feature-name">Building</td>
+            <tr class="not-checked">
+              <td class="feature-name"><a href="check-feature">Building</a></td>
               <td class="feature-area">0.3ha</td>
-              <td class="feature-edit"><a href="check-feature">Edit</a></td>
+              <td class="feature-status">No</td>
             </tr>
           </tbody>
         </table>

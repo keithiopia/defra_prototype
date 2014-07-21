@@ -1,21 +1,74 @@
-table.parcel-features{
-  margin-bottom: $gutter;
-  .feature-ref{
-    width: 5%;
-  }
-  .feature-name{
-  }
-  .feature-area{
-  }
-  .feature-edit{
-    width: 10%;
-    padding-right: 0;
-    text-align: right;
-  }
-}
 
 .delete-link{
   float: right;
   @include core-16;
   margin-top: $gutter-one-third;
+}
+
+table.parcel-features {
+  margin: $gutter 0;
+
+  .feature-name {
+    width: 45%;
+  }
+  td.parcel-id {
+    width: 25%;
+    @include core-14;
+    color: $secondary-text-colour;
+  }
+  .feature-area {
+    width: 15%;
+  }
+  .feature-status {
+    width: 1%;
+    padding-right: 0;
+  }
+
+  // Checked and unchecked icons
+  tbody{
+    .feature-status{
+      position: relative;
+      text-indent: -9999px;
+    }
+    tr.checked{
+
+      .feature-status{
+        &:after{
+          content: " ";
+          position: absolute;
+          right: 30px;
+          top: 10px;
+          width: 5px;
+          height: 10px;
+          border-right: 3px solid;
+          border-bottom: 3px solid;
+          border-color: $green;
+          -webkit-transform: rotate(45deg);
+        }
+      }
+    }
+    tr.not-checked{
+      .feature-status{
+        &:before,
+        &:after{
+          content: " ";
+          position: absolute;
+          right: 32px;
+          width: 10px;
+          height: 18px;
+          border-right: 3px solid;
+          border-color: $red;
+        }
+        &:after{
+          top: 7px;
+          -webkit-transform: rotate(45deg);
+        }
+        &:before{
+          top: 14px;
+          -webkit-transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
 }
