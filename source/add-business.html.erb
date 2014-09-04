@@ -1,0 +1,49 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <div class="group">
+    <div class="words-wide">
+      <div class="inner-block">
+
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.account.name %></h2>
+            <h1>Add a business to your account</h1>
+          </hgroup>
+
+        </header>
+
+
+       <p>Are you an owner of the business you want to add?</p>
+
+        <form class="form">
+          <div class="form-group inline">
+            <label for="owner-yes" class="block-label">
+              <input type="radio" name="hedges" id="owner-yes" value="yes" class="js-toggle" data-show="#next-owner" data-hide="#next-agent">
+              Yes
+            </label>
+            <label for="owner-no" class="block-label">
+              <input type="radio" name="hedges" id="owner-no" value="no" class="js-toggle" data-show="#next-agent" data-hide="#next-owner">
+              No
+            </label>
+          </div>
+
+          <div class="form-group" id="next-owner">
+            <a href="add-business-owner" class="button">Next</a>
+          </div>
+
+          <div class="form-group js-hidden" id="next-agent">
+            <a href="add-business-agent" class="button">Next</a>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

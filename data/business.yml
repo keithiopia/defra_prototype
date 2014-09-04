@@ -1,12 +1,13 @@
 name: Bodmin Agr Ltd.
 efa:  3.2
 land_use: 82
+area: 18.7
 
 parcels:
-  - name:       Fallow field
-    checked:    true
-    id:         SJ8063_3931
-    area:       11.09
+  - name:       Barley field
+    checked:    false
+    id:         SJ8063_5971
+    area:       3.05
     use:
       - type:   Barley
         cover:  Arable
@@ -16,10 +17,10 @@ parcels:
         cover:  Arable
         area:   1.00
 
-  - name:       Barley field
-    checked:    false
-    id:         SJ8063_5971
-    area:       3.05
+  - name:       Fallow field
+    checked:    true
+    id:         SJ8063_3931
+    area:       11.09
     use:
       - type:   Barley
         cover:  Arable

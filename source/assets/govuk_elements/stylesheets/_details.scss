@@ -8,9 +8,19 @@ details {
 details summary {
   display: inline-block;
   color: $govuk-blue;
+  text-decoration: underline;
   cursor: pointer;
   position: relative;
   margin-bottom: em(5);
+}
+
+details[open] summary{
+  color: $text-colour;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover{
+    color: $text-colour;
+  }
 }
 
 details summary:hover {

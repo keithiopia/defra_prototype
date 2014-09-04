@@ -1,0 +1,93 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <div id="breadcrumb">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/business"><%= data.business.name %></a></li>
+    </ol>
+  </div>
+
+  <div class="group">
+    <div class="words-wide">
+      <div class="inner-block">
+
+        <header class="page-header">
+          <hgroup>
+            <h1>Check business details for <br><%= data.business.name %></h1>
+          </hgroup>
+        </header>
+
+        <h2 class="heading-medium">Contact details</h2>
+
+        <div class="grid-wrapper">
+           <div class="grid grid-1-2">
+             <div class="inner-block">
+                <p>
+                  Bodmin Agr Ltd.<br>
+                  Monument Way <br>
+                  Bodmin <br>
+                  PL31 1NZ <br>
+                  United Kingdom
+                </p>
+             </div>
+           </div>
+           <div class="grid grid-1-2">
+             <div class="inner-block">
+                <p>
+                  <a href="">info@bodminagrltd.co.uk</a> <br>
+                  Landline: 0300 790 6802<br>
+                  Mobile: 0300 123 0798<br>
+                </p>
+             </div>
+           </div>
+         </div>
+
+        <p>This business also has land registered in Wales.</p>
+
+        <h2 class="heading-medium">Reference numbers</h2>
+
+        <p>
+          Single Business Identifier: 222223250 <br>
+          Firm Reference Number: 1100052819 <br>
+          VAT Registration Number: GB999 9999 73
+        </p>
+
+
+        <p class="heading-medium">Are the above details correct?</p>
+
+        <form class="form">
+          <div class="form-group inline">
+            <label for="correct-yes" class="block-label">
+              <input type="radio" name="hedges" id="correct-yes" value="yes" class="js-toggle">
+              Yes
+            </label>
+            <label for="correct-no" class="block-label">
+              <input type="radio" name="hedges" id="correct-no" value="no" class="js-toggle">
+              No
+            </label>
+          </div>
+
+          <div class="form-group">
+            <a href="business-details-check-people" class="button">Next</a>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+
+    <div class="map-column small-map">
+      <div class="map-wrapper">
+        <div class="map">
+        <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/business-1-checked.png") %>">
+      </div>
+    </div>
+
+  </div>
+</div>
+

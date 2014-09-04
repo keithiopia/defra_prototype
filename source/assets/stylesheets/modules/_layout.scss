@@ -7,6 +7,15 @@
   }
 }
 
+.words-wide {
+  width: $two-thirds;
+  float: left;
+
+  & > .inner-block {
+    margin: 0 $gutter 0 0;
+  }
+}
+
 .map-column {
   width: $half;
   float: left;
@@ -25,3 +34,20 @@
     }
   }
 }
+
+.map-column.small-map{
+  width: $one-third;
+  .map{
+    height: 300px;
+  }
+  .map-image{
+    margin-left: -20px;
+  }
+}
+
+
+.address{
+  width: $half;
+  float: left;
+}
+

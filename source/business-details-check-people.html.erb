@@ -1,0 +1,93 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <div id="breadcrumb">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/business"><%= data.business.name %></a></li>
+    </ol>
+  </div>
+
+  <div class="group">
+    <div class="words-wide">
+      <div class="inner-block">
+
+        <header class="page-header">
+          <hgroup>
+            <h1>Check business details for <br><%= data.business.name %></h1>
+          </hgroup>
+        </header>
+
+        <h2 class="heading-medium">People</h2>
+
+        <p>The following people are associated with this business:</p>
+
+        <details>
+          <summary>John Smith</summary>
+          <div class="panel-indent font-xsmall">
+            <ul>
+              <li>Business owner (51%)</li>
+              <li>Access: Full</li>
+              <li>Email address: <a href="#">jsmith@bodminagrltd.co.uk</a></li>
+              <li>Telephone: 04562 345762</li>
+              <li>Date of birth: 15 December 1977</li>
+              <li>National Insurance number: AA123458C</li>
+            </ul>
+            <p><a href="">Edit</a> or <a href="">remove</a> these details.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Jane Smith</summary>
+          <div class="panel-indent font-xsmall">
+            <ul>
+              <li>Business owner (49%)</li>
+              <li>Access: Full</li>
+              <li>Email address: <a href="#">jsmith2@bodminagrltd.co.uk</a></li>
+              <li>Telephone: 04562 345762</li>
+              <li>Date of birth: 15 December 1976</li>
+              <li>National Insurance number: AA123448C</li>
+            </ul>
+            <p><a href="">Edit</a> or <a href="">remove</a> these details.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Harry Carpenter</summary>
+          <div class="panel-indent font-xsmall">
+            <ul>
+              <li>Agent</li>
+              <li>Access: Full</li>
+              <li>Email address: <a href="#">hcarpenter@landagents.com</a></li>
+              <li>Telephone: 04562 345762</li>
+            </ul>
+            <p><a href="">Edit</a> or <a href="">remove</a> these details.</p>
+          </div>
+        </details>
+
+        <p><a href="">Add a person</a></p>
+
+        <form class="form">
+          <div class="form-group">
+            <a href="business-details.html" class="button">Save and return</a>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+
+    <div class="map-column small-map">
+      <div class="map-wrapper">
+        <div class="map">
+        <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/business-1-checked.png") %>">
+      </div>
+    </div>
+
+  </div>
+</div>
+
