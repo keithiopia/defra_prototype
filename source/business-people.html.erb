@@ -24,59 +24,99 @@ layout: layout_template_no_nav
 
         <p>Before you can apply for schemes you need to tell us about:</p>
 
-        <ul>
-          <li>business owners or people with legal responsibility for this business</li>
-          <li>employees you want to act on behalf of this business</li>
+        <ul class="list-bullet">
+          <li>people who own or are legally responsible for this business</li>
+          <li>employees you want to give access to this service</li>
           <li>agents working on behalf of this business</li>
         </ul>
 
+        <h2 class="heading-medium">People currently associated with this business</h2>
 
-        <p>The following people are associated with this business:</p>
+        <div class="people-list font-xsmall">
+          <details>
+            <summary>John Smith (you)<span class="role">Owner, 51%</span></summary>
+            <div class="panel-indent">
+              <ul>
+                <li>
+                  <a href="#">jsmith@bodminagrltd.co.uk</a>
+                </li>
+                <li>
+                  Telephone: 04562 345762
+                </li>
+                <li>
+                  Date of birth: 15 December 1977
+                </li>
+                <li>
+                  National Insurance number: AA123458C
+                </li>
+              </ul>
 
-        <details>
-          <summary>John Smith</summary>
-          <div class="panel-indent font-xsmall">
-            <ul>
-              <li>Business owner (51%)</li>
-              <li>Access: Full</li>
-              <li>Email address: <a href="#">jsmith@bodminagrltd.co.uk</a></li>
-              <li>Telephone: 04562 345762</li>
-              <li>Date of birth: 15 December 1977</li>
-              <li>National Insurance number: AA123458C</li>
-            </ul>
-            <p><a href="">Edit</a> or <a href="">remove</a> these details.</p>
-          </div>
-        </details>
+              <p>You have full access to the service</p>
 
-        <details>
-          <summary>Jane Smith</summary>
-          <div class="panel-indent font-xsmall">
-            <ul>
-              <li>Business owner (49%)</li>
-              <li>Access: Full</li>
-              <li>Email address: <a href="#">jsmith2@bodminagrltd.co.uk</a></li>
-              <li>Telephone: 04562 345762</li>
-              <li>Date of birth: 15 December 1976</li>
-              <li>National Insurance number: AA123448C</li>
-            </ul>
-            <p><a href="">Edit</a> or <a href="">remove</a> these details.</p>
-          </div>
-        </details>
+              <p><a href="">Change these details</a></p>
+            </div>
+          </details>
 
-        <details>
-          <summary>Harry Carpenter</summary>
-          <div class="panel-indent font-xsmall">
-            <ul>
-              <li>Agent</li>
-              <li>Access: Full</li>
-              <li>Email address: <a href="#">hcarpenter@landagents.com</a></li>
-              <li>Telephone: 04562 345762</li>
-            </ul>
-            <p><a href="">Edit</a> or <a href="">remove</a> these details.</p>
-          </div>
-        </details>
+          <details>
+            <summary>Jane Smith <span class="role">Owner, 49%</span></summary>
+            <div class="panel-indent">
 
-        <p><a href="">Add a person</a></p>
+              <ul>
+                <li>
+                  <a href="#">jsmith@bodminagrltd.co.uk</a>
+                </li>
+                <li>
+                  Telephone: 04562 345762
+                </li>
+                <li>
+                  Date of birth: 15 December 1977
+                </li>
+                <li>
+                  National Insurance number: AA123458C
+                </li>
+              </ul>
+
+              <p>This person has full access to the service</p>
+
+              <ul>
+                <li><a href="">Change these details</a></li>
+                <li><a href="">Remove this person</a></li>
+              </ul>
+
+            </div>
+          </details>
+
+          <details>
+            <summary>Harry Carpenter <span class="role">Agent</span></summary>
+            <div class="panel-indent">
+              <ul>
+                <li>
+                  <a href="#">hcarpenter@landagentsltd.co.uk</a>
+                </li>
+                <li>
+                  Telephone: 04562 345762
+                </li>
+              </ul>
+
+              <p>This person has full access to the service</p>
+
+              <ul>
+                <li><a href="">Change these details</a></li>
+                <li><a href="">Remove this person</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+<!--
+        <div class="form-group">
+          <a href="business-details-check-people" class="button">Add a person</a>
+        </div>
+-->
+
+        <p><a href="business-details-check-people" class="button">Add a person</a></p>
+
+        <p><a href="business">Back</a></p>
 
       </div>
     </div>

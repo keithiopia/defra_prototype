@@ -21,6 +21,8 @@ layout: layout_template_no_nav
           </hgroup>
         </header>
 
+        <p>Please check that the details below are correct.</p>
+
         <h2 class="heading-medium">Contact details</h2>
 
         <div class="grid-wrapper">
@@ -57,23 +59,28 @@ layout: layout_template_no_nav
         </p>
 
 
-        <p class="heading-medium">Are the above details correct?</p>
+        <h2 class="heading-medium">Are the above details correct?</h2>
 
         <form class="form">
           <div class="form-group inline">
             <label for="correct-yes" class="block-label">
-              <input type="radio" name="hedges" id="correct-yes" value="yes" class="js-toggle">
+              <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-people" data-hide="#next-change">
               Yes
             </label>
             <label for="correct-no" class="block-label">
-              <input type="radio" name="hedges" id="correct-no" value="no" class="js-toggle">
+              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-change" data-hide="#next-people">
               No
             </label>
           </div>
 
-          <div class="form-group">
-            <a href="business-details-check-people" class="button">Next</a>
+          <div class="form-group" id="next-change">
+            <a href="business-details-change" class="button">Next</a>
           </div>
+
+          <div class="form-group js-hidden" id="next-people">
+            <a href="business-details-people-check" class="button">Next</a>
+          </div>
+
         </form>
 
 

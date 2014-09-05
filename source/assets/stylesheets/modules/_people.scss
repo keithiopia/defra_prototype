@@ -1,0 +1,29 @@
+
+
+.people-list{
+  margin-bottom: $gutter;
+  padding-top: $gutter-half;
+  border-top: 1px solid $border-colour;
+  details{
+    padding-bottom: 8px;
+    border-bottom: 1px solid $border-colour;
+    summary {
+      display: block;
+      .role{
+        float: right;
+        width: 66.666%;
+        color: #000;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    // Tighter margins and padding
+    .panel-indent{
+      margin-top: $gutter-half;
+      margin-bottom: $gutter-half;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
