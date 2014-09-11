@@ -85,3 +85,17 @@
     }
   }
 }
+
+// Map markers
+
+.map-marker{
+  display: block;
+  background: url("/assets/images/map-marker-2.png");
+  background-size: 100%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 28px;
+  font-size: 14px;
+}

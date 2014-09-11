@@ -4,7 +4,7 @@ land_use: 82
 area: 18.7
 
 parcels:
-  - name:       Barley field
+  - name:       Top field
     checked:    false
     id:         SJ8063_5971
     area:       3.05
@@ -17,7 +17,7 @@ parcels:
         cover:  Arable
         area:   1.00
 
-  - name:       Fallow field
+  - name:       North paddock
     checked:    true
     id:         SJ8063_3931
     area:       11.09
@@ -30,7 +30,7 @@ parcels:
         cover:  Arable
         area:   1.00
 
-  - name:
+  - name:       East field
     checked:    false
     id:         SJ8063_4541
     area:       0.49
@@ -43,7 +43,7 @@ parcels:
         cover:  Arable
         area:   1.00
 
-  - name:
+  - name:   Fallow field
     id:     SJ8063_3254
     area:   0.72
 

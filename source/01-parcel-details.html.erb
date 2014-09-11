@@ -26,11 +26,14 @@ layout: layout_template_no_nav
             <dd>Area: <%= parcel.area %>ha</dd>
             <dt class="visuallyhidden">Parcel ID</dt>
             <dd>ID: <%= parcel.id %></dd>
-            <dd>Not organic</dd>
           </dl>
         </header>
 
         <!--<p class="alert">Reduce your unknown land use to below 20%</p>-->
+
+        <p>
+          Check that the details below are correct and add any missing information if you need to.
+        </p>
 
         <table class="parcel-details">
           <thead>
@@ -42,42 +45,45 @@ layout: layout_template_no_nav
           </thead>
           <tbody>
             <tr>
-              <td class="details-land-use">Crops and grassland</td>
-              <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="details-land-use">Wheat</td>
+              <td class="details-area">10.204ha</td>
+              <td class="edit"><a href="<%= parcel.id %>/crops-and-grassland">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Buffer strips</td>
-              <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="details-area">Unknown</td>
+              <td class="edit"><a href="<%= parcel.id %>/buffer-strips">Edit</a></td>
             </tr>
             <tr>
               <td class="details-land-use">Hedges</td>
-              <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
+              <td class="details-area">Unknown</td>
+              <td class="edit"><a href="<%= parcel.id %>/hedges">Edit</a></td>
             </tr>
             <tr>
-              <td class="details-land-use">Buildings and structures</td>
-              <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
-            </tr>
-            <tr>
-              <td class="details-land-use">Other features</td>
-              <td class="details-area">0.00ha</td>
-              <td class="edit"></td>
-            </tr>
-            <tr>
-              <td class="details-land-use">Unknown</td>
-              <td class="details-area"><%= parcel.area %>ha <span class="percentage">100%</span></td>
-              <td class="edit"></td>
+              <td class="details-land-use">Organic status</td>
+              <td class="details-area">Not certified</td>
+              <td class="edit"><a href="<%= parcel.id %>/crops-and-grassland">Edit</a></td>
             </tr>
           </tbody>
         </table>
 
+        <p class="font-xsmall"><a href="<%= parcel.id %>/add-feature">Add a feature</a></p>
+
+        <br>
+
         <form>
+          <!--
           <div class="form-group">
-            <a href="<%= parcel.id %>/organic-status" class="button">Check this land parcel</a>
+            <label for="correct-yes" class="block-label">
+              <input type="checkbox" name="correct" id="correct-yes" value="yes">
+              This information is correct
+            </label>
           </div>
+        -->
+          <div class="form-group">
+            <a href="<%= parcel.id %>/organic-status" class="button">Save and return</a>
+          </div>
+
         </form>
 
       </div>

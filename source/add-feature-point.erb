@@ -1,0 +1,92 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<% parcel = locals[:parcel] %>
+
+<div class="inner-block">
+
+  <%= partial "partial-breadcrumbs", :locals => { :parcel => parcel} %>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h1>Add a pond</h1>
+          </hgroup>
+        </header>
+
+        <p>
+          Mark the location and area of each pond by clicking on the map then adding details below.
+          Zoom in if it helps.
+        </p>
+
+        <form>
+
+          <table class="feature-table">
+            <thead>
+              <tr>
+                <th class="feature-marker"><span class="visuallyhidden">Feature</span></th>
+                <th><span class="visuallyhidden">Area</span></th>
+                <th><span class="visuallyhidden">Delete feature</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-marker">
+                  <span class="map-marker">1</span>
+                </td>
+                <td class="feature-area">
+                  <label for="feature-area-1" class="visuallyhidden">Area</label>
+                  <input type="text" class="form-control" id="feature-area-1"> sq m
+                </td>
+                <td class="feature-delete">
+                  <a href="">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="feature-marker">
+                  <span class="map-marker">2</span>
+                </td>
+                <td class="feature-area">
+                  <label for="feature-area-1" class="visuallyhidden">Area</label>
+                  <input type="text" class="form-control" id="feature-area-1"> sq m
+                </td>
+                <td class="feature-delete">
+                  <a href="">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <details class="font-xsmall">
+            <summary>Attach a note or file</summary>
+            <div class="panel-indent">
+              <label for="notes-details" class="">You can add any extra information below if you want</label>
+              <textarea class="form-control full-width" id="notes-details"></textarea>
+              <div>
+                <a href="#attachment" class="js-toggle">Attach a file</a>
+                <input type="file" name="attachment" id="attachment" class="js-hidden">
+              </div>
+            </div>
+          </details>
+
+          <div class="form-group">
+            <a href="<%= parcel.id %>/organic-status" class="button">Save and return</a>
+          </div>
+
+          <p><a href="">Cancel</a></p>
+
+
+
+        </form>
+
+
+      </div>
+    </div>
+    <%= partial "partial-map-parcel" %>
+  </div>
+</div>
+

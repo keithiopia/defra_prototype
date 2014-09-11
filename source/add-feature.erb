@@ -1,0 +1,41 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<% parcel = locals[:parcel] %>
+
+<div class="inner-block">
+
+  <%= partial "partial-breadcrumbs", :locals => { :parcel => parcel} %>
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+        <header class="page-header">
+          <hgroup>
+            <h1>Add a feature</h1>
+          </hgroup>
+        </header>
+
+        <p>
+          What kind of feature do you want to add?
+        </p>
+
+        <form class="form" id="land-use-form">
+
+          <%= partial "partial-land-use-list" %>
+
+          <br><br>
+
+          <div class="form-group">
+            <a href="add-feature-point" class="button">Next</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <%= partial "partial-map-parcel" %>
+  </div>
+</div>
+
