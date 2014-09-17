@@ -1,24 +1,16 @@
 
 
-.business-associatesx{
-  @extend %contain-floats;
-  margin-top: 0.26316em;
-  margin-bottom: 1.05263em;
-  dd, dt{
-    float: left;
-  }
-  dt{
-    width: 50%;
-  }
-  dd{
-    width: 50%;
-    padding-bottom: $gutter;
-  }
-}
-
 .business-associates{
   dt{
     font-weight: bold;
     margin-top: $gutter;
+  }
+}
+
+.business-list{
+  border-top: 1px solid $border-colour;
+  li{
+    border-bottom: 1px solid $border-colour;
+    padding: 10px 0;
   }
 }
