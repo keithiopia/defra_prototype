@@ -11,70 +11,28 @@ layout: layout_template_no_nav
 
         <header class="page-header">
           <hgroup>
-            <h2 class="subtitle"><%= data.business.name %></h2>
-            <h1>Check land details</h1>
+            <h1>Rural payments</h1>
           </hgroup>
-
-<!--
-          <dl class="metadata">
-            <dt class="visuallyhidden">Land use defined</dt>
-            <dd>Land use defined: <a href="#land-use-details" class="js-toggle" data-hide="#efa-details"><%= data.business.land_use %>%</a></dd>
-
-            <dt class="visuallyhidden">EFA coverage</dt>
-            <dd>EFA: <a href="#efa-details" class="js-toggle" data-hide="#land-use-details"><%= data.business.efa %>%</a></dd>
-          </dl>
-
-          <p id="land-use-details" class="js-hidden panel-indent font-xsmall">
-              You need to have defined at least 80% of your total area before you can qualify for a greening payment.
-              <br><br>
-              <a href="#land-use-details" class="js-toggle" data-hide="#efa-details">Close</a>
-          </p>
-
-          <p id="efa-details" class="js-hidden panel-indent font-xsmall">
-              At least 5% of your land must be designated as ecological focus areas (EFAs) before you can qualify for a greening payment. <a href="">Find out more</a>.
-              <br><br>
-              <a href="#efa-details" class="js-toggle" data-hide="#land-use-details">Close</a>
-          </p>
-
-        -->
-
         </header>
 
-        <p>Check the parcels below to make sure they show the land as it will be on 12 May 2015 (this is the date that scheme payments are based on).</p>
+
+        <p>Apply for rural payments.</p>
+
+        <h2 class="heading-medium">Manage a business</h2>
+
+        <ul>
+          <li>
+            <a href="business">Bodmin Agr Ltd.</a>
+          </li>
+        </ul>
 
 
-        <table class="parcels js-row-link">
-          <thead>
-            <tr>
-              <th class="parcel-name">Name</th>
-              <th class="parcel-id">ID</th>
-              <th class="parcel-area">Area</th>
-              <th class="parcel-status">Checked</th>
-            </tr>
-          </thead>
-          <tbody>
+        <h2 class="heading-medium">Add a business</h2>
 
-            <% data.business.parcels.each do |f| %>
-            <% statusClass = (f.checked ? "checked" : "not-checked") %>
-            <% statusName = (f.checked ? "Yes" : "No") %>
-            <tr class="<%= statusClass %>">
-              <td class="parcel-name">
-                <a href="/<%= f.id %>">
-                  <%= (f.name ? f.name : "Untitled") %>
-                </a>
-              </td>
-              <td class="parcel-id"><%= f.id %></td>
-              <td class="parcel-area"><%= f.area %>ha</td>
-              <td class="parcel-status"><%= statusName %></td>
-            </tr>
-            <% end %>
-
-          </tbody>
-        </table>
+        <p><a href="">Add a business</a></p>
 
       </div>
     </div>
-    <%= partial "partial-map-business" %>
 
   </div>
 </div>

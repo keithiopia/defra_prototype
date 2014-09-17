@@ -1,0 +1,57 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <div class="group">
+    <div class="words">
+      <div class="inner-block">
+
+        <header class="page-header">
+          <hgroup>
+            <h2 class="subtitle"><%= data.business.name %></h2>
+            <h1>Check land details</h1>
+          </hgroup>
+        </header>
+
+        <p>Check the parcels below to make sure they show the land as it will be on 12 May 2015 (this is the date that scheme payments are based on).</p>
+
+
+        <table class="parcels js-row-link">
+          <thead>
+            <tr>
+              <th class="parcel-name">Name</th>
+              <th class="parcel-id">ID</th>
+              <th class="parcel-area">Area</th>
+              <th class="parcel-status">Checked</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <% data.business.parcels.each do |f| %>
+            <% statusClass = (f.checked ? "checked" : "not-checked") %>
+            <% statusName = (f.checked ? "Yes" : "No") %>
+            <tr class="<%= statusClass %>">
+              <td class="parcel-name">
+                <a href="/<%= f.id %>">
+                  <%= (f.name ? f.name : "Untitled") %>
+                </a>
+              </td>
+              <td class="parcel-id"><%= f.id %></td>
+              <td class="parcel-area"><%= f.area %>ha</td>
+              <td class="parcel-status"><%= statusName %></td>
+            </tr>
+            <% end %>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+    <%= partial "partial-map-business" %>
+
+  </div>
+</div>
+

@@ -11,80 +11,63 @@ layout: layout_template_no_nav
 
         <header class="page-header">
           <hgroup>
-            <h2 class="subtitle">Your account</h2>
-            <h1><%= data.account.name %></h1>
+            <h2><a href="business">Back</a></h2>
+            <h1>Your details</h1>
           </hgroup>
 
         </header>
 
+        <h2 class="heading-medium">Personal details</h2>
+
+        <p>
+          Name: <%= data.account.name %><br>
+          Date of birth: 15 December 1947<br>
+          National Insurance number: AA123458C
+        </p>
+
+
+        <p><a href="update-personal-details">Update these details</a></p>
+
+
         <h2 class="heading-medium">Contact details</h2>
 
-        <div class="grid-wrapper">
-           <div class="grid grid-1-2">
-             <div class="inner-block">
-                <p>
-                  Land Agents Ltd.<br>
-                  Broad Street <br>
-                  Birmingham <br>
-                  BR1 6TR <br>
-                  United Kingdom
-                </p>
-             </div>
-           </div>
-           <div class="grid grid-1-2">
-             <div class="inner-block">
-                <p>
-                  <a href="">hcarpenter@landagents.com</a> <br>
-                  Landline: 0300 790 6802<br>
-                  Mobile: 0300 123 0798<br>
-                </p>
-            </div>
-          </div>
-        </div>
+        <p>
+          Bodmin Agr Ltd.<br>
+          Monument Way <br>
+          Bodmin <br>
+          PL31 1NZ <br>
+          United Kingdom
+        </p>
 
-        <p><a href="">Edit these details</a></p>
+        <p>
+          Email: jsmith@bodminagrltd.co.uk<br>
+          Landline: 0300 790 6802<br>
+          Mobile: 0300 123 0798<br>
+        </p>
+
+        <p><a href="update-contact-details">Update these details</a></p>
 
         <h2 class="heading-medium">Reference numbers</h2>
 
         <p>
           Customer Reference Number: 222223250 <br>
-          Personal Idenitfier: 1100052819 <br>
+          Personal Identifier: 1100052819 <br>
         </p>
 
-        <details>
-          <summary>What are these?</summary>
-        </details>
 
-
-
-        <h2 class="heading-medium">Businesses</h2>
-
-        <p>These are the businesses you currently have access to:</p>
-
-        <ul>
-          <li><a href="#">Wilkswood Farm</a></li>
-          <li><a href="#">Oakleigh Farm</a></li>
-          <li><a href="#">Modbury Farm</a></li>
-          <li><a href="#">Brewery Farm</a></li>
-          <li><a href="#">The Pamphill Dairy Farm</a></li>
-          <li><a href="#">Maydownfarm Ltd</a></li>
-          <li><a href="#">Iwerne Springs Farm</a></li>
-          <li><a href="#">Bride Valley Farm</a></li>
-          <li><a href="#">Allenbrook Restocking Trout Farm</a></li>
-          <li><a href="#">Washingpool Farm</a></li>
-          <li><a href="#">Gold Hill Organic Farm</a></li>
-          <li><a href="#">Hooke Springs Restocking Trout Farm</a></li>
-          <li><a href="#">Trigon Fisheries</a></li>
-          <li><a href="#">Sydling Estate</a></li>
-          <li><a href="#">C W Abbott & Son</a></li>
-          <li><a href="#">Longmeadow Organic Vegetables</a></li>
-        </ul>
-
-        <p><a href="add-business">Add another business</a></p>
-
-
+        <p><a href="">Back</a></p>
 
       </div>
+    </div>
+
+    <div class="map-column small-map">
+
+      <h2 class="heading-medium">Account actions</h2>
+      <ul>
+        <li><a href="">Sign out</a></li>
+        <li><a href="">Delete your account</a></li>
+      </ul>
+
     </div>
 
   </div>

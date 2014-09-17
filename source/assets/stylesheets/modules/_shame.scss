@@ -9,3 +9,21 @@
 details{
   margin-bottom: 15px;
 }
+
+
+#proposition-menu{
+  ul{
+    list-style-type: none;
+    margin: 0;
+  }
+  li{
+    float: left;
+  }
+  .account-link{
+    float: right;
+    margin-top: 4px;
+    a{
+      color: white;
+    }
+  }
+}
