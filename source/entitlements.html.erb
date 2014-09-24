@@ -1,0 +1,79 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <div id="breadcrumb">
+    <ol role="breadcrumbs" class="group">
+      <li><a href="/">Businesses</a></li>
+      <li><a href="/business"><%= data.business.name %></a></li>
+    </ol>
+  </div>
+
+  <div class="group">
+    <div class="words-wide">
+      <div class="inner-block">
+
+        <header class="page-header">
+          <hgroup>
+            <h1>Entitlements</h1>
+          </hgroup>
+        </header>
+
+        <p>
+          You can only use land for a Basic Payment Scheme application if you have the correct entitlements for it.
+          There are different entitlements for different types of land. <a href="">Find out more about entitlements</a>.
+
+        </p>
+
+
+        <h2 class="heading-medium">Entitlements for <%= data.business.name %></h3>
+
+        <table class="entitlements-list">
+          <tr>
+            <th>Land type</th>
+            <th>Area</th>
+            <th>Entitlements</th>
+          </tr>
+          <tr>
+            <td>Non-SDA land</td>
+            <td>10ha</td>
+            <td>14ha</td>
+          </tr>
+          <tr>
+            <td>SDA land</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Mooreland</td>
+            <td>4.3ha</td>
+            <td>5ha</td>
+          </tr>
+          <tr class="total">
+            <td>Total</td>
+            <td>14.3ha</td>
+            <td>19ha</td>
+          </tr>
+        </table>
+
+        <p>
+          You have 4.7ha more entitlements than arable land.
+          You will lose these entitlements if you don't use or transfer them before May 2015.
+        </p>
+
+        <ul class="list-bullet">
+          <li><a href="">Transfer entitlements to someone else</a></li>
+          <li><a href="entitlements-apply">Apply for more entitlements</a></li>
+        </ul>
+
+        <p><a href="">Back</a></p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+

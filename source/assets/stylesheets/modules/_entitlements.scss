@@ -1,0 +1,9 @@
+
+.entitlements-list{
+  margin: $gutter 0;
+  border-top: 1px solid $border-colour;
+
+  .total td{
+    border-top: 2px solid $black;
+  }
+}

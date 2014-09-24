@@ -10,6 +10,9 @@ details{
   margin-bottom: 15px;
 }
 
+details[open] summary{
+  margin-bottom: 10px;
+}
 
 #proposition-menu{
   ul{
@@ -26,4 +29,9 @@ details{
       color: white;
     }
   }
+}
+
+.warning-text{
+  font-weight: bold;
+  color: $mellow-red;
 }

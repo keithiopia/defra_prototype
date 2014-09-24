@@ -1,0 +1,30 @@
+
+.eligibility-list{
+  margin: $gutter 0;
+  border-top: 1px solid $border-colour;
+  padding-top: 5px;
+  li{
+    @include core-16;
+    border-bottom: 1px solid $border-colour;
+    padding: 5px 0 8px 0;
+    a{
+      @include core-19;
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  .eligible-status{
+    float: right;
+  }
+  .eligible-status.no{
+    font-weight: bold;
+    color: $mellow-red;
+  }
+  .header{
+    font-weight: bold;
+  }
+  .total{
+    border-top: 2px solid $black;
+  }
+}
