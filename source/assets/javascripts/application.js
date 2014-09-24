@@ -40,4 +40,13 @@ $(document).ready(function(){
         $sumDisplay.text("Total: "+sum.toFixed(2)+" ha");
   });
 
+  // Toggle full-screen map
+  $('.full-screen .open').click(function(){
+    $('.map-wrapper .map').addClass('map-full-screen');
+  });
+  $('.full-screen .close').click(function(){
+    $('.map-wrapper .map').removeClass('map-full-screen');
+  });
+
+
 });
