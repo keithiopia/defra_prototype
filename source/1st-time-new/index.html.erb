@@ -1,11 +1,10 @@
 ---
 title: Rural payments prototype
 layout: layout_template_no_nav
+firstTime: true
 ---
 
 <div class="inner-block">
-
-  <%= partial "partial-breadcrumbs" %>
 
   <div class="group">
     <div class="words-wide">
@@ -13,15 +12,15 @@ layout: layout_template_no_nav
 
         <header class="page-header">
           <hgroup>
-            <h1>Update your personal details</h1>
+            <h1>Your personal details</h1>
           </hgroup>
         </header>
 
 
-         <!-- Full name -->
+        <!-- Full name -->
         <div class="form-group">
           <label class="form-label" for="full-name">Full name</label>
-          <input type="text" class="form-control" id="full-name" value="John Smith">
+          <input type="text" class="form-control" id="full-name" value="">
         </div>
 
 
@@ -33,15 +32,15 @@ layout: layout_template_no_nav
             <div class="date">
               <div class="form-group">
                 <label for="dob-day" class="form-hint">Day</label>
-                <input type="text" class="form-control" id="dob-day" value="15">
+                <input type="text" class="form-control" id="dob-day" value="">
               </div>
               <div class="form-group">
                 <label for="dob-month" class="form-hint">Month</label>
-                <input type="text" class="form-control" id="dob-month" value="12">
+                <input type="text" class="form-control" id="dob-month" value="">
               </div>
               <div class="form-group form-group-year">
                 <label for="dob-year" class="form-hint">Year</label>
-                <input type="text" class="form-control" id="dob-year" value="1947">
+                <input type="text" class="form-control" id="dob-year" value="">
               </div>
             </div>
 
@@ -54,12 +53,11 @@ layout: layout_template_no_nav
           <label class="form-label" for="ni-number">
             National Insurance number
           </label>
-          <input type="text" class="form-control" id="ni-number" value="AA123458C">
+          <input type="text" class="form-control" id="ni-number" value="">
         </div>
 
         <br>
-        <p><a href="account" class="button">Save and return</a></p>
-        <p><a href="account">Back</a></p>
+        <p><a href="contact-details" class="button">Continue</a></p>
 
       </div>
     </div>

@@ -16,7 +16,9 @@
         <nav id="proposition-menu">
           <ul>
             <li><a href="/" id="proposition-name">Apply for Rural Payments</a></li>
+            <%if !current_page.data.firstTime %>
             <li class="account-link"><a href="/account">John Smith</a></li>
+            <%end%>
           </ul>
         </nav>
       </div>
