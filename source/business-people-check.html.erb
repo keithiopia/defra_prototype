@@ -13,72 +13,35 @@ layout: layout_template_no_nav
 
         <header class="page-header">
           <hgroup>
-            <h1>Add people associated with <br><%= data.business.name %></h1>
+            <h1>Add someone to <br><%= data.business.name %></h1>
           </hgroup>
         </header>
 
-
-        <p>Before you can apply for schemes you need to tell us about:</p>
-
-        <ul class="list-bullet">
-          <li>people who own or are legally responsible for this business</li>
-          <li>employees you want to give access to this service</li>
-          <li>agents working on behalf of this business</li>
-        </ul>
-
-        <h2 class="heading-medium">People currently associated with this business</h2>
-
-        <div class="people-list font-xsmall">
-          <details>
-            <summary>John Smith (you)<span class="role">Owner, 51%</span></summary>
-            <div class="panel-indent">
-              <ul>
-                <li>
-                  <a href="#">jsmith@bodminagrltd.co.uk</a>
-                </li>
-                <li>
-                  Telephone: 04562 345762
-                </li>
-                <li>
-                  Date of birth: 15 December 1977
-                </li>
-                <li>
-                  National Insurance number: AA123458C
-                </li>
-              </ul>
-
-              <p>You have full access to the service</p>
-
-              <p><a href="">Change these details</a></p>
-            </div>
-          </details>
-        </div>
-<!--
-        <p><a href="business-people-add">Add a person</a></p>
-
-        <p><a href="business" class="button">Save and continue</a></p>
--->
-
-        <h2 class="heading-medium">Add another person?</h2>
+        <p>What is this person's relationship to the business?</p>
 
         <form class="form">
-          <div class="form-group inline">
-            <label for="add-yes" class="block-label">
-              <input type="radio" name="add" id="add-yes" value="yes" class="js-toggle" data-show="#next-add" data-hide="#next-finish">
-              Yes
+          <div class="form-group">
+            <label for="correct-yes" class="block-label">
+              <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-yes" data-hide="#next-no">
+              They're an owner of the business
             </label>
-            <label for="add-no" class="block-label">
-              <input type="radio" name="add" id="add-no" value="no" class="js-toggle" data-show="#next-finish" data-hide="#next-add">
-              No
+            <label for="correct-no" class="block-label">
+              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
+              They're legally responsible for the business
+            </label>
+
+            <label for="correct-no" class="block-label">
+              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
+              They're acting on behalf of the business
             </label>
           </div>
 
-          <div class="form-group" id="next-add">
-            <a href="business-person-add" class="button">Next</a>
+          <div class="form-group" id="next-yes">
+            <a href="/business" class="button">Continue</a>
           </div>
 
-          <div class="form-group js-hidden" id="next-finish">
-            <a href="business" class="button">Next</a>
+          <div class="form-group js-hidden" id="next-no">
+            <a href="business-details-change" class="button">Continue</a>
           </div>
 
         </form>

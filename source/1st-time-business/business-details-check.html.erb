@@ -5,7 +5,7 @@ layout: layout_template_no_nav
 
 <div class="inner-block">
 
-  <%= partial "partial-breadcrumbs-business" %>
+  <%= partial "partial-breadcrumbs" %>
 
   <div class="group">
     <div class="words-wide">
@@ -60,21 +60,21 @@ layout: layout_template_no_nav
         <form class="form">
           <div class="form-group inline">
             <label for="correct-yes" class="block-label">
-              <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-people" data-hide="#next-change">
+              <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-yes" data-hide="#next-no">
               Yes
             </label>
             <label for="correct-no" class="block-label">
-              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-change" data-hide="#next-people">
+              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
               No
             </label>
           </div>
 
-          <div class="form-group" id="next-change">
-            <a href="business-details-change" class="button">Next</a>
+          <div class="form-group" id="next-yes">
+            <a href="/business" class="button">Continue</a>
           </div>
 
-          <div class="form-group js-hidden" id="next-people">
-            <a href="business-details-people-check" class="button">Next</a>
+          <div class="form-group js-hidden" id="next-no">
+            <a href="business-details-change" class="button">Continue</a>
           </div>
 
         </form>

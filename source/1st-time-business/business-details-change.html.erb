@@ -1,0 +1,82 @@
+---
+title: Rural payments prototype
+layout: layout_template_no_nav
+---
+
+<div class="inner-block">
+
+  <%= partial "partial-breadcrumbs-business" %>
+
+  <div class="group">
+
+        <header class="page-header">
+          <hgroup>
+            <h1>Update business details for <br><%= data.business.name %></h1>
+          </hgroup>
+        </header>
+
+        <form class="form">
+
+          <fieldset>
+              <legend class="heading-medium">
+                  Business address
+              </legend>
+
+              <div class="form-group-related">
+                <label class="form-label" for="businessAddressStreet">Street address</label>
+                <textarea class="form-control" id="businessAddressStreet" name="businessAddressStreet" rows="3">
+Bodmin Agri Ltd.
+Monument Way
+                </textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="businessAddressTown">Town or city</label>
+                <input type="text" class="form-control form-control-1-4" id="businessAddressTown" name="businessAddressTown" value="Bodmin">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="businessAddressPostcode">Postcode</label>
+                <input type="text" class="form-control form-control-1-8" id="businessAddressPostcode" name="businessAddressPostcode" value="PL31 1NZ">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="businessAddressCountry">Country</label>
+                <input type="text" class="form-control form-control-1-4" id="businessAddressCountry" name="businessAddressCountry" value="United Kingdom">
+              </div>
+          </fieldset>
+
+          <fieldset>
+              <legend class="heading-medium">
+                  Contact details
+              </legend>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="text" class="form-control form-control-1-2" id="email" name="email" value="info@bodminagrltd.co.uk">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="website">Website</label>
+                <input type="text" class="form-control form-control-1-2" id="website" name="website">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="landline">Landline</label>
+                <input type="text" class="form-control form-control-1-4" id="landline" name="landline" value="0300 790 6802">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="mobile">Mobile</label>
+                <input type="text" class="form-control form-control-1-4" id="mobile" name="mobile" value="0300 123 0798">
+              </div>
+
+          </fieldset>
+
+          <p><a class="button" href="/business">Continue</a></p>
+
+        </form>
+
+
+
+
+  </div>
+</div>
+
