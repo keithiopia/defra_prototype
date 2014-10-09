@@ -1,64 +1,56 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-business" %>
+<% end %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+<% content_for :column1 do %>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Business details for <br><%= data.business.name %></h1>
-          </hgroup>
-        </header>
+  <header class="page-header">
+    <hgroup>
+      <h1>Business details for <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
 
-        <h2 class="heading-medium">Contact details</h2>
+  <h2 class="heading-medium">Contact details</h2>
 
-        <div class="grid-wrapper">
-           <div class="grid grid-1-2">
-             <div class="inner-block">
-                <p>
-                  Bodmin Agr Ltd.<br>
-                  Monument Way <br>
-                  Bodmin <br>
-                  PL31 1NZ <br>
-                  United Kingdom
-                </p>
-             </div>
-           </div>
-           <div class="grid grid-1-2">
-             <div class="inner-block">
-                <p>
-                  <a href="">info@bodminagrltd.co.uk</a> <br>
-                  Landline: 0300 790 6802<br>
-                  Mobile: 0300 123 0798<br>
-                </p>
-             </div>
-           </div>
-         </div>
+  <div class="grid-wrapper">
+     <div class="grid grid-1-2">
+       <div class="inner-block">
+          <p>
+            Bodmin Agr Ltd.<br>
+            Monument Way <br>
+            Bodmin <br>
+            PL31 1NZ <br>
+            United Kingdom
+          </p>
+       </div>
+     </div>
+     <div class="grid grid-1-2">
+       <div class="inner-block">
+          <p>
+            <a href="">info@bodminagrltd.co.uk</a> <br>
+            Landline: 0300 790 6802<br>
+            Mobile: 0300 123 0798<br>
+          </p>
+       </div>
+     </div>
+   </div>
 
-        <p>This business also has land registered in Wales.</p>
+  <p>This business also has land registered in Wales.</p>
 
-        <h2 class="heading-medium">Reference numbers</h2>
+  <h2 class="heading-medium">Reference numbers</h2>
 
-        <p>
-          Single Business Identifier: 222223250 <br>
-          Firm Reference Number: 1100052819 <br>
-          VAT Registration Number: GB999 9999 73
-        </p>
+  <p>
+    Single Business Identifier: 222223250 <br>
+    Firm Reference Number: 1100052819 <br>
+    VAT Registration Number: GB999 9999 73
+  </p>
 
 
-        <p><a class="button" href="business-details-change">Change these details</a></p>
-        <p><a href="business">Back</a></p>
+  <p><a class="button" href="business-details-change">Change these details</a></p>
+  <p><a href="business">Back</a></p>
 
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<% end %>

@@ -2,6 +2,7 @@ name: Bodmin Agr Ltd.
 efa:  3.2
 land_use: 82
 area: 18.7
+sbi: 222223250
 
 parcels:
   - name:       Top field

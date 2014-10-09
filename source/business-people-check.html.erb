@@ -1,54 +1,46 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-business" %>
+<% end %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+<% content_for :column1 do %>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Add someone to <br><%= data.business.name %></h1>
-          </hgroup>
-        </header>
+  <header class="page-header">
+    <hgroup>
+      <h1>Add someone to <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
 
-        <p>What is this person's relationship to the business?</p>
+  <p>What is this person's relationship to the business?</p>
 
-        <form class="form">
-          <div class="form-group">
-            <label for="correct-yes" class="block-label">
-              <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-yes" data-hide="#next-no">
-              They're an owner of the business
-            </label>
-            <label for="correct-no" class="block-label">
-              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
-              They're legally responsible for the business
-            </label>
+  <form class="form">
+    <div class="form-group">
+      <label for="correct-yes" class="block-label">
+        <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-yes" data-hide="#next-no">
+        They're an owner of the business
+      </label>
+      <label for="correct-no" class="block-label">
+        <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
+        They're legally responsible for the business
+      </label>
 
-            <label for="correct-no" class="block-label">
-              <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
-              They're acting on behalf of the business
-            </label>
-          </div>
-
-          <div class="form-group" id="next-yes">
-            <a href="/business" class="button">Continue</a>
-          </div>
-
-          <div class="form-group js-hidden" id="next-no">
-            <a href="business-details-change" class="button">Continue</a>
-          </div>
-
-        </form>
-
-      </div>
+      <label for="correct-no" class="block-label">
+        <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
+        They're acting on behalf of the business
+      </label>
     </div>
 
-  </div>
-</div>
+    <div class="form-group" id="next-yes">
+      <a href="/business" class="button">Continue</a>
+    </div>
 
+    <div class="form-group js-hidden" id="next-no">
+      <a href="business-details-change" class="button">Continue</a>
+    </div>
+
+  </form>
+
+<% end %>

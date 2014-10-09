@@ -1,114 +1,99 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
 
-  <div id="breadcrumb">
-    <ol role="breadcrumbs" class="group">
-      <li><a href="/">Businesses</a></li>
-      <li><a href="/business"><%= data.business.name %></a></li>
-      <li><a href="/scheme-apply">Apply for a scheme</a></li>
-    </ol>
-  </div>
+<% content_for :column1 do %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+  <header class="page-header">
+    <hgroup>
+      <h1>Basic Payment Scheme</h1>
+    </hgroup>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Basic Payment Scheme</h1>
-          </hgroup>
+  </header>
 
-        </header>
+  <p class="lede">The Basic Payment Scheme pays farmers annually for the land that they manage or own.</p>
 
-        <p class="lede">The Basic Payment Scheme pays farmers annually for the land that they manage or own.</p>
+  <h3 class="heading-medium">Eligibility requirements</h3>
 
-        <h3 class="heading-medium">Eligibility requirements</h3>
+  <p>To be eligible for the full Basic Payment you must:</p>
 
-        <p>To be eligible for the full Basic Payment you must:</p>
-
-        <ul class="list-bullet">
-          <li>be an active farmer</li>
-          <li>have at least 5ha of entitled arable land or grassland</li>
-          <li>meet the cross Compliance rules</li>
-          <li>meet the greening requirements</li>
-        </ul>
+  <ul class="list-bullet">
+    <li>be an active farmer</li>
+    <li>have at least 5ha of entitled arable land or grassland</li>
+    <li>meet the cross Compliance rules</li>
+    <li>meet the greening requirements</li>
+  </ul>
 
 
 
-        <p>Based on the information you've provided so far you have <strong class="warning-text">not met</strong> all the eligibility requirements for the full Basic Payment. See below for more details and to find out what you can do about this.</p>
+  <p>Based on the information you've provided so far you have <strong class="warning-text">not met</strong> all the eligibility requirements for the full Basic Payment. See below for more details and to find out what you can do about this.</p>
 
 
-        <h3 class="heading-medium">Land and entitlements</h3>
+  <h3 class="heading-medium">Land and entitlements</h3>
 
 
-        <p>You have 14.3 hectares of entitled arable land or grassland. This meets the requirements for the Basic Payment Scheme.</p>
+  <p>You have 14.3 hectares of entitled arable land or grassland. This meets the requirements for the Basic Payment Scheme.</p>
 
-        <details>
-          <summary>Find out how this area was calculated</summary>
+  <details>
+    <summary>Find out how this area was calculated</summary>
 
-          <table class="entitlements-list">
-            <tr>
-              <td>Total area of business</td>
-              <td>18ha</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Total arable and grassland</td>
-              <td>14.3ha</td>
-              <td><a href="land">Check your land parcels</a></td>
-            </tr>
-            <tr>
-              <td>Entitlements</td>
-              <td>19ha</td>
-              <td><a href="entitlements">Check your entitlements</a></td>
-            </tr>
-            <tr class="total">
-              <td>Total eligible area</td>
-              <td>14.3ha</td>
-              <td></td>
-            </tr>
-          </table>
+    <table class="entitlements-list">
+      <tr>
+        <td>Total area of business</td>
+        <td>18ha</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Total arable and grassland</td>
+        <td>14.3ha</td>
+        <td><a href="land">Check your land parcels</a></td>
+      </tr>
+      <tr>
+        <td>Entitlements</td>
+        <td>19ha</td>
+        <td><a href="entitlements">Check your entitlements</a></td>
+      </tr>
+      <tr class="total">
+        <td>Total eligible area</td>
+        <td>14.3ha</td>
+        <td></td>
+      </tr>
+    </table>
 
-        </details>
+  </details>
+
+  <h3 class="heading-medium">Cross Compliance rules</h3>
+
+  <p>To be eligible for the Basic Payment Scheme, farmers must follow the relevant Cross Compliance rules for their business.
+    The rules are there to encourage responsible, environmentally aware farming.</p>
+
+  <p><a href="">Find out which Cross Compliance rules apply to you</a></p>
 
 
-        <h3 class="heading-medium">Cross Compliance rules</h3>
+  <h3 class="heading-medium">Greening requirements</h3>
 
-        <p>To be eligible for the Basic Payment Scheme, farmers must follow the relevant Cross Compliance rules for their business.
-          The rules are there to encourage responsible, environmentally aware farming.</p>
+  <p>30% of the Basic Payment is conditional on you meeting the following requirements:</p>
 
-        <p><a href="">Find out which Cross Compliance rules apply to you</a></p>
+  <ul class="eligibility-list">
+    <li>Your main crop accounts for less than 75% of your total arable area <span class="eligible-status">Yes</span></li>
+    <li>Your 2 main crops account for less than 95% of your total arable area <span class="eligible-status">Yes</span></li>
+    <li>At least 5% of your arable land is made of Ecological Focus Areas <span class="eligible-status no">No</span></li>
+  </ul>
 
+  <p><a href="cross-compliance">More about greening requirements</a></p>
 
-        <h3 class="heading-medium">Greening requirements</h3>
+  <h3 class="heading-medium">What you can do</h3>
 
-        <p>30% of the Basic Payment is conditional on you meeting the following requirements:</p>
+  <p>Here's what you can do to fully meet the above requirements.</p>
 
-        <ul class="eligibility-list">
-          <li>Your main crop accounts for less than 75% of your total arable area <span class="eligible-status">Yes</span></li>
-          <li>Your 2 main crops account for less than 95% of your total arable area <span class="eligible-status">Yes</span></li>
-          <li>At least 5% of your arable land is made of Ecological Focus Areas <span class="eligible-status no">No</span></li>
-        </ul>
+  <ol class="list-bullet">
+    <li><a href="">Increase your Ecological Focus Areas</a></li>
+  </ol>
 
-        <p><a href="cross-compliance">More about greening requirements</a></p>
+  <p><a href="">Back</a></p>
 
-        <h3 class="heading-medium">What you can do</h3>
-
-        <p>Here's what you can do to fully meet the above requirements.</p>
-
-        <ol class="list-bullet">
-          <li><a href="">Increase your Ecological Focus Areas</a></li>
-        </ol>
-
-        <p><a href="">Back</a></p>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<% end %>

@@ -1,56 +1,44 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
-firstTime: true
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
+<% content_for :column1 do %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+  <header class="page-header">
+    <hgroup>
+      <h1>Prototypes for the <br>Rural Payments service</h1>
+    </hgroup>
+  </header>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Prototypes for the <br>Rural Payments service</h1>
-          </hgroup>
-        </header>
+  <h2 class="heading-medium">First time access</h2>
 
-        <h2 class="heading-medium">First time access</h2>
+  <p>The flow when you sign in for the first time is slightly different as we route you through the account screens.</p>
 
-        <p>The flow when you sign in for the first time is slightly different as we route you through the account screens.</p>
+  <ul class="list-bullet">
+    <li><a href="/1st-time-new/">New farmer</a></li>
+    <li><a href="/1st-time-existing/">Existing farmer</a></li>
+  </ul>
 
-        <ul class="list-bullet">
-          <li><a href="/1st-time-new/">New farmer</a></li>
-          <li><a href="/1st-time-existing/">Existing farmer</a></li>
-        </ul>
+  <h2 class="heading-medium">Home page</h2>
 
-        <h2 class="heading-medium">Home page</h2>
+  <p>This is usually the first page a users sees upon signing in. It lists the businesses the user has access to, shows any messages for them and lets them add a new business.</p>
 
-        <p>This is usually the first page a users sees upon signing in. It lists the businesses the user has access to, shows any messages for them and lets them add a new business.</p>
+  <ul class="list-bullet">
+    <li><a href="index-none">No businesses plus intro message</a></li>
+    <li><a href="/">Single business plus intro message</a></li>
+    <li><a href="index-many">Multiple businesses and messages</a></li>
+    <li><a href="index-no-new-messages">No businesses, no new messages</a></li>
+  </ul>
 
-        <ul class="list-bullet">
-          <li><a href="index-none">No businesses plus intro message</a></li>
-          <li><a href="/">Single business plus intro message</a></li>
-          <li><a href="index-many">Multiple businesses and messages</a></li>
-          <li><a href="index-no-new-messages">No businesses, no new messages</a></li>
-        </ul>
+  <h2 class="heading-medium">Business page</h2>
 
+  <p>When the user accesses a business for the first time they're asked to check the business details first.
+    On subsequent visits they go straight to the business page.</p>
 
-        <h2 class="heading-medium">Business page</h2>
+  <ul class="list-bullet">
+    <li><a href="/1st-time-business/">1st time access of business</a></li>
+    <li><a href="business">Business page</a></li>
+  </ul>
 
-        <p>When the user accesses a business for the first time they're asked to check the business details first.
-          On subsequent visits they go straight to the business page.</p>
-
-        <ul class="list-bullet">
-          <li><a href="/1st-time-business/">1st time access of business</a></li>
-          <li><a href="business">Business page</a></li>
-        </ul>
-
-
-      </div>
-    </div>
-
-  </div>
-</div>
+<% end %>
 

@@ -30,6 +30,14 @@
 data.business.parcels.each do |parcel|
   proxy "/#{parcel[:id]}.html", "/01-parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}-checked.html", "/01-parcel-details-checked.html", :locals => { :parcel => parcel }, :ignore => true
+
+  proxy "/#{parcel[:id]}/change-land-parcel.html", "/change-land-parcel.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/change-land-parcel-split.html", "/change-land-parcel-split.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/change-land-parcel-merge.html", "/change-land-parcel-merge.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/change-land-parcel-change.html", "/change-land-parcel-change.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/change-land-parcel-date.html", "/change-land-parcel-date.html", :locals => { :parcel => parcel }, :ignore => true
+
+
   proxy "/#{parcel[:id]}/organic-status.html", "/02-organic-status.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/crops-and-grassland.html", "/03-crops-and-grassland.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/buffer-strips.html", "/04-buffer-strips.html", :locals => { :parcel => parcel }, :ignore => true

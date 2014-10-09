@@ -1,0 +1,8 @@
+<%# A map. Don't forget to pass in the filename when you reference this partial %>
+
+<div class="map-wrapper">
+  <div class="map">
+    <%= partial "partial-map-controls" %>
+    <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/" + locals[:map] + ".png") %>">
+  </div>
+</div>

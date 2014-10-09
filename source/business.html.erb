@@ -1,83 +1,67 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
-
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs" %>
+<% end %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+<% content_for :column1 do %>
 
-        <header class="page-header">
-          <hgroup>
-            <h1><%= data.business.name %></h1>
-          </hgroup>
-
-        </header>
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
 
 
-        <h2 class="heading-medium">1. Add people to the business</h2>
+  <h2 class="heading-medium">1. Add people to the business</h2>
 
-        <p>Add agents and other people who can act on behalf of this business.</p>
+  <p>Add agents and other people who can act on behalf of this business.</p>
 
-        <p><a href="business-people">Add people to this business</a></p>
-
-
-        <h2 class="heading-medium">2. Check the land details</h2>
-
-        <p>Check and update the information held about this business's land.</p>
-
-        <p><a href="/land">Check the land details</a></p>
+  <p><a href="business-people">Add people to this business</a></p>
 
 
-        <h2 class="heading-medium">3. Apply for a scheme</h2>
+  <h2 class="heading-medium">2. Check the land details</h2>
 
-        <p>You can only apply for schemes between 10 April and 10 June 2015.</p>
+  <p>Check and update the information held about this business's land.</p>
 
-        <p><a href="scheme-apply">Check which schemes you might be eligible for</a></p>
-
-
+  <p><a href="/land">Check the land details</a></p>
 
 
+  <h2 class="heading-medium">3. Apply for a scheme</h2>
 
-      </div>
-    </div>
+  <p>You can only apply for schemes between 10 April and 10 June 2015.</p>
 
-    <div class="map-column small-map">
-      <div class="map-wrapper">
-        <div class="map">
-        <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/business-1-checked.png") %>">
-      </div>
+  <p><a href="scheme-apply">Check which schemes you might be eligible for</a></p>
 
-      <div class="font-xsmall">
-        <h2 class="heading-small">Business details</h2>
-        <p>
-          Bodmin Agr Ltd.<br>
-          Monument Way <br>
-          Bodmin <br>
-          PL31 1NZ <br>
-          United Kingdom
-        </p>
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'business-1-checked'} %>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Business details</h2>
+    <p>
+      Bodmin Agr Ltd.<br>
+      Monument Way <br>
+      Bodmin <br>
+      PL31 1NZ <br>
+      United Kingdom
+    </p>
 
 
-        <p>
-          Email: <a href="">info@bodminagrltd.co.uk</a> <br>
-          Landline: 0300 790 6802<br>
-          Mobile: 0300 123 0798<br>
-        </p>
+    <p>
+      Email: <a href="">info@bodminagrltd.co.uk</a> <br>
+      Landline: 0300 790 6802<br>
+      Mobile: 0300 123 0798<br>
+    </p>
 
-        <ul>
-          <li><a href="business-details">Update these details</a></li>
-          <li><a href="">Close this business</a></li>
-        </ul>
-
-      </div>
-    </div>
-
+    <ul>
+      <li><a href="business-details">Update these details</a></li>
+      <li><a href="">Close this business</a></li>
+    </ul>
   </div>
-</div>
 
+<% end %>

@@ -1,51 +1,42 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
+<% content_for :column1 do %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+  <header class="page-header">
+    <hgroup>
+      <h1>Apply for Rural Payments</h1>
+    </hgroup>
+  </header>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Apply for Rural Payments</h1>
-          </hgroup>
-        </header>
+  <h2 class="heading-medium">Messages</h2>
 
-        <h2 class="heading-medium">Messages</h2>
+  <ul class="message-list">
+    <li>
+      <span class="delete"><a href="">delete</a></span>
+      <strong class="message-date">5 Sep 2014</strong>
+      <details>
+        <summary>Welcome to the Rural Payments service</summary>
 
-        <ul class="message-list">
-          <li>
-            <span class="delete"><a href="">delete</a></span>
-            <strong class="message-date">5 Sep 2014</strong>
-            <details>
-              <summary>Welcome to the Rural Payments service</summary>
+        <p>
+          Use this service to apply for Rural Payments schemes.
+          You'll find any important messages here when you sign in.
+        </p>
 
-              <p>
-                Use this service to apply for Rural Payments schemes.
-                You'll find any important messages here when you sign in.
-              </p>
+        <p>Regards,</p>
 
-              <p>Regards,</p>
+        <p>The Rural Payments team</p>
 
-              <p>The Rural Payments team</p>
+      </details>
+    </li>
+  </ul>
 
-            </details>
-          </li>
-        </ul>
+  <h2 class="heading-medium">Businesses</h2>
 
-        <h2 class="heading-medium">Businesses</h2>
+  <p>There are currently no businesses associated with this account.</p>
 
-        <p>There are currently no businesses associated with this account.</p>
+  <p><a href="add-business" class="button">Add a business</a></p>
 
-        <p><a href="add-business" class="button">Add a business</a></p>
-
-      </div>
-    </div>
-
-  </div>
-</div>
+<% end %>
 

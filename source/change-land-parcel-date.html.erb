@@ -1,0 +1,46 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Change land parcel boundary</h1>
+    </hgroup>
+  </header>
+
+    <p class="form-label-bold">When did the change you've described happen?</p>
+
+
+    <div class="date">
+      <div class="form-group">
+        <label for="dob-day" class="form-hint">Day</label>
+        <input type="text" class="form-control" id="dob-day" value="">
+      </div>
+      <div class="form-group">
+        <label for="dob-month" class="form-hint">Month</label>
+        <input type="text" class="form-control" id="dob-month" value="">
+      </div>
+      <div class="form-group form-group-year">
+        <label for="dob-year" class="form-hint">Year</label>
+        <input type="text" class="form-control" id="dob-year" value="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <a href="change-land-parcel-date" class="button">Submit</a>
+    </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+    <%= partial "partial-map", :locals => { :map => 'parcel'} %>
+
+<% end %>
+

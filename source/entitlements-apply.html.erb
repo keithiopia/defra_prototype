@@ -1,38 +1,25 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
 
-  <div id="breadcrumb">
-    <ol role="breadcrumbs" class="group">
-      <li><a href="/">Businesses</a></li>
-      <li><a href="/business"><%= data.business.name %></a></li>
-    </ol>
-  </div>
+<% content_for :column1 do %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+  <header class="page-header">
+    <hgroup>
+      <h1>Apply for more entitlements</h1>
+    </hgroup>
+  </header>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Apply for more entitlements</h1>
-          </hgroup>
-        </header>
+  <p>
+    If you're a young farmer (under 40) or new farmer you can apply for more entitlements from the National Reserve.
+  </p>
 
-        <p>
-          If you're a young farmer (under 40) or new farmer you can apply for more entitlements from the National Reserve.
-        </p>
+  <p><a href="" class="button">Apply for more entitlements</a></p>
 
-        <p><a href="" class="button">Apply for more entitlements</a></p>
+  <p><a href="entitlements">Back</a></p>
 
-        <p><a href="entitlements">Back</a></p>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<% end %>

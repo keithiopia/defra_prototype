@@ -1,0 +1,32 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Change land parcel boundary</h1>
+    </hgroup>
+  </header>
+
+  <p>Draw lines on the map to show where the land parcel boundary has changed.</p>
+
+  <p>When you're done, click Continue.</p>
+
+  <div class="form-group">
+    <a href="change-land-parcel-date" class="button">Continue</a>
+  </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+    <%= partial "partial-map", :locals => { :map => 'parcel'} %>
+
+<% end %>
+

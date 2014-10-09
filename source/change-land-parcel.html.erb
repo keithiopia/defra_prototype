@@ -1,0 +1,55 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Change land parcel boundary</h1>
+    </hgroup>
+  </header>
+
+  <p>What do you want to do with this land parcel?</p>
+
+  <form class="form">
+    <div class="form-group">
+      <label for="parcel-split" class="block-label">
+        <input type="radio" name="parcel" id="parcel-split" value="yes" class="js-toggle" data-show="#parcel-split-button" data-hide="#parcel-merge-button, #parcel-change-button">
+        Split the land parcel in two
+      </label>
+      <label for="parcel-merge" class="block-label selected">
+        <input type="radio" name="parcel" id="parcel-merge" value="no" class="js-toggle" data-show="#parcel-merge-button" data-hide="#parcel-split-button, #parcel-change-button">
+        Merge the land parcel with another one
+      </label>
+      <label for="parcel-change" class="block-label">
+        <input type="radio" name="parcel" id="parcel-change" value="no" class="js-toggle" data-show="#parcel-change-button" data-hide="#parcel-split-button, #parcel-merge-button">
+        Change the shape of the land parcel
+      </label>
+    </div>
+
+    <div class="form-group" id="parcel-split-button">
+      <a href="change-land-parcel-split" class="button">Continue</a>
+    </div>
+
+    <div class="form-group js-hidden" id="parcel-merge-button">
+      <a href="change-land-parcel-merge" class="button">Continue</a>
+    </div>
+
+    <div class="form-group js-hidden" id="parcel-change-button">
+      <a href="change-land-parcel-change" class="button">Continue</a>
+    </div>
+  </form>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+    <%= partial "partial-map", :locals => { :map => 'parcel'} %>
+
+<% end %>
+

@@ -19,20 +19,6 @@
 .map-column {
   width: $half;
   float: left;
-
-  .map-wrapper{
-    padding-top: $gutter-two-thirds;
-
-    .map{
-      position: relative;
-      background: $grey-3;
-      border: 1px solid $border-colour;
-      cursor: crosshair;
-      height: 500px;
-      width: 100%;
-      overflow: hidden;
-    }
-  }
 }
 
 .map-column.small-map{

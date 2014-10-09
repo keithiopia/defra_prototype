@@ -1,118 +1,103 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-business" %>
+<% end %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+<% content_for :column1 do %>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>People associated with <br><%= data.business.name %></h1>
-          </hgroup>
-        </header>
+  <header class="page-header">
+    <hgroup>
+      <h1>People associated with <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
 
+  <p>Before you can apply for schemes you need to tell us about the people who own or are legally responsible for this business.</p>
 
-        <p>Before you can apply for schemes you need to tell us about the people who own or are legally responsible for this business.</p>
+  <p>You can also give employees or land agents access to this service by adding them here.</p>
 
-        <p>You can also give employees or land agents access to this service by adding them here.</p>
+  <h2 class="heading-medium">People currently associated with this business</h2>
 
-        <h2 class="heading-medium">People currently associated with this business</h2>
+  <div class="people-list font-xsmall">
+    <details>
+      <summary>John Smith (you)<span class="role">Owner, 51%</span></summary>
+      <div class="panel-indent">
+        <ul>
+          <li>
+            <a href="#">jsmith@bodminagrltd.co.uk</a>
+          </li>
+          <li>
+            Telephone: 04562 345762
+          </li>
+          <li>
+            Date of birth: 15 December 1977
+          </li>
+          <li>
+            National Insurance number: AA123458C
+          </li>
+        </ul>
 
-        <div class="people-list font-xsmall">
-          <details>
-            <summary>John Smith (you)<span class="role">Owner, 51%</span></summary>
-            <div class="panel-indent">
-              <ul>
-                <li>
-                  <a href="#">jsmith@bodminagrltd.co.uk</a>
-                </li>
-                <li>
-                  Telephone: 04562 345762
-                </li>
-                <li>
-                  Date of birth: 15 December 1977
-                </li>
-                <li>
-                  National Insurance number: AA123458C
-                </li>
-              </ul>
+        <p>You have full access to the service</p>
 
-              <p>You have full access to the service</p>
+        <p><a href="account">Change these details</a></p>
+      </div>
+    </details>
 
-              <p><a href="account">Change these details</a></p>
-            </div>
-          </details>
+    <details>
+      <summary>Jane Smith <span class="role">Owner, 49%</span></summary>
+      <div class="panel-indent">
 
-          <details>
-            <summary>Jane Smith <span class="role">Owner, 49%</span></summary>
-            <div class="panel-indent">
+        <ul>
+          <li>
+            <a href="#">jsmith@bodminagrltd.co.uk</a>
+          </li>
+          <li>
+            Telephone: 04562 345762
+          </li>
+          <li>
+            Date of birth: 15 December 1977
+          </li>
+          <li>
+            National Insurance number: AA123458C
+          </li>
+        </ul>
 
-              <ul>
-                <li>
-                  <a href="#">jsmith@bodminagrltd.co.uk</a>
-                </li>
-                <li>
-                  Telephone: 04562 345762
-                </li>
-                <li>
-                  Date of birth: 15 December 1977
-                </li>
-                <li>
-                  National Insurance number: AA123458C
-                </li>
-              </ul>
+        <p>This person has full access to the service</p>
 
-              <p>This person has full access to the service</p>
-
-              <ul>
-                <li><a href="">Change these details</a></li>
-                <li><a href="">Remove this person</a></li>
-              </ul>
-
-            </div>
-          </details>
-
-          <details>
-            <summary>Harry Carpenter <span class="role">Agent</span></summary>
-            <div class="panel-indent">
-              <ul>
-                <li>
-                  <a href="#">hcarpenter@landagentsltd.co.uk</a>
-                </li>
-                <li>
-                  Telephone: 04562 345762
-                </li>
-              </ul>
-
-              <p>This person has full access to the service</p>
-
-              <ul>
-                <li><a href="">Change these details</a></li>
-                <li><a href="">Remove this person</a></li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-<!--
-        <div class="form-group">
-          <a href="business-details-check-people" class="button">Add a person</a>
-        </div>
--->
-
-        <p><a href="business-people-check" class="button">Add a person</a></p>
-
-        <p><a href="business">Back</a></p>
+        <ul>
+          <li><a href="">Change these details</a></li>
+          <li><a href="">Remove this person</a></li>
+        </ul>
 
       </div>
-    </div>
+    </details>
 
+    <details>
+      <summary>Harry Carpenter <span class="role">Agent</span></summary>
+      <div class="panel-indent">
+        <ul>
+          <li>
+            <a href="#">hcarpenter@landagentsltd.co.uk</a>
+          </li>
+          <li>
+            Telephone: 04562 345762
+          </li>
+        </ul>
+
+        <p>This person has full access to the service</p>
+
+        <ul>
+          <li><a href="">Change these details</a></li>
+          <li><a href="">Remove this person</a></li>
+        </ul>
+      </div>
+    </details>
   </div>
-</div>
 
+  <p><a href="business-people-check" class="button">Add a person</a></p>
+
+  <p><a href="business">Back</a></p>
+
+<% end %>

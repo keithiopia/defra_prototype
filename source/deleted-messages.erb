@@ -1,46 +1,38 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs" %>
+<% end %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+<% content_for :column1 do %>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Deleted messages</h1>
-          </hgroup>
-        </header>
+  <header class="page-header">
+    <hgroup>
+      <h1>Deleted messages</h1>
+    </hgroup>
+  </header>
 
-        <ul class="message-list">
-          <li>
-            <span class="delete"><a href="">undelete</a></span>
-            <strong class="message-date">5 Sep 2014</strong>
-            <details>
-              <summary>Welcome to the Rural Payments service</summary>
+  <ul class="message-list">
+    <li>
+      <span class="delete"><a href="">undelete</a></span>
+      <strong class="message-date">5 Sep 2014</strong>
+      <details>
+        <summary>Welcome to the Rural Payments service</summary>
 
-              <p>
+        <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis turpis id urna fermentum dictum sit amet ac risus. Vivamus et ante in neque gravida tempor cursus in eros. Phasellus ante nisl, porttitor eu ante sed, tincidunt scelerisque augue.
 </p>
 
 <p>In posuere mollis nisl vitae mollis. Donec laoreet neque venenatis nisl porta aliquet. Nulla in imperdiet nisi. Sed vestibulum neque a malesuada vestibulum.
-              </p>
+        </p>
 
 
-            </details>
-          </li>
-        </ul>
+      </details>
+    </li>
+  </ul>
 
-        <p><a href="/">Back</a></p>
+  <p><a href="/">Back</a></p>
 
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<% end %>
