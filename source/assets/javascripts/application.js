@@ -2,12 +2,6 @@
 
 $(document).ready(function(){
 
-
-  // Clicking anywhere in the table row activate the link
-  $('.parcels tbody tr').click(function(){
-    var ref = $(this).find('a').attr('href');
-  });
-
   // Convert land-use lists into an auto-suggest box
   $(".land-use-list").chosen();
 
@@ -21,11 +15,56 @@ $(document).ready(function(){
     $(this).toggleClass('open');
   });
 
-  // Rowclick - if a table row contains a link, make the whole row activate the link
-  $('.js-row-link tr').click(function(){
-    var link = $(this).find('a').attr('href');
+
+  // Toggle full-screen map
+  $('.full-screen .open .map-button').click(function(){
+    $('.map-wrapper .map').addClass('map-full-screen');
+  });
+  $('.full-screen .close').click(function(){
+    $('.map-wrapper .map').removeClass('map-full-screen');
+  });
+
+
+  // If a table row contains a link, make the whole row activate the link
+
+  $('.js-row-link tr td:not(.parcel-select)').click(function(){
+    var link = $(this).parent().find('a').attr('href');
     window.location = link;
   });
+
+    // If a table row contains a link, make the whole row activate the link
+
+  $('.js-row-select tr td:not(.parcel-select)').click(function(){
+    $(this).parent().find('js-select-row').click();
+  });
+
+
+  // Highlight a selected row
+
+  $('.js-select-row').change(function(e) {
+    $(this).closest("tr").toggleClass("highlight", this.checked);
+  });
+
+
+  // Filter table
+
+  $(".table-filter input").on("input",function(e){
+
+    if($(this).val()=="") {
+
+      $('.parcels tr').show();
+
+    } else {
+
+      $('.parcels tr:not(:contains("'+$(this).val()+'"))').hide();
+      $('.parcels tr a:not(:contains("'+$(this).val()+'"))').closest('tr').hide();
+
+    }
+
+  });
+
+
+
 
   // Running total of areas in a land use table
   var $table = $('.land-use-table'),
@@ -40,13 +79,6 @@ $(document).ready(function(){
         $sumDisplay.text("Total: "+sum.toFixed(2)+" ha");
   });
 
-  // Toggle full-screen map
-  $('.full-screen .open').click(function(){
-    $('.map-wrapper .map').addClass('map-full-screen');
-  });
-  $('.full-screen .close').click(function(){
-    $('.map-wrapper .map').removeClass('map-full-screen');
-  });
 
 
 });

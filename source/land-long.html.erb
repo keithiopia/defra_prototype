@@ -16,6 +16,10 @@ layout: layout-2-1-columns
 
   <p>Check the land parcels to make sure they show the land as it will be on 12 May 2015 (this is the date that scheme payments are based on).</p>
 
+  <div class="table-filter">
+    <label>Search the list</label> <input type="search" placeholder="Enter parcel name, ID, CPH number etc."> <!--<span>(enter parcel name, ID, CPH number etc.)</span>-->
+  </div>
+
   <table class="parcels js-row-link">
     <thead>
       <tr>
@@ -26,6 +30,8 @@ layout: layout-2-1-columns
       </tr>
     </thead>
     <tbody>
+
+<% for i in 1..90 do %>
 
       <% data.business.parcels.each do |f| %>
       <% statusClass = (f.checked ? "checked" : "not-checked") %>
@@ -41,6 +47,9 @@ layout: layout-2-1-columns
         <td class="parcel-status"><%= statusName %></td>
       </tr>
       <% end %>
+
+<% end %>
+
 
     </tbody>
   </table>
@@ -63,7 +72,7 @@ layout: layout-2-1-columns
 
     <ul>
       <li><a href="add-land">Add land</a></li>
-      <li><a href="remove-land">Remove land parcels</a></li><!--
+      <li><a href="remove-land">Remove selected land parcels</a></li><!--
       <li><a href="add-land">Add</a> or <a href="remove-land">remove</a> land from this business</li>
     -->
     </ul>

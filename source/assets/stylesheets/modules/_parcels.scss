@@ -15,6 +15,13 @@
 table.parcels {
   margin: $gutter 0;
 
+  .parcel-select {
+    width: 5%;
+  }
+  th.parcel-select{
+    //text-indent: -9999px;
+  }
+
   .parcel-name {
     width: 45%;
   }
@@ -24,10 +31,10 @@ table.parcels {
     color: $secondary-text-colour;
   }
   .parcel-area {
-    width: 15%;
+    width: 10%;
   }
   .parcel-status {
-    width: 15%;
+    width: 5%;
     padding-right: 0;
   }
 
@@ -80,4 +87,30 @@ table.parcels {
     }
   }
 
+}
+
+.table-filter{
+  @extend %contain-floats;
+  background: $panel-colour;
+  padding: 5px 10px;
+  margin-top: $gutter;
+  label{
+    font-weight: bold;
+    float: left;
+    display: block;
+    padding-top: 8px;
+  }
+  input{
+    //margin: 0 10px;
+    padding: 4px;
+    background-color: $white;
+    border: 0px solid $border-colour;
+
+    // Disable webkit appearance and remove rounded corners
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    width: 75%;
+    float: right;
+  }
 }

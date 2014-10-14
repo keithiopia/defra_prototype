@@ -1,0 +1,61 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-land" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+ <header class="page-header">
+    <hgroup>
+      <h1>Remove land parcels</h1>
+    </hgroup>
+  </header>
+
+  <p>Select the land parcels you want to remove from the map or the list.</p>
+
+  <table class="parcels js-row-select">
+    <thead>
+      <tr>
+        <th class="parcel-select"><input type="checkbox" class="js-select-row"></th>
+        <th class="parcel-name">Name</th>
+        <th class="parcel-id">ID</th>
+        <th class="parcel-area">Area</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% data.business.parcels.each do |f| %>
+      <% statusClass = (f.checked ? "checked" : "not-checked") %>
+      <% statusName = (f.checked ? "Yes" : "No") %>
+      <tr class="<%= statusClass %>">
+        <td class="parcel-select">
+          <input type="checkbox" class="js-select-row" id="<%= f.id %>">
+        </td>
+        <td class="parcel-name">
+          <label for="<%= f.id %>">
+            <%= (f.name ? f.name : "Untitled") %>
+          </label>
+        </td>
+        <td class="parcel-id"><%= f.id %></td>
+        <td class="parcel-area"><%= f.area %>ha</td>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+  <p><a href="remove-land-confirm" class="button">Remove these land parcels</a></p>
+  <p><a href="land">Back</a></p>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="js-stick-at-top-when-scrolling">
+    <%= partial "partial-map", :locals => { :map => 'business'} %>
+  </div>
+
+<% end %>
