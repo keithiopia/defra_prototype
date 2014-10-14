@@ -60,6 +60,8 @@ layout: layout-2-1-columns
 
 <% content_for :column2 do %>
 
+  <div class="js-stick-at-top-when-scrolling">
+
   <%= partial "partial-map", :locals => { :map => 'business-1-checked'} %>
 
   <div class="font-xsmall">
@@ -76,6 +78,8 @@ layout: layout-2-1-columns
       <li><a href="add-land">Add</a> or <a href="remove-land">remove</a> land from this business</li>
     -->
     </ul>
+  </div>
+
   </div>
 
 <% end %>
