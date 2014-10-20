@@ -34,8 +34,8 @@ layout: layout-2-1-columns
 <% for i in 1..90 do %>
 
       <% data.business.parcels.each do |f| %>
-      <% statusClass = (f.checked ? "checked" : "not-checked") %>
-      <% statusName = (f.checked ? "Yes" : "No") %>
+      <% statusClass = (f.complete ? "done" : "not-done") %>
+      <% statusName = (f.complete ? "Done" : "Not done") %>
       <tr class="<%= statusClass %>">
         <td class="parcel-name">
           <a href="/<%= f.id %>">
@@ -44,7 +44,7 @@ layout: layout-2-1-columns
         </td>
         <td class="parcel-id"><%= f.id %></td>
         <td class="parcel-area"><%= f.area %>ha</td>
-        <td class="parcel-status"><%= statusName %></td>
+        <td class="parcel-status"><span class="tag"><%= statusName %></span></td>
       </tr>
       <% end %>
 
@@ -74,9 +74,7 @@ layout: layout-2-1-columns
 
     <ul>
       <li><a href="add-land">Add land</a></li>
-      <li><a href="remove-land">Remove selected land parcels</a></li><!--
-      <li><a href="add-land">Add</a> or <a href="remove-land">remove</a> land from this business</li>
-    -->
+      <li><a href="remove-land">Remove land</a></li>
     </ul>
   </div>
 

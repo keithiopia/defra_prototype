@@ -2,6 +2,9 @@
 layout: layout-2-1-columns
 ---
 
+
+<% statusClass = (parcel.coverage == 100 ? "done" : "not-done") %>
+
 <% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-land" %>
 <% end %>
@@ -12,63 +15,55 @@ layout: layout-2-1-columns
     <hgroup>
       <h1 class="editable" contenteditable><%= parcel.name ? parcel.name : "Untitled" %></h1>
     </hgroup>
-
-    <dl class="metadata">
-      <dt class="visuallyhidden">Area</dt>
-      <dd>Area: <%= parcel.area %>ha</dd>
-      <dt class="visuallyhidden">Parcel ID</dt>
-      <dd>ID: <%= parcel.id %></dd>
-      <dd>Not organic</dd>
-    </dl>
   </header>
 
-  <table class="parcel-details">
+  <% unless parcel.verified %>
+    <p>NOT VERIFIED!</p>
+  <% end %>
+
+  <p>
+    All land parcels must have 100% coverage before you can apply for schemes.
+    Select a feature below to update it, or <a href="<%= parcel.id %>/add-feature">add a missing feature</a>.
+  </p>
+
+  <table class="features js-row-link">
     <thead>
       <tr>
-        <th class="details-land-use">Land use</th>
-        <th class="details-area">Area</th>
-        <th class="detail-status"></th>
+        <th class="name">Feature</th>
+        <th class="area">Area</th>
+        <th class="coverage">Coverage</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="details-land-use">Crops and grassland</td>
-        <td class="details-area">0.00ha</td>
-        <td class="edit"></td>
+        <td class="name"><a href="">Unspecified arable land</a></td>
+        <td class="area unknown">Unknown</td>
+        <td class="coverage unknown">Unknown</td>
       </tr>
       <tr>
-        <td class="details-land-use">Buffer strips</td>
-        <td class="details-area">0.00ha</td>
-        <td class="edit"></td>
+        <td class="name"><a href="">Buffer strips</a></td>
+        <td class="area unknown">Unknown</td>
+        <td class="coverage unknown">Unknown</td>
       </tr>
       <tr>
-        <td class="details-land-use">Hedges</td>
-        <td class="details-area">0.00ha</td>
-        <td class="edit"></td>
+        <td class="name"><a href="">Hedges</a></td>
+        <td class="area unknown">Unknown</td>
+        <td class="coverage unknown">Unknown</td>
       </tr>
       <tr>
-        <td class="details-land-use">Buildings and structures</td>
-        <td class="details-area">0.00ha</td>
-        <td class="edit"></td>
+        <td class="name"><a href="">Pond</a></td>
+        <td class="area">0.4ha</td>
+        <td class="coverage"><span class="tag"><%= parcel.coverage %>%</span></td>
       </tr>
-      <tr>
-        <td class="details-land-use">Other features</td>
-        <td class="details-area">0.00ha</td>
-        <td class="edit"></td>
-      </tr>
-      <tr>
-        <td class="details-land-use">Unknown</td>
-        <td class="details-area"><%= parcel.area %>ha <span class="percentage">100%</span></td>
-        <td class="edit"></td>
+      <tr class="totals <%= statusClass %>">
+        <td class="name">Total</td>
+        <td class="area">0.4ha</td>
+        <td class="coverage"><span class="tag"><%= parcel.coverage %>%</span></td>
       </tr>
     </tbody>
   </table>
 
-  <form>
-    <div class="form-group">
-      <a href="<%= parcel.id %>/organic-status" class="button">Check this land parcel</a>
-    </div>
-  </form>
+  <p><a href="<%= parcel.id %>/add-feature">Add a feature</a></p>
 
 <% end %>
 
@@ -86,12 +81,11 @@ layout: layout-2-1-columns
 
     <ul>
       <li>Parcel ID: <%= parcel.id %></li>
-      <li>Area: <%= parcel.area %>ha</li>
+      <li>Total area: <%= parcel.area %>ha</li>
     </ul>
 
     <ul>
-      <li><a href="<%= parcel.id %>/change-land-parcel">Merge or split the parcel</a></li>
-      <li><a href="<%= parcel.id %>/change-land-parcel">Change the parcel boundary</a></li>
+      <li><a href="<%= parcel.id %>/change-land-parcel">Merge, split or change the parcel boundary</a></li>
       <li><a href="<%= parcel.id %>/change-land-parcel">Transfer the parcel to someone else</a></li>
       <li><a href="<%= parcel.id %>/change-land-parcel">Remove the parcel</a></li>
     </ul>

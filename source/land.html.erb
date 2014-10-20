@@ -10,63 +10,66 @@ layout: layout-2-1-columns
 
  <header class="page-header">
     <hgroup>
-      <h1>Check land details</h1>
+      <h1>Land parcels</h1>
     </hgroup>
   </header>
 
-  <p>Check the land parcels to make sure they show the land as it will be on 12 May 2015 (this is the date that scheme payments are based on).</p>
+  <p>
+    All land parcels must have 100% coverage before you can apply for schemes.
+    To do this, select each parcel and complete any missing information.
+
+  </p>
 
   <table class="parcels js-row-link">
     <thead>
       <tr>
-        <th class="parcel-name">Name</th>
-        <th class="parcel-id">ID</th>
-        <th class="parcel-area">Area</th>
-        <th class="parcel-status">Checked</th>
+        <th class="name">Land parcel name</th>
+        <th class="id">ID</th>
+        <th class="area">Area</th>
+        <th class="coverage">Coverage</th>
       </tr>
     </thead>
     <tbody>
 
       <% data.business.parcels.each do |f| %>
-      <% statusClass = (f.checked ? "checked" : "not-checked") %>
-      <% statusName = (f.checked ? "Yes" : "No") %>
+      <% statusClass = (f.coverage == 100 ? "done" : "not-done") %>
       <tr class="<%= statusClass %>">
-        <td class="parcel-name">
+        <td class="name">
           <a href="/<%= f.id %>">
             <%= (f.name ? f.name : "Untitled") %>
           </a>
         </td>
-        <td class="parcel-id"><%= f.id %></td>
-        <td class="parcel-area"><%= f.area %>ha</td>
-        <td class="parcel-status"><%= statusName %></td>
+        <td class="id"><%= f.id %></td>
+        <td class="area"><%= f.area %>ha</td>
+        <td class="coverage"><span class="tag"><%= f.coverage %>%</span></td>
       </tr>
       <% end %>
 
     </tbody>
   </table>
 
-  <p></p>
-
 <% end %>
 
 <% content_for :column2 do %>
 
-  <%= partial "partial-map", :locals => { :map => 'business-1-checked'} %>
+  <div class="js-stick-at-top-when-scrolling">
 
-  <div class="font-xsmall">
-    <h2 class="heading-small">Land details</h2>
+    <%= partial "partial-map", :locals => { :map => 'business-1-checked'} %>
 
-    <ul>
-      <li>Area: <%= data.business.area %>ha</li>
-      <li>SBI: <%= data.business.sbi %></li>
-    </ul>
+    <div class="font-xsmall">
+      <h2 class="heading-small">Land details</h2>
 
-    <ul>
-      <li><a href="add-land">Add land</a></li>
-      <li><a href="remove-land">Remove land parcels</a></li><!--
-      <li><a href="add-land">Add</a> or <a href="remove-land">remove</a> land from this business</li>
-    -->
-    </ul>
+      <ul>
+        <li>Area: <%= data.business.area %>ha</li>
+        <li>SBI: <%= data.business.sbi %></li>
+      </ul>
+
+      <ul>
+        <li><a href="add-land">Add land</a></li>
+        <li><a href="remove-land">Remove land</a></li>
+      </ul>
+    </div>
+
   </div>
 
 <% end %>

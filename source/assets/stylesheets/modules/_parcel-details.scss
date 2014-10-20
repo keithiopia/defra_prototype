@@ -1,9 +1,5 @@
 
-.edit-organic-status{
-  float: right;
-  margin-top: -23px;
-  @include core-16;
-}
+
 .edit-name{
   float: right;
   margin-top: -55px;
@@ -25,21 +21,4 @@
 
 .editable:hover{
   cursor: pointer;
-}
-
-table.parcel-details{
-  margin-bottom: $gutter;
-  .details-land-use{
-    width: 50%;
-  }
-  .details-area{
-    span{
-      padding-left: 15px;
-    }
-  }
-  .edit{
-    width: 10%;
-    padding-right: 0;
-    text-align: right;
-  }
 }

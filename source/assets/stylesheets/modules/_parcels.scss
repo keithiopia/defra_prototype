@@ -12,81 +12,52 @@
   -webkit-transform: rotate(45deg);
 }
 
-table.parcels {
+table.parcels,
+table.features {
   margin: $gutter 0;
 
-  .parcel-select {
-    width: 5%;
-  }
-  th.parcel-select{
-    //text-indent: -9999px;
-  }
-
-  .parcel-name {
+  .name {
     width: 45%;
   }
-  td.parcel-id {
+  .id {
     width: 25%;
-    @include core-14;
-    color: $secondary-text-colour;
   }
-  .parcel-area {
+  td.id{
+    color: $secondary-text-colour;
+    @include core-14;
+  }
+  .area {
     width: 10%;
   }
-  .parcel-status {
+  .coverage {
     width: 5%;
     padding-right: 0;
+    text-align: right;
   }
-
-  // Checked and unchecked icons
-  tbody{
-    .parcel-status{
-      position: relative;
-      text-indent: -9999px;
-    }
-    tr.checked{
-
-      .parcel-status{
-        &:after{
-          content: " ";
-          position: absolute;
-          right: 30px;
-          top: 10px;
-          width: 5px;
-          height: 10px;
-          border-right: 3px solid;
-          border-bottom: 3px solid;
-          border-color: $green;
-          -webkit-transform: rotate(45deg);
-        }
-      }
-    }
-    tr.not-checked{
-      .parcel-status{
-        /*
-        &:before,
-        &:after{
-          content: " ";
-          position: absolute;
-          right: 32px;
-          width: 10px;
-          height: 18px;
-          border-right: 3px solid;
-          border-color: $red;
-        }
-        &:after{
-          top: 7px;
-          -webkit-transform: rotate(45deg);
-        }
-        &:before{
-          top: 14px;
-          -webkit-transform: rotate(-45deg);
-        }
-        */
-      }
+  .unknown{
+    color: $secondary-text-colour;
+  }
+  .totals{
+    td{
+      border-top: 2px solid $black;
     }
   }
 
+}
+
+.tag{
+  display: inline-block;
+  text-align: right;
+  padding: 4px 20px 2px 20px;
+  float: right;
+  margin-top: -2px;
+}
+
+.done .tag{
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  background: $green;
 }
 
 .table-filter{

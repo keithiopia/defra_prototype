@@ -1,41 +1,53 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-1-1-columns
 ---
 
-<% parcel = locals[:parcel] %>
-
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
 
-  <div class="group">
-    <div class="words">
-      <div class="inner-block">
-        <header class="page-header">
-          <hgroup>
-            <h1>Add a feature</h1>
-          </hgroup>
-        </header>
+<% content_for :column1 do %>
 
-        <p>
-          What kind of feature do you want to add?
-        </p>
+  <header class="page-header">
+    <hgroup>
+      <h1>Add a feature to a land parcel</h1>
+    </hgroup>
+  </header>
 
-        <form class="form" id="land-use-form">
+  <p>
+    Enter the name of the crop, building or other features that you want to add.
+  </p>
 
-          <%= partial "partial-land-use-list" %>
+  <form class="form" id="land-use-form">
 
-          <br><br>
+    <%= partial "partial-land-use-list" %>
 
-          <div class="form-group">
-            <a href="add-feature-point" class="button">Next</a>
-          </div>
-        </form>
+    <br><br>
 
-      </div>
+    <div class="form-group">
+      <a href="add-feature-trees" class="button">Continue</a>
     </div>
-    <%= partial "partial-map-parcel" %>
-  </div>
-</div>
+  </form>
 
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    </div>
+  </div>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Land parcel details</h2>
+
+    <ul>
+      <li>Parcel ID: <%= parcel.id %></li>
+      <li>Total area: <%= parcel.area %>ha</li>
+    </ul>
+
+  </div>
+
+<% end %>
