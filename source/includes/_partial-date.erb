@@ -1,15 +1,14 @@
-<div class="form-group date">
-  <div class="form-group inline form-group-day">
-      <label for="<%= locals[:id] %>Day" class="form-control-label">Day</label>
+<div class="date">
+  <div class="form-group">
+      <label for="<%= locals[:id] %>Day" class="form-hint">Day</label>
       <input type="text" class="form-control" pattern="[0-9]*" id="<%= locals[:id] %>Day" name="<%= locals[:id] %>Day">
   </div>
-  <div class="form-group inline form-group-month">
-      <label for="<%= locals[:id] %>Month" class="form-control-label">Month</label>
+  <div class="form-group">
+      <label for="<%= locals[:id] %>Month" class="form-hint">Month</label>
       <input type="text" class="form-control" id="<%= locals[:id] %>Month" name="<%= locals[:id] %>Month">
   </div>
-  <div class="form-group inline form-group-year">
-      <label for="<%= locals[:id] %>Year" class="form-control-label">Year</label>
+  <div class="form-group form-group-year">
+      <label for="<%= locals[:id] %>Year" class="form-hint">Year</label>
       <input type="text" class="form-control" pattern="[0-9]*" id="<%= locals[:id] %>Year" name="<%= locals[:id] %>Year">
   </div>
-  <div class="form-group inline hint">Eg. 21/8/2014</div>
 </div>

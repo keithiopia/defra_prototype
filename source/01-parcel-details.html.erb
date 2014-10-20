@@ -17,13 +17,9 @@ layout: layout-2-1-columns
     </hgroup>
   </header>
 
-  <% unless parcel.verified %>
-    <p>NOT VERIFIED!</p>
-  <% end %>
-
   <p>
     All land parcels must have 100% coverage before you can apply for schemes.
-    Select a feature below to update it, or <a href="<%= parcel.id %>/add-feature">add a missing feature</a>.
+    Select a feature below to edit it, or <a href="/<%= parcel.id %>/add-feature">add missing features</a>.
   </p>
 
   <table class="features js-row-link">
@@ -63,7 +59,7 @@ layout: layout-2-1-columns
     </tbody>
   </table>
 
-  <p><a href="<%= parcel.id %>/add-feature">Add a feature</a></p>
+  <p><a href="/<%= parcel.id %>/add-feature">Add a feature</a></p>
 
 <% end %>
 
@@ -82,9 +78,11 @@ layout: layout-2-1-columns
     <ul>
       <li>Parcel ID: <%= parcel.id %></li>
       <li>Total area: <%= parcel.area %>ha</li>
+      <% if (parcel.organic) %><li>Certified organic</li><% end %>
     </ul>
 
     <ul>
+      <li><a href="<%= parcel.id %>/organic-status">Change the organic status of the parcel</a></li>
       <li><a href="<%= parcel.id %>/change-land-parcel">Merge, split or change the parcel boundary</a></li>
       <li><a href="<%= parcel.id %>/change-land-parcel">Transfer the parcel to someone else</a></li>
       <li><a href="<%= parcel.id %>/change-land-parcel">Remove the parcel</a></li>

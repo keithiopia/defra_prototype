@@ -6,7 +6,6 @@ sbi: 222223250
 
 parcels:
   - name:       Top field
-    complete:   false
     coverage:   10
     verified:   true
     id:         SJ8063_5971
@@ -22,7 +21,7 @@ parcels:
 
   - name:       North paddock
     verified:   true
-    complete:   true
+    organic:    true
     coverage:   100
     id:         SJ8063_3931
     area:       11.09
@@ -37,7 +36,6 @@ parcels:
 
   - name:       East field
     verified:   false
-    complete:   true
     coverage:   100
     id:         SJ8063_4541
     area:       0.49
@@ -57,7 +55,6 @@ parcels:
     area:       0.72
 
   - name:
-    complete:   false
     coverage:   0
     verified:   true
     id:         SJ8063_4248
@@ -65,62 +62,53 @@ parcels:
 
   - name:
     verified:   true
-    complete:   false
     coverage:   42
     id:         SJ8063_1039
     area:       10.82
 
   - name:
-    complete:   false
     coverage:   12
     verified:   true
     id:         SJ8063_4485
     area:       4.79
 
   - name:
-    complete:   false
     coverage:   2
     verified:   true
     id:         SJ8063_4461
     area:       0.49
 
   - name:
-    complete:   false
     coverage:   64
     verified:   true
     id:         SJ8063_4369
     area:       0.1
 
   - name:
-    complete:   false
     coverage:   33
     verified:   true
     id:         SJ8063_4774
     area:       0.12
 
   - name:
-    complete:   false
     coverage:   76
     verified:   true
     id:         SJ8063_4066
     area:       0.32
 
   - name:
-    complete:   false
     coverage:   0
     verified:   true
     id:         SJ8063_7981
     area:       7.26
 
   - name:
-    complete:   false
     coverage:   0
     verified:   true
     id:         SJ8063_1674
     area:       7.18
 
   - name:
-    complete:   false
     coverage:   0
     verified:   true
     id:         SJ8063_3758

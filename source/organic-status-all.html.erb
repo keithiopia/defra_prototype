@@ -1,0 +1,61 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-land" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+ <header class="page-header">
+    <hgroup>
+      <h1>Update organic status of land</h1>
+    </hgroup>
+  </header>
+
+  <p>Select the land parcels who's organic status you want to update.</p>
+
+  <table class="parcels js-row-select">
+    <thead>
+      <tr>
+        <th class="parcel-select"><input type="checkbox" class="js-select-row"></th>
+        <th class="parcel-name">Name</th>
+        <th class="parcel-id">ID</th>
+        <th class="parcel-area">Area</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% data.business.parcels.each do |f| %>
+      <% statusClass = (f.checked ? "checked" : "not-checked") %>
+      <% statusName = (f.checked ? "Yes" : "No") %>
+      <tr class="<%= statusClass %>">
+        <td class="parcel-select">
+          <input type="checkbox" class="js-select-row" id="<%= f.id %>">
+        </td>
+        <td class="parcel-name">
+          <label for="<%= f.id %>">
+            <%= (f.name ? f.name : "Untitled") %>
+          </label>
+        </td>
+        <td class="parcel-id"><%= f.id %></td>
+        <td class="parcel-area"><%= f.area %>ha</td>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+  <p><a href="organic-status-all-2" class="button">Update organic status</a></p>
+  <p><a href="land">Back</a></p>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="js-stick-at-top-when-scrolling">
+    <%= partial "partial-map", :locals => { :map => 'business'} %>
+  </div>
+
+<% end %>

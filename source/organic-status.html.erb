@@ -1,0 +1,82 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Is this land certified organic?</h1>
+    </hgroup>
+  </header>
+
+  <p>Answer yes if the land parcel is currently certified or will be certified by January 2015.</p>
+
+  <form class="form">
+    <div class="form-group inline">
+      <label for="organic-status-yes" class="block-label">
+        <input type="radio" name="organic-status" id="organic-status-yes" value="yes" class="js-toggle" data-show="#yes-details">
+        Yes
+      </label>
+      <label for="organic-status-no" class="block-label">
+        <input type="radio" name="organic-status" id="organic-status-no" value="no" class="js-toggle" checked data-hide="#yes-details">
+        No
+      </label>
+    </div>
+
+    <p class="js-hidden">If you answered yes...</p>
+
+    <div class="js-hidden panel-indent" id="yes-details">
+
+      <div class="form-group">
+        <label for="organic-certification-body" class="form-label">Certified by</label>
+        <select name="organic-certification-body" id="organic-certification-body">
+          <option value="">Select an organisation</option>
+          <option value="0">Ascisco Ltd</option>
+          <option value="1">Biodynamic Association</option>
+          <option value="2">Global Trust Certification Ltd</option>
+          <option value="3">Irish Organic Farmers and Growers Association (IOFGA)</option>
+          <option value="4">Organic Farmers &amp; Growers Ltd</option>
+          <option value="5">Organic Food Federation</option>
+          <option value="6">Organic Trust Limited</option>
+          <option value="7">Quality Welsh Food Certification Ltd</option>
+          <option value="8">Scottish Food Quality Certification Ltd</option>
+          <option value="9">Soil Association Certification Ltd</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Certification date</legend>
+        <%= partial 'partial-date', :locals => { :id => 'organic-start-date'} %>
+      </fieldset>
+
+      <fieldset>
+        <legend>Expiry date</legend>
+        <%= partial 'partial-date', :locals => { :id => 'organic-end-date'} %>
+      </fieldset>
+
+    </div>
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/" class="button">Save and continue</a>
+    </div>
+  </form>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    </div>
+  </div>
+
+<% end %>
+
