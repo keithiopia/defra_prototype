@@ -1,5 +1,5 @@
 ---
-layout: layout-1-1-columns
+layout: layout-2-1-columns
 ---
 
 <% content_for :breadcrumbs do %>
@@ -38,16 +38,6 @@ layout: layout-1-1-columns
       <%= partial "partial-map-controls" %>
       <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
     </div>
-  </div>
-
-  <div class="font-xsmall">
-    <h2 class="heading-small">Land parcel details</h2>
-
-    <ul>
-      <li>Parcel ID: <%= parcel.id %></li>
-      <li>Total area: <%= parcel.area %>ha</li>
-    </ul>
-
   </div>
 
 <% end %>

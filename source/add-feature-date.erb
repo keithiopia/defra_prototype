@@ -29,7 +29,7 @@ layout: layout-1-1-columns
         For less than a year
       </label>
       <div class="panel-indent date js-hidden" id="date-past-details">
-
+        <p>From what date?</p>
         <div class="form-group">
           <label for="dob-day" class="form-hint">Day</label>
           <input type="text" class="form-control" id="dob-day" value="">
@@ -43,11 +43,12 @@ layout: layout-1-1-columns
           <input type="text" class="form-control" id="dob-year" value="">
         </div>
       </div>
-
+<!--
       <label for="date-future" class="block-label">
         <input type="radio" name="date" id="date-future" value="no">
         These are planned features
       </label>
+    -->
     </div>
 
     <div class="form-group">
@@ -65,16 +66,6 @@ layout: layout-1-1-columns
       <%= partial "partial-map-controls" %>
       <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
     </div>
-  </div>
-
-  <div class="font-xsmall">
-    <h2 class="heading-small">Land parcel details</h2>
-
-    <ul>
-      <li>Parcel ID: <%= parcel.id %></li>
-      <li>Total area: <%= parcel.area %>ha</li>
-    </ul>
-
   </div>
 
 <% end %>
