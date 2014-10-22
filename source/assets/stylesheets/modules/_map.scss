@@ -163,14 +163,21 @@
 
 // Map markers
 
-.map-marker{
+.map-marker,
+.map-marker-2{
   display: block;
-  background: url("/assets/images/map-marker-2.png");
-  background-size: 100%;
   width: 35px;
   height: 35px;
   text-align: center;
   font-weight: bold;
   line-height: 28px;
   font-size: 14px;
+}
+.map-marker{
+  background: url("/assets/images/map-marker.png");
+  background-size: 100%;
+}
+.map-marker-2{
+  background: url("/assets/images/map-marker-2.png");
+  background-size: 100%;
 }

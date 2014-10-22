@@ -1,114 +1,67 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-1-1-columns
 ---
 
-<% parcel = locals[:parcel] %>
-
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
 
-  <div class="group">
-    <div class="words">
-      <div class="inner-block">
-        <header class="page-header">
-          <hgroup>
-            <h1>Hedges</h1>
-          </hgroup>
-        </header>
+<% content_for :column1 do %>
 
+  <header class="page-header">
+    <hgroup>
+      <h1>Hedges</h1>
+    </hgroup>
+  </header>
 
-       <p>Are there any hedges on this land?</p>
+  <p>Are there any hedges on this land?</p>
 
-        <form class="form">
-          <div class="form-group inline">
-            <label for="hedges-yes" class="block-label">
-              <input type="radio" name="hedges" id="hedges-yes" value="yes" class="js-toggle" data-show="#hedges-details">
-              Yes
-            </label>
-            <label for="hedges-no" class="block-label">
-              <input type="radio" name="hedges" id="hedges-no" value="no" class="js-toggle" data-hide="#hedges-details">
-              No
-            </label>
-          </div>
-
-          <p class="js-hidden">If you answered yes...</p>
-
-          <div class="panel-indent js-hidden" id="hedges-details">
-
-
-            <p>Draw hedges on the map by clicking their start and end points. Press Escape to cancel drawing.</p>
-
-            <details>
-              <summary>Which hedges should I include?</summary>
-              <div class="panel-indentx">
-                <p>Include any hedge that:</p>
-
-                <ul class="list-bullet">
-                  <li>is less than 10m wide</li>
-                  <li>is at least 20m long (after gaps)</li>
-                  <li>you want to count towards your Environmental Focus Area total</li>
-                </ul>
-
-                <p>Gaps or gates in a single hedge cannot be wider than 5m and should not account for more than 10% of the total area of the hedge.</p>
-
-              </div>
-            </details>
-
-            <!--
-
-            <p>Describe this area by:</p>
-
-            <ul class="describe-area list-bullet">
-              <li>
-                  <a href="#describe-draw" class="js-toggle">drawing it on the map</a>
-                  <p id="describe-draw" class="js-hidden">
-
-                    Draw hedges on the map by clicking their start and end points. Press Escape to cancel drawing.
-
-                  </p>
-              </li>
-              <li>
-                  <a href="#describe-write" class="js-toggle">describing it in words</a>
-                  <div id="describe-write" class="js-hidden">
-
-                    <label for="notes-details" class="visuallyhidden">Enter details here</label>
-                    <textarea class="form-control full-width" id="notes-details"></textarea>
-
-                  </div>
-              </li>
-              <li>
-                  <a href="#describe-upload" class="js-toggle">uploading a file or image</a>
-                  <p id="describe-upload" class="js-hidden">
-                    <input type="file" name="attachment" id="attachment">
-                  </p>
-              </li>
-            </ul>
-
-            <div class="form-group">
-              <label for="hedges-width" class="form-label">Total length:
-              <input type="text" name="hedges-area" id="hedges-area" class="form-control form-control-1-4" value="0.00"> m
-              </label>
-            </div>
-
-          -->
-
-            <p>Total length: 0.00m</p>
-
-
-          </div>
-        </form>
-
-        <form>
-          <div class="form-group">
-            <a href="buildings-and-structures" class="button">Save and continue</a>
-          </div>
-        </form>
-
-      </div>
+  <form class="form">
+    <div class="form-group inline">
+      <label for="hedges-yes" class="block-label">
+        <input type="radio" name="hedges" id="hedges-yes" value="yes" class="js-toggle" data-show="#hedges-details">
+        Yes
+      </label>
+      <label for="hedges-no" class="block-label">
+        <input type="radio" name="hedges" id="hedges-no" value="no" class="js-toggle" data-hide="#hedges-details">
+        No
+      </label>
     </div>
-    <%= partial "partial-map-parcel" %>
-  </div>
-</div>
 
+    <p class="js-hidden">If you answered yes...</p>
+
+    <div class="panel-indent js-hidden" id="hedges-details">
+
+
+      <p>Draw hedges on the map by clicking their start and end points. Press Escape to cancel drawing.</p>
+
+      <details>
+        <summary>Which hedges should I include?</summary>
+        <div>
+          <p>Include any hedge that:</p>
+
+          <ul class="list-bullet">
+            <li>is less than 10m wide</li>
+            <li>is at least 20m long (after gaps)</li>
+            <li>you want to count towards your Environmental Focus Area total</li>
+          </ul>
+
+          <p>Gaps or gates in a single hedge cannot be wider than 5m and should not account for more than 10% of the total area of the hedge.</p>
+
+        </div>
+      </details>
+    </div>
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/" class="button">Save and continue</a>
+    </div>
+
+  </form>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'parcel'} %>
+
+<% end %>

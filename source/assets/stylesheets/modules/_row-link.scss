@@ -5,6 +5,10 @@
     cursor: pointer;
     background: $highlight-colour;
   }
+  &.totals:hover{
+    cursor: default;
+    background: transparent;
+  };
   &.highlight,
   &.highlight:hover{
     background-color: $yellow-25;

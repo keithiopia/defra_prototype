@@ -1,0 +1,72 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Buffer strips</h1>
+    </hgroup>
+  </header>
+
+
+  <h2 class="heading-medium">1. Feature area</h2>
+
+  <p>What is the total area of this feature?</p>
+
+  <form class="form">
+
+    <div class="form-group">
+      <label for="area" class="visuallyhidden">Total area</label>
+      <input class="form-control form-control-1-4" type="text"> ha
+    </div>
+
+  </form>
+
+<!--
+
+  <p>Are there any buffer strips on this land?</p>
+
+  <form class="form">
+    <div class="form-group inline">
+      <label for="buffer-strip-yes" class="block-label">
+        <input type="radio" name="buffer-strip" id="buffer-strip-yes" value="yes" class="js-toggle" data-show="#buffer-strip-details">
+        Yes
+      </label>
+      <label for="buffer-strip-no" class="block-label">
+        <input type="radio" name="buffer-strip" id="buffer-strip-no" value="no" class="js-toggle" data-hide="#buffer-strip-details">
+        No
+      </label>
+    </div>
+
+    <p class="js-hidden">If you answered yes...</p>
+
+    <div class="panel-indent js-hidden" id="buffer-strip-details">
+
+    <p>Click the start and end points of each buffer strip on the green parcel boundary on the map.</p>
+
+    </div>
+
+  -->
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/buffer-strips-description" class="button">Continue</a>
+    </div>
+
+    <p><a href="/<%= parcel.id %>/">Back</a></p>
+
+  </form>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'parcel'} %>
+
+<% end %>

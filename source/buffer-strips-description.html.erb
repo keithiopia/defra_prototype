@@ -1,0 +1,40 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Buffer strips</h1>
+    </hgroup>
+  </header>
+
+  <h2 class="heading-medium">2. Feature description</h2>
+
+  <p>Mark the buffer strips on the map by clicking their start and end points on the parcel boundary.</p>
+
+  <p>You can add a decription below as well.</p>
+
+  <div class="form-group">
+    <textarea class="form-control full-width"></textarea>
+  </div>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/buffer-strips-date" class="button">Continue</a>
+  </div>
+
+  <p><a href="/<%= parcel.id %>/buffer-strips">Back</a></p>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'parcel'} %>
+
+<% end %>
