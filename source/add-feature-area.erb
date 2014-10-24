@@ -14,19 +14,21 @@ layout: layout-2-1-columns
     </hgroup>
   </header>
 
-  <h2 class="heading-medium">1. What do you want to add?</h2>
+ <h2 class="heading-medium">2. What is the area?</h2>
 
-  <p>For example 'wheat', 'woodland', 'shed' etc.</p>
+  <p>Enter the total area of the feature</p>
 
-  <form class="form" id="land-use-form">
-
-    <%= partial "partial-land-use-list" %>
-
-    <br><br>
+  <form class="form">
 
     <div class="form-group">
-      <a href="add-feature-area" class="button">Continue</a>
+      <label for="area" class="visuallyhidden">Total area</label>
+      <input class="form-control form-control-1-4" type="text"> ha
     </div>
+
+    <div class="form-group">
+      <a href="add-feature-date" class="button">Continue</a>
+    </div>
+
   </form>
 
 <% end %>

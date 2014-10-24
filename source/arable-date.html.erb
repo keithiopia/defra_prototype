@@ -10,20 +10,18 @@ layout: layout-1-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Add a feature</h1>
+      <h1>Wheat</h1>
     </hgroup>
   </header>
 
-  <h2 class="heading-medium">4. Feature date</h2>
-
   <p>
-    How long have these features been on this land?
+    How long has the arable land been used for wheat?
   </p>
 
   <form class="form">
     <div class="form-group">
       <label for="date-old" class="block-label">
-        <input type="radio" name="date" id="date-old" value="yes">
+        <input type="radio" name="date" id="date-old" value="yes" class="js-toggle" data-hide="#date-past-details">
         For over a year
       </label>
       <label for="date-past" class="block-label">
@@ -45,29 +43,21 @@ layout: layout-1-1-columns
           <input type="text" class="form-control" id="dob-year" value="">
         </div>
       </div>
-<!--
-      <label for="date-future" class="block-label">
-        <input type="radio" name="date" id="date-future" value="no">
-        These are planned features
-      </label>
-    -->
     </div>
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>" class="button">Continue</a>
+      <a href="/<%= parcel.id %>" class="button">Save and continue</a>
     </div>
 
+    <p><a href="/<%= parcel.id %>/arable-area">Back</a></p>
+
   </form>
+
 
 <% end %>
 
 <% content_for :column2 do %>
 
-  <div class="map-wrapper">
-    <div class="map">
-      <%= partial "partial-map-controls" %>
-      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
-    </div>
-  </div>
+  <%= partial "partial-map", :locals => { :map => 'parcel'} %>
 
 <% end %>

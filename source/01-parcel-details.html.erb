@@ -22,39 +22,45 @@ layout: layout-2-1-columns
     Select a feature below to edit it, or <a href="/<%= parcel.id %>/add-feature">add missing features</a>.
   </p>
 
-  <table class="features js-row-link">
+  <table class="features xjs-row-link">
     <thead>
       <tr>
         <th class="name">Feature</th>
         <th class="area">Area</th>
         <th class="coverage">Coverage</th>
+        <th class="delete"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="name"><a href="">Unspecified arable land</a></td>
+        <td class="name"><a href="/<%= parcel.id %>/arable">Arable land</a></td>
         <td class="area unknown">Unknown</td>
         <td class="coverage unknown">Unknown</td>
+        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">✕</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/buffer-strips">Buffer strips</a></td>
         <td class="area unknown">Unknown</td>
         <td class="coverage unknown">Unknown</td>
+        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">✕</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/hedges">Hedges</a></td>
         <td class="area unknown">Unknown</td>
         <td class="coverage unknown">Unknown</td>
+        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">✕</a></td>
       </tr>
       <tr>
         <td class="name"><a href="">Pond</a></td>
         <td class="area">0.4ha</td>
         <td class="coverage"><span class="tag"><%= parcel.coverage %>%</span></td>
+        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">✕</a></td>
       </tr>
       <tr class="totals <%= statusClass %>">
         <td class="name">Total</td>
         <td class="area">0.4ha</td>
         <td class="coverage"><span class="tag"><%= parcel.coverage %>%</span></td>
+        <td>
       </tr>
     </tbody>
   </table>

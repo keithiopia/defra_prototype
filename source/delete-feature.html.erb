@@ -1,5 +1,5 @@
 ---
-layout: layout-2-1-columns
+layout: layout-1-1-columns
 ---
 
 <% content_for :breadcrumbs do %>
@@ -10,19 +10,29 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Add a feature</h1>
+      <h1>Remove feature</h1>
     </hgroup>
   </header>
 
-  <h2 class="heading-medium">1. What do you want to add?</h2>
+  <p>Are you sure you want to remove the feature: <br>
 
-  <p>For example 'wheat', 'woodland', 'shed' etc.</p>
+    Unspecified arable land
+
+    ?
+  </p>
 
   <form class="form" id="land-use-form">
 
-    <%= partial "partial-land-use-list" %>
-
-    <br><br>
+    <div class="form-group inline">
+      <label for="delete-yes" class="block-label">
+        <input type="radio" name="delete" id="delete-yes" value="yes" class="js-toggle">
+        Yes
+      </label>
+      <label for="delete-no" class="block-label">
+        <input type="radio" name="delete" id="delete-no" value="no" class="js-toggle">
+        No
+      </label>
+    </div>
 
     <div class="form-group">
       <a href="add-feature-area" class="button">Continue</a>
