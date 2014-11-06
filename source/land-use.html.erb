@@ -14,7 +14,7 @@ layout: layout-2-1-columns
     </hgroup>
   </header>
 
-  <p>Undefined land remaining in this parcel: 3.4ha</p>
+  <p>What is this land used for?</p>
 
   <form class="form" id="land-use-form">
     <table class="land-use-table">
@@ -39,12 +39,25 @@ layout: layout-2-1-columns
 <% end %>
 
 <% content_for :column2 do %>
+  <div class="font-xsmall">
+    <p>Parcel area: 5ha (2.3ha undefined)</p>
+  </div>
 
   <div class="map-wrapper">
     <div class="map">
       <%= partial "partial-map-controls" %>
       <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
     </div>
+  </div>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Land parcel details</h2>
+
+    <ul>
+      <li>Parcel ID: <%= parcel.id %></li>
+      <li>Total area: <%= parcel.area %>ha (2.3ha undefined)</li>
+      <% if (parcel.organic) %><li>Certified organic</li><% end %>
+    </ul>
   </div>
 
 <% end %>

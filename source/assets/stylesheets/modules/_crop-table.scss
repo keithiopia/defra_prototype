@@ -1,8 +1,12 @@
 table.land-use-table{
   margin-bottom: $gutter;
-  width: 75%;
+  //width: 75%;
   th, td{
     border: 0;
+  }
+  th{
+    font-weight: normal;
+    font-size: 18px;
   }
   td{
     padding: 0 8px 5px 0;
