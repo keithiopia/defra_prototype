@@ -1,0 +1,55 @@
+---
+layout: layout-2-1-columns
+---
+
+
+<% statusClass = (parcel.coverage == 100 ? "done" : "not-done") %>
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-land" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1 class="editable" contenteditable><%= parcel.name ? parcel.name : "Untitled" %></h1>
+    </hgroup>
+  </header>
+
+  <p>
+    This land parcel must be described before you can apply for schemes.
+  </p>
+
+  <p><a class="button" href="/<%= parcel.id %>/boundary-features">Describe this parcel</a></p>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    </div>
+  </div>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Land parcel details</h2>
+
+    <ul>
+      <li>Parcel ID: <%= parcel.id %></li>
+      <li>Total area: <%= parcel.area %>ha</li>
+      <% if (parcel.organic) %><li>Certified organic</li><% end %>
+    </ul>
+
+    <ul>
+      <li><a href="<%= parcel.id %>/organic-status">Change the organic status of the parcel</a></li>
+      <li><a href="<%= parcel.id %>/change-land-parcel">Merge, split or change the parcel boundary</a></li>
+      <li><a href="<%= parcel.id %>/change-land-parcel">Transfer the parcel to someone else</a></li>
+      <li><a href="<%= parcel.id %>/change-land-parcel">Remove the parcel</a></li>
+    </ul>
+  </div>
+
+<% end %>
+

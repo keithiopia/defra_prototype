@@ -10,26 +10,20 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Arable land</h1>
+      <h1>What other features does this land parcel contain?</h1>
     </hgroup>
   </header>
 
-  <p class="heading-small">What's the arable land used for?</p>
-
-  <p>For example 'Wheat', 'Corn', etc.</p>
-
-  <form class="form" id="land-use-form">
-
-    <%= partial "partial-land-use-list" %>
-
-    <br><br>
-
-    <p><a href="">Add another land use</a></p>
-
-
+  <p>Include things like buildings, trees and unused land.</p>
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/arable-area" class="button">Continue</a>
+      <%= partial "partial-land-use-and-features-list" %>
+    </div>
+
+    <p class="text-small"><a href="">Add another</a></p>
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/land-use" class="button">Continue</a>
     </div>
   </form>
 

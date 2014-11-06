@@ -28,6 +28,7 @@ table.features {
   }
   .area {
     width: 10%;
+    text-align: right;
   }
   .coverage {
     width: 5%;
@@ -36,12 +37,11 @@ table.features {
     color: $secondary-text-colour;
   }
   .delete{
-    width: 1%;
+    width: 4%;
     padding-right: 0;
     text-align: right;
     a{
-      //color: $secondary-text-colour;
-      text-decoration: none;
+      color: $secondary-text-colour;
     }
   }
   .totals{

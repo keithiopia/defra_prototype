@@ -42,6 +42,18 @@ data.business.parcels.each do |parcel|
   proxy "/#{parcel[:id]}/buffer-strips-date.html", "/buffer-strips-date.html", :locals => { :parcel => parcel }, :ignore => true
 
 
+  proxy "/#{parcel[:id]}/undefined-feature.html", "/undefined-feature.html", :locals => { :parcel => parcel }, :ignore => true
+
+
+  proxy "/#{parcel[:id]}/get-started.html", "/get-started.html", :locals => { :parcel => parcel }, :ignore => true
+
+
+  proxy "/#{parcel[:id]}/land-use.html", "/land-use.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/boundary-features.html", "/boundary-features.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/other-features.html", "/other-features.html", :locals => { :parcel => parcel }, :ignore => true
+
+
+
   proxy "/#{parcel[:id]}/arable.html", "/arable.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/arable-area.html", "/arable-area.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/arable-date.html", "/arable-date.html", :locals => { :parcel => parcel }, :ignore => true

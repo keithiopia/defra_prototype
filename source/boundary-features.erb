@@ -1,0 +1,63 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>What boundary features does this land parcel contain?</h1>
+    </hgroup>
+  </header>
+
+  <p>Select all that apply.</p>
+
+ <form class="form">
+    <div class="form-group">
+      <label class="block-label">
+        <input type="checkbox" name="boundary-feature">
+        Buffer strips
+      </label>
+      <label class="block-label">
+        <input type="checkbox" name="boundary-feature">
+        Hedges
+      </label>
+      <label class="block-label">
+        <input type="checkbox" name="boundary-feature">
+        Hedge banks
+      </label>
+      <label class="block-label">
+        <input type="checkbox" name="boundary-feature">
+        Banks
+      </label>
+      <label class="block-label">
+        <input type="checkbox" name="boundary-feature">
+        Stone walls
+      </label>
+      <label class="block-label">
+        <input type="checkbox" name="boundary-feature">
+        Trees in a line
+      </label>
+    </div>
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/other-features" class="button">Continue</a>
+    </div>
+  </form>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    </div>
+  </div>
+
+<% end %>

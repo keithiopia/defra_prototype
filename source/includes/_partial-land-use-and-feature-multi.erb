@@ -1,0 +1,30 @@
+
+<% for i in 1..6 do
+
+# Stick 6 rows in the page, but only show the first one initially
+hideIt = (i == 1 ? "" : " js-hidden")
+
+# Only give a running total from row 2 onwards
+showTotal = (i == 1 ? "" : "running-total")
+
+%>
+
+<tr class="use-<%= i %><%= hideIt %>">
+  <td class="land-use-name">
+    <label for="land-use" class="visuallyhidden">Select the feature</label>
+    <%= partial "partial-land-use-and-features-list" %>
+  </td>
+  <td class="land-use-area">
+    <label for="feature-area" class="visuallyhidden">Total area</label>
+    <input type="text" class="form-control form-control-3-4 area-field"> &nbsp;ha
+  </td>
+</tr>
+<tr class="use-<%= i %><%= hideIt %> use-controls" id="use-<%= i %>-link">
+  <td>
+    <span class="js-toggle link-style" data-show=".use-<%= i + 1 %>" data-hide="#use-<%= i %>-link">Add another</span>
+
+  </td>
+  <td class="<%= showTotal %>"></td>
+</tr>
+
+<% end %>

@@ -1,5 +1,5 @@
 ---
-layout: layout-2-1-columns
+layout: layout-1-1-columns
 ---
 
 <% content_for :breadcrumbs do %>
@@ -10,21 +10,32 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Add a feature</h1>
+      <h1>Undefined feature</h1>
     </hgroup>
   </header>
 
-    <p>Name of feature
+    <p>You can reposition this feature by dragging it on the map, or <a href="">remove it</a>.</p>
 
-      <span class="form-hint">For example 'Pond', 'Tree' or 'Farmyard'</span>
-    </p>
+
+
 
     <div class="form-group">
+      <p class="form-label">Name of feature
+        <span class="form-hint">For example 'Pond', 'Tree' or 'Farmyard'</span>
+      </p>
       <%= partial "partial-land-use-and-features-list" %>
     </div>
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/add-feature-area" class="button">Continue</a>
+      <label class="form-label">Size of feature
+      </label>
+      <input class="form-control form-control-1-8" type="text" value="2.1"> ha
+    </div>
+
+
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/" class="button">Continue</a>
     </div>
   </form>
 

@@ -9,7 +9,7 @@ parcels:
     coverage:   10
     verified:   true
     id:         SJ8063_5971
-    area:       3.05
+    area:       6.05
     use:
       - type:   Barley
         cover:  Arable

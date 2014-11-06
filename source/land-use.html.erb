@@ -10,26 +10,29 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Arable land</h1>
+      <h1>Undefined arable land</h1>
     </hgroup>
   </header>
 
-  <p class="heading-small">What's the arable land used for?</p>
-
-  <p>For example 'Wheat', 'Corn', etc.</p>
+  <p>Undefined land remaining in this parcel: 3.4ha</p>
 
   <form class="form" id="land-use-form">
+    <table class="land-use-table">
+      <thead>
+        <tr>
+          <th class="land-use-name">Land use (eg. 'Wheat' or 'Corn')</th>
+          <th class="land-use-area">Area</th>
+        </tr>
+      </thead>
+      <tbody>
 
-    <%= partial "partial-land-use-list" %>
+        <%= partial "partial-land-use-and-area" %>
 
-    <br><br>
-
-    <p><a href="">Add another land use</a></p>
-
-
+      </tbody>
+    </table>
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/arable-area" class="button">Continue</a>
+      <a href="/<%= parcel.id %>/" class="button">Continue</a>
     </div>
   </form>
 
