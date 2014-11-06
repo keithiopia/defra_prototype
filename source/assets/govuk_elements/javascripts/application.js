@@ -65,4 +65,18 @@ $(document).ready(function() {
   // Example - Add aria support to details
   // See /javascripts/vendor/details.polyfill.js
 
+
+  // Get parameter value from querystring
+
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  var landUse = getParameterByName('land-use');
+
+  $(".js-land-use").text(landUse);
+
 });

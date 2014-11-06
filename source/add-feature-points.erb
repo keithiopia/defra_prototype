@@ -1,0 +1,52 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Add a feature</h1>
+    </hgroup>
+  </header>
+
+    <div class="form-group">
+      <span class="bold-small">Name</span> <span class="form-hint">Trees</span>
+    </div>
+
+    <div class="form-group">
+      <h3 class="form-label-bold">Position</h3>
+      <p class="form-hint">Mark the features on the map</p>
+    </div>
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/" class="button">Save and continue</a>
+      <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+    </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+    </div>
+  </div>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Land parcel details</h2>
+
+    <ul>
+      <li>Parcel ID: <%= parcel.id %></li>
+      <li>Total area: <%= parcel.area %>ha</li>
+    </ul>
+
+  </div>
+
+<% end %>

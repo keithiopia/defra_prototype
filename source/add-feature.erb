@@ -1,5 +1,5 @@
 ---
-layout: layout-2-1-columns
+layout: layout-1-1-columns
 ---
 
 <% content_for :breadcrumbs do %>
@@ -14,17 +14,16 @@ layout: layout-2-1-columns
     </hgroup>
   </header>
 
-    <p>Name of feature
-
-      <span class="form-hint">For example 'Pond', 'Tree' or 'Farmyard'</span>
-    </p>
-
+  <form class="form" id="land-use-form" name="land-use-form" method="get" action="/<%= parcel.id %>/add-feature-details">
     <div class="form-group">
+      <p class="form-label-bold">Type of feature
+        <span class="form-hint">For example 'Pond', 'Trees' or 'Farmyard'</span>
+      </p>
       <%= partial "partial-land-use-and-features-list" %>
     </div>
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/add-feature-area" class="button">Continue</a>
+      <input type="submit" class="button" value="Continue">
     </div>
   </form>
 
