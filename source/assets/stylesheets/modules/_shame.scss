@@ -13,6 +13,14 @@ details[open] summary{
   margin-bottom: 10px;
 }
 
+.button{
+  vertical-align: baseline; // Makes button text align with surrounding inline text
+}
+
+.form-label-bold {
+  @include bold-19; // Make bold form labels the same size as normal ones
+}
+
 #proposition-menu{
   ul{
     list-style-type: none;
