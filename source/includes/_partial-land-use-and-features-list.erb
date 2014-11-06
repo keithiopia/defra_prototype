@@ -1,14 +1,14 @@
 <select class="land-use-list" name="land-use">
 <option><option>
-<option>Stone Wall<option>
-<option>Hedges<option>
-<option>Hedgebank<option>
-<option>Trees in a line<option>
-<option>Bank<option>
-<option>Trees  individual, trunks/stumps<option>
-<option>Trees  clumps<option>
+<option data-type="line">Stone Wall<option>
+<option data-type="line">Hedges<option>
+<option data-type="line">Hedgebank<option>
+<option data-type="line">Trees in a line<option>
+<option data-type="line">Bank<option>
+<option data-type="points">Trees  individual, trunks/stumps<option>
+<option data-type="shape">Trees  clumps<option>
 <option>Drain/Ditch/Dyke<option>
-<option>Pond<option>
+<option data-type="point">Pond<option>
 <option>Scree<option>
 <option>Boulders<option>
 <option>Rocky outcrop<option>
@@ -310,3 +310,5 @@
 <option>Mineral Extraction site<option>
 
 </select>
+
+<input type="hidden" name="land-use-type" id="land-use-type">

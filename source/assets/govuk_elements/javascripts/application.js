@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+  // Get parameter value from querystring
+
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
   // Example - Highlight grid
 
   if ($('.js-highlight-grid').length>0) {
@@ -66,17 +75,26 @@ $(document).ready(function() {
   // See /javascripts/vendor/details.polyfill.js
 
 
-  // Get parameter value from querystring
+  // Set land-use type when the land use is chosen
+  $('.land-use-list').on('change',function(){
+    $('#land-use-type').val($(this).find(':selected').data('type'))
+  });
 
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+
+  // Show chosen land use on screen
+  var landUse = getParameterByName('land-use');
+  $(".js-land-use").text(landUse);
+
+
+
+  // Hide 'content'
+  $("[class^='content-']").hide();
+
+  // Show content relating to land-use type
+  var landUseType = getParameterByName('land-use-type');
+  if(landUseType){
+    $(".content-" + landUseType).show()
   }
 
-  var landUse = getParameterByName('land-use');
-
-  $(".js-land-use").text(landUse);
 
 });
