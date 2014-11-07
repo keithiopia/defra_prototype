@@ -18,6 +18,8 @@ layout: layout-1-1-columns
     </hgroup>
   </header>
 
+  <div class="content-point">
+
     <div class="form-group">
       <label class="form-label-bold">Size
         <span class="form-hint">For example '2ha', '10m<sup class="font-xsmall">2</sup>' or '7m x 8m'</span>
@@ -27,20 +29,65 @@ layout: layout-1-1-columns
 
     <div class="form-group">
       <h3 class="form-label-bold">Location</h3>
+      <p class="form-hint">Mark the location by clicking on the map</p>
+    </div>
 
-      <p class="content-point form-hint">
+  </div>
 
-        Mark the location by clicking on the map
-      </p>
-      <p class="content-points form-hint">Mark the locations by clicking on the map</p>
-      <p class="content-line form-hint">
+
+  <div class="content-points">
+
+    <div class="form-group">
+      <h3 class="form-label-bold">Location</h3>
+      <p class="form-hint">Mark the locations by clicking on the map</p>
+    </div>
+
+  </div>
+
+
+  <div class="content-line">
+
+    <div class="form-group">
+      <h3 class="form-label-bold">Location</h3>
+      <p class="form-hint">
         Draw lines on the map to mark the features.
         Click the map to mark points on the line.
-        Double-click to end a line.</p>
-      <p class="content-shape form-hint">Mark the outline of the feature on the map</p>
-
-
+        Double-click to end a line.
+      </p>
     </div>
+
+  </div>
+
+
+  <div class="content-crop">
+
+    <div class="form-group">
+      <label class="form-label-bold">Area
+        <span class="form-hint">There is 2.3ha of undefined land on this parcel</span>
+      </label>
+      <input class="form-control form-control-1-8" type="text"> ha
+    </div>
+
+  </div>
+
+
+  <div class="content-shape">
+
+    <div class="form-group">
+      <label class="form-label-bold">Size
+        <span class="form-hint">For example '2ha', '10m<sup class="font-xsmall">2</sup>' or '7m x 8m'</span>
+      </label>
+      <input class="form-control form-control-1-4" type="text">
+    </div>
+
+    <div class="form-group">
+      <h3 class="form-label-bold">Location</h3>
+      <p class="form-hint">
+        Mark the outline of the feature on the map
+      </p>
+    </div>
+
+  </div>
 
     <div class="form-group">
       <a href="/<%= parcel.id %>/?changed=true" class="button">Save and continue</a>
