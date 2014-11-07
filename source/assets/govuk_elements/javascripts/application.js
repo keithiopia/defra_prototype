@@ -96,5 +96,10 @@ $(document).ready(function() {
     $(".content-" + landUseType).show()
   }
 
+  // Show 'Unverified changes' panel
+  if (getParameterByName('changed') != 'true'){
+    $("#submit-changes").hide();
+  }
+
 
 });

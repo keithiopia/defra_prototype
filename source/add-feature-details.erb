@@ -12,6 +12,9 @@ layout: layout-1-1-columns
     <hgroup>
       <h1>Add a feature</h1>
       <h2 class="subtitle js-land-use">Undefined</h2>
+      <!--
+      <div class="edit-feature-type"><a href="/<%= parcel.id %>/add-feature">Change</a></div>
+    -->
     </hgroup>
   </header>
 
@@ -23,18 +26,24 @@ layout: layout-1-1-columns
     </div>
 
     <div class="form-group">
-      <h3 class="form-label-bold">Position</h3>
-      <p class="content-point form-hint">Mark the feature on the map</p>
-      <p class="content-points form-hint">Mark the features on the map</p>
-      <p class="content-line form-hint">Mark the start and end points of the feature on the map</p>
+      <h3 class="form-label-bold">Location</h3>
+
+      <p class="content-point form-hint">
+
+        Mark the location by clicking on the map
+      </p>
+      <p class="content-points form-hint">Mark the locations by clicking on the map</p>
+      <p class="content-line form-hint">
+        Draw lines on the map to mark the features.
+        Click the map to mark points on the line.
+        Double-click to end a line.</p>
       <p class="content-shape form-hint">Mark the outline of the feature on the map</p>
 
 
     </div>
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/" class="button">Save and continue</a>
-      <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+      <a href="/<%= parcel.id %>/?changed=true" class="button">Save and continue</a>
     </div>
 
 <% end %>

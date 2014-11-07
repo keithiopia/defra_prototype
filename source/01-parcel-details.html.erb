@@ -18,10 +18,15 @@ layout: layout-2-1-columns
   </header>
 
 
+  <p class="alert font-xsmall" id="submit-changes">
+    <a class="button" href="/<%= parcel.id %>/">Submit changes</a>
+    <span class="bold-xsmall">There are unverified changes on this land parcel</span><br>
+    Submit these changes to the RPA for verification
+  </p>
+
   <p>
     Describe the features on this land parcel. All features must be fully defined before you can apply for schemes.
     <a href="what-features-should-I-add">Find out what features you should add</a>.
-
   </p>
 
 
@@ -44,29 +49,6 @@ layout: layout-2-1-columns
         <td class="area">0.1ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">Remove</a></td>
       </tr>
-    <!--
-      <tr>
-        <td class="name"><a href="/<%= parcel.id %>/buffer-strips">Buffer strips</a></td>
-        <td class="area">1.2ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">Remove</a></td>
-      </tr>
-      <tr>
-        <td class="name"><a href="/<%= parcel.id %>/hedges">Hedges</a></td>
-        <td class="area">0.5ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">Remove</a></td>
-      </tr>
-      <tr>
-        <td class="name"><a href="/<%= parcel.id %>/land-use">Farm building</a></td>
-        <td class="area">0.2ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">Remove</a></td>
-      </tr>
-      <tr>
-        <td class="name"><a href="/<%= parcel.id %>/land-use">Wheat</a></td>
-        <td class="area">1.5ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/delete-feature" title="Remove this feature">Remove</a></td>
-      </tr>
-    -->
-
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/land-use">Undefined arable land</a></td>
         <td class="area">5.75ha</td>
@@ -77,13 +59,6 @@ layout: layout-2-1-columns
         <td class="area">0.0ha</td>
         <td class="delete">0%</td>
       </tr>
-      <!--
-      <tr>
-        <td class="name">Total area undefined</td>
-        <td class="area">6.05ha</td>
-        <td class="delete">100%</td>
-      </tr>
-    -->
     </tbody>
   </table>
 
