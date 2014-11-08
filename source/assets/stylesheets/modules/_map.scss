@@ -17,9 +17,15 @@
 // Set height of map based on it's width
 .grid-1-3 .map{
   height: 300px;
+  img{
+    margin-left: -25px;
+  }
 }
 .grid-1-2 .map{
   height: 500px;
+  img{
+    margin-left: -60px;
+  }
 }
 
 // Hide map buttons on small map
@@ -164,7 +170,9 @@
 // Map markers
 
 .map-marker,
-.map-marker-2{
+.map-marker-2,
+.map-marker-3,
+.map-marker-4{
   display: block;
   width: 35px;
   height: 35px;
@@ -174,10 +182,27 @@
   font-size: 14px;
 }
 .map-marker{
+  margin-top: 3px;
   background: url("/assets/images/map-marker.png");
   background-size: 100%;
 }
 .map-marker-2{
   background: url("/assets/images/map-marker-2.png");
   background-size: 100%;
+}
+
+.map-marker-3{
+  background: url("/assets/images/map-marker-3.png");
+  background-size: 65%;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.map-marker-4{
+  background: url("/assets/images/map-marker-4.png");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  float: left;
+  margin-top: -6px;
+  margin-left: -6px;
 }
