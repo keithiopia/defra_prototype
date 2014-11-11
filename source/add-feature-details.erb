@@ -12,9 +12,6 @@ layout: layout-1-1-columns
     <hgroup>
       <h1>Add a feature</h1>
       <h2 class="subtitle js-land-use">Undefined</h2>
-      <!--
-      <div class="edit-feature-type"><a href="/<%= parcel.id %>/add-feature">Change</a></div>
-    -->
     </hgroup>
   </header>
 
@@ -31,7 +28,9 @@ layout: layout-1-1-columns
 
     <div class="form-group">
       <a href="/<%= parcel.id %>/?changed=true" class="button">Save and continue</a>
+      <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
     </div>
+
 
 <% end %>
 

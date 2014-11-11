@@ -11,28 +11,34 @@ layout: layout-1-1-columns
   <header class="page-header">
     <hgroup>
       <h1>Remove feature</h1>
+      <h2 class="subtitle js-land-use">Undefined</h2>
     </hgroup>
   </header>
 
-  <p>Are you sure you want to remove the feature: <br>
-
-    Unspecified arable land
-
-    ?
-  </p>
+  <p>Are you sure you want to remove this feature?</p>
 
   <form class="form" id="land-use-form">
 
     <div class="form-group inline">
       <label for="delete-yes" class="block-label">
-        <input type="radio" name="delete" id="delete-yes" value="yes" class="js-toggle">
+        <input type="radio" name="delete" id="delete-yes" value="yes" class="js-toggle" data-show="#remove-yes">
         Yes
       </label>
       <label for="delete-no" class="block-label">
-        <input type="radio" name="delete" id="delete-no" value="no" class="js-toggle">
+        <input type="radio" name="delete" id="delete-no" value="no" class="js-toggle" data-hide="#remove-yes">
         No
       </label>
+
+      <div class="panel-indent js-hidden" id="remove-yes">
+        <p class="form-label">What has this feature been replaced by?
+          <span class="form-hint">For example 'Wheat', 'Corn' or 'Hard standings'</span>
+        </p>
+        <%= partial "partial-land-use-and-features-list" %>
+      </div>
+
     </div>
+
+
 
     <div class="form-group">
       <a href="add-feature-area" class="button">Continue</a>
@@ -46,7 +52,7 @@ layout: layout-1-1-columns
   <div class="map-wrapper">
     <div class="map">
       <%= partial "partial-map-controls" %>
-      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/feature-pond.png") %>">
     </div>
   </div>
 
