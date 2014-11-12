@@ -83,7 +83,10 @@ $(document).ready(function() {
 
   // Show chosen land use on screen
   var landUse = getParameterByName('land-use');
-  $(".js-land-use").text(landUse);
+  if(landUse != ""){
+    $(".js-land-use").text(landUse);
+  }
+
 
 
 

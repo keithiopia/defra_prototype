@@ -21,6 +21,18 @@ details[open] summary{
   @include bold-19; // Make bold form labels the same size as normal ones
 }
 
+.form-control-num{
+  width: 50px;
+}
+
+.change-feature-type{
+  font-size: 16px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: super;
+}
+
+
 #proposition-menu{
   ul{
     list-style-type: none;

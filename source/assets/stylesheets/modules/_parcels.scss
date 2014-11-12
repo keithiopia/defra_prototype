@@ -17,7 +17,7 @@ table.features {
   margin: $gutter 0;
 
   .name {
-    width: 45%;
+    width: 30%;
   }
   .id {
     width: 25%;
@@ -35,6 +35,13 @@ table.features {
   }
   .unknown{
     color: $secondary-text-colour;
+  }
+  td.cover{
+   color: $secondary-text-colour;
+  }
+  th.cover{
+    text-indent: -9999px;
+    //width: 40%;
   }
   .delete{
     width: 4%;

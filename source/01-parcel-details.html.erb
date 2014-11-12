@@ -17,50 +17,61 @@ layout: layout-2-1-columns
     </hgroup>
   </header>
 
-
-  <p class="alert font-xsmall" id="submit-changes">
-    <a class="button" href="/<%= parcel.id %>/">Submit changes</a>
-    <span class="bold-xsmall">There are unverified changes on this land parcel</span><br>
-    Submit these changes to the RPA for verification
-  </p>
-
   <p>
     Describe the features on this land parcel. All features must be fully defined before you can apply for schemes.
-    <a href="what-features-should-I-add">Find out what features you should add</a>.
+    <a href="#help-features" class="js-toggle">Find out what features you should add</a>.
   </p>
+
+  <div class="js-hidden panel-indent fonr-xsmall" id="help-features">
+    <h3 class="bold-xsmall">What features should you add?</h3>
+    <p class="font-xsmall">
+      Describe as much of the land parcel as possible.
+      We need to know about things like crops, buildings, buffer strips, hedges, trees and unused land.
+    </p>
+  </div>
 
 
   <table class="features">
     <thead>
       <tr>
-        <th class="name">Land uses and features</th>
+        <th class="name">Land use or feature</th>
+        <th class="cover">Cover</th>
         <th class="area">Area</th>
         <th class="delete"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="name"><a href="/<%= parcel.id %>/undefined-feature">Undefined feature</a></td>
+        <td class="name"><a href="/<%= parcel.id %>/edit-feature-type?land-use=Undefined+feature">Undefined feature</a></td>
+        <td class="cover">Permanent structure</td>
         <td class="area">0.2ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+feature" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
-        <td class="name"><a href="/<%= parcel.id %>/undefined-feature">Undefined feature</a></td>
+        <td class="name"><a href="/<%= parcel.id %>/edit-undefined-feature">Undefined feature</a></td>
+        <td class="cover">Water</td>
         <td class="area">0.1ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+feature" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
+        <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Mixed+woodland&land-use-type=shape">Mixed woodland</a></td>
+        <td class="cover">Woodland</td>
+        <td class="area">0.1ha</td>
+        <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Mixed+woodland" title="Remove this feature">Remove</a></td>
+      </tr>
+      <tr>
         <td class="name"><a href="/<%= parcel.id %>/land-use">Undefined arable land</a></td>
+        <td class="cover">Arable</td>
         <td class="area">5.75ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
       </tr>
       <tr class="totals <%= statusClass %>">
-        <td class="name">Total area defined</td>
+        <td class="name" colspan="2">Total area defined</td>
         <td class="area">0.0ha</td>
         <td class="delete">0%</td>
       </tr>
       <tr class="">
-        <td class="name">Total area undefined</td>
+        <td class="name" colspan="2">Total area undefined</td>
         <td class="area">6.05ha</td>
         <td class="delete">100%</td>
       </tr>

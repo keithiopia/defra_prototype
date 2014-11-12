@@ -68,12 +68,9 @@ data.business.parcels.each do |parcel|
   proxy "/#{parcel[:id]}/add-feature.html", "/add-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/add-feature-details.html", "/add-feature-details.html", :locals => { :parcel => parcel }, :ignore => true
 
-
-
-  proxy "/#{parcel[:id]}/add-feature-area.html", "/add-feature-area.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/add-feature-point.html", "/add-feature-point.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/add-feature-points.html", "/add-feature-points.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/add-feature-date.html", "/add-feature-date.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/edit-feature.html", "/edit-feature.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/edit-undefined-feature.html", "/edit-undefined-feature.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/edit-feature-type.html", "/edit-feature-type.html", :locals => { :parcel => parcel }, :ignore => true
 
 
   proxy "/#{parcel[:id]}/check-feature.html", "/06.2-check-feature.html", :locals => { :parcel => parcel }, :ignore => true

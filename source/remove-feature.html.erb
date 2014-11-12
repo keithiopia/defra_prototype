@@ -30,10 +30,15 @@ layout: layout-1-1-columns
       </label>
 
       <div class="panel-indent js-hidden" id="remove-yes">
-        <p class="form-label">What has this feature been replaced by?
+        <!--
+        <p class="form-label">What has this feature been replaced with?
           <span class="form-hint">For example 'Wheat', 'Corn' or 'Hard standings'</span>
         </p>
         <%= partial "partial-land-use-and-features-list" %>
+        -->
+
+        <p>Remember to update the land parcel with information about what this feature has been replaced with.</p>
+
       </div>
 
     </div>
@@ -41,7 +46,7 @@ layout: layout-1-1-columns
 
 
     <div class="form-group">
-      <a href="add-feature-area" class="button">Continue</a>
+      <a href="/<%= parcel.id %>/" class="button">Save and return</a>
     </div>
   </form>
 

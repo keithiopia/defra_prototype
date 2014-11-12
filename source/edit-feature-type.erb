@@ -1,0 +1,41 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1 class="js-land-use">Change feature type</h1>
+    </hgroup>
+  </header>
+
+  <form class="form" id="land-use-form" name="land-use-form" method="get" action="/<%= parcel.id %>/edit-feature">
+    <div class="form-group">
+      <p class="form-label-bold">Type of feature
+        <span class="form-hint">For example 'Pond', 'Trees' or 'Farmyard'</span>
+      </p>
+      <%= partial "partial-land-use-and-features-list" %>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+  </form>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/shape.png") %>">
+    </div>
+  </div>
+
+<% end %>

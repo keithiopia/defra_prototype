@@ -1,0 +1,53 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1 class="js-land-use">Undefined</h1>
+      <span class="change-feature-type"><a href="/<%= parcel.id %>/edit-feature-type">Change</a></span>
+    </hgroup>
+  </header>
+
+  <%= partial "land-use-type/point" %>
+  <%= partial "land-use-type/points" %>
+  <%= partial "land-use-type/line-edit" %>
+  <%= partial "land-use-type/shape-edit" %>
+  <%= partial "land-use-type/hedges" %>
+  <%= partial "land-use-type/crop" %>
+
+
+    <div class="form-group">
+      <a href="/<%= parcel.id %>/?changed=true" class="button">Save and return</a>
+      <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+    </div>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "maps/point" %>
+  <%= partial "maps/points" %>
+  <%= partial "maps/line" %>
+  <%= partial "maps/shape" %>
+  <%= partial "maps/hedges" %>
+  <%= partial "maps/crop" %>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Land parcel details</h2>
+
+    <ul>
+      <li>Parcel ID: <%= parcel.id %></li>
+      <li>Total area: <%= parcel.area %>ha</li>
+    </ul>
+
+  </div>
+
+<% end %>

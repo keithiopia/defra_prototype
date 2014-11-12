@@ -178,7 +178,8 @@
 .map-marker,
 .map-marker-2,
 .map-marker-3,
-.map-marker-4{
+.map-marker-4,
+.map-marker-5{
   display: block;
   width: 35px;
   height: 35px;
@@ -204,7 +205,8 @@
   float: left;
 }
 
-.map-marker-4{
+.map-marker-4,
+.map-marker-5{
   background: url("/assets/images/map-marker-4.png");
   background-size: 93%;
   background-repeat: no-repeat;
@@ -212,3 +214,10 @@
   margin-top: -6px;
   margin-left: -6px;
 }
+
+
+.map-marker-5{
+  background: url("/assets/images/map-marker-5.png");
+}
+
+
