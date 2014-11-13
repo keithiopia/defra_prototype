@@ -1,0 +1,74 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Split a parcel</h1>
+      <h2 class="subtitle"><%= parcel.id %></h2>
+    </hgroup>
+  </header>
+
+<p>
+  <span class="map-marker-5"></span> Draw a line on the map to mark the split.
+</p>
+
+<p>
+  <a href="#drawing-tips-line" class="js-toggle">Drawing tips</a>
+</p>
+
+<div id="drawing-tips-line" class="js-hidden">
+
+  <ul class="font-xsmall list-bullet">
+    <li>Click on the map to mark points along the line</li>
+    <li>Double-click the last point to stop drawing</li>
+    <li>Switch to 'Photo' to see an arial photo of the land</li>
+    <li>Use the zoom and full screen controls to make the map bigger</li>
+  </ul>
+
+</div>
+
+  <table class="">
+    <thead>
+      <tr>
+        <th class="">Parcel</th>
+        <th class="">Area on map</th>
+        <th class="">Actual area</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A</td>
+        <td>3.45ha</td>
+        <td><input class="form-control form-control-1-4" value=""> ha</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>2.31ha</td>
+        <td><input class="form-control form-control-1-4" value=""> ha</td>
+      </tr>
+    </tbody>
+  </table>
+
+      <div class="form-group">
+      <a href="/<%= parcel.id %>/" class="button">Split parcel</a>
+    </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel-split.png") %>">
+    </div>
+  </div>
+
+<% end %>

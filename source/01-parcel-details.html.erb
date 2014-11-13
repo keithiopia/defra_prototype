@@ -18,7 +18,7 @@ layout: layout-2-1-columns
   </header>
 
   <p>
-    Describe the features on this land parcel. All features must be fully defined before you can apply for schemes.
+    List the features on this land parcel. All features must be fully defined before you can apply for schemes.
     <a href="#help-features" class="js-toggle">Find out what features you should add</a>.
   </p>
 
@@ -34,7 +34,7 @@ layout: layout-2-1-columns
   <table class="features">
     <thead>
       <tr>
-        <th class="name">Land use or feature</th>
+        <th class="name">Feature</th>
         <th class="cover">Cover</th>
         <th class="area">Area</th>
         <th class="delete"></th>
@@ -78,17 +78,15 @@ layout: layout-2-1-columns
     </tbody>
   </table>
 
-  <p class="bold-xsmall"><a href="/<%= parcel.id %>/add-feature">Add a feature</a></p>
+  <div class="form-group">
+    <div class="bold-xsmall"><a href="/<%= parcel.id %>/add-feature">Add a feature</a></div>
+  </div>
 
   <div class="form-group">
     <a href="/land" class="button">Save and return</a>
+    <p><a href="/land">Back</a></p>
   </div>
 
-
-<!--
-  <p class="alert"><input type="checkbox"> Submit these changes to the RPA for verification</p>
-  <p><a class="button">Save changes</a></p>
--->
 
 <% end %>
 
