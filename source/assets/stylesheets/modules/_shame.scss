@@ -32,6 +32,17 @@ details[open] summary{
   vertical-align: super;
 }
 
+// Link style select boxes
+
+select.link-style{
+  font-size: 18px;
+  //color: $secondary-text-colour;
+  color: $link-colour;
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  -webkit-appearance: none;
+}
 
 #proposition-menu{
   ul{

@@ -22,6 +22,11 @@ layout: layout-1-1-columns
   <%= partial "land-use-type/hedges" %>
   <%= partial "land-use-type/crop" %>
 
+    <div class="form-group">
+      <label for="notes-details" class="form-label">Additional notes</label>
+      <textarea class="form-control full-width" id="notes-details"></textarea>
+    </div>
+
 
     <div class="form-group">
       <a href="/<%= parcel.id %>/?changed=true" class="button">Save and return</a>
