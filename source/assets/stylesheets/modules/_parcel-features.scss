@@ -25,7 +25,6 @@ table.parcel-features {
   }
 
 
-
   // Checked and unchecked icons
   tbody{
     .feature-status{
@@ -49,32 +48,17 @@ table.parcel-features {
         }
       }
     }
-    tr.not-checked{
-      .feature-status{
-        /*
-        &:before,
-        &:after{
-          content: " ";
-          position: absolute;
-          right: 32px;
-          width: 10px;
-          height: 18px;
-          border-right: 3px solid;
-          border-color: $red;
-        }
-        &:after{
-          top: 7px;
-          -webkit-transform: rotate(45deg);
-        }
-        &:before{
-          top: 14px;
-          -webkit-transform: rotate(-45deg);
-        }
-        */
-      }
-    }
   }
 
+}
+
+.feature-footer{
+  border-top: 2px solid black;
+  margin-top: -11px;
+  padding-top: 10px;
+  .add-feature-link{
+    margin-top: 15px;
+  }
 }
 
 

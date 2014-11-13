@@ -18,14 +18,13 @@ layout: layout-2-1-columns
   </header>
 
   <p>
-    List the features on this land parcel. All features must be fully defined before you can apply for schemes.
-    <a href="#help-features" class="js-toggle">Find out what features you should add</a>.
+    List the features on this land parcel. <a href="#help-features" class="js-toggle">Find out what to include</a>.
   </p>
 
   <div class="js-hidden panel-indent" id="help-features">
-    <h3 class="bold-xsmall">What features should you add?</h3>
+    <h3 class="bold-xsmall">What features should you include?</h3>
     <p class="font-xsmall">
-      Describe as much of the land parcel as possible.
+      100% of the area of the parcel must be defined before you can apply for schemes.
       We need to know about things like crops, buildings, buffer strips, hedges, trees and unused land.
     </p>
   </div>
@@ -43,13 +42,13 @@ layout: layout-2-1-columns
     <tbody>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature-type?land-use=Undefined+feature">Undefined feature</a></td>
-        <td class="cover">Buildings and structures</td>
+        <td class="cover">Building or structure</td>
         <td class="area">0.2ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+feature" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-undefined-feature">Undefined feature</a></td>
-        <td class="cover">Water and wetlands</td>
+        <td class="cover">Water or wetlands</td>
         <td class="area">0.1ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+feature" title="Remove this feature">Remove</a></td>
       </tr>
@@ -65,26 +64,35 @@ layout: layout-2-1-columns
         <td class="area">5.75ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
       </tr>
-      <tr class="totals <%= statusClass %>">
-        <td class="name" colspan="2">Total area defined</td>
-        <td class="area">0.0ha</td>
-        <td class="delete">0%</td>
+      <tr class="totals">
+        <td class="name" colspan="2">Total area of parcel</td>
+        <td class="area">8.05ha</td>
+        <td class="delete"></td>
       </tr>
-      <tr class="">
-        <td class="name" colspan="2">Total area undefined</td>
-        <td class="area">6.05ha</td>
-        <td class="delete">100%</td>
+      <tr>
+        <td class="name" colspan="2">Total area of features</td>
+        <td class="area">5.97ha</td>
+        <td class="delete"></td>
       </tr>
     </tbody>
   </table>
 
-  <div class="form-group">
-    <div class="bold-xsmall"><a href="/<%= parcel.id %>/add-feature">Add a feature</a></div>
+  <div class="feature-footer">
+      <div class="percent-complete">
+        <span>78%</span> complete
+      </div>
+      <div class="add-feature-link">
+        <div>
+          <a href="/<%= parcel.id %>/add-feature">Add a feature</a>
+        </div>
+      </div>
   </div>
+
+
 
   <div class="form-group">
     <a href="/land" class="button">Save and return</a>
-    <p><a href="/land">Back</a></p>
+    <!--<p><a href="/land">Back</a></p>-->
   </div>
 
 
@@ -104,7 +112,6 @@ layout: layout-2-1-columns
 
     <ul>
       <li>Parcel ID: <%= parcel.id %></li>
-      <li>Total area: <%= parcel.area %>ha</li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>
         <p class="js-hidden" id="status-help-draft">
           This parcel has unverified changes.

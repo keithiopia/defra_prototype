@@ -60,6 +60,22 @@ table.features {
 
 }
 
+
+.percent-complete{
+  float: right;
+  font-size: 16px;
+  margin-right: 71px;
+  span{
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
+table.features{
+  margin-bottom: 10px;
+}
+
 .tag{
   display: inline-block;
   text-align: right;
