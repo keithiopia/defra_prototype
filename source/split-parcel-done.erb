@@ -1,0 +1,42 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Split a parcel</h1>
+      <h2 class="subtitle"><%= parcel.id %></h2>
+    </hgroup>
+  </header>
+
+  <h2 class="heading-medium">Thank you</h2>
+
+  <p>
+    The RPA will need to verify the split before it's made.
+  </p>
+  <p>
+    This can take up to X days. You'll be emailed when it's done.
+  </p>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/" class="button">Continue</a>
+  </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="map-wrapper">
+    <div class="map">
+      <%= partial "partial-map-controls" %>
+      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel-split.png") %>">
+    </div>
+  </div>
+
+<% end %>
