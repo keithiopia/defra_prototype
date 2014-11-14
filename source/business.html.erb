@@ -20,7 +20,7 @@ layout: layout-2-1-columns
 
   <p>You can give agents and others permission to use this service on your behalf.</p>
 
-  <p><a href="business-details">Give someone permision to use this service</a></p>
+  <p><a href="business-details">Give someone permission to use this service</a></p>
 
 
 
@@ -31,11 +31,11 @@ layout: layout-2-1-columns
   <p><a href="business-details">Update your business details</a></p>
 
 
-  <h2 class="heading-medium">Check the land parcels</h2>
+  <h2 class="heading-medium">Check your land parcels</h2>
 
   <p>Check and update the information held about this business's land.</p>
 
-  <p><a href="/land">Check the land parcels</a></p>
+  <p><a href="/land">Check your land parcels</a></p>
 
 
   <h2 class="heading-medium">Apply for a scheme</h2>
@@ -48,7 +48,7 @@ layout: layout-2-1-columns
 
 <% content_for :column2 do %>
 
-  <%= partial "partial-map", :locals => { :map => 'business-1-checked'} %>
+  <%= partial "partial-map", :locals => { :map => 'business'} %>
 
   <div class="font-xsmall">
     <h2 class="heading-small">Business details</h2>
@@ -68,7 +68,8 @@ layout: layout-2-1-columns
     </p>
 
     <ul>
-      <li><a href="business-details">Update these details</a></li>
+      <li><a href="business-details">Update your business details</a></li>
+      <li><a href="">Manage access to this service</a></li>
       <li><a href="">Close this business</a></li>
     </ul>
 
