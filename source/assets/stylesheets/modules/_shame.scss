@@ -13,8 +13,17 @@ details[open] summary{
   margin-bottom: 10px;
 }
 
+select{
+  font-size: 16px;
+}
+
 .button{
   vertical-align: baseline; // Makes button text align with surrounding inline text
+}
+
+
+.panel-indent :last-child{
+  margin-bottom: 0;
 }
 
 .form-label-bold {
@@ -22,7 +31,7 @@ details[open] summary{
 }
 
 .form-control-num{
-  width: 50px;
+  width: 70px;
 }
 
 .change-feature-type{

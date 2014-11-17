@@ -23,6 +23,7 @@ layout: layout-1-1-columns
   <%= partial "land-use-type/line" %>
   <%= partial "land-use-type/shape" %>
   <%= partial "land-use-type/hedges" %>
+  <%= partial "land-use-type/hedge" %>
   <%= partial "land-use-type/crop" %>
 
 
@@ -30,6 +31,16 @@ layout: layout-1-1-columns
     <div class="form-group">
       <label for="notes-details" class="form-label">Additional notes</label>
       <textarea class="form-control full-width" id="notes-details"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Use for:
+        <select>
+          <option>Ecological Focus Area</option>
+          <option>Basic Payment Scheme</option>
+          <option>Other scheme</option>
+        </select>
+      </label>
     </div>
 
 
@@ -48,8 +59,10 @@ layout: layout-1-1-columns
   <%= partial "maps/line" %>
   <%= partial "maps/shape" %>
   <%= partial "maps/hedges" %>
+  <%= partial "maps/hedge" %>
   <%= partial "maps/crop" %>
 
+<!--
   <div class="font-xsmall">
     <h2 class="heading-small">Land parcel details</h2>
 
@@ -59,5 +72,6 @@ layout: layout-1-1-columns
     </ul>
 
   </div>
+-->
 
 <% end %>

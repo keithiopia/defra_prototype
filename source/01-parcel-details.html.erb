@@ -34,27 +34,27 @@ layout: layout-2-1-columns
     <thead>
       <tr>
         <th class="name">Feature</th>
-        <th class="cover">Cover</th>
+        <th class="cover">Eligibility</th>
         <th class="area">Area</th>
         <th class="delete"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="name"><a href="/<%= parcel.id %>/edit-feature-type?land-use=Pond">Pond</a></td>
-        <td class="cover">Water or wetlands</td>
+        <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Pond&land-use-type=shape">Pond</a></td>
+        <td class="cover"><abbr>BPS</abbr>, <abbr>EFA</abbr></td>
         <td class="area">0.1ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Pond" title="Remove this feature">Remove</a></td>
+        <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Pond&land-use-type=shape" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Mixed+woodland&land-use-type=shape">Mixed woodland</a></td>
-        <td class="cover">Woodland</td>
+        <td class="cover"><abbr>BPS</abbr></td>
         <td class="area">0.1ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Mixed+woodland" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/land-use">Undefined arable land</a></td>
-        <td class="cover">Arable land</td>
+        <td class="cover"><abbr>BPS</abbr></td>
         <td class="area">5.75ha</td>
         <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
       </tr>

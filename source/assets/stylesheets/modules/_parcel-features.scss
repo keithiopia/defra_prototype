@@ -75,3 +75,13 @@ table.parcel-features {
     text-align: right;
   }
 }
+
+.feature-dimensions{
+  border: 1px solid $border-colour;
+  th, td{
+    padding: 10px;
+  }
+  td{
+    font-size: 19px;
+  }
+}
