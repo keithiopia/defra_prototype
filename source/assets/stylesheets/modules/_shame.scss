@@ -20,9 +20,12 @@ select{
   vertical-align: baseline;
 }
 
-// Remove bottom margin from last element in panel
+// Trim margins from top and bottom of content in the panel
 .panel-indent :last-child{
   margin-bottom: 0;
+}
+.panel-indent :first-child{
+  margin-top: 0;
 }
 
 // Make bold form labels the same size as normal ones
