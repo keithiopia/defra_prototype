@@ -3,3 +3,15 @@
   padding: 1px 24px;
   @include core-16;
 }
+
+.warning-icon{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: $mellow-red;
+  color: $white;
+  font-weight: bold;
+  margin-right: 5px;
+  text-align: center;
+}

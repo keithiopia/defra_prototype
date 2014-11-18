@@ -41,7 +41,7 @@ select{
 // Red inline warning text
 .warning-text{
   font-weight: bold;
-  color: $mellow-red;
+  color: $mellow-red !important;
 }
 
 // Gutter below table

@@ -18,14 +18,14 @@ layout: layout-2-1-columns
   </header>
 
   <p>
-    Describe the features and uses of this parcel
+    List the features on this land. Include things like buildings, ponds, trees, hedges and buffer strips.
   </p>
 
 
   <table class="table feature-list">
     <thead>
       <tr>
-        <th class="name"><!--Features--></th>
+        <th class="name">Feature</th>
         <th class="cover">Cover</th>
         <th class="area">Area</th>
         <th class="remove"></th>
@@ -44,42 +44,16 @@ layout: layout-2-1-columns
         <td class="area">0.1ha</td>
         <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Mixed+woodland" title="Remove this feature">Remove</a></td>
       </tr>
-      <tr>
-        <td class="name"><span class="warning-icon">!</span><a href="/<%= parcel.id %>/land-use">Unknown land use</a></td>
-        <td class="cover">Arable land</td>
-        <td class="area">5.75ha</td>
-        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
-      </tr>
-      <tr class="totals">
-        <td class="name" colspan="2">Total area of parcel</td>
-        <td class="area">8.05ha</td>
-        <td class="remove"></td>
-      </tr>
-      <tr>
-        <td class="name" colspan="2">Total area described</td>
-        <td class="area">5.95ha</td>
-        <td class="remove"></td>
-      </tr>
     </tbody>
   </table>
 
-  <div class="feature-footer">
-    <!--
-      <div class="percent-complete">
-        <span>78%</span> complete
-      </div>
-    -->
-      <div class="add-feature-link">
-        <p>
-          <a href="/<%= parcel.id %>/add-feature">Add a feature or land use</a>
-        </p>
-      </div>
-  </div>
-
-
+  <p>
+    <br>
+    <a href="/<%= parcel.id %>/add-feature">Add a feature</a>
+  </p>
 
   <div class="form-group">
-    <a href="/land" class="button">Save and return</a>
+    <a href="/<%= parcel.id %>/parcel-details-uses" class="button">Save and continue</a>
   </div>
 
 
