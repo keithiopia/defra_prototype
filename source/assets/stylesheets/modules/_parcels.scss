@@ -1,29 +1,13 @@
 
+// List of parcels in a business
 
-.icon-tick{
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 2px;
-  width: 5px;
-  height: 10px;
-  border-right: 3px solid;
-  border-bottom: 3px solid;
-  border-color: $green;
-  -webkit-transform: rotate(45deg);
-}
-
-table.parcels,
-table.features {
+table.parcel-list {
   margin: $gutter 0;
-
   .name {
     width: 30%;
   }
-
-  .id {
-    width: 25%;
-  }
   td.id{
+    width: 25%;
     color: $secondary-text-colour;
     @include core-14;
   }
@@ -31,51 +15,13 @@ table.features {
     width: 10%;
     text-align: right;
   }
-  .coverage {
+  .complete {
     width: 5%;
     text-align: right;
   }
-  .unknown{
-    color: $secondary-text-colour;
-  }
-  td.cover{
-   color: $secondary-text-colour;
-  }
-  th.cover{
-    //text-indent: -9999px;
-    //width: 40%;
-  }
-  .delete{
-    width: 4%;
-    padding-right: 0;
-    text-align: right;
-    a{
-      color: $secondary-text-colour;
-    }
-  }
-  .totals{
-    td{
-      border-top: 2px solid $black;
-    }
-  }
-
 }
 
-
-.percent-complete{
-  float: right;
-  font-size: 16px;
-  margin-right: 71px;
-  span{
-    display: block;
-    font-size: 32px;
-    font-weight: bold;
-  }
-}
-
-table.features{
-  margin-bottom: 10px;
-}
+// Percent complete tag in 'Complete' column of parcel list
 
 .tag{
   display: inline-block;
@@ -84,13 +30,14 @@ table.features{
   float: right;
   margin-top: -2px;
 }
-
 .done .tag{
   color: white;
   font-size: 12px;
   font-weight: bold;
   background: $green;
 }
+
+// Parcel list filter - shown when there are lots of parcels. See 'land-long.html'
 
 .table-filter{
   @extend %contain-floats;

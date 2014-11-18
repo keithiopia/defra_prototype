@@ -30,43 +30,43 @@ layout: layout-2-1-columns
   </div>
 
 
-  <table class="features">
+  <table class="table feature-list">
     <thead>
       <tr>
         <th class="name">Feature</th>
-        <th class="cover">Eligibility</th>
+        <th class="cover">Cover</th>
         <th class="area">Area</th>
-        <th class="delete"></th>
+        <th class="remove"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Pond&land-use-type=shape">Pond</a></td>
-        <td class="cover"><abbr>BPS</abbr>, <abbr>EFA</abbr></td>
+        <td class="cover">Water</td>
         <td class="area">0.1ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Pond&land-use-type=shape" title="Remove this feature">Remove</a></td>
+        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Pond&land-use-type=shape" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Mixed+woodland&land-use-type=shape">Mixed woodland</a></td>
-        <td class="cover"><abbr>BPS</abbr></td>
+        <td class="cover">Woodland</td>
         <td class="area">0.1ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Mixed+woodland" title="Remove this feature">Remove</a></td>
+        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Mixed+woodland" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/land-use">Undefined arable land</a></td>
-        <td class="cover"><abbr>BPS</abbr></td>
+        <td class="cover">Arable land</td>
         <td class="area">5.75ha</td>
-        <td class="delete"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
+        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
       </tr>
       <tr class="totals">
         <td class="name" colspan="2">Total area of parcel</td>
         <td class="area">8.05ha</td>
-        <td class="delete"></td>
+        <td class="remove"></td>
       </tr>
       <tr>
-        <td class="name" colspan="2">Total area of features</td>
+        <td class="name" colspan="2">Total area complete</td>
         <td class="area">5.95ha</td>
-        <td class="delete"></td>
+        <td class="remove"></td>
       </tr>
     </tbody>
   </table>

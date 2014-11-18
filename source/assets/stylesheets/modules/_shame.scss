@@ -1,47 +1,54 @@
+
+//
+// GOV.UK Elements Updates
+//
+
+// Small grey labels for date field. See '/update-personal-details' for example
 .date label{
   font-size: 16px;
   width: auto;
   color: $secondary-text-colour;
 }
 
-
-details{
-  margin-bottom: 15px;
-}
-
-details[open] summary{
-  margin-bottom: 10px;
-}
-
+// Set font on select boxes
 select{
   font-size: 16px;
 }
 
+// Make button text align with surrounding inline text
 .button{
-  vertical-align: baseline; // Makes button text align with surrounding inline text
+  vertical-align: baseline;
 }
 
-
+// Remove bottom margin from last element in panel
 .panel-indent :last-child{
   margin-bottom: 0;
 }
 
+// Make bold form labels the same size as normal ones
 .form-label-bold {
-  @include bold-19; // Make bold form labels the same size as normal ones
+  @include bold-19;
 }
 
+// Add a new form-control for fixed-width small numbers
 .form-control-num{
   width: 70px;
 }
 
-.change-feature-type{
-  font-size: 16px;
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: super;
+// Red inline warning text
+.warning-text{
+  font-weight: bold;
+  color: $mellow-red;
 }
 
+// Gutter below table
+table{
+  margin-bottom: $gutter;
+}
+
+
 // Link style select boxes
+// (these might be evil. Not sure)
 
 select.link-style{
   font-size: 18px;
@@ -53,6 +60,11 @@ select.link-style{
   -webkit-appearance: none;
 }
 
+//
+// GOV.UK Template Updates
+//
+
+// Add account link in top-right
 #proposition-menu{
   ul{
     list-style-type: none;
@@ -67,22 +79,5 @@ select.link-style{
     a{
       color: white;
     }
-  }
-}
-
-.warning-text{
-  font-weight: bold;
-  color: $mellow-red;
-}
-
-table{
-  margin-bottom: $gutter;
-}
-
-.remove{
-  padding-right: 0;
-  text-align: right;
-  a{
-    color: $secondary-text-colour;
   }
 }

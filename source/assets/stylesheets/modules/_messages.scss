@@ -1,0 +1,37 @@
+// Messages
+
+.message-list{
+  margin: $gutter 0;
+  border-top: 1px solid $border-colour;
+  padding-top: 5px;
+  > li{
+    @include core-16;
+    color: $secondary-text-colour;
+    border-bottom: 1px solid $border-colour;
+    padding: 5px 0 8px 0;
+    .message{
+      color: $text-colour;
+    }
+    .message-date{
+      display: inline-block;
+      vertical-align: top;
+      width: 120px;
+    }
+    .delete{
+      display: block;
+      float: right;
+      font-size: 16px;
+      a{
+        color: $secondary-text-colour;
+      }
+    }
+    details{
+      display: inline-block;
+      color: $text-colour;
+      margin-bottom: 0;
+      max-width: 400px;
+
+      summary::-webkit-details-marker { display:none; }
+    }
+  }
+}

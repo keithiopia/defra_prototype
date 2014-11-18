@@ -28,7 +28,7 @@
 # Set up proxies for each of the parcel-specific pages
 
 data.business.parcels.each do |parcel|
-  proxy "/#{parcel[:id]}.html", "/01-parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}.html", "/parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
 
   proxy "/#{parcel[:id]}/change-land-parcel.html", "/change-land-parcel.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/change-land-parcel-split.html", "/change-land-parcel-split.html", :locals => { :parcel => parcel }, :ignore => true
@@ -63,24 +63,19 @@ data.business.parcels.each do |parcel|
 
 
   proxy "/#{parcel[:id]}/organic-status.html", "/organic-status.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/crops-and-grassland.html", "/03-crops-and-grassland.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/buffer-strips.html", "/04-buffer-strips.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/hedges.html", "/05-hedges.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/buildings-and-structures.html", "/06-buildings-and-structures.html", :locals => { :parcel => parcel }, :ignore => true
 
   proxy "/#{parcel[:id]}/add-feature.html", "/add-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/add-feature-details.html", "/add-feature-details.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/add-feature-date.html", "/add-feature-date.html", :locals => { :parcel => parcel }, :ignore => true
+
+
 
   proxy "/#{parcel[:id]}/edit-feature.html", "/edit-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/edit-undefined-feature.html", "/edit-undefined-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/edit-feature-type.html", "/edit-feature-type.html", :locals => { :parcel => parcel }, :ignore => true
 
 
-  proxy "/#{parcel[:id]}/check-feature.html", "/06.2-check-feature.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/verify-feature.html", "/06.3-verify-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/remove-feature.html", "/remove-feature.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/other-features.html", "/07-other-features.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/describe-feature.html", "/08-describe-feature.html", :locals => { :parcel => parcel }, :ignore => true
 end
 
 

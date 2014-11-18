@@ -1,10 +1,5 @@
 
-
-.edit-name{
-  float: right;
-  margin-top: -55px;
-  @include core-16;
-}
+// Editable parcel name
 
 .editable{
   display: inline-block;
@@ -18,13 +13,66 @@
     color: $link-active-colour;
   }
 }
-
 .editable:hover{
   cursor: pointer;
 }
 
-#submit-changes .button{
-  float: right;
-  margin-right: 3px;
-  margin-top: 3px;
+// List of features in a parcel
+
+table.feature-list{
+  margin: $gutter 0 0;
+  .name {
+    width: 30%;
+  }
+  td.cover{
+   color: $secondary-text-colour;
+  }
+  th.cover{
+    text-indent: -9999px;
+    width: 40%;
+  }
+  .area {
+    width: 10%;
+    text-align: right;
+  }
+  .remove{
+    width: 4%;
+    padding-right: 0;
+    text-align: right;
+    a{
+      color: $secondary-text-colour;
+    }
+  }
+  .totals{
+    td{
+      border-top: 2px solid $black;
+    }
+  }
+  .unknown{
+    color: $secondary-text-colour;
+  }
+}
+
+
+// Footer row below feature list
+
+.feature-footer{
+  border-top: 2px solid black;
+  margin-top: -1px;
+  padding-top: 10px;
+
+  .add-feature-link{
+    margin-top: 15px;
+  }
+
+  .percent-complete{
+    float: right;
+    font-size: 16px;
+    margin-right: 71px;
+    span{
+      display: block;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
 }

@@ -1,0 +1,41 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Add a feature</h1>
+      <h2 class="subtitle js-land-use">Undefined</h2>
+    </hgroup>
+  </header>
+
+
+
+
+
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/" class="button">Save and continue</a>
+    <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+  </div>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "maps/point" %>
+  <%= partial "maps/points" %>
+  <%= partial "maps/line" %>
+  <%= partial "maps/shape" %>
+  <%= partial "maps/hedges" %>
+  <%= partial "maps/hedge" %>
+  <%= partial "maps/crop" %>
+
+<% end %>

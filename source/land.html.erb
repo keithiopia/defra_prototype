@@ -15,17 +15,16 @@ layout: layout-2-1-columns
   </header>
 
   <p>
-    Select each parcel and complete any missing information.
-    All parcels must be 100% complete before applying for any schemes.
+    Go through each parcel and complete any missing information.
   </p>
 
-  <table class="parcels js-row-link">
+  <table class="parcel-list js-row-link">
     <thead>
       <tr>
         <th class="name">Land parcel name</th>
         <th class="id">ID</th>
         <th class="area">Area</th>
-        <th class="coverage">Complete</th>
+        <th class="complete">Complete</th>
       </tr>
     </thead>
     <tbody>
@@ -40,7 +39,7 @@ layout: layout-2-1-columns
         </td>
         <td class="id"><%= f.id %></td>
         <td class="area"><%= f.area %>ha</td>
-        <td class="coverage"><span class="tag"><%= f.coverage %>%</span></td>
+        <td class="complete"><span class="tag"><%= f.coverage %>%</span></td>
       </tr>
       <% end %>
 
