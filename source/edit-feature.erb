@@ -11,7 +11,7 @@ layout: layout-1-1-columns
   <header class="page-header">
     <hgroup>
       <h1 class="js-land-use">Undefined</h1>
-      <span class="change-feature-type"><a href="/<%= parcel.id %>/edit-feature-type">Change</a></span>
+      <span class="change-feature-type"><a href="/<%= parcel.id %>/edit-feature-type" class="js-pass-querystring">Change</a></span>
     </hgroup>
   </header>
 
@@ -29,8 +29,8 @@ layout: layout-1-1-columns
 
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/?changed=true" class="button">Save and return</a>
-      <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+      <a href="/<%= parcel.id %>/edit-feature-date" class="button js-pass-querystring">Continue</a>
+      <p><a href="/<%= parcel.id %>/edit-feature-type">Back</a></p>
     </div>
 
 

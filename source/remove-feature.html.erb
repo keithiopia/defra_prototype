@@ -10,12 +10,11 @@ layout: layout-1-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Remove feature</h1>
-      <h2 class="subtitle js-land-use">Undefined</h2>
+      <h1 class="js-land-use">Undefined</h1>
     </hgroup>
   </header>
 
-  <p>Are you sure you want to remove this feature?</p>
+  <p>Are you sure you want to remove this?</p>
 
   <form class="form" id="land-use-form">
 
@@ -30,14 +29,14 @@ layout: layout-1-1-columns
       </label>
 
       <div class="panel-indent js-hidden" id="remove-yes">
-        <!--
-        <p class="form-label">What has this feature been replaced with?
+
+        <p class="form-label">What has it been replaced with?
           <span class="form-hint">For example 'Wheat', 'Corn' or 'Hard standings'</span>
         </p>
         <%= partial "partial-land-use-and-features-list" %>
-        -->
 
-        <p>Remember to update the land parcel with information about what this feature has been replaced with.</p>
+
+        <!--<p>Remember to update the land parcel with information about what this feature has been replaced with.</p>-->
 
       </div>
 
@@ -46,7 +45,7 @@ layout: layout-1-1-columns
 
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/" class="button">Save and return</a>
+      <a href="/<%= parcel.id %>/remove-feature-date" class="button js-pass-querystring">Continue</a>
     </div>
   </form>
 
@@ -54,11 +53,12 @@ layout: layout-1-1-columns
 
 <% content_for :column2 do %>
 
-  <div class="map-wrapper">
-    <div class="map">
-      <%= partial "partial-map-controls" %>
-      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/feature-pond.png") %>">
-    </div>
-  </div>
+  <%= partial "maps/point" %>
+  <%= partial "maps/points" %>
+  <%= partial "maps/line" %>
+  <%= partial "maps/shape" %>
+  <%= partial "maps/hedges" %>
+  <%= partial "maps/hedge" %>
+  <%= partial "maps/crop" %>
 
 <% end %>

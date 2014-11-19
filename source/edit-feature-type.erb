@@ -16,8 +16,13 @@ layout: layout-1-1-columns
 
   <form class="form" id="land-use-form" name="land-use-form" method="get" action="/<%= parcel.id %>/edit-feature">
     <div class="form-group">
-      <p class="form-label-bold">Type of feature
-        <span class="form-hint">For example 'Pond', 'Trees' or 'Farmyard'</span>
+      <p class="form-label">What is this land used for?
+
+
+        <span class="content-shape form-hint">For example 'Pond', 'Trees' or 'Farmyard'</span>
+        <span class="content-line form-hint">For example 'Stone wall', or 'Hedge'</span>
+        <span class="content-crop form-hint">For example 'Wheat', 'Barley' or 'Maize'</span>
+
       </p>
       <%= partial "partial-land-use-and-features-list" %>
     </div>
@@ -31,11 +36,12 @@ layout: layout-1-1-columns
 
 <% content_for :column2 do %>
 
-  <div class="map-wrapper">
-    <div class="map">
-      <%= partial "partial-map-controls" %>
-      <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/shape.png") %>">
-    </div>
-  </div>
+  <%= partial "maps/point" %>
+  <%= partial "maps/points" %>
+  <%= partial "maps/line" %>
+  <%= partial "maps/shape" %>
+  <%= partial "maps/hedges" %>
+  <%= partial "maps/hedge" %>
+  <%= partial "maps/crop" %>
 
 <% end %>

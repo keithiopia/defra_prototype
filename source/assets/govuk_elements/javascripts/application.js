@@ -84,7 +84,9 @@ $(document).ready(function() {
   // Show chosen land use on screen
   var landUse = getParameterByName('land-use');
   if(landUse != ""){
+
     $(".js-land-use").text(landUse);
+
   }
 
 
@@ -102,6 +104,14 @@ $(document).ready(function() {
   // Show 'Unverified changes' panel
   if (getParameterByName('changed') != 'true'){
     $("#submit-changes").hide();
+  }
+
+  // Append current querystring to link
+  var q = document.URL.split('?')[1];
+  if(q != ""){
+    $('a.js-pass-querystring').each(function(){
+         this.href += '?' + q;
+    })
   }
 
 

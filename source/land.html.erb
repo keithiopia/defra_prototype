@@ -10,12 +10,12 @@ layout: layout-2-1-columns
 
  <header class="page-header">
     <hgroup>
-      <h1>Land parcels</h1>
+      <h1>Land</h1>
     </hgroup>
   </header>
 
   <p>
-    Go through each parcel and complete any missing information.
+    Check each land parcel and confirm whether the information is accurate.
   </p>
 
   <div class="panel-indent font-xsmall">
@@ -29,14 +29,14 @@ layout: layout-2-1-columns
         <th class="name">Land parcel name</th>
         <th class="id">ID</th>
         <th class="area">Area</th>
-        <th class="complete">Complete</th>
+        <th class="complete">Checked</th>
       </tr>
     </thead>
     <tbody>
 
       <% data.business.parcels.each do |f| %>
       <% statusClass = (f.coverage == 100 ? "done" : "not-done") %>
-      <tr class="<%= statusClass %>">
+      <tr class="x<%= statusClass %>">
         <td class="name">
           <a href="/<%= f.id %>">
             <%= (f.name ? f.name : "Untitled") %>
@@ -44,7 +44,8 @@ layout: layout-2-1-columns
         </td>
         <td class="id"><%= f.id %></td>
         <td class="area"><%= f.area %>ha</td>
-        <td class="complete"><span class="tag"><%= f.coverage %>%</span></td>
+        <td class="complete"><span class="tag"><!--<%= f.coverage %>%-->No</span>
+        </td>
       </tr>
       <% end %>
 

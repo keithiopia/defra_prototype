@@ -18,15 +18,14 @@ layout: layout-2-1-columns
   </header>
 
   <p>
-    Describe the features and uses of this parcel
+    Describe the land uses and features on this land.
   </p>
-
 
   <table class="table feature-list">
     <thead>
       <tr>
-        <th class="name"><!--Features--></th>
-        <th class="cover">Cover</th>
+        <th class="name">Land uses and features</th>
+        <th class="cover"></th>
         <th class="area">Area</th>
         <th class="remove"></th>
       </tr>
@@ -34,28 +33,24 @@ layout: layout-2-1-columns
     <tbody>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Pond&land-use-type=shape">Pond</a></td>
-        <td class="cover">Water</td>
+        <td class="cover">Ineligible for BPS</td>
         <td class="area">0.1ha</td>
         <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Pond&land-use-type=shape" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
-        <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Mixed+woodland&land-use-type=shape">Mixed woodland</a></td>
-        <td class="cover">Woodland</td>
+        <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Hard+standings&land-use-type=shape">Hard standings</a></td>
+        <td class="cover">Ineligible for BPS</td>
         <td class="area">0.1ha</td>
-        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Mixed+woodland" title="Remove this feature">Remove</a></td>
+        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Hard+standings&land-use-type=shape" title="Remove this feature">Remove</a></td>
       </tr>
       <tr>
-        <td class="name"><span class="warning-icon">!</span><a href="/<%= parcel.id %>/land-use">Unknown land use</a></td>
-        <td class="cover">Arable land</td>
+        <td class="name"><a href="/<%= parcel.id %>/edit-feature-type?land-use=Arable+land&land-use-type=crop">Arable land</a></td>
+        <td class="cover"><span class="warning-icon">!</span>Unknown land use</td>
         <td class="area">5.75ha</td>
-        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Undefined+arable+land" title="Remove this feature">Remove</a></td>
+        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Arable+land&land-use-type=crop" title="Remove this feature">Remove</a></td>
       </tr>
+
       <tr class="totals">
-        <td class="name" colspan="2">Total area of parcel</td>
-        <td class="area">8.05ha</td>
-        <td class="remove"></td>
-      </tr>
-      <tr>
         <td class="name" colspan="2">Total area described</td>
         <td class="area">5.95ha</td>
         <td class="remove"></td>
@@ -63,20 +58,17 @@ layout: layout-2-1-columns
     </tbody>
   </table>
 
-  <div class="feature-footer">
-    <!--
-      <div class="percent-complete">
-        <span>78%</span> complete
-      </div>
-    -->
-      <div class="add-feature-link">
-        <p>
-          <a href="/<%= parcel.id %>/add-feature">Add a feature or land use</a>
-        </p>
-      </div>
+
+
+  <div class="form-group">
+
+
+    <p><a href="/<%= parcel.id %>/add-feature">Add a land use or feature</a></p>
+
+    <label class="form-label block-label">
+      <input type="checkbox"> This information is accurate
+    </label>
   </div>
-
-
 
   <div class="form-group">
     <a href="/land" class="button">Save and return</a>
@@ -95,14 +87,13 @@ layout: layout-2-1-columns
   </div>
 
   <div class="font-xsmall">
-    <h2 class="heading-small">Land parcel details</h2>
+    <h2 class="heading-small">Land details</h2>
 
     <ul>
       <li>Parcel ID: <%= parcel.id %></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>
         <p class="js-hidden" id="status-help-draft">
-          This parcel has unverified changes.
-          Save the parcel to submit the changes to the Rural Payments Agency for verification.
+          Confirm that the information is accurate to submit it to the Rural Payments Agency for verification.
         </p>
       </li>
       <% if (parcel.organic) %><li>Certified organic</li><% end %>

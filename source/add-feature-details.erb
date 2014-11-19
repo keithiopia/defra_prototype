@@ -10,8 +10,8 @@ layout: layout-1-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Add a feature</h1>
-      <h2 class="subtitle js-land-use">Undefined</h2>
+      <h1 class="js-land-use">Add a land use or feature</h1>
+      <!--<h2 class="subtitle js-land-use">Undefined</h2>-->
     </hgroup>
   </header>
 
@@ -33,6 +33,7 @@ layout: layout-1-1-columns
       <textarea class="form-control full-width" id="notes-details"></textarea>
     </div>
 
+<!--
     <div class="form-group">
       <label class="form-label">Use for:
         <select>
@@ -42,10 +43,10 @@ layout: layout-1-1-columns
         </select>
       </label>
     </div>
-
+-->
 
     <div class="form-group">
-      <a href="/<%= parcel.id %>/" class="button">Save and continue</a>
+      <a href="/<%= parcel.id %>/add-feature-date" class="button js-pass-querystring">Continue</a>
       <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
     </div>
 

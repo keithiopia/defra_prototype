@@ -1,6 +1,6 @@
 <% wrap_layout :govuk_template do %>
 
-  <% content_for :page_title do %><%= current_page.data.title || "Rural Payments prototype" %><% end %>
+  <% content_for :page_title do %><%= current_page.data.title || "Claim rural payments" %><% end %>
 
   <% content_for :head do %>
     <%= partial "template-head" %>
@@ -15,7 +15,7 @@
       <div class="content">
         <nav id="proposition-menu">
           <ul>
-            <li><a href="/" id="proposition-name">Rural Payments</a></li>
+            <li><a href="/" id="proposition-name">Claim rural payments</a></li>
             <%if !current_page.data.firstTime %>
             <li class="account-link"><a href="/account">John Smith</a></li>
             <%end%>

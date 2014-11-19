@@ -20,7 +20,6 @@
 // List of features in a parcel
 
 table.feature-list{
-  margin: $gutter 0 0;
   .name {
     width: 30%;
   }
@@ -28,8 +27,8 @@ table.feature-list{
    color: $secondary-text-colour;
   }
   th.cover{
-    text-indent: -9999px;
-    width: 40%;
+    //text-indent: -9999px;
+    //width: 40%;
   }
   .area {
     width: 10%;
