@@ -5,11 +5,13 @@ area: 18.7
 sbi: 222223250
 
 parcels:
-  - name:       Top field
-    coverage:   10
+  - name:       North paddock
     verified:   true
-    id:         SJ8063_5971
-    area:       6.05
+    organic:    true
+    coverage:   100
+    id:         SJ8063_3931
+    area:       5.76
+    areadescribed:       5.75
     use:
       - type:   Barley
         cover:  Arable
@@ -19,12 +21,13 @@ parcels:
         cover:  Arable
         area:   1.00
 
-  - name:       North paddock
+  - name:       Top field
+    features:   true
+    coverage:   10
     verified:   true
-    organic:    true
-    coverage:   100
-    id:         SJ8063_3931
-    area:       11.09
+    id:         SJ8063_5971
+    area:       6.05
+    areadescribed:  5.9
     use:
       - type:   Barley
         cover:  Arable

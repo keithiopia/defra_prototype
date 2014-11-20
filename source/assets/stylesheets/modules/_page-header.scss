@@ -13,14 +13,6 @@
   h2.subtitle{
     margin: 0;
     color: $secondary-text-colour;
-    @include core-24;
-  }
-
-  .metadata {
-    dd {
-      color: $secondary-text-colour;
-      display: inline-block;
-      margin-right: $gutter-two-thirds;
-    }
+    @include core-19;
   }
 }

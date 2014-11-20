@@ -31,6 +31,7 @@ layout: layout-2-1-columns
       </tr>
     </thead>
     <tbody>
+      <% if (parcel.features) %>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Pond&land-use-type=shape">Pond</a></td>
         <td class="cover">Ineligible for BPS</td>
@@ -43,6 +44,7 @@ layout: layout-2-1-columns
         <td class="area">0.1ha</td>
         <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Hard+standings&land-use-type=shape" title="Remove this feature">Remove</a></td>
       </tr>
+      <% end %>
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature-type?land-use=Arable+land&land-use-type=crop">Arable land</a></td>
         <td class="cover"><span class="warning-icon">!</span>Unknown land use</td>
@@ -59,7 +61,7 @@ layout: layout-2-1-columns
     </tbody>
   </table>
 
-  <p>5.95ha described, 0.1ha remaining.</p>
+  <p><%= parcel.areadescribed %>ha described, 0.1ha remaining</p>
 
   <div class="form-group">
 
