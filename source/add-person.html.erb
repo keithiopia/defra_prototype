@@ -1,0 +1,53 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Add someone to <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+  <h3 class="heading-medium">Permissions</h3>
+
+  <p>What do you want to allow this person to do?</p>
+
+  <form class="form">
+
+    <div>
+      <label for="add" class="form-label">
+        <input type="checkbox" id="add" value="yes">
+        Add or remove other people from the business
+      </label>
+
+      <label for="update" class="form-label">
+        <input type="checkbox" id="update" value="yes">
+        Update information about the business, land and entitlements
+      </label>
+
+      <label for="apply" class="form-label">
+        <input type="checkbox" id="apply" value="yes">
+        Apply for schemes
+      </label>
+    </div>
+
+    <div class="font-xsmall form-group">
+      <br>
+      <p><a href="">Advanced options</a></p>
+    </div>
+
+
+
+    <div class="form-group" id="next-yes">
+      <a href="/business" class="button">Continue</a>
+    </div>
+
+  </form>
+
+<% end %>

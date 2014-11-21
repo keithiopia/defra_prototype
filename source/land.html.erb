@@ -10,7 +10,7 @@ layout: layout-2-1-columns
 
  <header class="page-header">
     <hgroup>
-      <h1>Land</h1>
+      <h1>Check your land</h1>
     </hgroup>
   </header>
 
@@ -35,8 +35,8 @@ layout: layout-2-1-columns
     <tbody>
 
       <% data.business.parcels.each do |f| %>
-      <% statusClass = (f.coverage == 100 ? "done" : "not-done") %>
-      <tr class="x<%= statusClass %>">
+      <% statusClass = (f.checked ? "done" : "not-done") %>
+      <tr class="<%= statusClass %>">
         <td class="name">
           <a href="/<%= f.id %>">
             <%= (f.name ? f.name : "Untitled") %>
@@ -44,7 +44,7 @@ layout: layout-2-1-columns
         </td>
         <td class="id"><%= f.id %></td>
         <td class="area"><%= f.area %>ha</td>
-        <td class="complete"><span class="tag"><!--<%= f.coverage %>%-->No</span>
+        <td class="complete"><span class="tag"><%= f.checked ? "Yes" : "No" %></span>
         </td>
       </tr>
       <% end %>
@@ -64,8 +64,17 @@ layout: layout-2-1-columns
       <h2 class="heading-small">Land details</h2>
 
       <ul>
-        <li>Area: <%= data.business.area %>ha</li>
         <li>SBI: <%= data.business.sbi %></li>
+        <li>Total area: <%= data.business.area %>ha</li>
+        <li>Eligible area: 10.2ha</li>
+        <li>EFA target: <a href="#efa-status" class="js-toggle">Not met</a>
+
+          <div class="js-hidden" id="efa-status">
+            This land currently does not meet the 5% EFA requirement.
+            <a href="">Find out more about EFAs</a>
+          </div>
+
+        </li>
       </ul>
 
       <ul>

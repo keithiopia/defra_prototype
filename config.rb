@@ -78,6 +78,7 @@ data.business.parcels.each do |parcel|
 
   proxy "/#{parcel[:id]}/remove-feature.html", "/remove-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/remove-feature-date.html", "/remove-feature-date.html", :locals => { :parcel => parcel }, :ignore => true
+
 end
 
 

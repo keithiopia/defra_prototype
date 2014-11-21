@@ -2,8 +2,23 @@
 layout: layout-2-1-columns
 ---
 
+<%
 
-<% statusClass = (parcel.coverage == 100 ? "done" : "not-done") %>
+# Calculate areas
+
+definedArea = 0
+eligibleArea = 0
+if parcel.uses
+  parcel.uses.each do |f|
+    definedArea += f.area
+    eligibleArea += f.area if f.bps
+  end
+end
+definedArea = definedArea.round(2)
+eligibleArea = eligibleArea.round(2)
+unknownArea = (parcel.area - definedArea).round(2)
+
+%>
 
 <% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-land" %>
@@ -21,6 +36,8 @@ layout: layout-2-1-columns
     Describe the land uses and features on this land.
   </p>
 
+  <% if parcel.uses %>
+
   <table class="table feature-list">
     <thead>
       <tr>
@@ -31,46 +48,75 @@ layout: layout-2-1-columns
       </tr>
     </thead>
     <tbody>
-      <% if (parcel.features) %>
+
+      <% parcel.uses.each do |f| %>
       <tr>
-        <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Pond&land-use-type=shape">Pond</a></td>
-        <td class="cover">Ineligible for BPS</td>
-        <td class="area">0.1ha</td>
-        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Pond&land-use-type=shape" title="Remove this feature">Remove</a></td>
-      </tr>
-      <tr>
-        <td class="name"><a href="/<%= parcel.id %>/edit-feature?land-use=Hard+standings&land-use-type=shape">Hard standings</a></td>
-        <td class="cover">Ineligible for BPS</td>
-        <td class="area">0.1ha</td>
-        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Hard+standings&land-use-type=shape" title="Remove this feature">Remove</a></td>
+        <td class="name"><a href="/<%= parcel.id %>/edit-feature<%= "-type" unless f.use %>?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>"><%= f.use ? f.use : f.cover %></a></td>
+        <td class="cover">
+          <% if !f.use %>
+            <span class="warning-icon">!</span><a href="/<%= parcel.id %>/edit-feature-type?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">Describe the land use</a>
+          <% else %>
+
+            <% if f.efa %>
+              Eligible for BPS and EFA
+            <% elsif f.bps %>
+              Eligible for BPS
+            <% else %>
+              Ineligible for BPS
+            <% end %>
+
+          <% end %>
+        </td>
+        <td class="area"><%= f.area %>ha</td>
+        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=<%= f.use %>&land-use-type=<%= f.type %>" title="Remove this feature">Remove</a></td>
       </tr>
       <% end %>
+
+      <% if unknownArea > 0 %>
       <tr>
-        <td class="name"><a href="/<%= parcel.id %>/edit-feature-type?land-use=Arable+land&land-use-type=crop">Arable land</a></td>
-        <td class="cover"><span class="warning-icon">!</span>Unknown land use</td>
-        <td class="area">5.75ha</td>
-        <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=Arable+land&land-use-type=crop" title="Remove this feature">Remove</a></td>
-      </tr>
-<!--
-      <tr class="totals">
-        <td class="name">Total area described:</td>
-        <td>5.95ha &nbsp; 0.1ha remaining</td>
-        <td class="area"></td>
+        <td class="name">Unknown</td>
+        <td class="cover"></td>
+        <td class="area"><%= unknownArea %>ha</td>
         <td class="remove"></td>
-      </tr>-->
+      </tr>
+      <% end %>
+
+      <tr class="totals">
+
+      <% if  parcel.uses.size > 1 %>
+
+        <td class="name">Total area</td>
+        <td class="cover"></td>
+        <td class="area"><%= parcel.area %>ha</td>
+        <td class="remove"></td>
+      </tr>
+      <tr>
+
+      <% end %>
+
+        <td class="name">Total eligible area</td>
+        <td class="cover"></td>
+        <td class="area"><%= eligibleArea %>ha</td>
+        <td class="remove"></td>
+      </tr>
     </tbody>
   </table>
 
-  <p><%= parcel.areadescribed %>ha described, 0.1ha remaining</p>
+  <% end %>
 
   <div class="form-group">
 
 
     <p><a href="/<%= parcel.id %>/add-feature">Add a land use or feature</a></p>
 
+
+  <% if parcel.uses %>
     <label class="form-label block-label">
       <input type="checkbox"> This information is accurate
     </label>
+  <% end %>
+
+
   </div>
 
   <div class="form-group">
@@ -94,7 +140,7 @@ layout: layout-2-1-columns
 
     <ul>
       <li>Parcel ID: <%= parcel.id %></li>
-      <li>Total area: <%= parcel.area %>ha</li>
+      <li>Region: <%= parcel.region %></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>
         <p class="js-hidden" id="status-help-draft">
           Confirm that the information is accurate to submit it to the Rural Payments Agency for verification.
