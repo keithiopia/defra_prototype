@@ -12,9 +12,9 @@ require "rack/rewrite"
 use Rack::Head
 
 # Enable basic auth for password protection
-#use Rack::Auth::Basic, "HMRC Prototypes. Please login." do |username, password|
-#  [username, password] == [ENV['SITE_USERNAME'], ENV['SITE_PASSWORD']]
-#end
+use Rack::Auth::Basic, "RPA prototypes. Please login." do |username, password|
+  [username, password] == [ENV['SITE_USERNAME'], ENV['SITE_PASSWORD']]
+end
 
 # Attempt to serve static HTML files
 use Rack::TryStatic,
