@@ -56,7 +56,7 @@ parcels:
     verified:   true
     checked:    false
     id:         SJ8063_3254
-    area:       0.72
+    area:       5.6
     uses:
       - use:    Hedge
         type:   hedge
@@ -78,19 +78,41 @@ parcels:
         bps:    true
         area:   4.32
 
-  - name:       The fen
+  - name:       The Fen
     region:     Mooreland
     verified:   true
     checked:    false
     id:         SJ8063_4248
-    area:       0.16
+    area:       4.56
+    uses:
+      - use:    Fen marsh and swamp
+        type:   crop
+        cover:  Woodland
+        area:   4.56
 
-  - name:
+  - name:       Wheat and Barley
     region:     Non-SDA
     verified:   true
     checked:    false
     id:         SJ8063_1039
-    area:       10.82
+    area:       5.34
+    uses:
+      - use:    Stone wall
+        type:   line
+        cover:  Boundary feature
+        area:   0.56
+
+      - use:    Wheat
+        type:   crop
+        bps:    true
+        cover:  Arable land
+        area:   3.67
+
+      - use:    Barley
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   4.32
 
   - name:
     region:     Non-SDA

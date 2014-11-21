@@ -18,6 +18,13 @@ definedArea = definedArea.round(2)
 eligibleArea = eligibleArea.round(2)
 unknownArea = (parcel.area - definedArea).round(2)
 
+if (unknownArea < 0)
+  totalArea = definedArea
+  tooBig = true
+else
+  totalArea = parcel.area
+end
+
 %>
 
 <% content_for :breadcrumbs do %>
@@ -54,7 +61,10 @@ unknownArea = (parcel.area - definedArea).round(2)
         <td class="name"><a href="/<%= parcel.id %>/edit-feature<%= "-type" unless f.use %>?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>"><%= f.use ? f.use : f.cover %></a></td>
         <td class="cover">
           <% if !f.use %>
-            <span class="warning-icon">!</span><a href="/<%= parcel.id %>/edit-feature-type?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">Describe the land use</a>
+            <span class="warning">
+              <span class="warning-icon">!</span>
+              <a href="/<%= parcel.id %>/edit-feature-type?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">Describe the land use</a>
+            </span>
           <% else %>
 
             <% if f.efa %>
@@ -86,8 +96,12 @@ unknownArea = (parcel.area - definedArea).round(2)
       <% if  parcel.uses.size > 1 %>
 
         <td class="name">Total area</td>
-        <td class="cover"></td>
-        <td class="area"><%= parcel.area %>ha</td>
+        <td class="cover">
+          <% if tooBig %>
+            <span class="warning"><span class="warning-icon">!</span>Exceeds parcel area by <%= unknownArea * -1 %>ha</span>
+          <% end %>
+        </td>
+        <td class="area<%= ' warning-text' if tooBig %>"><%= totalArea %>ha</td>
         <td class="remove"></td>
       </tr>
       <tr>
@@ -136,9 +150,10 @@ unknownArea = (parcel.area - definedArea).round(2)
   </div>
 
   <div class="font-xsmall">
-    <h2 class="heading-small">Land details</h2>
+    <h2 class="heading-small">Land parcel details</h2>
 
     <ul>
+      <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
       <li>Region: <%= parcel.region %></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>

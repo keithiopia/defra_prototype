@@ -25,9 +25,6 @@ table.feature-list{
   }
   td.cover{
    color: $secondary-text-colour;
-   a{
-    color: $mellow-red;
-   }
   }
   th.cover{
     //text-indent: -9999px;
@@ -58,8 +55,8 @@ table.feature-list{
 .totals{
   font-size: 16px;
   span{
-    display: inline-block;
-    width: 50px;
+    //display: inline-block;
+    //width: 50px;
   }
 }
 
