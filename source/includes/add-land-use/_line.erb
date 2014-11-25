@@ -1,0 +1,39 @@
+<div class="content-line">
+
+<p>
+  <span class="map-marker-5"></span> Draw a line on the map to mark the feature.
+</p>
+
+<p>
+  <a href="#drawing-tips-line" class="js-toggle">Drawing tips</a>
+</p>
+
+<div id="drawing-tips-line" class="js-hidden">
+
+  <ul class="font-xsmall list-bullet">
+    <li>Click on the map to mark points along the line</li>
+    <li>Double-click the last point to stop drawing</li>
+    <li>Switch to 'Photo' to see an arial photo of the land</li>
+    <li>Use the zoom and full screen controls to make the map bigger</li>
+  </ul>
+
+</div>
+
+
+<p>Length on map: 32m</p>
+
+<div class="form-group">
+  <label class="form-label">Actual length:&nbsp;
+    <input class="form-control form-control-1-8" type="text"> m
+  </label>
+</div>
+
+  <%= partial "partial-note", :locals => { :type => "line"} %>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/add-feature-date" class="button js-pass-querystring">Continue</a>
+    <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+  </div>
+
+
+</div>

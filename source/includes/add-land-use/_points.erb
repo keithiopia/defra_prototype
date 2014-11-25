@@ -1,0 +1,15 @@
+<div class="content-points">
+
+  <p>
+    <span class="map-marker-3"></span> Mark their locations on the map
+  </p>
+
+  <%= partial "partial-note", :locals => { :type => "points"} %>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/add-feature-date" class="button js-pass-querystring">Continue</a>
+    <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+  </div>
+
+
+</div>

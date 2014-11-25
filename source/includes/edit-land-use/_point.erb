@@ -1,0 +1,40 @@
+<div class="content-point">
+
+  <p>
+    <span class="map-marker-3"></span> Mark the location on the map
+  </p>
+
+  <p>
+    <a href="#drawing-tips" class="js-toggle">Drawing tips</a>
+  </p>
+
+  <div id="drawing-tips" class="js-hidden xpanel-indent">
+
+    <ul class="font-xsmall list-bullet">
+      <li>Switch to 'Photo' to see an arial photo of the land</li>
+      <li>Use the zoom and full screen controls to make the map bigger</li>
+    </ul>
+
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Area</label>
+    <input class="form-control form-control-num" type="text"> ha
+    <!--
+    <select>
+      <option>square meters</option>
+      <option>square feet</option>
+      <option>hectares</option>
+    </select>
+  -->
+  </div>
+
+  <%= partial "partial-note", :locals => { :type => "shape"} %>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/edit-feature-date" class="button js-pass-querystring">Continue</a>
+    <p><a href="/<%= parcel.id %>/edit-feature-type">Back</a></p>
+  </div>
+
+
+</div>

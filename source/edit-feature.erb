@@ -15,12 +15,12 @@ layout: layout-1-1-columns
     </hgroup>
   </header>
 
-  <%= partial "land-use-type/point", :locals => { :parcel => parcel} %>
-  <%= partial "land-use-type/points", :locals => { :parcel => parcel} %>
-  <%= partial "land-use-type/line-edit", :locals => { :parcel => parcel} %>
-  <%= partial "land-use-type/shape-edit", :locals => { :parcel => parcel} %>
-  <%= partial "land-use-type/hedge", :locals => { :parcel => parcel} %>
-  <%= partial "land-use-type/crop", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/point", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/points", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/line", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/shape", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/hedge", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/crop", :locals => { :parcel => parcel} %>
 
 
 <% end %>

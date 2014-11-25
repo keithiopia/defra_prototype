@@ -9,7 +9,7 @@
     </label>
   </div>
 
-  <%= partial "partial-note" %>
+  <%= partial "partial-note", :locals => { :type => "crop"} %>
 
   <div class="form-group">
     <a href="/<%= parcel.id %>/" class="button">Save and return</a>

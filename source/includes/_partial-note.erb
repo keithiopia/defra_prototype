@@ -1,12 +1,17 @@
-<!--
+
     <div class="form-group">
-      <label for="notes-details" class="form-label">Additional notes</label>
+      <label for="notes-details" class="form-label">Additional notes (optional)</label>
       <textarea class="form-control full-width" id="notes-details"></textarea>
     </div>
--->
 
 
+<!--
 <div class="form-group">
-  <label for="notes-details" class="form-label js-toggle link-style" data-toggle="#notes-details">Add a note</label>
-  <textarea class="form-control full-width js-hidden" id="notes-details"></textarea>
+  <label for="notes-details-<%= type %>" class="form-label js-toggle font-xsmall" data-toggle=".notes-details">
+    <span class="link-style">Add a note</span>
+    <span class="notes-details js-hidden">(optional)</span></label>
+  <div class="notes-details js-hidden">
+    <textarea class="form-control full-width" id="notes-details-<%= type %>"></textarea>
+  </div>
 </div>
+-->

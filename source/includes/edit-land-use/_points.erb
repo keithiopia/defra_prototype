@@ -5,8 +5,7 @@
   </p>
 
 
-
-  <%= partial "partial-note" %>
+  <%= partial "partial-note", :locals => { :type => "shape"} %>
 
   <div class="form-group">
     <a href="/<%= parcel.id %>/edit-feature-date" class="button js-pass-querystring">Continue</a>

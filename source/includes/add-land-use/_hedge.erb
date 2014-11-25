@@ -28,11 +28,11 @@
 </div>
 
 
-  <%= partial "partial-note" %>
+  <%= partial "partial-note", :locals => { :type => "hedge"} %>
 
   <div class="form-group">
-    <a href="/<%= parcel.id %>/edit-feature-date" class="button js-pass-querystring">Continue</a>
-    <p><a href="/<%= parcel.id %>/edit-feature-type">Back</a></p>
+    <a href="/<%= parcel.id %>/add-feature-date" class="button js-pass-querystring">Continue</a>
+    <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
   </div>
 
 
