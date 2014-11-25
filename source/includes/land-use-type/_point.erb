@@ -19,12 +19,22 @@
 
   <div class="form-group">
     <label class="form-label">Area</label>
-    <input class="form-control form-control-num" type="text">
+    <input class="form-control form-control-num" type="text"> ha
+    <!--
     <select>
       <option>square meters</option>
       <option>square feet</option>
       <option>hectares</option>
     </select>
+  -->
   </div>
+
+  <%= partial "partial-note" %>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/edit-feature-date" class="button js-pass-querystring">Continue</a>
+    <p><a href="/<%= parcel.id %>/edit-feature-type">Back</a></p>
+  </div>
+
 
 </div>

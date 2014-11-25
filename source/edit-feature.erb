@@ -15,24 +15,12 @@ layout: layout-1-1-columns
     </hgroup>
   </header>
 
-  <%= partial "land-use-type/point" %>
-  <%= partial "land-use-type/points" %>
-  <%= partial "land-use-type/line-edit" %>
-  <%= partial "land-use-type/shape-edit" %>
-  <%= partial "land-use-type/hedge" %>
-  <%= partial "land-use-type/crop" %>
-
-    <div class="form-group">
-      <label for="notes-details" class="form-label">Additional notes</label>
-      <textarea class="form-control full-width" id="notes-details"></textarea>
-    </div>
-
-
-    <div class="form-group">
-      <!--<a href="/<%= parcel.id %>/edit-feature-date" class="button js-pass-querystring">Continue</a>-->
-      <a href="/<%= parcel.id %>/" class="button">Save and return</a>
-      <p><a href="/<%= parcel.id %>/edit-feature-type">Back</a></p>
-    </div>
+  <%= partial "land-use-type/point", :locals => { :parcel => parcel} %>
+  <%= partial "land-use-type/points", :locals => { :parcel => parcel} %>
+  <%= partial "land-use-type/line-edit", :locals => { :parcel => parcel} %>
+  <%= partial "land-use-type/shape-edit", :locals => { :parcel => parcel} %>
+  <%= partial "land-use-type/hedge", :locals => { :parcel => parcel} %>
+  <%= partial "land-use-type/crop", :locals => { :parcel => parcel} %>
 
 
 <% end %>

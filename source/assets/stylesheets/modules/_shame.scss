@@ -45,7 +45,7 @@ select{
 }
 
 .secondary-text{
-  color: $secondary-text-colour;
+  color: $secondary-text-colour !important;
 }
 
 // Gutter below table
