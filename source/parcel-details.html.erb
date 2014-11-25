@@ -40,8 +40,12 @@ end
   </header>
 
   <p>
-    Describe the land uses and features on this land.
+    List the land uses and features on this land parcel.
   </p>
+
+
+  <p class="error-missing-land-uses warning-text"><span class="warning-icon">!</span>Describe any missing land uses before saving</p>
+
 
   <% if parcel.uses %>
 
@@ -72,7 +76,7 @@ end
             <% elsif f.bps %>
               Eligible for BPS
             <% else %>
-              Ineligible for BPS
+              Not eligible for BPS
             <% end %>
 
           <% end %>
@@ -108,8 +112,7 @@ end
 
       <% end %>
 
-        <td class="name">Total eligible area</td>
-        <td class="cover"></td>
+        <td class="name" colspan="2">Total eligible area</td>
         <td class="area"><%= eligibleArea %>ha</td>
         <td class="remove"></td>
       </tr>
@@ -121,17 +124,23 @@ end
   <div class="form-group">
 
 
-    <p><a href="/<%= parcel.id %>/add-feature">Add a land use or feature</a></p>
+    <a href="/<%= parcel.id %>/add-feature">Add a land use or feature</a>
 
 
+<!--
   <% if parcel.uses %>
     <label class="form-label block-label">
       <input type="checkbox"> This information is accurate
     </label>
   <% end %>
+-->
 
 
   </div>
+
+<!--
+  <p class="font-xsmall">You have unsaved changes.</p>
+-->
 
   <div class="form-group">
     <a href="/land" class="button">Save and return</a>
@@ -155,20 +164,23 @@ end
     <ul>
       <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
-      <li>Region: <%= parcel.region %></li>
+      <!--<li>Region: <%= parcel.region %></li>-->
+      <li>Certified organic: <a href="/<%= parcel.id %>/organic-status">No</a></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>
-        <p class="js-hidden" id="status-help-draft">
-          Confirm that the information is accurate to submit it to the Rural Payments Agency for verification.
+        <p class="js-hidden secondary-text" id="status-help-draft">
+          Save the parcel to submit it to the Rural Payments Agency for verification.
         </p>
       </li>
       <% if (parcel.organic) %><li>Certified organic</li><% end %>
     </ul>
 
     <ul>
-      <li><a href="/<%= parcel.id %>/organic-status">Change the organic status of the parcel</a></li>
+      <li><a href="/<%= parcel.id %>/change-land-parcel">Split, remove or transfer this land</a></li>
+      <!--
       <li><a href="/<%= parcel.id %>/change-land-parcel">Transfer the parcel to someone else</a></li>
       <li><a href="/<%= parcel.id %>/split-parcel">Split the parcel in two</a></li>
       <li><a href="/<%= parcel.id %>/change-land-parcel">Remove the parcel</a></li>
+    -->
     </ul>
   </div>
 

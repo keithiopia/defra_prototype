@@ -7,6 +7,7 @@ sbi: 222223250
 parcels:
   - name:       North paddock
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    true
     organic:    false
@@ -24,13 +25,14 @@ parcels:
         area:   0.67
 
       - use:
-        type:   shape
+        type:   crop
         cover:  Arable land
         bps:    true
         area:   4.32
 
   - name:       Top field
     region:     Non-SDA
+    cph:
     features:   true
     verified:   true
     checked:    false
@@ -38,13 +40,14 @@ parcels:
     area:       6.05
     uses:
       - use:
-        type:   shape
+        type:   crop
         cover:  Arable land
         bps:    true
         area:   6.05
 
   - name:       East field
     region:     Non-SDA
+    cph:
     verified:   false
     checked:    false
     id:         SJ8063_4541
@@ -53,6 +56,7 @@ parcels:
 
   - name:       Fallow field
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_3254
@@ -80,6 +84,7 @@ parcels:
 
   - name:       The Fen
     region:     Mooreland
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_4248
@@ -92,6 +97,7 @@ parcels:
 
   - name:       Wheat and Barley
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_1039
@@ -116,59 +122,115 @@ parcels:
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_4485
     area:       4.79
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   4.79
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_4461
-    area:       0.49
+    area:       3.25
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   3.25
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_4369
-    area:       0.1
+    area:       2.1
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   2.1
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_4774
-    area:       0.12
+    area:       7.12
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   7.12
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_4066
-    area:       0.32
+    area:       3.12
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   3.12
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_7981
-    area:       7.26
+    area:       4.07
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   4.07
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_1674
     area:       7.18
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   7.18
 
   - name:
     region:     Non-SDA
+    cph:
     verified:   true
     checked:    false
     id:         SJ8063_3758
-    area:       0.75
+    area:       3.75
+    uses:
+      - use:
+        type:   crop
+        cover:  Arable land
+        bps:    true
+        area:   3.75
 
 
 

@@ -44,6 +44,10 @@ select{
   color: $mellow-red !important;
 }
 
+.secondary-text{
+  color: $secondary-text-colour;
+}
+
 // Gutter below table
 table{
   margin-bottom: $gutter;

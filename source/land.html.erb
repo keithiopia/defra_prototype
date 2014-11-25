@@ -2,6 +2,29 @@
 layout: layout-2-1-columns
 ---
 
+<%
+
+totalArea = 0
+eligibleArea = 0
+efaArea = 0
+data.business.parcels.each do |f|
+  totalArea += f.area
+  if f.uses
+    f.uses.each do |f|
+      eligibleArea += f.area if f.bps
+      efaArea += f.area if f.efa
+    end
+  end
+end
+totalArea = totalArea.round(2)
+eligibleArea = eligibleArea.round(2)
+efaArea = efaArea.round(2)
+efaTarget = ((efaArea / eligibleArea) * 100).round(1)
+meetsEfaTarget = (efaTarget < 5 ? false : true)
+
+%>
+
+
 <% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs-business" %>
 <% end %>
@@ -18,10 +41,12 @@ layout: layout-2-1-columns
     Check each land parcel and confirm whether the information is accurate.
   </p>
 
+<!--
   <div class="panel-indent font-xsmall">
     <h3 class="heading-small">Don't forget your EFAs</h3>
     <p>This year, 30% of your Basic Payment will be based on Ecological Focus Areas like hedges, trees, nitrogen fixing crops and buffer strips. <a href="">Find out more about EFAs.</a></p>
   </div>
+-->
 
   <table class="parcel-list js-row-link">
     <thead>
@@ -64,23 +89,19 @@ layout: layout-2-1-columns
       <h2 class="heading-small">Land details</h2>
 
       <ul>
-        <li>SBI: <%= data.business.sbi %></li>
-        <li>Total area: <%= data.business.area %>ha</li>
-        <li>Eligible area: 10.2ha</li>
-        <li>EFA target: <a href="#efa-status" class="js-toggle">Not met</a>
-
-          <div class="js-hidden" id="efa-status">
-            This land currently does not meet the 5% EFA requirement.
-            <a href="">Find out more about EFAs</a>
-          </div>
-
-        </li>
+        <!--<li>SBI: <%= data.business.sbi %></li>-->
+        <li>Total area: <%= totalArea %>ha</li>
+        <li>Eligible area: <%= eligibleArea %>ha</li>
+        <li>EFA target: <span <%= 'class="warning-text"' if !meetsEfaTarget %>><%= efaTarget %>%</span></li>
       </ul>
+
+      <% if !meetsEfaTarget %>
+      <p class="warning">Add more Ecological Focus Areas to your land to meet the <a href="#">5% EFA target</a>.</p>
+      <% end %>
 
       <ul>
         <li><a href="add-land">Add land</a></li>
         <li><a href="remove-land">Remove land</a></li>
-        <li><a href="organic-status-all">Update organic status of land</a></li>
       </ul>
     </div>
 

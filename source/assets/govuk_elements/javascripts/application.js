@@ -101,6 +101,17 @@ $(document).ready(function() {
     $(".content-" + landUseType).show()
   }
 
+
+  // Hide errors
+  $("[class^='error-']").hide();
+
+  // Show errors
+  var error = getParameterByName('error');
+  if(error){
+    $(".error-" + error).show()
+  }
+
+
   // Show 'Unverified changes' panel
   if (getParameterByName('changed') != 'true'){
     $("#submit-changes").hide();
