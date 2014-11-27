@@ -1,23 +1,20 @@
 ---
-title: Rural payments prototype
-layout: layout_template_no_nav
+layout: layout-2-1-columns
 ---
 
-<div class="inner-block">
-
+<% content_for :breadcrumbs do %>
   <%= partial "partial-breadcrumbs" %>
+<% end %>
 
-  <div class="group">
-    <div class="words-wide">
-      <div class="inner-block">
+<% content_for :column1 do %>
 
-        <header class="page-header">
-          <hgroup>
-            <h1>Check business details for <br><%= data.business.name %></h1>
-          </hgroup>
-        </header>
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
 
-        <p>Please check that the details below are correct.</p>
+ <p>Please check that the details for this business are correct.</p>
 
         <h2 class="heading-medium">Contact details</h2>
 
@@ -50,7 +47,7 @@ layout: layout_template_no_nav
 
         <p>
           Single Business Identifier: 222223250 <br>
-          Firm Reference Number: 1100052819 <br>
+          <!--Firm Reference Number: 1100052819 <br>-->
           VAT Registration Number: GB999 9999 73
         </p>
 
@@ -70,7 +67,7 @@ layout: layout_template_no_nav
           </div>
 
           <div class="form-group" id="next-yes">
-            <a href="/business" class="button">Continue</a>
+            <a href="business-extra-1" class="button">Continue</a>
           </div>
 
           <div class="form-group js-hidden" id="next-no">
@@ -80,17 +77,5 @@ layout: layout_template_no_nav
         </form>
 
 
-
-      </div>
-    </div>
-
-    <div class="map-column small-map">
-      <div class="map-wrapper">
-        <div class="map">
-        <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/business-1-checked.png") %>">
-      </div>
-    </div>
-
-  </div>
-</div>
+<% end %>
 
