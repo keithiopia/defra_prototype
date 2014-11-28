@@ -64,13 +64,14 @@ end
       <tr>
         <td class="name"><a href="/<%= parcel.id %>/edit-feature<%= "-type" unless f.use %>?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>"><%= f.use ? f.use : f.cover %></a></td>
         <td class="cover">
+
           <% if !f.use %>
             <span class="warning">
               <span class="warning-icon">!</span>
               <a href="/<%= parcel.id %>/edit-feature-type?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">Describe the land use</a>
             </span>
           <% else %>
-
+          <!--
             <% if f.efa %>
               Eligible for BPS and EFA
             <% elsif f.bps %>
@@ -78,6 +79,7 @@ end
             <% else %>
               Not eligible for BPS
             <% end %>
+        -->
 
           <% end %>
         </td>
@@ -108,6 +110,7 @@ end
         <td class="area<%= ' warning-text' if tooBig %>"><%= totalArea %>ha</td>
         <td class="remove"></td>
       </tr>
+      <!--
       <tr>
 
       <% end %>
@@ -116,6 +119,7 @@ end
         <td class="area"><%= eligibleArea %>ha</td>
         <td class="remove"></td>
       </tr>
+    -->
     </tbody>
   </table>
 
@@ -163,14 +167,14 @@ end
     <ul>
       <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
-      <!--<li>Region: <%= parcel.region %></li>-->
+      <!--<li>Region: <%= parcel.region %></li>
       <li>Certified organic: <a href="/<%= parcel.id %>/organic-status">No</a></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>
         <p class="js-hidden secondary-text" id="status-help-draft">
           Save the parcel to submit it to the Rural Payments Agency for verification.
         </p>
       </li>
-      <% if (parcel.organic) %><li>Certified organic</li><% end %>
+      <% if (parcel.organic) %><li>Certified organic</li><% end %>-->
     </ul>
 
     <ul>
