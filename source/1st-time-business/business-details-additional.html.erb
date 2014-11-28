@@ -10,13 +10,13 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1><%= data.business.name %></h1>
+      <h1>Scheme eligibility</h1>
     </hgroup>
   </header>
 
-  <p>
-    We need to know more about this business before you can apply for any schemes.
-    If you don't have the information you can <a href="/business?alert=business-details">skip this step for now</a>.
+  <p class="lede">
+    We need to check that <%= data.business.name %> is eligible for rural payments schemes.
+    If you don't have all the information to hand you can <a href="/business?alert=business-details">skip this step for now</a>.
   </p>
 
 
@@ -24,7 +24,7 @@ layout: layout-2-1-columns
 
 
     <div class="form-group">
-      <p class="heading-small" for="type">What kind of business is this?</p>
+      <p class="heading-medium" for="type">What kind of business is this?</p>
       <select>
         <option value="" class="">Select an option</option>
         <option value="" class="">  </option>
@@ -55,67 +55,7 @@ layout: layout-2-1-columns
     </div>
 
     <div class="form-group">
-      <p class="heading-small">Does the business operate any of the following?</p>
-
-      <p>An airport, estate agency, permanent sports ground, property development, railway, recreation ground or waterworks.</p>
-
-      <div class="inline">
-        <label for="activities-yes" class="block-label">
-          <input type="radio" name="activities" id="activities-yes" value="yes" class="js-toggle" data-show="#activities-list">
-          Yes
-        </label>
-        <label for="activities-no" class="block-label">
-          <input type="radio" name="activities" id="activities-no" value="no" class="js-toggle" data-hide="#activities-list">
-          No
-        </label>
-      </div>
-
-      <div class="form-group panel-indent js-hidden" id="activities-list">
-        <p>Which does it operate?</p>
-
-        <div>
-          <label for="ac1" class="form-label">
-            <input type="checkbox" name="activites" id="ac1">
-            Airport
-          </label>
-
-          <label for="ac2" class="form-label">
-            <input type="checkbox" name="activites" id="ac2">
-            Estate agency
-          </label>
-
-          <label for="ac3" class="form-label">
-            <input type="checkbox" name="activites" id="ac3">
-            Permanent sports ground
-          </label>
-
-          <label for="ac4" class="form-label">
-            <input type="checkbox" name="activites" id="ac4">
-            Property development
-          </label>
-
-          <label for="ac5" class="form-label">
-            <input type="checkbox" name="activites" id="ac5">
-            Railway
-          </label>
-
-          <label for="ac6" class="form-label">
-            <input type="checkbox" name="activites" id="ac6">
-            Recreation ground
-          </label>
-
-          <label for="ac7" class="form-label">
-            <input type="checkbox" name="activites" id="ac7">
-            Waterworks
-          </label>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="form-group">
-      <h3 class="heading-small" for="legal-status">What is the legal status of the business?</h3>
+      <h3 class="heading-medium" for="legal-status">What is the legal status of the business?</h3>
         <select>
           <option value="" class="">Select an option</option>
           <option></option>
@@ -138,18 +78,24 @@ layout: layout-2-1-columns
     </div>
 
     <div class="form-group">
-      <label class="heading-small" for="date">What date was the business registered or created on?</label>
+      <label class="heading-medium" for="date">What date was the business registered or created on?</label>
       <%= partial "partial-date" %>
     </div>
 
+    <h3 class="heading-medium">Does the business have land registered in Scotland, Wales or Northern Ireland?</h3>
 
-      <h3 class="heading-small">What countries does this business have land registered in?</h3>
+    <div class="form-group inline">
+      <label for="outside-england-yes" class="block-label">
+        <input type="radio" name="outside-england" id="outside-england-yes" value="yes" class="js-toggle" data-show="#outside-england-details">
+        Yes
+      </label>
+      <label for="outside-england-no" class="block-label">
+        <input type="radio" name="outside-england" id="outside-england-no" value="no" class="js-toggle" data-hide="#outside-england-details">
+        No
+      </label>
 
-      <div class="form-group">
-        <label for="england" class="form-label">
-          <input type="checkbox" id="england">
-          England
-        </label>
+      <div class="form-group js-hidden panel-indent" id="outside-england-details">
+        <p>Which countries?</p>
         <label for="scotland" class="form-label">
           <input type="checkbox" id="scotland">
           Scotland
@@ -163,27 +109,114 @@ layout: layout-2-1-columns
           Northern Ireland
         </label>
       </div>
-
-
-
-    <h3 class="heading-small">Is the business registered with Companies House?</h3>
-
-    <div class="form-group">
-      <label class="form-label" for="businessCH">If so, give the registration number</label>
-      <input type="text" class="form-control form-control-1-2" id="businessCH" name="businessCH" value="">
     </div>
 
-    <h3 class="heading-small">Is the business registered with the Charity Commission?</h3>
+
+    <h3 class="heading-medium">Is the business registered with Companies House?</h3>
+
+    <div class="form-group inline">
+      <label for="CH-yes" class="block-label">
+        <input type="radio" name="CH" id="CH-yes" value="yes" class="js-toggle" data-show="#CH-details">
+        Yes
+      </label>
+      <label for="CH-no" class="block-label">
+        <input type="radio" name="CH" id="CH-no" value="no" class="js-toggle" data-hide="#CH-details">
+        No
+      </label>
+
+      <div class="form-group js-hidden panel-indent" id="CH-details">
+        <label class="form-label" for="businessCH">Registration number</label>
+        <input type="text" class="form-control form-control-1-2" id="businessCH" name="businessCH" value="">
+      </div>
+    </div>
+
+
+
+    <h3 class="heading-medium">Is the business registered with the Charity Commission?</h3>
+
+    <div class="form-group inline">
+      <label for="CC-yes" class="block-label">
+        <input type="radio" name="CC" id="CC-yes" value="yes" class="js-toggle" data-show="#CC-details">
+        Yes
+      </label>
+      <label for="CC-no" class="block-label">
+        <input type="radio" name="CC" id="CC-no" value="no" class="js-toggle" data-hide="#CC-details">
+        No
+      </label>
+
+      <div class="form-group js-hidden panel-indent" id="CC-details">
+        <label class="form-label" for="businessCC">Registration number</label>
+        <input type="text" class="form-control form-control-1-2" id="businessCC" name="businessCH" value="">
+      </div>
+    </div>
+
+
+
+    <h3 class="heading-medium">Does the business operate any of the following?</h3>
 
     <div class="form-group">
-      <label class="form-label" for="businessCC">If so, give the registration number</label>
-      <input type="text" class="form-control form-control-1-2" id="businessCC" name="businessCC" value="">
+
+      <p>An airport, railway services, waterworks, real estate services or permanent sports and recreational grounds.</p>
+
+      <div class="inline">
+        <label for="activities-yes" class="block-label">
+          <input type="radio" name="activities" id="activities-yes" value="yes" class="js-toggle" data-show="#activities-list">
+          Yes
+        </label>
+        <label for="activities-no" class="block-label">
+          <input type="radio" name="activities" id="activities-no" value="no" class="js-toggle" data-hide="#activities-list">
+          No
+        </label>
+      </div>
+
+      <div class="form-group js-hidden" id="activities-list">
+
+        <div class="form-group panel-indent">
+
+          <p>Which of those does it operate?</p>
+
+          <label for="ac1" class="form-label">
+            <input type="checkbox" name="activites" id="ac1">
+            Airport
+          </label>
+
+          <label for="ac2" class="form-label">
+            <input type="checkbox" name="activites" id="ac2">
+            Railway services
+          </label>
+
+          <label for="ac3" class="form-label">
+            <input type="checkbox" name="activites" id="ac3">
+            Waterworks
+          </label>
+
+          <label for="ac4" class="form-label">
+            <input type="checkbox" name="activites" id="ac4">
+            Real estate services
+          </label>
+
+          <label for="ac5" class="form-label">
+            <input type="checkbox" name="activites" id="ac5">
+            Permanent sports and recreational grounds
+          </label>
+        </div>
+
+
+        <h3 class="heading-medium">Eligibility</h3>
+        <p>
+          You <span class="warning-text">may not</span> be eligible for BPS and Rural Development organic conversion and maintenance payments.
+          You'll need to submit evidence to show you comply with these schemes before 15 May.
+          We'll email you with more information.
+        </p>
+
+      </div>
+
     </div>
 
 
 
       <div class="form-group">
-        <a href="business-extra-1" class="button">Continue</a>
+        <a href="business-details-people" class="button">Continue</a>
       </div>
 
   </form>

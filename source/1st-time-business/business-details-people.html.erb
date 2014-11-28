@@ -1,0 +1,35 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+    <p>
+      We need to know about the people who are accountable for this business before you can apply for any schemes.
+      If you don't have the information you can <a href="/business?alert=business-details">skip this step for now</a>.
+    </p>
+
+
+
+
+
+
+    <div class="form-group">
+      <a href="business-extra-1" class="button">Continue</a>
+    </div>
+
+  </form>
+
+
+<% end %>
+
