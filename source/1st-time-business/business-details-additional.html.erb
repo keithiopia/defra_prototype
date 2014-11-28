@@ -60,15 +60,57 @@ layout: layout-2-1-columns
       <p>An airport, estate agency, permanent sports ground, property development, railway, recreation ground or waterworks.</p>
 
       <div class="inline">
-        <label for="correct-yes" class="form-label">
-          <input type="radio" name="activites" id="activities-yes" value="yes">
+        <label for="activities-yes" class="block-label">
+          <input type="radio" name="activities" id="activities-yes" value="yes" class="js-toggle" data-show="#activities-list">
           Yes
         </label>
-        <label for="correct-no" class="form-label">
-          <input type="radio" name="activities" id="activities-no" value="no">
+        <label for="activities-no" class="block-label">
+          <input type="radio" name="activities" id="activities-no" value="no" class="js-toggle" data-hide="#activities-list">
           No
         </label>
       </div>
+
+      <div class="form-group panel-indent js-hidden" id="activities-list">
+        <p>Which does it operate?</p>
+
+        <div>
+          <label for="ac1" class="form-label">
+            <input type="checkbox" name="activites" id="ac1">
+            Airport
+          </label>
+
+          <label for="ac2" class="form-label">
+            <input type="checkbox" name="activites" id="ac2">
+            Estate agency
+          </label>
+
+          <label for="ac3" class="form-label">
+            <input type="checkbox" name="activites" id="ac3">
+            Permanent sports ground
+          </label>
+
+          <label for="ac4" class="form-label">
+            <input type="checkbox" name="activites" id="ac4">
+            Property development
+          </label>
+
+          <label for="ac5" class="form-label">
+            <input type="checkbox" name="activites" id="ac5">
+            Railway
+          </label>
+
+          <label for="ac6" class="form-label">
+            <input type="checkbox" name="activites" id="ac6">
+            Recreation ground
+          </label>
+
+          <label for="ac7" class="form-label">
+            <input type="checkbox" name="activites" id="ac7">
+            Waterworks
+          </label>
+        </div>
+      </div>
+
     </div>
 
 
