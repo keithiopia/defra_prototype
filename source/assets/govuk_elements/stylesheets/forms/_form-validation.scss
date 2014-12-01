@@ -36,25 +36,25 @@
   margin-top: $gutter-half;
 }
 
-
 // Validation error message box
-// .validation-error {
-//   clear: both;
-//   @include contain-floats;
-//   border-left: 3px solid $error-colour;
-//   padding: $gutter- $gutter;
-//   margin-bottom: $gutter-half;
-//   margin-left: -($gutter);
-// }
+/*
+.validation-error {
+ clear: both;
+ @include contain-floats;
+ border-left: 3px solid $error-colour;
+ padding: $gutter- $gutter;
+ margin-bottom: $gutter-half;
+ margin-left: -($gutter);
+}
 
-// .validation-error .form-group {
-//   margin-bottom: 20px;
-// }
+.validation-error .form-group {
+ margin-bottom: 20px;
+}
 
-// .validation-error p {
-//   margin-bottom: 10px;
-// }
-
+.validation-error p {
+ margin-bottom: 10px;
+}
+*/
 
 // Validation message
 .validation-message {

@@ -88,3 +88,21 @@ select.link-style{
     }
   }
 }
+
+// Validation error message box
+.validation-error {
+ clear: both;
+ @include contain-floats;
+ border-left: 3px solid $error-colour;
+ padding: 15px 15px 0;
+ margin-bottom: 15px;
+ margin-left: -15px;
+}
+
+.validation-error .form-group {
+ margin-bottom: 20px;
+}
+
+.validation-error p {
+ margin: 0 0 10px 0;
+}

@@ -7,11 +7,11 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Update your personal details</h1>
+      <h1>Check your personal details</h1>
     </hgroup>
   </header>
 
-  <p class="lede">Check your details and add any missing information.</p>
+  <p class="lede">Please check your details and add any missing information.</p>
 
     <h2 class="heading-medium">Name<h2>
 
@@ -35,18 +35,25 @@ layout: layout-2-1-columns
 
     <h2 class="heading-medium">Date of birth<h2>
 
+
+
+
     <div class="form-group date">
-      <div class="form-group">
-        <label for="dob-day">Day</label>
-        <input type="text" class="form-control" id="dob-day" value="15">
-      </div>
-      <div class="form-group">
-        <label for="dob-month">Month</label>
-        <input type="text" class="form-control" id="dob-month" value="12">
-      </div>
-      <div class="form-group form-group-year">
-        <label for="dob-year">Year</label>
-        <input type="text" class="form-control" id="dob-year" value="1947">
+
+      <div class="xvalidation-error">
+        <!--<p class="warning-text">Enter date of birth</p>-->
+        <div class="form-group">
+          <label for="dob-day">Day</label>
+          <input type="text" class="form-control" id="dob-day" value="">
+        </div>
+        <div class="form-group">
+          <label for="dob-month">Month</label>
+          <input type="text" class="form-control" id="dob-month" value="">
+        </div>
+        <div class="form-group form-group-year">
+          <label for="dob-year">Year</label>
+          <input type="text" class="form-control" id="dob-year" value="">
+        </div>
       </div>
     </div>
 
@@ -142,7 +149,7 @@ Monument Way
     </fieldset>
 
 
-    <p><a class="button" href="/">Save and continue</a></p>
+    <p><a class="button" href="/1st-time-business/">Save and continue</a></p>
 
 
 <% end %>
