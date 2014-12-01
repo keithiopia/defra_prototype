@@ -3,8 +3,8 @@
 .date-of-birth label {
   display: block;
   margin-bottom: 5px;
-  @include core-16;
-  color: $secondary-text-colour;
+  //@include core-16;
+  //color: $secondary-text-colour;
 }
 
 .date-of-birth .form-group {

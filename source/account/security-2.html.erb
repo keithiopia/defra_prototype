@@ -1,0 +1,33 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Complete your registration</h1>
+    </hgroup>
+  </header>
+
+  <p class="lede">Enter the reference number and registration code given to you over the phone.</p>
+
+  <form class="form">
+
+    <div class="form-group">
+      <label class="form-label" for="custNo">Your customer reference number</label>
+      <input type="text" class="form-control form-control-1-2" id="custNo" name="custNo">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="custNo">Your registration code</label>
+      <input type="text" class="form-control form-control-1-4" id="custNo" name="custNo">
+    </div>
+
+    <div class="form-group">
+      <a href="/1st-time-existing/personal-details-check" class="button">Complete registration</a>
+    </div>
+
+  </form>
+
+<% end %>
