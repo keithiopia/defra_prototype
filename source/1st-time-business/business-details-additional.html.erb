@@ -22,53 +22,66 @@ layout: layout-2-1-columns
 
   <form class="form">
 
+    <h3 class="heading-medium">Is this business a farm?</h3>
 
-    <div class="form-group">
-      <p class="heading-medium" for="type">What kind of business is this?</p>
-      <select>
-        <option value="" class="">Select an option</option>
-        <option value="" class="">  </option>
-        <option value="0">Agency or agent</option>
-        <option value="1">Farm</option>
-        <option value="2">Airport</option>
-        <option value="3">Commons or Graziers Association</option>
-        <option value="4">Education Provider/Training</option>
-        <option value="5">Importer/Exporter</option>
-        <option value="6">Forestry/Woodland Owner</option>
-        <option value="7">Central/Local Government</option>
-        <option value="8">Horticultural business</option>
-        <option value="9">Intervention/Private Storage</option>
-        <option value="10">Land Manager</option>
-        <option value="11">Leader Group</option>
-        <option value="12">Official Receiver/Administrator</option>
-        <option value="13">Permanent Sports ground/facility</option>
-        <option value="14">Producer Group representative</option>
-        <option value="15">Railway services</option>
-        <option value="16">Rural Community/Voluntary/Third sector organisation</option>
-        <option value="17">Tourism</option>
-        <option value="18">Waterworks</option>
-        <option value="20">Meat Industry</option>
-        <option value="21">Hobby livestock keeper</option>
-        <option value="22">Professional livestock keeper</option>
-        <option value="19">Not Specified</option>
-      </select>
+    <div class="form-group inline">
+      <label for="farm-yes" class="block-label">
+        <input type="radio" name="farm" id="farm-yes" value="yes" class="js-toggle" data-hide="#farm-details">
+        Yes
+      </label>
+      <label for="farm-no" class="block-label">
+        <input type="radio" name="farm" id="farm-no" value="no" class="js-toggle" data-show="#farm-details">
+        No
+      </label>
+
+      <div class="form-group js-hidden panel-indent" id="farm-details">
+        <p class="form-label" for="type">What kind of business is it?</p>
+        <select id="type">
+          <option value="" class="">Select an option</option>
+          <option value="" class="">  </option>
+          <option value="0">Agency or agent</option>
+          <option value="2">Airport</option>
+          <option value="3">Commons or Graziers Association</option>
+          <option value="4">Education Provider/Training</option>
+          <option value="5">Importer/Exporter</option>
+          <option value="6">Forestry/Woodland Owner</option>
+          <option value="7">Central/Local Government</option>
+          <option value="8">Horticultural business</option>
+          <option value="9">Intervention/Private Storage</option>
+          <option value="10">Land Manager</option>
+          <option value="11">Leader Group</option>
+          <option value="12">Official Receiver/Administrator</option>
+          <option value="13">Permanent Sports ground/facility</option>
+          <option value="14">Producer Group representative</option>
+          <option value="15">Railway services</option>
+          <option value="16">Rural Community/Voluntary/Third sector organisation</option>
+          <option value="17">Tourism</option>
+          <option value="18">Waterworks</option>
+          <option value="20">Meat Industry</option>
+          <option value="21">Hobby livestock keeper</option>
+          <option value="22">Professional livestock keeper</option>
+          <option value="19">Not Specified</option>
+        </select>
+      </div>
     </div>
+
+
 
     <div class="form-group">
       <h3 class="heading-medium" for="legal-status">What is the legal status of the business?</h3>
         <select>
           <option value="" class="">Select an option</option>
           <option></option>
+          <option value="8">Private Limited Company (Ltd)</option>
+          <option value="9">Public Limited Company (PLC)</option>
+          <option value="4">Limited Liability Partnership (LLP)</option>
+          <option value="7">Partnership</option>
+          <option value="5">Limited Partnership (LP)</option>
           <option value="0">Charitable Interest Organisation (CIO)</option>
           <option value="1">Community Interest Company (CIC)</option>
           <option value="2">Central government</option>
           <option value="3">Local government</option>
-          <option value="4">Limited Liability Partnership (LLP)</option>
-          <option value="5">Limited Partnership (LP)</option>
           <option value="6">Non-UK company</option>
-          <option value="7">Partnership</option>
-          <option value="8">Private Limited Company (Ltd)</option>
-          <option value="9">Public Limited Company (PLC)</option>
           <option value="10">Sole Proprietorship</option>
           <option value="11">The Crown</option>
           <option value="12">Trust</option>
