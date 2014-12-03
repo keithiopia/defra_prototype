@@ -1,0 +1,68 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Rural payments</h1>
+    </hgroup>
+  </header>
+
+  <h2 class="heading-medium">Check your eligibility</h2>
+
+  <div class="check-progress">
+    <div class="in-progress">
+      <p>We need more information from you in order to check your eligiblity for certain schemes and incentives.</p>
+
+      <p>Additional personal details</p>
+    </div>
+  </div>
+
+  <h2 class="heading-medium">Businesses</h2>
+
+<!--
+  <ul class="business-list">
+    <li><a href="business" class="bold-small">Bodmin Agr Ltd</a> Monument Way, Bodmin PL31 1NZ</li>
+  </ul>
+-->
+
+  <p>You currently have access to 1 business.</p>
+
+  <table class="business-list js-row-link">
+    <thead>
+      <tr>
+        <th class="name">Name</th>
+        <th class="address"></th>
+        <th class="progress">Progress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name"><a href="business">Bodmin Agr Ltd</a></td>
+        <td class="address">Monument Way, Bodmin PL31 1NZ</td>
+        <td class="progress">Not started</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><a href="add-business">Add a business</a></p>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div>
+
+    <ul>
+      <li><a href="account">Update your details</a></li>
+      <li><a href="">Sign out</a></li>
+    </ul>
+
+  </div>
+
+<% end %>
+

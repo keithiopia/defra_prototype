@@ -1,0 +1,22 @@
+.check-list {
+  padding: 0;
+
+  &>div {
+    border-bottom: 1px solid $border-colour;
+    margin: $gutter-half 0;
+    padding-left: 60px;
+    background: transparent url(/assets/images/check-list-in-progress.png) 0% 0% no-repeat;
+
+    &.not-met {
+      background-image: url(/assets/images/check-list-not-met.png);
+    }
+
+    &.in-progress {
+      background-image: url(/assets/images/check-list-in-progress.png);
+    }
+
+    &.done {
+      background-image: url(/assets/images/check-list-done.png);
+    }
+  }
+}
