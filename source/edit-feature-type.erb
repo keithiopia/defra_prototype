@@ -24,15 +24,31 @@ layout: layout-1-1-columns
         <span class="content-crop form-hint">For example 'Wheat', 'Barley' or 'Maize'</span>
 
       </p>
-      <%= partial "partial-land-use-and-features-list" %>
+
+      <!-- <%= partial "partial-land-use-and-features-list" %> -->
+
+      <table class="multi-use-list">
+        <%= partial "partial-land-use-and-feature-multi" %>
+      </table>
+
     </div>
 
-    <div class="form-group">
+    <div class="form-group" id="single-use">
       <input type="submit" class="button" value="Continue">
+    </div>
+
+    <div class="form-group js-hidden" id="multi-use">
+      <a href="edit-feature-multi-use?land-use=Wheat, turnips, barley, clover&land-use-type=crop" class="button">Continue</a>
     </div>
   </form>
 
+
+
+
+
+
 <% end %>
+
 
 <% content_for :column2 do %>
 

@@ -128,23 +128,21 @@ end
 
   <div class="form-group">
 
-
     <a href="/<%= parcel.id %>/add-feature">Add a land use or feature</a>
-
-
-<!--
-  <% if parcel.uses %>
-    <label class="form-label block-label">
-      <input type="checkbox"> This information is accurate
-    </label>
-  <% end %>
--->
-
 
   </div>
 
+  <% if parcel.uses %>
+    <div class="form-group">
+      <label class="form-label block-label">
+        <input type="checkbox"> Mark the parcel as checked
+      </label>
+    </div>
+  <% end %>
 
+<!--
   <p class="font-xsmall secondary-text">You have unsaved changes. <a href="" class="secondary-text">Undo changes</a></p>
+-->
 
   <div class="form-group">
     <a href="/land" class="button">Save and return</a>
@@ -168,6 +166,7 @@ end
     <ul>
       <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
+      <li>Last checked: 12/12/14</li>
       <!--<li>Region: <%= parcel.region %></li>
       <li>Certified organic: <a href="/<%= parcel.id %>/organic-status">No</a></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>

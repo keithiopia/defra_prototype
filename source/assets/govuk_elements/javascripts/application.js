@@ -125,5 +125,11 @@ $(document).ready(function() {
     })
   }
 
+  // If someone adds multiple crops route them via the multi-use screens
+  $('#add-another-use-link').click(function(){
+    $('#single-use').hide();
+    $('#multi-use').show();
+  });
+
 
 });

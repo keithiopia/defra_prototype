@@ -14,17 +14,20 @@ showTotal = (i == 1 ? "" : "running-total")
     <label for="land-use" class="visuallyhidden">Select the feature</label>
     <%= partial "partial-land-use-and-features-list" %>
   </td>
+  <!--
   <td class="land-use-area">
     <label for="feature-area" class="visuallyhidden">Total area</label>
     <input type="text" class="form-control form-control-3-4 area-field"> &nbsp;ha
   </td>
+-->
 </tr>
 <tr class="use-<%= i %><%= hideIt %> use-controls" id="use-<%= i %>-link">
   <td>
-    <span class="js-toggle link-style" data-show=".use-<%= i + 1 %>" data-hide="#use-<%= i %>-link">Add another</span>
-
+    <span id="add-another-use-link" class="js-toggle link-style" data-show=".use-<%= i + 1 %>" data-hide="#use-<%= i %>-link">Add another crop</span>
   </td>
+  <!--
   <td class="<%= showTotal %>"></td>
+-->
 </tr>
 
 <% end %>
