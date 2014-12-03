@@ -3,7 +3,7 @@ layout: layout-2-1-columns
 ---
 
 <% content_for :breadcrumbs do %>
-  <%= partial "partial-breadcrumbs" %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/home" }, { title: data.business.name, url: "/business"}] }) %>
 <% end %>
 
 <% content_for :column1 do %>

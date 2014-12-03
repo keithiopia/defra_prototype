@@ -1,9 +1,7 @@
-<!--
 <div id="breadcrumb">
   <ol role="breadcrumbs" class="group">
-    <li><a href="/">Businesses</a></li>
+    <% breadcrumb.each do |crumb| %>
+      <li><a href="<%= crumb[:url] %>"><%= crumb[:title] %></a></li>
+    <% end %>
   </ol>
 </div>
--->
-
-<p id="breadcrumb"><a href="/">Back to businesses</a></p>

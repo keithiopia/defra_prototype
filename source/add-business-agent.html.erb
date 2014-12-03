@@ -5,7 +5,7 @@ layout: layout_template_no_nav
 
 <div class="inner-block">
 
-  <%= partial "partial-breadcrumbs" %>
+<%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/home" }, { title: data.business.name, url: "/business"}, {title: "Add business", url: "/add-business-agent"}] }) %>
 
   <div class="group">
     <div class="words-wide">
