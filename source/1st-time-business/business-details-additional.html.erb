@@ -67,28 +67,76 @@ layout: layout-2-1-columns
 
 
 
+    <h3 class="heading-medium">What kind of business is it?</h3>
+
     <div class="form-group">
-      <h3 class="heading-medium" for="legal-status">What is the legal status of the business?</h3>
+      <label for="business-type-1" class="block-label">
+        <input type="radio" name="business-type" id="business-type-1" value="1" class="js-toggle" data-hide=".business-type-details" data-show="#type-ltd">
+        Private Limited Company (Ltd)
+      </label>
+      <label for="business-type-2" class="block-label">
+        <input type="radio" name="business-type" id="business-type-2" value="2" class="js-toggle" data-hide=".business-type-details">
+        Public Limited Company (PLC)
+      </label>
+      <label for="business-type-3" class="block-label">
+        <input type="radio" name="business-type" id="business-type-3" value="3" class="js-toggle" data-hide=".business-type-details">
+        Limited Liability Partnership (LLP)
+      </label>
+      <label for="business-type-4" class="block-label">
+        <input type="radio" name="business-type" id="business-type-4" value="4" class="js-toggle" data-hide=".business-type-details">
+        Sole trader
+      </label>
+      <label for="business-type-5" class="block-label">
+        <input type="radio" name="business-type" id="business-type-5" value="5" class="js-toggle" data-hide=".business-type-details" data-show="#type-charity">
+        Charity
+      </label>
+      <label for="business-type-6" class="block-label">
+        <input type="radio" name="business-type" id="business-type-6" value="6" class="js-toggle" data-hide=".business-type-details" data-show="#type-other">
+        Something else
+      </label>
+
+      <div class="form-group js-hidden panel-indent business-type-details" id="type-other">
         <select>
           <option value="" class="">Select an option</option>
           <option></option>
+          <!--
           <option value="8">Private Limited Company (Ltd)</option>
           <option value="9">Public Limited Company (PLC)</option>
           <option value="4">Limited Liability Partnership (LLP)</option>
           <option value="7">Partnership</option>
           <option value="5">Limited Partnership (LP)</option>
           <option value="0">Charitable Interest Organisation (CIO)</option>
+        -->
           <option value="1">Community Interest Company (CIC)</option>
           <option value="2">Central government</option>
           <option value="3">Local government</option>
           <option value="6">Non-UK company</option>
-          <option value="10">Sole Proprietorship</option>
+          <!--<option value="10">Sole Proprietorship</option>-->
           <option value="11">The Crown</option>
           <option value="12">Trust</option>
           <option value="13">Unlimited Company (Ultd)</option>
         </select>
-        <br><br>
+      </div>
+
     </div>
+
+
+    <div class="js-hidden business-type-details" id="type-charity">
+      <h3 class="heading-medium">What's the Charity Commission registration number for this business?</h3>
+      <div class="form-group">
+        <label class="form-label" for="businessCC">Registration number</label>
+        <input type="text" class="form-control form-control-1-2" id="businessCC" name="businessCC" value="">
+      </div>
+    </div>
+
+    <div class="js-hidden business-type-details" id="type-ltd">
+      <h3 class="heading-medium">What's the Companies House registration number for this business?</h3>
+      <div class="form-group">
+        <label class="form-label" for="businessCH">Registration number</label>
+        <input type="text" class="form-control form-control-1-2" id="businessCH" name="businessCH" value="">
+      </div>
+    </div>
+
 
     <div class="form-group">
       <label class="heading-medium" for="date">What date was the business registered or created on?</label>
@@ -121,45 +169,6 @@ layout: layout-2-1-columns
           <input type="checkbox" id="northern-ireland">
           Northern Ireland
         </label>
-      </div>
-    </div>
-
-
-    <h3 class="heading-medium">Is the business registered with Companies House?</h3>
-
-    <div class="form-group inline">
-      <label for="CH-yes" class="block-label">
-        <input type="radio" name="CH" id="CH-yes" value="yes" class="js-toggle" data-show="#CH-details">
-        Yes
-      </label>
-      <label for="CH-no" class="block-label">
-        <input type="radio" name="CH" id="CH-no" value="no" class="js-toggle" data-hide="#CH-details">
-        No
-      </label>
-
-      <div class="form-group js-hidden panel-indent" id="CH-details">
-        <label class="form-label" for="businessCH">Registration number</label>
-        <input type="text" class="form-control form-control-1-2" id="businessCH" name="businessCH" value="">
-      </div>
-    </div>
-
-
-
-    <h3 class="heading-medium">Is the business registered with the Charity Commission?</h3>
-
-    <div class="form-group inline">
-      <label for="CC-yes" class="block-label">
-        <input type="radio" name="CC" id="CC-yes" value="yes" class="js-toggle" data-show="#CC-details">
-        Yes
-      </label>
-      <label for="CC-no" class="block-label">
-        <input type="radio" name="CC" id="CC-no" value="no" class="js-toggle" data-hide="#CC-details">
-        No
-      </label>
-
-      <div class="form-group js-hidden panel-indent" id="CC-details">
-        <label class="form-label" for="businessCC">Registration number</label>
-        <input type="text" class="form-control form-control-1-2" id="businessCC" name="businessCH" value="">
       </div>
     </div>
 

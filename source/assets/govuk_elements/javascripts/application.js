@@ -48,15 +48,15 @@ $(document).ready(function() {
       });
 
       // Add selected class
-      $('input:checked').parent().addClass('selected');
+      $('input:checked').closest('.block-label').addClass('selected');
 
     });
 
     // Add/remove selected class
     $('.block-label').find('input[type=radio], input[type=checkbox]').click(function() {
 
-      $('input:not(:checked)').parent().removeClass('selected');
-      $('input:checked').parent().addClass('selected');
+      $('input:not(:checked)').closest('.block-label').removeClass('selected');
+      $('input:checked').closest('.block-label').addClass('selected');
 
       $('.toggle-content').hide();
 
