@@ -2,23 +2,17 @@
 layout: layout-2-1-columns
 ---
 
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Your businesses", url: "/index-10-december" }] }) %>
+<% end %>
+
 <% content_for :column1 do %>
 
   <header class="page-header">
     <hgroup>
-      <h1>Rural payments</h1>
+      <h1>Your businesses</h1>
     </hgroup>
   </header>
-
-  <h2 class="heading-medium">Check your eligibility</h2>
-
-  <div class="check-progress">
-    <div class="in-progress">
-      <p>We need more information from you in order to check your eligiblity for certain schemes and incentives.</p>
-
-      <p>Additional personal details</p>
-    </div>
-  </div>
 
   <h2 class="heading-medium">Businesses</h2>
 
