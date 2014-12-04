@@ -1,5 +1,5 @@
 .phase-banner {
-  margin-bottom: $gutter;
+  // margin-bottom: $gutter;
   @include phase-banner(beta);
   @include core-16;
 }

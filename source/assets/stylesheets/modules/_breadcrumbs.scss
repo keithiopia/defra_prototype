@@ -1,13 +1,13 @@
 // Breadcrumbs
 
 #breadcrumb {
-  margin: 0;
+  margin: $gutter-half 0;
 
   ol {
     margin: 0;
 
     li {
-      //@include core-16;
+      @include core-16;
       background-image: url('/assets/images/separator.png');
       background-position: 100% 50%;
       background-repeat: no-repeat;
@@ -25,6 +25,10 @@
       &:last-child {
         background-image: none;
         margin-right: 0
+      }
+
+      a {
+        color: $text-colour;
       }
     }
   }
