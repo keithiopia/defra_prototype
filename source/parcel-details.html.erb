@@ -70,7 +70,13 @@ end
               <span class="warning-icon">!</span>
               <a href="/<%= parcel.id %>/edit-feature-type?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">More information required</a>
             </span>
-          <% else %>
+          <% elsif f.area == 0.00 %>
+
+            <span class="warning">
+              <span class="warning-icon">!</span>
+              <a href="/<%= parcel.id %>/edit-feature?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">More information required</a>
+            </span>
+
           <!--
             <% if f.efa %>
               Eligible for BPS and EFA
@@ -83,7 +89,13 @@ end
 
           <% end %>
         </td>
-        <td class="area"><%= f.area %>ha</td>
+        <td class="area">
+          <% if f.area > 0 %>
+            <%= f.area %>ha
+          <% elsif %>
+
+          <% end %>
+        </td>
         <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=<%= f.use %>&land-use-type=<%= f.type %>" title="Remove this feature">Remove</a></td>
       </tr>
       <% end %>

@@ -218,19 +218,61 @@ parcels:
         bps:    true
         area:   7.18
 
-  - name:
+  - name:       North paddock
     region:     Non-SDA
     cph:
     verified:   true
-    checked:    false
-    id:         SJ8063_3758
-    area:       3.75
+    checked:    true
+    organic:    false
+    id:         SJ8063_3932
+    area:       5.76
     uses:
-      - use:
+      - use:    Pond
+        type:   shape
+        cover:  Building or structure
+        area:   0.56
+
+      - use:    Hard standings
+        type:   shape
+        cover:  Building or structure
+        area:   0.67
+
+      - use:    'Winter Rye, Spring oats'
         type:   crop
-        cover:  Arable land
+        cover:  Arable
         bps:    true
-        area:   3.75
+        area:   4.32
+
+  - name:       North paddock
+    region:     Non-SDA
+    cph:
+    verified:   true
+    checked:    true
+    organic:    false
+    id:         SJ8063_3933
+    area:       5.76
+    uses:
+      - use:    Pond
+        type:   shape
+        cover:  Building or structure
+        area:   0.56
+
+      - use:    Hard standings
+        type:   shape
+        cover:  Building or structure
+        area:   0.67
+
+      - use:    Winter Rye
+        type:   crop
+        cover:  Arable
+        bps:    true
+        area:   0.00
+
+      - use:    Spring oats
+        type:   crop
+        cover:  Arable
+        bps:    true
+        area:   0.00
 
 
 
