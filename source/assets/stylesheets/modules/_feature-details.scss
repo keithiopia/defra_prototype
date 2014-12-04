@@ -28,3 +28,19 @@
     font-size: 19px;
   }
 }
+
+.multi-use-list{
+  margin-bottom: 0;
+  td{
+    border: none;
+  }
+  .land-use-name{
+    width :75%
+  }
+  .land-use-area{
+    width: 25%;
+  }
+  .use-controls{
+  }
+
+}

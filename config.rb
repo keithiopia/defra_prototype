@@ -30,9 +30,6 @@
 data.business.parcels.each do |parcel|
   proxy "/#{parcel[:id]}.html", "/parcel-details.html", :locals => { :parcel => parcel }, :ignore => true
 
-  proxy "/#{parcel[:id]}/parcel-details-features.html", "/parcel-details-features.html", :locals => { :parcel => parcel }, :ignore => true
-  proxy "/#{parcel[:id]}/parcel-details-uses.html", "/parcel-details-uses.html", :locals => { :parcel => parcel }, :ignore => true
-
 
   proxy "/#{parcel[:id]}/change-land-parcel.html", "/change-land-parcel.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/change-land-parcel-split.html", "/change-land-parcel-split.html", :locals => { :parcel => parcel }, :ignore => true
@@ -75,6 +72,7 @@ data.business.parcels.each do |parcel|
   proxy "/#{parcel[:id]}/edit-feature.html", "/edit-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/edit-feature-type.html", "/edit-feature-type.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/edit-feature-date.html", "/edit-feature-date.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/edit-feature-multi-use.html", "/edit-feature-multi-use.html", :locals => { :parcel => parcel }, :ignore => true
 
   proxy "/#{parcel[:id]}/remove-feature.html", "/remove-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/remove-feature-date.html", "/remove-feature-date.html", :locals => { :parcel => parcel }, :ignore => true

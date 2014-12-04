@@ -70,7 +70,13 @@ end
               <span class="warning-icon">!</span>
               <a href="/<%= parcel.id %>/edit-feature-type?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">More information required</a>
             </span>
-          <% else %>
+          <% elsif f.area == 0.00 %>
+
+            <span class="warning">
+              <span class="warning-icon">!</span>
+              <a href="/<%= parcel.id %>/edit-feature?land-use=<%= f.use ? f.use : f.cover %>&land-use-type=<%= f.type %>">More information required</a>
+            </span>
+
           <!--
             <% if f.efa %>
               Eligible for BPS and EFA
@@ -83,7 +89,13 @@ end
 
           <% end %>
         </td>
-        <td class="area"><%= f.area %>ha</td>
+        <td class="area">
+          <% if f.area > 0 %>
+            <%= f.area %>ha
+          <% elsif %>
+
+          <% end %>
+        </td>
         <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=<%= f.use %>&land-use-type=<%= f.type %>" title="Remove this feature">Remove</a></td>
       </tr>
       <% end %>
@@ -128,23 +140,21 @@ end
 
   <div class="form-group">
 
-
     <a href="/<%= parcel.id %>/add-feature">Add a land use or feature</a>
-
-
-<!--
-  <% if parcel.uses %>
-    <label class="form-label block-label">
-      <input type="checkbox"> This information is accurate
-    </label>
-  <% end %>
--->
-
 
   </div>
 
+  <% if parcel.uses %>
+    <div class="form-group">
+      <label class="form-label block-label">
+        <input type="checkbox"> Mark the parcel as checked
+      </label>
+    </div>
+  <% end %>
 
+<!--
   <p class="font-xsmall secondary-text">You have unsaved changes. <a href="" class="secondary-text">Undo changes</a></p>
+-->
 
   <div class="form-group">
     <a href="/land" class="button">Save and return</a>
@@ -168,6 +178,7 @@ end
     <ul>
       <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
+      <li>Last checked: 12/12/14</li>
       <!--<li>Region: <%= parcel.region %></li>
       <li>Certified organic: <a href="/<%= parcel.id %>/organic-status">No</a></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>

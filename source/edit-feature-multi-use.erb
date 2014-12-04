@@ -1,0 +1,56 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1 class="js-land-use">Land use</h1>
+    </hgroup>
+  </header>
+
+  <p>Are these crops grown in rotation or at the same time?</p>
+
+    <form class="form">
+      <div class="form-group">
+        <label for="series" class="block-label">
+          <input type="radio" name="how-grown" id="series" value="series" class="js-toggle" data-show="#how-grown-series" data-hide="#how-grown-parallel">
+          They're grown in rotation
+        </label>
+        <label for="parallel" class="block-label">
+          <input type="radio" name="how-grown" id="parallel" value="parallel" class="js-toggle" data-hide="#how-grown-series" data-show="#how-grown-parallel">
+          They're grown at the same time
+        </label>
+      </div>
+    </form>
+
+
+    <div class="form-group" id="how-grown-series">
+      <a href="/<%= parcel.id %>/edit-feature" class="button js-pass-querystring">Continue</a>
+    </div>
+
+    <div class="form-group js-hidden" id="how-grown-parallel">
+      <a href="/SJ8063_3933/" class="button">Continue</a>
+    </div>
+
+
+<% end %>
+
+
+<% content_for :column2 do %>
+
+  <%= partial "maps/point" %>
+  <%= partial "maps/points" %>
+  <%= partial "maps/line" %>
+  <%= partial "maps/shape" %>
+  <%= partial "maps/hedges" %>
+  <%= partial "maps/hedge" %>
+  <%= partial "maps/crop" %>
+  <%= partial "maps/crop-multi" %>
+
+<% end %>
