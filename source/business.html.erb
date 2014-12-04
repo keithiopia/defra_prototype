@@ -15,32 +15,65 @@ layout: layout-2-1-columns
   </header>
 
 
-<div class="panel-indent">
-  <h2 class="heading-small">Does someone help you with your claim?</h2>
+  <h2 class="heading-medium">Give access to this business</h2>
 
-  <p style="margin-bottom: 0.3125em;">You can give agents and others access to this business.</p>
+  <div class="check-list">
+    <div class="in-progress group">
+      <p>You can give people access to your business if you'd like them to complete your application for you.</p>
 
-  <p><a href="business-details">Manage access to this business</a></p>
-</div>
+      <p>Do you want to give someone access now? You will need their <a href="#">customer reference number</a>, which they can get from accessing this service.</p>
 
-<!--
-  <h2 class="heading-medium">Update your business details</h2>
+      <form action="" class="form">
+        <div class="form-group form-group-compound inline">
+          <label class="block-label">
+            <input type="radio" name="grant-access" value="yes"> Yes
+          </label>
+          <label class="block-label">
+            <input type="radio" name="grant-access" value="no"> No
+          </label>
+        </div>
+        <div class="form-group">
+          <button class="button">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-  <p>You need to update your business details before you can apply for schemes.</p>
+  <h2 class="heading-medium">Check your land parcels</h2>
 
-  <p><a href="business-details">Update your business details</a></p>
--->
+  <div class="check-list">
+    <div class="in-progress">
+      <p>Tell us about your how you use your land.</p>
 
-  <h2 class="heading-medium">1. Check your land parcels</h2>
+      <p><b class="bold-small">4 out of 13 parcels</b> have been checked so far.</p>
 
-  <p>Check and update the information held about this business's land.</p>
-
-  <!--<p>4 out of 13 parcels have been checked so far.</p>-->
-
-  <p><a href="/land">Check your land parcels</a></p>
+      <p><a href="/land">Check your land parcels</a></p>
+    </div>
+  </div>
 
 
-  <h2 class="heading-medium">2. Apply for schemes</h2>
+  <h2 class="heading-medium">Greening requirements</h2>
+
+  <div class="check-list">
+    <div class="not-met">
+      <p>You don't meet your crop diversification rules.</p>
+
+      <ul class="bullets">
+        <li>You need at least 2 types of arable crop.</li>
+        <li>Your largest crop must not account for more than 75% of your non-organic arable land.</li>
+      </ul>
+    </div>
+
+    <div class="not-met">
+      <p>You don't meet your ecological focus area requirements.</p>
+
+      <ul class="bullets">
+        <li>At least 5% of your non-organic arable land must be made up of <a href="#">ecological focus areas</a>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="heading-medium">Apply for schemes</h2>
 
   <p>You can only apply for schemes between 10 April and 10 June 2015.</p>
 
@@ -53,7 +86,7 @@ layout: layout-2-1-columns
   <%= partial "partial-map", :locals => { :map => 'business'} %>
 
   <div class="font-xsmall">
-    <h2 class="heading-small">Business details</h2>
+    <h2 class="heading-small"><a href="business-details">Business details</a></h2>
     <p>
       Bodmin Agr Ltd.<br>
       Monument Way <br>
@@ -62,20 +95,19 @@ layout: layout-2-1-columns
       United Kingdom
     </p>
 
-
     <p>
       Email: <a href="">info@bodminagrltd.co.uk</a> <br>
       Landline: 0300 790 6802<br>
       Mobile: 0300 123 0798<br>
     </p>
 
-    <ul>
-      <li><a href="business-details">Update your business details</a></li>
-      <li><a href="">Manage access to this business</a></li>
-      <li><a href="">Close this business</a></li>
+    <h2 class="heading-small">Manage business</h2>
+
+    <ul class="action-list">
+      <li><a href="business-details">View business details</a></li>
+      <li><a href="#">Manage access to this business</a></li>
+      <li><a href="#">Tell us this business is closed</a></li>
     </ul>
-
-
 
 
   </div>
