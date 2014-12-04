@@ -3,7 +3,7 @@ layout: layout-2-1-columns
 ---
 
 <% content_for :breadcrumbs do %>
-  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/home" }, { title: data.business.name, url: "/business"}] }) %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Your businesses", url: "/index-10-december" }, { title: data.business.name, url: "/business"}] }) %>
 <% end %>
 
 <% content_for :column1 do %>
@@ -23,49 +23,18 @@ layout: layout-2-1-columns
 
       <p>Do you want to give someone access now? You will need their <a href="#">customer reference number</a>, which they can get from accessing this service.</p>
 
-      <form action="" class="form">
-        <div class="form-group form-group-compound inline">
-          <label class="block-label">
-            <input type="radio" name="grant-access" value="yes"> Yes
-          </label>
-          <label class="block-label">
-            <input type="radio" name="grant-access" value="no"> No
-          </label>
-        </div>
-        <div class="form-group">
-          <button class="button">Continue</button>
-        </div>
-      </form>
+      <p><a href="#">Access to business</a></p>
+
     </div>
   </div>
 
-  <h2 class="heading-medium">Check your eligibility</h2>
-
-  <div class="check-list">
-    <div class="in-progress">
-      <p>To check your eligibility for certain schemes you will need to complete additional details about your business.</p>
-
-      <p><a href="#">Additional business details</a></p>
-    </div>
-  </div>
-
-  <h2 class="heading-medium">Check your land parcels</h2>
+  <h2 class="heading-medium">View your land parcels</h2>
 
   <div class="check-list">
     <div class="in-progress">
       <p>You can view the information we currently hold about your land. We will send you a message when we have opened access to update this information in the coming weeks.</p>
 
-      <p><a href="/land">Check your land parcels</a></p>
-    </div>
-  </div>
-
-  <h2 class="heading-medium">Apply for schemes</h2>
-
-  <div class="check-list">
-    <div class="in-progress">
-    <p>You can only apply for schemes between 10 April and 10 June 2015.</p>
-
-    <p><a href="scheme-apply">Find out which schemes you might be eligible for</a></p>
+      <p><a href="/land">View your land parcels</a></p>
     </div>
   </div>
 
@@ -85,18 +54,12 @@ layout: layout-2-1-columns
       United Kingdom
     </p>
 
-    <p>
-      Email: <a href="">info@bodminagrltd.co.uk</a> <br>
-      Landline: 0300 790 6802<br>
-      Mobile: 0300 123 0798<br>
-    </p>
-
     <h2 class="heading-small">Manage business</h2>
 
     <ul class="action-list">
       <li><a href="business-details">View business details</a></li>
       <li><a href="#">Manage access to this business</a></li>
-      <li><a href="#">Tell us this business is closed</a></li>
+      <li><a href="#">View CPH numbers</a></li>
     </ul>
 
 
