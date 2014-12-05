@@ -4,10 +4,10 @@
 table.business-list {
   margin: $gutter 0;
   .name {
-    width: 30%;
-  }
-  td.address{
     width: 50%;
+  }
+  td.sbi{
+    width: 30%;
     color: $secondary-text-colour;
   }
   .progress {
