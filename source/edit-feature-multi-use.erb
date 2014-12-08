@@ -18,24 +18,24 @@ layout: layout-1-1-columns
 
     <form class="form">
       <div class="form-group">
-        <label for="series" class="block-label">
-          <input type="radio" name="how-grown" id="series" value="series" class="js-toggle" data-show="#how-grown-series" data-hide="#how-grown-parallel">
+        <label for="rotation" class="block-label">
+          <input type="radio" name="how-grown" id="rotation" value="rotation" class="js-toggle" data-show="#how-grown-rotation" data-hide="#how-grown-multi">
           They're grown in rotation
         </label>
-        <label for="parallel" class="block-label">
-          <input type="radio" name="how-grown" id="parallel" value="parallel" class="js-toggle" data-hide="#how-grown-series" data-show="#how-grown-parallel">
+        <label for="multi" class="block-label">
+          <input type="radio" name="how-grown" id="multi" value="multi" class="js-toggle" data-hide="#how-grown-rotation" data-show="#how-grown-multi">
           They're grown at the same time
         </label>
       </div>
     </form>
 
 
-    <div class="form-group" id="how-grown-series">
-      <a href="/<%= parcel.id %>/edit-feature" class="button js-pass-querystring">Continue</a>
+    <div class="form-group" id="how-grown-multi">
+      <a href="/<%= parcel.id %>/edit-feature?land-use=Winter Rye, Spring oats&land-use-type=crop-multi" class="button">Continue</a>
     </div>
 
-    <div class="form-group js-hidden" id="how-grown-parallel">
-      <a href="/SJ8063_3933/" class="button">Continue</a>
+    <div class="form-group js-hidden" id="how-grown-rotation">
+      <a href="/<%= parcel.id %>/edit-feature?land-use=Winter Rye, Spring oats&land-use-type=crop-rotation" class="button">Continue</a>
     </div>
 
 
@@ -44,13 +44,11 @@ layout: layout-1-1-columns
 
 <% content_for :column2 do %>
 
-  <%= partial "maps/point" %>
-  <%= partial "maps/points" %>
-  <%= partial "maps/line" %>
-  <%= partial "maps/shape" %>
-  <%= partial "maps/hedges" %>
-  <%= partial "maps/hedge" %>
-  <%= partial "maps/crop" %>
-  <%= partial "maps/crop-multi" %>
+<div class="map-wrapper">
+  <div class="map">
+    <%= partial "partial-map-controls" %>
+    <img class="map-image" src="<%= asset_path(:png, "/assets/images/maps/parcel.png") %>">
+  </div>
+</div>
 
 <% end %>

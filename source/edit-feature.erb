@@ -22,6 +22,7 @@ layout: layout-1-1-columns
   <%= partial "edit-land-use/hedge", :locals => { :parcel => parcel} %>
   <%= partial "edit-land-use/crop", :locals => { :parcel => parcel} %>
   <%= partial "edit-land-use/crop-multi", :locals => { :parcel => parcel} %>
+  <%= partial "edit-land-use/crop-rotation", :locals => { :parcel => parcel} %>
 
 
 <% end %>
@@ -35,6 +36,7 @@ layout: layout-1-1-columns
   <%= partial "maps/hedge" %>
   <%= partial "maps/crop" %>
   <%= partial "maps/crop-multi" %>
+  <%= partial "maps/crop-rotation" %>
 
   <div class="font-xsmall">
     <h2 class="heading-small">Land parcel details</h2>
