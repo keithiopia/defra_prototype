@@ -1,0 +1,35 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Rural payments</h1>
+    </hgroup>
+  </header>
+
+  <p>If you've not used this service before you'll need to register first.</p>
+
+
+  <h2 class="heading-medium">Register</h2>
+
+  <p><a class="button" href="">Register with GOV.UK Verify</a></p>
+
+  <p><a href="">Register over the phone</a></p>
+
+
+
+  <h2 class="heading-medium">Sign in</h2>
+
+  <p><a class="button" href="">Sign in with GOV.UK Verify</a></p>
+
+  <p><a href="">If you registered over the phone, sign in here</a></p>
+
+
+<% end %>
