@@ -1,0 +1,111 @@
+---
+layout: layout-2-1-columns
+---
+
+<%
+
+totalArea = 0
+eligibleArea = 0
+efaArea = 0
+data.business.parcels.each do |f|
+  totalArea += f.area
+  if f.uses
+    f.uses.each do |f|
+      eligibleArea += f.area if f.bps
+      efaArea += f.area if f.efa
+    end
+  end
+end
+totalArea = totalArea.round(2)
+eligibleArea = eligibleArea.round(2)
+efaArea = efaArea.round(2)
+efaTarget = ((efaArea / eligibleArea) * 100).round(1)
+meetsEfaTarget = (efaTarget < 5 ? false : true)
+
+%>
+
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+ <header class="page-header">
+    <hgroup>
+      <h1>Your land</h1>
+    </hgroup>
+  </header>
+
+  <p>
+    This is the information currently held about your land parcels.
+    We'll contact you in the new year when you'll be able to update this information for your 2015 claim.
+  </p>
+
+<!--
+  <div class="panel-indent font-xsmall">
+    <h3 class="heading-small">Don't forget your EFAs</h3>
+    <p>This year, 30% of your Basic Payment will be based on Ecological Focus Areas like hedges, trees, nitrogen fixing crops and buffer strips. <a href="">Find out more about EFAs.</a></p>
+  </div>
+-->
+
+  <table class="parcel-list js-row-link">
+    <thead>
+      <tr>
+        <th class="name">Land parcel name</th>
+        <th class="id">ID</th>
+        <th class="area">Area</th>
+        <th class="complete">Checked</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% data.business.parcels.each do |f| %>
+      <% statusClass = (f.checked ? "done" : "not-done") %>
+      <tr class="<%= statusClass %>">
+        <td class="name">
+          <a href="/<%= f.id %>">
+            <%= (f.name ? f.name : "Untitled") %>
+          </a>
+        </td>
+        <td class="id"><%= f.id %></td>
+        <td class="area"><%= f.area %>ha</td>
+        <td class="complete"><span class="tag"><%= f.checked ? "Yes" : "No" %></span>
+        </td>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <div class="js-stick-at-top-when-scrolling">
+
+    <%= partial "partial-map", :locals => { :map => 'business'} %>
+
+    <div class="font-xsmall">
+      <h2 class="heading-small">Land details</h2>
+
+      <ul>
+        <!--<li>SBI: <%= data.business.sbi %></li>-->
+        <li>Total area: <%= totalArea %>ha</li><!--
+        <li>Eligible area: <%= eligibleArea %>ha</li>
+        <li>EFA target: <span <%= 'class="warning-text"' if !meetsEfaTarget %>><%= efaTarget %>%</span></li>-->
+      </ul>
+<!--
+      <% if !meetsEfaTarget %>
+      <p class="warning">Add more Ecological Focus Areas to your land to meet the <a href="#">5% EFA target</a>.</p>
+      <% end %> -->
+
+      <ul>
+        <li><a href="add-land">Add land</a></li>
+        <li><a href="remove-land">Remove land</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+<% end %>
