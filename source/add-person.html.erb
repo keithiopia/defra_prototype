@@ -10,43 +10,28 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Add someone to <br><%= data.business.name %></h1>
+      <h1>Give someone access to <br><%= data.business.name %></h1>
     </hgroup>
   </header>
 
-  <h3 class="heading-medium">Permissions</h3>
+  <p class="lede">Enter their customer reference number.</p>
 
-  <p>What do you want to allow this person to do?</p>
-
-  <form class="form">
-
-    <div>
-      <label for="add" class="form-label">
-        <input type="checkbox" id="add" value="yes">
-        Add or remove other people from the business
-      </label>
-
-      <label for="update" class="form-label">
-        <input type="checkbox" id="update" value="yes">
-        Update information about the business, land and entitlements
-      </label>
-
-      <label for="apply" class="form-label">
-        <input type="checkbox" id="apply" value="yes">
-        Apply for schemes
-      </label>
-    </div>
-
-    <div class="font-xsmall form-group">
-      <br>
-      <p><a href="">Advanced options</a></p>
-    </div>
+  <div class="form-group">
+    <label class="form-label visuallyhidden" for="custRef">Customer reference number</label>
+    <input type="text" class="form-control form-control-1-2" id="custRef" name="custRef">
+  </div>
 
 
+  <details>
+    <summary>Don't know the number?</summary>
+    <p>Ask the person to give you their customer reference number. They'll get this once they've registered with Rural Payments.</p>
+  </details>
 
-    <div class="form-group" id="next-yes">
-      <a href="/business" class="button">Continue</a>
-    </div>
+<br>
+
+  <div class="form-group" id="next-yes">
+    <a href="add-person-permissions" class="button">Continue</a>
+  </div>
 
   </form>
 
