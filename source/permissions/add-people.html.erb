@@ -1,0 +1,61 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Give people access to <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+<!--
+    <p class="lede">Who do you want to give access to?</p>
+
+
+    <div class="form-group">
+      <label for="individual" class="block-label">
+        <input type="radio" name="method" id="individual" value="yes" class="js-toggle" data-hide="">
+        An individual person
+      </label>
+      <label for="date-past" class="block-label">
+        <input type="radio" name="method" id="multiple" value="no" class="js-toggle" data-show="">
+        People from a firm of agents
+      </label>
+
+      <div class="panel-indent">
+        <label class="form-label">Enter their customer reference number</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  -->
+
+  <p>Enter either:</p>
+  <ul class="list-bullet">
+    <li>the name of the land agency they work for, or</li>
+    <li>their customer reference number <a href="#crn-help" class="js-toggle font-xsmall">What's this?</a>
+
+      <p class="js-hidden secondary-text" id="crn-help">
+        It's a 10 digit number you get when you sign in to Rural Payments.<br>
+        They will need to give you their number.
+      </p>
+
+    </li>
+  </ul>
+
+  <div class="form-group">
+    <label class="form-label visuallyhidden">Agency name or customer reference number</label>
+    <input type="text" class="form-control">
+  </div>
+
+  <div class="form-group" id="next-yes">
+    <a href="add-person-search-results" class="button">Continue</a>
+  </div>
+
+  </form>
+
+<% end %>
