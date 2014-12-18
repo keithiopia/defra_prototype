@@ -1,0 +1,23 @@
+
+
+// List of people with permissions
+
+table.permissions-list{
+  th{
+    text-indent: -9999px;
+  }
+  .name {
+    width: 30%;
+  }
+  .notes {
+    width: 66%;
+  }
+  td.remove{
+    width: 4%;
+    padding-right: 0;
+    text-align: right;
+    a{
+      color: $secondary-text-colour;
+    }
+  }
+}
