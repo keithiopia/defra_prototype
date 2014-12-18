@@ -1,0 +1,85 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+<%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Your businesses", url: "/index-10-december" }, { title: data.business.name, url: "/business"}, { title: "Business activites", url: "/business-activities"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Business activities</h1>
+    </hgroup>
+  </header>
+
+  <form class="form">
+    <h3 class="heading-medium">Does the business operate any of the following?</h3>
+
+    <div class="form-group">
+
+      <p>An airport, railway services, waterworks, real estate services or permanent sports and recreational grounds.</p>
+
+      <div class="inline">
+        <label for="activities-yes" class="block-label">
+          <input type="radio" name="activities" id="activities-yes" value="yes" class="js-toggle" data-show="#activities-list">
+          Yes
+        </label>
+        <label for="activities-no" class="block-label">
+          <input type="radio" name="activities" id="activities-no" value="no" class="js-toggle" data-hide="#activities-list">
+          No
+        </label>
+      </div>
+
+      <div class="form-group js-hidden" id="activities-list">
+        <div class="form-group panel-indent">
+          <p>Which of those does it operate?</p>
+
+          <label for="ac1" class="form-label">
+            <input type="checkbox" name="activites" id="ac1">
+            Airport
+          </label>
+
+          <label for="ac2" class="form-label">
+            <input type="checkbox" name="activites" id="ac2">
+            Railway services
+          </label>
+
+          <label for="ac3" class="form-label">
+            <input type="checkbox" name="activites" id="ac3">
+            Waterworks
+          </label>
+
+          <label for="ac4" class="form-label">
+            <input type="checkbox" name="activites" id="ac4">
+            Real estate services
+          </label>
+
+          <label for="ac5" class="form-label">
+            <input type="checkbox" name="activites" id="ac5">
+            Permanent sports and recreational grounds
+          </label>
+        </div>
+
+
+        <h3 class="heading-medium">Eligibility</h3>
+        <p>
+          By indicating you operated one or more of the business categories below you are not automatically eligible for BPS and Rural Development organic conversion and maintenance payments. You may be eligible if you can demonstrate compliance with one of the criteria set out in their scheme guidance. For BPS, this evidence must be provided by 15 May for your application to proceed.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+      <div class="form-group">
+        <a href="/business/" class="button">Continue</a>
+      </div>
+
+  </form>
+
+
+<% end %>
+

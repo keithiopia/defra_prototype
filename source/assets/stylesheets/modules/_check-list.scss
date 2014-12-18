@@ -6,6 +6,7 @@
     margin: $gutter-half 0;
     padding-left: 60px;
     background: transparent url(/assets/images/check-list-in-progress.png) 0% 0% no-repeat;
+    min-height: ($gutter*2);
 
     &.not-met {
       background-image: url(/assets/images/check-list-not-met.png);

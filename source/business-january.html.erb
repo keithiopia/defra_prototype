@@ -1,0 +1,97 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Your businesses", url: "/index-10-december" }, { title: data.business.name, url: "/business"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+  <div id="eligibility">
+    <h2 class="heading-medium">Business eligibilty</h2>
+
+    <div class="check-list">
+      <div class="done" id="land-yes">
+        <p>This business has enough eligible land</p>
+      </div>
+      <div class="not-met" id="land-no">
+        <p>This business doesn't have enough eligible land, you need another 3.20 ha</p>
+      </div>
+
+      <div class="done" id="entitlements-yes">
+        <p>This business has enough entitlements</p>
+      </div>
+      <div class="not-met" id="entitlements-no">
+        <p>This business doesn't have enough entitlements</p>
+      </div>
+
+      <div class="in-progress" id="activites-undefined">
+        <p><a href="business-activities">Tell us more about your business activities</a></p>
+      </div>
+      <div class="done" id="activities-yes">
+        <p>View your <a href="land">land parcels</a></p>
+      </div>
+      <div class="not-met" id="activities-no">
+        <p>This business isn't eligible to claim rural payments. If you think it is eligible, or is <a href="#">exempt from the rules</a>, call 03000 xxxxxxx.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="heading-medium">Give someone access to this business</h2>
+
+  <div class="check-list">
+    <div class="in-progress group">
+      <p>You can give people access to your business if you'd like them to complete your application for you.</p>
+
+      <p>They'll need to give you their customer reference number, which they can get by registering with this service.</p>
+
+      <p><a href="#">Give access to this business</a></p>
+
+    </div>
+  </div>
+
+  <h2 class="heading-medium">View your land parcels</h2>
+
+  <div class="check-list">
+    <div class="in-progress">
+      <p>You can view the information we currently have about your land.</p>
+
+      <p>We’ll send you a message when you’re able to come back and update your land details.</p>
+
+      <p><a href="/land">View your land parcels</a></p>
+    </div>
+  </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'business'} %>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Business details</h2>
+    <p>
+      Bodmin Agr Ltd.<br>
+      Monument Way <br>
+      Bodmin <br>
+      PL31 1NZ <br>
+      United Kingdom
+    </p>
+
+    <h2 class="heading-small">Manage business</h2>
+
+    <ul class="action-list">
+      <li><a href="business-details">View business details</a></li>
+    </ul>
+
+
+  </div>
+
+<% end %>
