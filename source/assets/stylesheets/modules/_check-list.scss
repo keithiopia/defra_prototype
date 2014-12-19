@@ -8,16 +8,36 @@
     background: transparent url(/assets/images/check-list-in-progress.png) 0% 0% no-repeat;
     min-height: ($gutter*2);
 
+    @include device-pixel-ratio() {
+      background-image: url(/assets/images/check-list-in-progress-2x.png);
+      background-size: 50px 50px;
+    }
+
     &.not-met {
       background-image: url(/assets/images/check-list-not-met.png);
+
+      @include device-pixel-ratio() {
+        background-image: url(/assets/images/check-list-not-met-2x.png);
+        background-size: 50px 50px;
+      }
     }
 
     &.in-progress {
       background-image: url(/assets/images/check-list-in-progress.png);
+
+      @include device-pixel-ratio() {
+        background-image: url(/assets/images/check-list-in-progress-2x.png);
+        background-size: 50px 50px;
+      }
     }
 
     &.done {
       background-image: url(/assets/images/check-list-done.png);
+
+      @include device-pixel-ratio() {
+        background-image: url(/assets/images/check-list-done-2x.png);
+        background-size: 50px 50px;
+      }
     }
   }
 }
