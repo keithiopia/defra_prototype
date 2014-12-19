@@ -1,0 +1,35 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :column1 do %>
+
+  <header class="page-header no-breadcrumb">
+    <hgroup>
+      <h1>Finish creating your account</h1>
+    </hgroup>
+  </header>
+
+  <form class="form">
+
+    <div class="form-group">
+      <label class="form-label" for="code">Security code
+        <span class="form-hint">This was given to you over the phone</span>
+      </label>
+      <input type="text" class="form-control form-control-1-4" id="code">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="custNo">Customer reference number
+        <span class="form-hint">This was emailed to you</span>
+      </label>
+      <input type="text" class="form-control" id="custNo">
+    </div>
+
+    <div class="form-group">
+      <a href="create-account-2" class="button">Continue</a>
+    </div>
+
+  </form>
+
+<% end %>
