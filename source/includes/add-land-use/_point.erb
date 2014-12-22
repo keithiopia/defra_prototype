@@ -1,14 +1,15 @@
 <div class="content-point">
 
   <p>
-    <span class="map-marker-3"></span> Mark the location on the map
+    <!--<span class="map-marker-3"></span>-->1. Mark the feature on the map
   </p>
 
+<!--
   <p>
     <a href="#drawing-tips" class="js-toggle">Drawing tips</a>
   </p>
 
-  <div id="drawing-tips" class="js-hidden xpanel-indent">
+  <div id="drawing-tips" class="js-hidden">
 
     <ul class="font-xsmall list-bullet">
       <li>Switch to 'Photo' to see an arial photo of the land</li>
@@ -16,17 +17,12 @@
     </ul>
 
   </div>
+-->
+
 
   <div class="form-group">
-    <label class="form-label">Area</label>
-    <input class="form-control form-control-num" type="text"> ha
-    <!--
-    <select>
-      <option>square meters</option>
-      <option>square feet</option>
-      <option>hectares</option>
-    </select>
-  -->
+    <label class="form-label">2. Give the area:
+    <input class="form-control form-control-num" type="text"> ha </label>
   </div>
 
   <%= partial "partial-note", :locals => { :type => "point"} %>

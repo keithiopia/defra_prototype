@@ -1,14 +1,37 @@
 <div class="content-crop">
 
-  <p>Area of land: 6.5ha</p>
+
+<!--
+  <table>
+    <tr>
+      <td>Area of land parcel:</td>
+      <td>6.5 ha</td>
+    </tr>
+    <tr>
+      <td>Area of unidentified land parcel remaining:</td>
+      <td>2.2 ha</td>
+    </tr>
+    <tr>
+      <td>Area of spring wheat on the map:</td>
+      <td>2.2 ha</td>
+    </tr>
+    <tr>
+      <td>Actual area to be declared:</td>
+      <td><input class="form-control form-control-num" type="text" value=""> ha</td>
+    </tr>
+  </table>
+
+
+  <p>Total area of land parcel: 6.5ha</p>
   <p>Area of land minus other features: 5.75ha</p>
 
+-->
+
   <div class="form-group">
-    <label class="form-label">Area of this crop:&nbsp;
-      <input class="form-control form-control-num" type="text" value="5.75"> ha
+    <label class="form-label">Area&nbsp;
+      <input class="form-control form-control-num" type="text" value="5.75"> ha &nbsp;&nbsp;<span class="font-xsmall">(2.2ha unknown land use remaining)</span>
     </label>
   </div>
-
   <%= partial "partial-note", :locals => { :type => "crop"} %>
 
   <div class="form-group">

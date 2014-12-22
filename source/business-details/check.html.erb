@@ -1,0 +1,71 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :column1 do %>
+
+  <header class="page-header no-breadcrumb">
+    <hgroup>
+      <h1>Check the business details</h1>
+    </hgroup>
+  </header>
+
+  <p class="lede">These are the details the Rural Payments Agency has for this business.</p>
+
+  <div class="panel-indent">
+    <p class='bold-small'>Bodmin Agri Ltd.</p>
+
+    <p>
+      Monument Way <br>
+      Bodmin <br>
+      PL31 1NZ <br>
+      United Kingdom
+    </p>
+
+    <p>
+      Email: info@bodminagrltd.co.uk<br>
+      Landline: 0300 790 6802<br>
+      Mobile: 0300 123 0798<br>
+    </p>
+
+    <p>
+      Single Business Identifier: 122098776<br>
+      VAT Registration Number: 78567453
+    </p>
+  </div>
+
+
+  <h2 class="heading-medium">Are these details correct?</h2>
+
+  <form class="form">
+    <div class="form-group inline">
+      <label for="correct-yes" class="block-label">
+        <input type="radio" name="correct" id="correct-yes" value="yes" class="js-toggle" data-show="#next-yes" data-hide="#next-no">
+        Yes
+      </label>
+      <label for="correct-no" class="block-label">
+        <input type="radio" name="correct" id="correct-no" value="no" class="js-toggle" data-show="#next-no" data-hide="#next-yes">
+        No
+      </label>
+    </div>
+
+
+    <p><a href="#wrong-business" class="js-toggle">Not the right business?</a></p>
+
+    <p id="wrong-business" class="js-hidden panel-indent">Please call The Rural Payments Agency on 03000 200 301 if you don't recognise this business.</p>
+
+
+    <div class="form-group" id="next-yes">
+      <a href="/" class="button">Continue</a>
+    </div>
+
+    <div class="form-group js-hidden" id="next-no">
+      <a href="change" class="button">Continue</a>
+    </div>
+
+  </form>
+
+
+
+<% end %>
+
