@@ -152,7 +152,7 @@ end
   <% if parcel.uses %>
     <div class="form-group">
       <label class="form-label block-label">
-        <input type="checkbox"> Tick this box when this information is complete and correct
+        <input type="checkbox"> Submit this parcel to the RPA for verification
       </label>
     </div>
   <% end %>
@@ -182,8 +182,7 @@ end
       <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
     -->
-      <li>Checked by you on 12 Dec 2014</li>
-      <li>Awaiting verification by the RPA</li>
+      <li>Last submitted on 12 Dec 2014</li>
       <!--<li>Region: <%= parcel.region %></li>
       <li>Certified organic: <a href="/<%= parcel.id %>/organic-status">No</a></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>
