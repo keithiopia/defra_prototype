@@ -38,7 +38,7 @@ meetsEfaTarget = (efaTarget < 5 ? false : true)
   </header>
 
   <p>
-    Check each land parcel and confirm that the information is accurate.
+    All land parcels must be checked by you before they can be verified by the Rural Payments Agency.
   </p>
 
 <!--
@@ -51,25 +51,25 @@ meetsEfaTarget = (efaTarget < 5 ? false : true)
   <table class="parcel-list js-row-link">
     <thead>
       <tr>
-        <th class="name">Land parcel name</th>
-        <th class="id">ID</th>
+        <th class="id">Parcel ID</th>
+        <th class="name">Name</th>
         <th class="area">Area</th>
-        <th class="complete">Checked</th>
+        <th class="complete">Status</th>
       </tr>
     </thead>
     <tbody>
 
       <% data.business.parcels.each do |f| %>
-      <% statusClass = (f.checked ? "verified" : "not-done") %>
-      <tr class="<%= statusClass %>">
+      <% statusClass = (f.checked ? "unverified" : "unchecked") %>
+      <tr class="<%= f.status %>">
+        <td class="id"><%= f.id %></td>
         <td class="name">
           <a href="/<%= f.id %>">
             <%= (f.name ? f.name : "Untitled") %>
           </a>
         </td>
-        <td class="id"><%= f.id %></td>
         <td class="area"><%= f.area %>ha</td>
-        <td class="complete"><span class="tag"><%= f.checked ? "Yes" : "No" %></span>
+        <td class="complete"><span class="tag"><%= f.status %></span>
         </td>
       </tr>
       <% end %>

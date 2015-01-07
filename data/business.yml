@@ -6,6 +6,7 @@ sbi: 222223250
 
 parcels:
   - name:       North paddock
+    status:     verified
     region:     Non-SDA
     cph:
     verified:   true
@@ -31,6 +32,7 @@ parcels:
         area:   4.32
 
   - name:       Top field
+    status:     unchecked
     region:     Non-SDA
     cph:
     features:   true
@@ -46,6 +48,7 @@ parcels:
         area:   6.05
 
   - name:       East field
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   false
@@ -55,6 +58,7 @@ parcels:
     uses:
 
   - name:       Fallow field
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -83,6 +87,7 @@ parcels:
         area:   4.32
 
   - name:       The Fen
+    status:     unchecked
     region:     Mooreland
     cph:
     verified:   true
@@ -96,6 +101,7 @@ parcels:
         area:   4.56
 
   - name:       Wheat and Barley
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -121,6 +127,7 @@ parcels:
         area:   4.32
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -135,6 +142,7 @@ parcels:
         area:   4.79
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -149,6 +157,7 @@ parcels:
         area:   3.25
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -163,6 +172,7 @@ parcels:
         area:   2.1
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -177,6 +187,7 @@ parcels:
         area:   7.12
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -191,6 +202,7 @@ parcels:
         area:   3.12
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -205,6 +217,7 @@ parcels:
         area:   4.07
 
   - name:
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
@@ -219,6 +232,7 @@ parcels:
         area:   7.18
 
   - name:       North paddock
+    status:     checked
     region:     Non-SDA
     cph:
     verified:   true
@@ -243,6 +257,7 @@ parcels:
         area:   4.32
 
   - name:       North paddock
+    status:     verified
     region:     Non-SDA
     cph:
     verified:   true
