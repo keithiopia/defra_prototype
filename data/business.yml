@@ -235,7 +235,7 @@ parcels:
     status:     checked
     region:     Non-SDA
     cph:
-    checked:    true
+    checked:    false
     verified:   true
     organic:    false
     id:         SJ8063_3932
@@ -261,7 +261,7 @@ parcels:
     status:     verified
     region:     Non-SDA
     cph:
-    checked:    true
+    checked:    false
     verified:   true
     organic:    false
     id:         SJ8063_3933
