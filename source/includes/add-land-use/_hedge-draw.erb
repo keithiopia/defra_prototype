@@ -1,0 +1,31 @@
+<div class="content-hedge">
+
+
+<p class="bold-small">Draw the hedge on the map</p>
+
+<ul class="list-bullet">
+  <li>click on the map to mark points along the hedge</li>
+  <li>double-click the last point to stop drawing</li>
+  <li><a href="#note-help" class="js-toggle">Add a note</a> if you want to give more detail</li>
+</ul>
+
+<br>
+
+<div class="form-group js-hidden" id="note-help">
+  <label for="notes-details" class="form-label">Notes</label>
+  <textarea class="form-control full-width" id="notes-details"></textarea>
+</div>
+
+
+
+<!--
+  <%= partial "partial-note", :locals => { :type => "hedge"} %>
+-->
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/add-feature-date" class="button js-pass-querystring">Continue</a>
+    <p><a href="/<%= parcel.id %>/add-feature-details">Back</a></p>
+  </div>
+
+
+</div>

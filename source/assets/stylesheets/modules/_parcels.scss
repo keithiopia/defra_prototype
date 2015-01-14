@@ -4,10 +4,10 @@
 table.parcel-list {
   margin: $gutter 0;
   .name {
-    width: 70%;
+    width: 50%;
   }
   td.id{
-    width: 10%;
+    width: 30%;
     color: $secondary-text-colour;
     @include core-14;
   }
@@ -26,20 +26,21 @@ table.parcel-list {
 
 .tag{
   display: inline-block;
-  text-align: right;
+  padding: 5px 20px 4px 20px;
+  text-align: center;
   color: $secondary-text-colour;
   text-transform: capitalize;
   margin-top: -2px;
 }
 .verified .tag{
-  color: $green;
-  font-weight: bold;
-  /*
+  //color: $green;
+  //font-weight: bold;
+
   color: white;
   font-size: 14px;
   font-weight: bold;
   background: $green;
-  */
+
 }
 .checked .tag{
   color: $orange;

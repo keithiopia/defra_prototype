@@ -11,7 +11,6 @@ layout: layout-1-1-columns
   <header class="page-header">
     <hgroup>
       <h1 class="js-land-use">Add a land use or feature</h1>
-      <!--<h2 class="subtitle js-land-use">Undefined</h2>-->
     </hgroup>
   </header>
 
@@ -19,7 +18,7 @@ layout: layout-1-1-columns
   <%= partial "add-land-use/points", :locals => { :parcel => parcel} %>
   <%= partial "add-land-use/line", :locals => { :parcel => parcel} %>
   <%= partial "add-land-use/shape", :locals => { :parcel => parcel} %>
-  <%= partial "add-land-use/hedge-details", :locals => { :parcel => parcel} %>
+  <%= partial "add-land-use/hedge-draw", :locals => { :parcel => parcel} %>
   <%= partial "add-land-use/crop", :locals => { :parcel => parcel} %>
 
 <% end %>

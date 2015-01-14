@@ -176,14 +176,14 @@ end
   </div>
 
   <div class="font-xsmall">
-    <h2 class="heading-small">Parcel status</h2>
+    <% if (parcel.checked) %><h2 class="heading-small">Parcel status</h2><% end %>
 
     <ul><!--
       <li>Parcel area: <%= parcel.area %>ha</li>
       <li>Parcel ID: <%= parcel.id %></li>
     -->
-      <li>Checked by you on 12 Dec 2014</li>
-      <li>Awaiting verification by the RPA</li>
+      <% if (parcel.checked) %><li>Checked by you on 12 Dec 2014</li><% end %>
+      <% unless (parcel.verified) %><li>Awaiting verification by the RPA</li><% end %>
       <!--<li>Region: <%= parcel.region %></li>
       <li>Certified organic: <a href="/<%= parcel.id %>/organic-status">No</a></li>
       <li>Status: <a class="js-toggle parcel-status-link" href="#status-help-draft">Unverified</a>

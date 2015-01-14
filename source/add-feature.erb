@@ -10,13 +10,13 @@ layout: layout-1-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>What do you want to add to this land?</h1>
+      <h1>Add a land use or feature</h1>
     </hgroup>
   </header>
 
   <form class="form" id="land-use-form" name="land-use-form" method="get" action="/<%= parcel.id %>/add-feature-details">
     <div class="form-group">
-      <p class="form-label">Enter the land use or feature
+      <p class="form-label-bold">What do you want to add to this land?
         <span class="form-hint">For example 'Pond', 'Wheat' or 'Farmyard'</span>
       </p>
       <%= partial "partial-land-use-and-features-list" %>

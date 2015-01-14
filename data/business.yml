@@ -6,11 +6,11 @@ sbi: 222223250
 
 parcels:
   - name:       North paddock
-    status:     verified
+    status:     unchecked
     region:     Non-SDA
     cph:
     verified:   true
-    checked:    true
+    checked:    false
     organic:    false
     id:         SJ8063_3931
     area:       5.76
@@ -235,6 +235,7 @@ parcels:
     status:     checked
     region:     Non-SDA
     cph:
+    checked:    true
     verified:   true
     organic:    false
     id:         SJ8063_3932
@@ -260,6 +261,7 @@ parcels:
     status:     verified
     region:     Non-SDA
     cph:
+    checked:    true
     verified:   true
     organic:    false
     id:         SJ8063_3933
