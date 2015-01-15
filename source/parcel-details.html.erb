@@ -152,7 +152,7 @@ end
   <% if parcel.uses %>
     <div class="form-group">
       <label class="form-label block-label">
-        <input type="checkbox"> Tick this box when this information is complete and correct
+        <input type="checkbox" <% if (parcel.checked) %>checked<% end %>  > Tick this box when this information is complete and correct
       </label>
     </div>
   <% end %>
