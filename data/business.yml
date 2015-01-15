@@ -231,7 +231,7 @@ parcels:
         bps:    true
         area:   7.18
 
-  - name:       North paddock
+  - name:       Top field
     status:     checked
     region:     Non-SDA
     cph:
@@ -239,25 +239,15 @@ parcels:
     verified:   true
     organic:    false
     id:         SJ8063_3932
-    area:       5.76
+    area:       6.05
     uses:
-      - use:    Pond
-        type:   shape
-        cover:  Building or structure
-        area:   0.56
-
-      - use:    Hard standings
-        type:   shape
-        cover:  Building or structure
-        area:   0.67
-
       - use:    'Winter Rye, Spring oats'
         type:   crop
         cover:  Arable
         bps:    true
         area:   4.32
 
-  - name:       North paddock
+  - name:       Top field
     status:     verified
     region:     Non-SDA
     cph:
@@ -265,31 +255,21 @@ parcels:
     verified:   true
     organic:    false
     id:         SJ8063_3933
-    area:       5.76
+    area:       6.05
     uses:
-      - use:    Pond
-        type:   shape
-        cover:  Building or structure
-        area:   0.56
-
-      - use:    Hard standings
-        type:   shape
-        cover:  Building or structure
-        area:   0.67
-
       - use:    Winter Rye
         type:   crop
         cover:  Arable
         bps:    true
-        area:   1.33
+        area:   3.0
 
       - use:    Spring oats
         type:   crop
         cover:  Arable
         bps:    true
-        area:   3.2
+        area:   3.0
 
-  - name:       North paddock
+  - name:       Top field
     status:     checked
     region:     Non-SDA
     cph:
@@ -297,18 +277,8 @@ parcels:
     verified:   false
     organic:    false
     id:         SJ8063_3934
-    area:       5.76
+    area:       6.05
     uses:
-      - use:    Pond
-        type:   shape
-        cover:  Building or structure
-        area:   0.56
-
-      - use:    Hard standings
-        type:   shape
-        cover:  Building or structure
-        area:   0.67
-
       - use:    'Winter Rye, Spring oats'
         type:   crop
         cover:  Arable
