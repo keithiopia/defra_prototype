@@ -17,27 +17,22 @@ layout: layout-1-1-columns
 
 
   <p class="bold-small">
-      Was this added to the land before 2009?
+      Was this added in the last 5 years?
   </p>
 
 
   <div class="form-group inline">
     <label for="date-old" class="block-label">
-      <input type="radio" name="date" id="date-old" value="yes" class="js-toggle" data-hide="#date-past-details">
+      <input type="radio" name="date" id="date-old" value="yes" class="js-toggle" data-show="#date-past-details">
       Yes
     </label>
     <label for="date-past" class="block-label">
-      <input type="radio" name="date" id="date-past" value="no" class="js-toggle" data-show="#date-past-details">
+      <input type="radio" name="date" id="date-past" value="no" class="js-toggle" data-hide="#date-past-details">
       No
     </label>
     <div class="panel-indent date js-hidden" id="date-past-details">
-      <p>When was this added?
-        <span class="form-hint">For example, 25&nbsp; 1&nbsp; 2013. Assume the 1st of the month if you don't know the full date</span>
+      <p>When was it added?
       </p>
-      <div class="form-group">
-        <label for="dob-day" class="form-hint">Day</label>
-        <input type="text" class="form-control" id="dob-day" value="">
-      </div>
       <div class="form-group">
         <label for="dob-month" class="form-hint">Month</label>
         <input type="text" class="form-control" id="dob-month" value="">
