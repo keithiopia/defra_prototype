@@ -68,6 +68,7 @@ data.business.parcels.each do |parcel|
   proxy "/#{parcel[:id]}/add-feature-details.html", "/add-feature-details.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/add-feature-draw.html", "/add-feature-draw.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/add-feature-date.html", "/add-feature-date.html", :locals => { :parcel => parcel }, :ignore => true
+  proxy "/#{parcel[:id]}/add-feature-date-2.html", "/add-feature-date-2.html", :locals => { :parcel => parcel }, :ignore => true
 
   proxy "/#{parcel[:id]}/edit-feature.html", "/edit-feature.html", :locals => { :parcel => parcel }, :ignore => true
   proxy "/#{parcel[:id]}/edit-feature-type.html", "/edit-feature-type.html", :locals => { :parcel => parcel }, :ignore => true

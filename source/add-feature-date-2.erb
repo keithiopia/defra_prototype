@@ -1,0 +1,75 @@
+---
+layout: layout-1-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-parcel", :locals => { :parcel => parcel} %>
+<% end %>
+
+<% content_for :column1 do %>
+
+
+  <header class="page-header">
+    <hgroup>
+      <h1 class="js-land-use">Undefined</h1>
+    </hgroup>
+  </header>
+
+
+  <p class="bold-small">
+      When was it added?
+  </p>
+
+  <div class="form-group">
+    <select id="year-added">
+      <option>2015</option>
+      <option>2014</option>
+      <option>2013</option>
+      <option>2012</option>
+      <option>2011</option>
+      <option selected>Before 2011</option>
+    </select>
+  </div>
+
+  <div id="month-added" class="js-hidden">
+    <p class="bold-small">
+        What month was it added?
+    </p>
+
+    <div class="form-group">
+      <select>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <a href="/<%= parcel.id %>/" class="button">Add to land</a>
+    <p><a href="/<%= parcel.id %>/add-feature">Back</a></p>
+  </div>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "maps/point" %>
+  <%= partial "maps/points" %>
+  <%= partial "maps/line" %>
+  <%= partial "maps/shape" %>
+  <%= partial "maps/hedges" %>
+  <%= partial "maps/hedge" %>
+  <%= partial "maps/crop" %>
+
+<% end %>

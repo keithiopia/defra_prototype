@@ -80,6 +80,15 @@ $(document).ready(function() {
     $('#land-use-type').val($(this).find(':selected').data('type'))
   });
 
+  // Set land-use type when the land use is chosen
+  $('#year-added').on('change',function(){
+    if($(this).find(':selected').val() == 'Before 2011'){
+      $('#month-added').addClass('js-hidden')
+    } else {
+      $('#month-added').removeClass('js-hidden')
+    }
+  });
+
 
   // Show chosen land use on screen
   var landUse = getParameterByName('land-use');
