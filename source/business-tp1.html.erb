@@ -1,0 +1,79 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+
+  <div class="panel-indent">
+    <h2 class="heading-small">Do you want to give others permission to manage this business?</h2>
+    <p>For example, if you use a Land Agent.</p>
+    <form action="" class="form">
+      <div class="form-group">
+        <button class="button">&nbsp;&nbsp;Yes&nbsp;&nbsp;</button> <a href="">Not now</a>
+      </div>
+    </form>
+  </div>
+
+  <h2 class="heading-medium">1. Tell us about this business</h2>
+
+  <p><a href="">Tell us about this business</a></p>
+
+
+  <h2 class="heading-medium">2. Check your land parcels</h2>
+
+  <p>You have 21 land parcels left to check.</p>
+
+  <p><a href="">Check your land parcels</a></p>
+
+
+  <h2 class="heading-medium">3. Apply for rural payments schemes</h2>
+
+  <p>You can only apply for schemes between 10 April and 10 June 2015.</p>
+
+  <p><a href="scheme-apply">Find out which schemes you might be eligible for</a></p>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'business'} %>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small"><a href="business-details">Business details</a></h2>
+    <p>
+      Bodmin Agr Ltd.<br>
+      Monument Way <br>
+      Bodmin <br>
+      PL31 1NZ <br>
+      United Kingdom
+    </p>
+
+    <p>
+      Email: <a href="">info@bodminagrltd.co.uk</a> <br>
+      Landline: 0300 790 6802<br>
+      Mobile: 0300 123 0798<br>
+    </p>
+
+    <h2 class="heading-small">Manage business</h2>
+
+    <ul class="action-list">
+      <li><a href="business-details">View business details</a></li>
+      <li><a href="#">Manage access to this business</a></li>
+      <li><a href="#">Tell us this business is closed</a></li>
+    </ul>
+
+
+  </div>
+
+<% end %>
