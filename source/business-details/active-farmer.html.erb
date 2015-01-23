@@ -4,16 +4,19 @@ layout: layout-2-1-columns
 
 <% content_for :column1 do %>
 
+<br>
+  <p><a href="">Back to business overview</a></p>
+
   <header class="page-header no-breadcrumb">
     <hgroup>
-      <h1>Basic Payment Scheme eligibility</h1>
+      <h1>Your business activities</h1>
     </hgroup>
   </header>
 
   <form class="form">
 
   <div id="q1">
-    <h2 class="heading-medium">Does this business operate any of the following?</h2>
+    <h2 class="heading-medium">Does this business run any of the following?</h2>
     <p>An airport, railway services, waterworks, real estate services or permanent sports and recreational grounds.</p>
     <div class="form-group inline">
       <label for="yes-1" class="block-label">
@@ -46,7 +49,7 @@ layout: layout-2-1-columns
   </div>
 
   <div id="q2" class="js-hidden">
-    <h2 class="heading-medium">Did this business claim more than €5000 in rural payments last year?</h2>
+    <h2 class="heading-medium">Did this business claim more than €5,000 in rural payments last year?</h2>
     <p>You can get this number from the top of last year's statement.</p>
     <div class="form-group inline">
       <label for="yes-2" class="block-label">
@@ -61,8 +64,8 @@ layout: layout-2-1-columns
   </div>
 
   <div id="q3" class="js-hidden">
-    <h2 class="heading-medium">Does the business have more than 36ha of eligible land?</h2>
-    <p>This is eligible land at the businesses disposal on the 15 May 2015.</p>
+    <h2 class="heading-medium">Does the business have 36ha of eligible land or more?</h2>
+    <p>This has to be available to the business on 15 May 2015.</p>
     <div class="form-group inline">
       <label for="yes-3" class="block-label">
         <input type="radio" name="q3" id="yes-3" value="yes" class="js-toggle" data-show="#outcome-1" data-hide="#q4, #outcome-2, #outcome-3">
@@ -77,10 +80,10 @@ layout: layout-2-1-columns
 
   <div id="q4" class="js-hidden">
     <h2 class="heading-medium">Is the business income primarily agricultural?</h2>
-    <p>You'll need to prove that either:</p>
+    <p>You'll need to provide evidence for one of the following:</p>
     <ul class="list-bullet">
-      <li>more than 40% of the total business receipts are agricultural, or</li>
-      <li>last year's rural payment was equal to more than 5% of the businesses non-agricultural receipts</li>
+      <li>your agriciultural income is at least 40% of your business' total annual income</li>
+      <li>your SPS was at least 5% of the business' non-agricultural income</li>
     </ul>
     <div class="form-group inline">
       <label for="yes-4" class="block-label">
@@ -95,13 +98,16 @@ layout: layout-2-1-columns
   </div>
 
   <div id="outcome-1" class="js-hidden">
+    <!--
     <div class="panel-indent">
       <h2 class="heading-medium">This business is eligible for the Basic Payment Scheme</h2>
     </div>
-    <p><a href="" class="button">Continue</a></p>
+  -->
+    <p><a href="" class="button">Save and return</a></p>
   </div>
 
   <div id="outcome-2" class="js-hidden">
+    <!--
     <div class="panel-indent">
       <h2 class="heading-medium">This business might be eligible for the Basic Payment Scheme</h2>
 
@@ -112,16 +118,19 @@ layout: layout-2-1-columns
       </ul>
       <p><a href="">Find out more about submitting evidence</a></p>
     </div>
+  -->
 
-    <p><a href="" class="button">Continue</a></p>
+    <p><a href="" class="button">Save and return</a></p>
   </div>
 
 
   <div id="outcome-3" class="js-hidden">
+    <!--
     <div class="panel-indent">
       <h2 class="heading-medium">This business is NOT eligible for the Basic Payment Scheme</h2>
     </div>
-    <p><a href="" class="button">Continue</a></p>
+  -->
+    <p><a href="" class="button">Save and return</a></p>
   </div>
 
 
