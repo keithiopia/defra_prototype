@@ -14,73 +14,105 @@ layout: layout-2-1-columns
     </hgroup>
   </header>
 
-  <form class="form" id="activities-form">
-    <h3 class="heading-medium">Does the business run any of the following?</h3>
+ <form class="form">
 
-    <div class="form-group">
-
-      <p>An airport, railway services, waterworks, real estate services or permanent sports and recreational grounds.</p>
-
-      <div class="inline">
-        <label for="activities-yes" class="block-label">
-          <input type="radio" name="activities" id="activities-yes" value="yes" class="js-toggle" data-show="#activities-list">
-          Yes
-        </label>
-        <label for="activities-no" class="block-label">
-          <input type="radio" name="activities" id="activities-no" value="no" class="js-toggle" data-hide="#activities-list">
-          No
-        </label>
-      </div>
-
-      <div class="form-group js-hidden" id="activities-list">
-        <div class="form-group panel-indent">
-          <p>Which of those does it operate?</p>
-
-          <label for="ac1" class="form-label">
-            <input type="checkbox" name="activites" id="ac1">
-            Airport
-          </label>
-
-          <label for="ac2" class="form-label">
-            <input type="checkbox" name="activites" id="ac2">
-            Railway services
-          </label>
-
-          <label for="ac3" class="form-label">
-            <input type="checkbox" name="activites" id="ac3">
-            Waterworks
-          </label>
-
-          <label for="ac4" class="form-label">
-            <input type="checkbox" name="activites" id="ac4">
-            Real estate services
-          </label>
-
-          <label for="ac5" class="form-label">
-            <input type="checkbox" name="activites" id="ac5">
-            Permanent sports and recreational grounds
-          </label>
-        </div>
-
-        <h3 class="heading-medium">Eligibility</h3>
-        <p>As you run one of these businesses, your business isn't eligible for rural payments.</p>
-
-        <p>You may still be able to claim if one of the following is true: </p>
-
-        <ul class="list-bullet">
-          <li>you have more than 36 ha of eligible land </li>
-          <li>you got less than &euro;5,000 before deductions last year</li>
-          <li>your SPS payment was at least 5% of your total non-agricultural receipts in the last financial year</li>
-          <li>your total agricultural receipts are at least 15% of your total receipts in the last financial year</li>
-        </ul>
-      </div>
+  <div id="q1">
+    <h2 class="heading-medium">Does this business run any of the following?</h2>
+    <p>An airport, railway services, waterworks, real estate services or permanent sports and recreational grounds.</p>
+    <div class="form-group inline">
+      <label for="yes-1" class="block-label">
+        <input type="radio" name="q1" id="yes-1" value="yes" class="js-toggle" data-show="#q2, #q1-options" data-hide="#q3, #q4, #outcome-1, #outcome-2, #outcome-3">
+        Yes
+      </label>
+      <label for="no-1" class="block-label">
+        <input type="radio" name="q1" id="no-1" value="no" class="js-toggle" data-show="#outcome-1" data-hide="#q1-options, #q2, #q3, #q4, #outcome-2, #outcome-3">
+        No
+      </label>
     </div>
-
-    <div class="form-group">
-      <a href="/business-january" class="button" id="set-activities">Continue</a>
+    <div class="panel-indent js-hidden" id="q1-options">
+      <p>Select all that apply:</p>
+      <label class="form-label" for="a1">
+        <input type="checkbox" id="a1"> Airport
+      </label>
+      <label class="form-label" for="a2">
+        <input type="checkbox" id="a2"> Railway services
+      </label>
+      <label class="form-label" for="a3">
+        <input type="checkbox" id="a3"> Waterworks
+      </label>
+      <label class="form-label" for="a4">
+        <input type="checkbox" id="a4"> Real estate services
+      </label>
+      <label class="form-label" for="a5">
+        <input type="checkbox" id="a5"> Permanent sports and recreational grounds
+      </label>
     </div>
+  </div>
 
-</form>
+  <div id="q2" class="js-hidden">
+    <h2 class="heading-medium">Did this business claim more than €5,000 in rural payments last year?</h2>
+    <p>You can get this number from the top of last year's statement.</p>
+    <div class="form-group inline">
+      <label for="yes-2" class="block-label">
+        <input type="radio" name="q2" id="yes-2" value="yes" class="js-toggle" data-show="#q3" data-hide="#q4, #outcome-1, #outcome-2, #outcome-3">
+        Yes
+      </label>
+      <label for="no-2" class="block-label">
+        <input type="radio" name="q2" id="no-2" value="no" class="js-toggle" data-show="#outcome-1" data-hide="#q3, #q4, #outcome-2, #outcome-3">
+        No
+      </label>
+    </div>
+  </div>
+
+  <div id="q3" class="js-hidden">
+    <h2 class="heading-medium">Does the business have 36ha of eligible land or more?</h2>
+    <p>This has to be available to the business on 15 May 2015.</p>
+    <div class="form-group inline">
+      <label for="yes-3" class="block-label">
+        <input type="radio" name="q3" id="yes-3" value="yes" class="js-toggle" data-show="#outcome-1" data-hide="#q4, #outcome-2, #outcome-3">
+        Yes
+      </label>
+      <label for="no-3" class="block-label">
+        <input type="radio" name="q3" id="no-3" value="no" class="js-toggle" data-show="#q4" data-hide="#outcome-1, #outcome-2, #outcome-3">
+        No
+      </label>
+    </div>
+  </div>
+
+  <div id="q4" class="js-hidden">
+    <h2 class="heading-medium">Is the business income primarily agricultural?</h2>
+    <p>If it is you'll need to provide evidence for one of the following:</p>
+    <ul class="list-bullet">
+      <li>your agriciultural income is at least 40% of your business' total annual income</li>
+      <li>your SPS was at least 5% of the business' non-agricultural income</li>
+    </ul>
+    <div class="form-group inline">
+      <label for="yes-4" class="block-label">
+        <input type="radio" name="q4" id="yes-4" value="yes" class="js-toggle" data-show="#outcome-2" data-hide="#outcome-1, #outcome-3">
+        Yes
+      </label>
+      <label for="no-4" class="block-label">
+        <input type="radio" name="q4" id="no-4" value="no" class="js-toggle" data-show="#outcome-3" data-hide="#outcome-1, #outcome-2">
+        No
+      </label>
+    </div>
+  </div>
+
+  <div id="outcome-1" class="js-hidden">
+    <p><a href="/business-january/?eligible=yes" class="button">Save and return</a></p>
+  </div>
+
+  <div id="outcome-2" class="js-hidden">
+    <p><a href="/business-january/?eligible=evidence" class="button">Save and return</a></p>
+  </div>
+
+
+  <div id="outcome-3" class="js-hidden">
+    <p><a href="/business-january/?eligible=no" class="button">Save and return</a></p>
+  </div>
+
+
+  </form>
 
 
 <% end %>
