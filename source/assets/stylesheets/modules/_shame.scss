@@ -92,7 +92,7 @@ select.link-style{
 // Validation error message box
 .validation-error {
  clear: both;
- @include contain-floats;
+ @extend %contain-floats;
  border-left: 3px solid $error-colour;
  padding: 15px 15px 0;
  margin-bottom: 15px;
