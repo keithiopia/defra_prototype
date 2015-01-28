@@ -1,5 +1,7 @@
 // Details
 // ==========================================================================
+// GOV.UK front end toolkit dependencies
+@import "colours";
 
 details {
   display: block;
@@ -8,19 +10,9 @@ details {
 details summary {
   display: inline-block;
   color: $govuk-blue;
-  text-decoration: underline;
   cursor: pointer;
   position: relative;
   margin-bottom: em(5);
-}
-
-details[open] summary{
-  color: $text-colour;
-  text-decoration: none;
-  font-weight: bold;
-  &:hover{
-    color: $text-colour;
-  }
 }
 
 details summary:hover {
@@ -39,6 +31,7 @@ details .summary {
 // Match fallback arrow spacing with -webkit default
 details .arrow {
   margin-right: 0.35em;
+  font-style: normal;
 }
 
 // Remove top margin from bordered panel
