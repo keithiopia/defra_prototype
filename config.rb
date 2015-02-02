@@ -123,6 +123,7 @@ configure :build do
     config.output_style = :expanded
     config.sass_options = {:debug_info => false}
     config.sass_options = {:line_comments => false}
+    config.additional_import_paths = ["assets/govuk_frontend_toolkit/stylesheets"]
   end
 
   #activate :minify_css
