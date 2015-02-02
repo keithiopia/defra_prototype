@@ -1,0 +1,46 @@
+// ==========================================================================
+// Summary
+// ==========================================================================
+
+.summary {
+  margin-bottom: 1.05263em; // 20px
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		border-top: 1px solid $grey-2;
+		clear: both;
+		margin: 0;
+		overflow: hidden;
+		padding: .5em 0;
+
+		&:first-child {
+  		border-top: none;
+		}
+
+	}
+
+}
+
+.summary-title {
+	@extend .bold-small;
+
+	@include media(tablet) {
+		float: left;
+		width: 40%;
+	}
+
+}
+
+.summary-value {
+	display: block;
+	@include media(tablet) {
+  	@include box-sizing(border-box);
+		float: right;
+		padding-left: 20px;
+		width: 60%;
+	}
+
+}

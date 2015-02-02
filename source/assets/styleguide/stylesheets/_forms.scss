@@ -1,0 +1,108 @@
+// ==========================================================================
+// Forms
+// ==========================================================================
+
+
+// Checkboxes
+
+.form-checkboxes {
+  margin-top: 2em;
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .code {
+    font-weight: bold;
+    margin: 0 20px 0 10px;
+    display: block;
+    float: left;
+  }
+
+  .details {
+    display: block;
+    overflow: hidden;
+  }
+
+}
+
+
+// Form control
+
+.form-control-textarea {
+  @extend .form-control;
+  min-height: 35px;
+  max-height: 400px;
+  resize: vertical;
+}
+
+
+.form-control-select {
+  @include core-19;
+  background-color: white;
+  border: 1px solid $border-colour;
+  width: 100%;
+
+  @include media(tablet) {
+    width: 50%;
+  }
+
+
+  // Prevent firefox from using default focus
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+
+
+}
+
+
+// Form search
+
+.form-search {
+  display: table;
+  width: 100%;
+
+  @include media(tablet) {
+    width: 50%;
+  }
+
+  .form-control {
+    margin: 0;
+    width: 100%;
+  }
+
+  .form-group-search,
+  .form-group-button {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  .button {
+    margin: 0 0 0 15px;
+    line-height: 1em;
+    white-space: nowrap;
+  }
+
+}
+
+
+// Form table
+
+.form-table {
+
+  table th,
+  table td {
+    padding: em(13) em(20) em(11) 0;
+  }
+
+  .form-control {
+    @include core-16;
+    width: auto;
+  }
+
+}
+

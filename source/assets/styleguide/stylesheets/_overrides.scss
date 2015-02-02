@@ -1,0 +1,111 @@
+// ==========================================================================
+// Overrides
+// ==========================================================================
+
+
+// Footer colour extended / font rendering fixes
+
+html {
+  background-color: $grey-3;
+  -webkit-text-size-adjust: 100%; /* 1 */
+  -ms-text-size-adjust: 100%; /* 1 */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  @include box-sizing(border-box);
+	background-color: $page-colour;
+}
+
+
+// Selection
+
+::-moz-selection {
+  background: $grey-3;
+  color: $black;
+}
+
+::selection {
+  background: $grey-3;
+  color: $black;
+}
+
+
+
+// Main heading no back link
+
+.heading-xlarge-noback {
+  @extend .heading-xlarge;
+
+  margin-top: em(30, 32);
+  margin-bottom: em(15, 32);
+
+  @include media(tablet) {
+    margin-top: em(60, 48);
+    margin-bottom: em(30, 48);
+  }
+
+}
+
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+
+  // Fixes bug (white line top and bottom on focus)
+
+  &:focus {
+    border: 1px solid transparent;
+    margin: 29px -1px -1px -1px;
+    outline-width: 2px;
+  }
+
+}
+
+
+// Exception for date inputs
+
+.form-date {
+
+  .form-group {
+
+    .form-label {
+      color: $secondary-text-colour;
+    }
+
+  }
+
+}
+
+
+// Exception for details
+
+details {
+  margin-top: em(5, 16 );
+  margin-bottom: em(20, 16);
+
+  @include media(tablet) {
+    margin-top: em(5);
+    margin-bottom: em(20);
+  }
+
+}
+
+details .panel-indent {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+
+// Links
+
+#global-header #logo,
+a:link {
+  overflow: hidden; // Fixes unwanted padding on focus
+}
+
+
+

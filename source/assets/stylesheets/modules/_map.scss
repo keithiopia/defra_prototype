@@ -15,13 +15,13 @@
 }
 
 // Set height of map based on it's width
-.grid-1-3 .map{
+.column-third .map{
   height: 300px;
   img{
     margin-left: -25px;
   }
 }
-.grid-1-2 .map{
+.column-half .map{
   height: 500px;
   img{
     margin-left: -60px;
@@ -29,7 +29,7 @@
 }
 
 // Hide map buttons on small map
-.grid-1-3 .map{
+.column-third.map{
   .undo-redo,
   .map-photo,
   .zoom{

@@ -108,10 +108,11 @@ set :partials_dir, 'includes'
 configure :development do
   activate :livereload
 
- # compass_config do |config|
-  #  config.output_style = :expanded
-   # config.sass_options = {:debug_info => true}
-  #end
+  compass_config do |config|
+    # config.output_style = :expanded
+    # config.sass_options = {:debug_info => true}
+    config.additional_import_paths = ["assets/govuk_frontend_toolkit/stylesheets"]
+  end
 
 end
 
