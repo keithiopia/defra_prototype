@@ -1,0 +1,56 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+  <header class="page-header">
+    <hgroup>
+      <h1>People with access to <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+  <p>Select a person to change what they can access.</p>
+
+  <table class="table permissions-list">
+    <thead>
+      <tr>
+        <th class="name">Person</th>
+        <th class="notes">Notes</th>
+        <th class="remove">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name">
+          <a href="/permissions-february/permissions">Bill John Smith</a>
+        </td>
+        <td class="notes">
+
+          <span class="warning">
+            <span class="warning-icon">!</span>
+            <a href="#">More information required</a>
+          </span>
+
+        </td>
+        <td class="remove"><a href="/permissions-february/permissions" title="Remove this person">Remove</a></td>
+      </tr>
+      <tr>
+        <td class="name">
+          <a href="/permissions-february/permissions">Jane Smith</a>
+        </td>
+        <td class="notes">
+
+        </td>
+        <td class="remove"><a href="" title="Remove this person">Remove</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <a class="button" href="/permissions-february/add-people">Give someone else access</a>
+  </p>
+<% end %>

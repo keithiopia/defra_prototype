@@ -1,0 +1,79 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Find an individual</h1>
+    </hgroup>
+  </header>
+
+  <form id="permissions-find-person">
+    <div class="form-group">
+      <label class="form-label" for="customer-reference-number">Customer reference number</label>
+      <input type="text" class="form-control" name="customer-reference-number" id="customer-reference-number" />
+      <button class="button" type="submit">Find person</button>
+    </div>
+  </form>
+
+  <div id="person-details" class="hidden">
+    <table>
+      <thead>
+        <tr>
+          <th class="name">Name</th>
+          <th class="crn">Customer reference number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Keith Emmerson</td>
+          <td>1000000214</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <fieldset class="form-group inline">
+        <legend>Is this the right person?</legend>
+        <label class="block-label">
+          Yes
+          <input type="radio" name="individual-correct" value="yes" id="individual-correct-yes">
+        </label>
+
+        <label class="block-label">
+          <input type="radio" name="individual-correct" value="no" id="individual-correct-no">
+          No
+        </label>
+      </fieldset>
+
+      <div class="optional-section optional-section-individual-correct" data-toggle-value="no">
+        <p>Check you typed the correct customer reference number. If you are looking for a firm of agents use the <a href="/permissions-february/find-agent">agent search</a>.</p>
+      </div>
+
+      <fieldset class="form-group optional-section optional-section-individual-correct" data-toggle-value="yes">
+        <label class="form-label" for="individual-relationship">What is their relationship to <%= data.business.name %>?</label>
+
+        <select name="individual-relationship" id="individual-relationship">
+          <option value="">Agent</option>
+          <option value="">Company secretary</option>
+          <option value="">Director</option>
+          <option value="">Employee</option>
+          <option value="">Executor</option>
+          <option value="">Helper</option>
+          <option value="">Owner or sole trader</option>
+          <option value="">Partner</option>
+          <option value="">Trustee</option>
+        </select>
+
+        <p><a href="/permissions-february/select-permissions" class="button">Next</a></p>
+      </fieldset>
+    </form>
+  </div>
+
+<% end %>

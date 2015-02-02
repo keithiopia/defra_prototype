@@ -1,0 +1,98 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Find an agent or firm of agents</h1>
+    </hgroup>
+  </header>
+
+  <form id="permissions-find-agent">
+    <div class="form-group">
+      <label for="agency-reference">Agency name or firm reference number</label>
+      <input type="text" class="form-control" name="agency-reference" id="agency-reference" />
+      <button class="button" type="submit">Find agent</button>
+    </div>
+  </form>
+
+  <div class="hidden" id="agent-details">
+    <h3 class="heading-small">Choose the correct agency</h3>
+
+    <table class="agency-table">
+      <thead>
+        <tr>
+          <th class="select"><span class="visuallyhidden">Select</span></th>
+          <th class="name">Name</th>
+          <th class="address">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="radio" name="agent-id" value="01" id="agent-id-01" />
+          </td>
+          <td>
+            <label for="agent-id-01">Savills Reading</label>
+          </td>
+          <td>
+            14 Broad Street, Reading, Berks, RG1 1AH
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="agent-id" value="02" id="agent-id-02" />
+          </td>
+          <td>
+            <label for="agent-id-02">Savills Reading</label>
+          </td>
+          <td>
+            14 Broad Street, Reading, Berks, RG1 1AH
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="agent-id" value="03" id="agent-id-03" />
+          </td>
+          <td>
+            <label for="agent-id-03">Savills Reading</label>
+          </td>
+          <td>
+            14 Broad Street, Reading, Berks, RG1 1AH
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="agent-id" value="04" id="agent-id-04" />
+          </td>
+          <td>
+            <label for="agent-id-04">Savills Reading</label>
+          </td>
+          <td>
+            14 Broad Street, Reading, Berks, RG1 1AH
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="agent-id" value="05" id="agent-id-05" />
+          </td>
+          <td>
+            <label for="agent-id-05">Savills Reading</label>
+          </td>
+          <td>
+            14 Broad Street, Reading, Berks, RG1 1AH
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><a href="/permissions-february/select-agent" class="button">Next</a></p>
+  </div>
+
+<% end %>

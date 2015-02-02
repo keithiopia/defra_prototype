@@ -1,0 +1,35 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Give people access to <br><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+  <form id="permissions-type">
+    <fieldset class="form-group">
+      <legend>Who are you adding?</legend>
+      <label class="block-label">
+        An agent
+        <input type="radio" name="person-type" value="agent" id="person-type-agent">
+      </label>
+
+      <label class="block-label">
+        <input type="radio" name="person-type" value="individual" id="person-type-individual">
+        An individual
+      </label>
+      <p class="form-hint form-block">ie a colleague, employee, family member or friend</p>
+    </fieldset>
+  </form>
+
+  <p><a href="/permissions-february/find-individual" class="button" id="permissions-type-next">Next</a></p>
+
+<% end %>

@@ -175,4 +175,45 @@ $(document).ready(function(){
     }
   });
 
+  $('body').on('change', 'input,select,textarea', function(){
+
+    var $this = $(this);
+    // toggle optional sections
+    if ($this.is(':checkbox')){
+      var $toggleTarget = $('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+      console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '""]');
+      if ($toggleTarget.length){
+        $toggleTarget.toggle($this.is(':checked') && $this.val() == $toggleTarget.attr('data-toggle-value'));
+      }
+
+    } else if ($this.is(':radio')){
+      var $toggleTarget = $('.optional-section-'+$this.attr('name'));
+
+      $toggleTarget.each(function(){
+        var $thisTarget = $(this);
+        var toggleValue = $thisTarget.data('toggle-value').toString().split(',');
+        var toggleFlag = false;
+        for (var i = toggleValue.length - 1; i >= 0; i--) {
+          if ($this.val() == toggleValue[i]) toggleFlag = true;
+        };
+        $thisTarget.toggle(toggleFlag);
+      });
+    }
+
+  });
+
+  $('#permissions-type').find('input[name=person-type]').on('change', function(e) {
+    console.log($(this).val());
+    $('#permissions-type-next').attr('href', '/permissions-february/find-'+$(this).val());
+  });
+
+  $('#permissions-find-person').find('button').on('click', function(e) {
+    e.preventDefault();
+    $('#person-details').removeClass('hidden');
+  });
+
+  $('#permissions-find-agent').find('button').on('click', function(e) {
+    e.preventDefault();
+    $('#agent-details').removeClass('hidden');
+  });
 });
