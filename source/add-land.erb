@@ -1,0 +1,48 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-land" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Add land to Bodmin Agri Ltd.</h1>
+    </hgroup>
+  </header>
+
+  <form class="form">
+    <div class="form-group">
+      <p class="form-label">Why are you adding land to this business?</p>
+    </div>
+
+    <div class="form-group inline">
+      <label for="remove-1" class="block-label">
+        <input type="radio" name="remove-method" id="remove-1">
+        It's been bought from another business
+      </label>
+      <label for="remove-2" class="block-label">
+        <input type="radio" name="remove-method" id="remove-2">
+        It's been leased from another business
+      </label>
+      <label for="remove-3" class="block-label">
+        <input type="radio" name="remove-method" id="remove-3">
+        It's been converted to agricultural use
+      </label>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+  </form>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'business'} %>
+
+<% end %>
