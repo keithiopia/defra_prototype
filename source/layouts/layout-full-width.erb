@@ -1,0 +1,18 @@
+<%# A full width page %>
+
+<% wrap_layout :layout_template_no_nav do %>
+
+<% parcel = locals[:parcel] %>
+
+<%= yield_content(:breadcrumbs) %>
+
+<div class="grid-row">
+
+  <% if content_for?(:column1) %>
+  <div class="column-full-width">
+    <%= yield_content(:column1) %>
+  </div>
+  <% end %>
+</div>
+
+<% end %>
