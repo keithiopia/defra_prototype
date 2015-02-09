@@ -10,11 +10,11 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>People with access to <br><%= data.business.name %></h1>
+      <h1>People with permission to edit <br><%= data.business.name %></h1>
     </hgroup>
   </header>
 
-  <p>Select a person to change what they can access.</p>
+  <p>Select a person to change their permission level.</p>
 
   <table class="table permissions-list">
     <thead>
@@ -52,7 +52,7 @@ layout: layout-2-1-columns
   </table>
 
   <p>
-    <a class="button" href="/permissions/add-people">Give someone else access</a>
+    <a class="button" href="/permissions/add-people">Give someone else permission</a>
   </p>
 
 <% end %>
