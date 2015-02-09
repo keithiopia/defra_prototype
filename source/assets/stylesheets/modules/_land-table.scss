@@ -1,0 +1,54 @@
+.land-table {
+  thead {
+
+  }
+
+  // column widths
+  .parcel-reference {
+    width: 20%
+  }
+
+  .land-use {
+    width: 14%;
+  }
+
+  .land-cover {
+    width: 18%;
+  }
+
+  .land-area {
+    width: 10%;
+  }
+
+  .notes {
+    width: 18%;
+  }
+
+  .active-entitlements {
+    width: 10%;
+  }
+
+  .edit {
+    widows: 10%;
+  }
+
+  // CPH header rows
+  .cph-header {
+    border-bottom: 2px solid $black;
+  }
+
+  .parcel-name {
+    vertical-align: top;
+  }
+
+  .parcel-ref {
+    font-weight: normal;
+    color: $secondary-text-colour;
+  }
+
+  // total rows
+  .total td {
+    font-weight: bold;
+  }
+
+}

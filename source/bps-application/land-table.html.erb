@@ -1,0 +1,124 @@
+---
+layout: layout-full-width
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial "partial-breadcrumbs-business" %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Activate entitlements</h1>
+    </hgroup>
+  </header>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p>In order to claim for the basic payment scheme you need to activate your entitlements against your eligible land. We have automatically activated your maximum eligible area, you may adjust the entitlement to be above or below the eligible area.</p>
+    </div>
+  </div>
+
+  <table class="land-table">
+    <thead>
+      <tr>
+        <th class="parcel-reference">Parcel reference</th>
+        <th class="land-cover">Land cover</th>
+        <th class="land-use">Land use</th>
+        <th class="land-area numeric">Area (<abbr title="hectares">ha</abbr>)</th>
+        <th class="notes">Notes</th>
+        <th class="active-entitlements">&nbsp;</th>
+        <th class="edit">&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <!-- Start CPH -->
+      <tr class="cph-header">
+        <th colspan="7">CPH 01/234/5678</th>
+      </tr>
+      <!-- Start Parcel -->
+      <tr>
+        <th rowspan="4" scope="row" class="parcel-name">Top field<br /><span class="parcel-ref">SR123456</span></th>
+        <td>Arable</td>
+        <td>Fallow</td>
+        <td class="numeric">2.48</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Arable</td>
+        <td>Barley</td>
+        <td class="numeric">2.50</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Building</td>
+        <td>Barn</td>
+        <td class="numeric">0.20</td>
+        <td><span class="inegligible">Ineligible</span></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="total">
+        <td>&nbsp;</td>
+        <th id="parcel-sr123456-total">Eligible area</th>
+        <td class="numeric" headers="parcel-sr123456-total">5.00</td>
+        <th id="parcel-sr-123456-activated">Activated area</th>
+        <td class="numeric" headers="parcel-sr123456-activated">4.98</td>
+        <td><a href="#">Edit</a></td>
+      </tr>
+
+      <!-- Start Parcel -->
+      <tr>
+        <th rowspan="2" scope="row" class="parcel-name">Bottom field<br /><span class="parcel-ref">SR234567</span></th>
+        <td>Arable</td>
+        <td>Peas</td>
+        <td class="numeric">3.20</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="total">
+        <td>&nbsp;</td>
+        <th id="parcel-sr234567-total">Eligible area</th>
+        <td class="numeric" headers="parcel-sr234567-total">3.20</td>
+        <th id="parcel-sr234567-activated">Activated area</th>
+        <td class="numeric" headers="parcel-sr234567-activated">3.20</td>
+        <td><a href="#">Edit</a></td>
+      </tr>
+
+      <!-- Start CPH -->
+      <tr class="cph-header">
+        <th colspan="7">CPH 01/234/7777</th>
+      </tr>
+
+      <!-- Start Parcel -->
+      <tr>
+        <th rowspan="2" scope="row" class="parcel-name">East field<br /><span class="parcel-ref">SR987654</span></th>
+        <td>Arable</td>
+        <td>Wheat</td>
+        <td class="numeric">1.70</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="total">
+        <td>&nbsp;</td>
+        <th id="parcel-sr987654-total">Eligible area</th>
+        <td class="numeric" headers="parcel-sr987654-total">1.70</td>
+        <th id="parcel-sr987654-activated">Activated area</th>
+        <td class="numeric" headers="parcel-sr987654-activated">1.70</td>
+        <td><a href="#">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a href="#" class="button">Save and continue</a></p>
+
+<% end %>
