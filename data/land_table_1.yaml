@@ -1,0 +1,416 @@
+name: J&R Morris & Son
+sbi: 106221627
+
+parcels:
+
+  - name: HORN LIT
+    id: SP6509 9569
+    cph: 03/045/0091
+    area: 2.33
+    eligible_area: 2.33
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 2.33
+
+  - name: HORN BIG
+    id: SP6509 9994
+    cph: 03/045/0091
+    area: 18.91
+    eligible_area: 18.91
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 18.91
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 0.37
+
+  - name: BRIDLE
+    id: SP6610 6412
+    cph: 03/045/0091
+    area: 1.53
+    eligible_area: 1.53
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 1.53
+
+  - name: HORNWOOD
+    id: SP6610 9322
+    cph: 03/045/0091
+    area: 8.45
+    eligible_area: 8.45
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 8.45
+
+  - name: LANE
+    id: SP6710 3330
+    cph: 03/045/0091
+    area: 13.35
+    eligible_area: 13.34
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 13.34
+
+  - name: FOOTBALL
+    id: SP6710 6734
+    cph: 03/045/0091
+    area: 13.49
+    eligible_area: 13.49
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 13.49
+
+  - name: NEW SHED
+    id: SP6710 9426
+    cph: 03/045/0091
+    area: 5.14
+    eligible_area: 5.12
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 5.12
+
+  - name: NURSERY
+    id: SP6809 9373
+    cph: 03/045/0091
+    area: 3.95
+    eligible_area: 3.95
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 3.95
+
+  - name: FFE
+    id: SP6810 4122
+    cph: 03/045/0091
+    area: 6.11
+    eligible_area: 6.11
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 6.11
+
+  - name: RESERVOR
+    id: SP6909 4682
+    cph: 03/045/0091
+    area: 6.77
+    eligible_area: 6.52
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 6.52
+      - use: Waterworks
+        cover: Non-agricultural area
+        area: 0.25
+
+  - name: QUICKS
+    id: SP6909 6677
+    cph: 03/045/0091
+    area: 7.64
+    eligible_area: 7.64
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 7.34
+      - use: Waterworks
+        cover: Non-agricultural area
+        area: 0.3
+
+  - name: MOLES
+    id: SP6909 6943
+    cph: 03/045/0091
+    area: 4.66
+    eligible_area: 4.66
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 4.66
+
+  - name: GRAINPAD
+    id: SP6909 7861
+    cph: 03/045/0091
+    area: 1.04
+    eligible_area: 1.04
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 1.04
+
+  - name: Set side
+    id: SP6909 8196
+    cph: 03/045/0091
+    area: 9.32
+    eligible_area: 9.19
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 9.32
+
+  - name: COL PAD
+    id: SP6909 8542
+    cph: 03/045/0091
+    area: 0.99
+    eligible_area: 0.96
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 0.96
+
+  - name: FFC G
+    id: SP6909 9030
+    cph: 03/045/0091
+    area: 1.76
+    eligible_area: 1.76
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 1.76
+
+  - name: GRAIN C
+    id: SP6909 9368
+    cph: 03/045/0091
+    area: 6.77
+    eligible_area: 6.77
+    uses:
+      - use: Wheat - spring
+        cover: Arable land
+        area: 6.77
+
+  - name: BANKS
+    id: SP6910 2616
+    cph: 03/045/0091
+    area: 3.55
+    eligible_area: 3.38
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 3.38
+      - use: Manmade transport
+        cover: Non-agricultural area
+        area: 0.17
+
+  - name: KEVINHUT
+    id: SP6910 3116
+    cph: 03/045/0091
+    area: 0.16
+    eligible_area: 0.15
+    uses:
+      - use: Farm building
+        cover: Non-agricultural area
+        area: 0.15
+
+  - name: ORRALL B
+    id: SP6910 4330
+    cph: 03/045/0091
+    area: 5.89
+    eligible_area: 5.52
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 5.52
+      - use: Mixed woodland
+        cover: Non-agricultural area
+        area: 0.37
+
+  - name: WHITEHIL
+    id: SP6910 5411
+    cph: 03/045/0091
+    area: 7.72
+    eligible_area: 7.57
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 7.57
+      - use: Mixed woodland
+        cover: Non-agricultural area
+        area: 0.15
+
+  - name: HAMMONDS
+    id: SP6910 7640
+    cph: 03/045/0091
+    area: 9.22
+    eligible_area: 9.22
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 9.22
+
+  - name: WELLSPRI
+    id: SP6910 9442
+    cph: 03/045/0091
+    area: 0.29
+    eligible_area: 0
+    uses:
+      - use: Mixed woodland
+        cover: Non-agricultural area
+        area:
+
+  - name: FFC CORN
+    id: SP7009 0548
+    cph: 03/045/0091
+    area: 7.82
+    eligible_area: 7.82
+    uses:
+      - use: Wheat - spring
+        cover: Arable land
+        area: 7.62
+      - use: Farm building
+        cover: Non-agricultural area
+        area: 0.2
+
+  - name: STONE RD
+    id: SP7009 2371
+    cph: 03/045/0091
+    area: 11.75
+    eligible_area: 11.75
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 11.75
+
+  - name: GLEBE P
+    id: SP7009 5991
+    cph: 03/045/0091
+    area: 2.17
+    eligible_area: 2.11
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 2.11
+
+  - name: G DRIVE
+    id: SP7009 6170
+    cph: 03/045/0091
+    area: 0.59
+    eligible_area: 0.59
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 0.59
+
+  - name: FFG
+    id: SP7009 7589
+    cph: 03/045/0091
+    area: 6.70
+    eligible_area: 6.65
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 6.65
+
+  - name: ROAD G
+    id: SP7009 9591
+    cph: 03/045/0091
+    area: 4.36
+    eligible_area: 4.36
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 4.36
+
+  - name: MOUNT P
+    id: SP7010 0211
+    cph: 03/045/0091
+    area: 10.51
+    eligible_area: 10.51
+    uses:
+      - use: Wheat - spring
+        cover: Arable land
+        area: 10.51
+
+  - name: BEIL F
+    id: SP7010 1459
+    cph: 03/045/0091
+    area: 14.11
+    eligible_area: 14.11
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 14.11
+
+  - name: BELL HIL
+    id: SP7010 2436
+    cph: 03/045/0091
+    area: 9.88
+    eligible_area: 9.88
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 9.88
+
+  - name: MAIZE
+    id: SP7010 3316
+    cph: 03/045/0091
+    area: 7.22
+    eligible_area: 7.22
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 7.22
+
+  - name: BELL BRO
+    id: SP7010 4168
+    cph: 03/045/0091
+    area: 5.32
+    eligible_area: 5.32
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 5.32
+
+  - name: BRIDGE
+    id: SP7010 6515
+    cph: 03/045/0091
+    area: 9.80
+    eligible_area: 9.75
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 9.75
+
+  - name: SMITHIES
+    id: SP7010 6541
+    cph: 03/045/0091
+    area: 9.54
+    eligible_area: 9.54
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 9.54
+
+  - name: L SHAPED
+    id: SP7010 7953
+    cph: 03/045/0091
+    area: 5.39
+    eligible_area: 5.39
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 5.39
+
+  - name: FFG BROK
+    id: SP7010 8507
+    cph: 03/045/0091
+    area: 2.48
+    eligible_area: 2.48
+    uses:
+      - use: Permanent grassland
+        cover: Permanent grassland
+        area: 2.48
+
+  - name: GROVE
+    id: SP7109 1399
+    cph: 03/045/0091
+    area: 0.48
+    eligible_area: 0
+    uses:
+      - use: Mixed woodland
+        cover: Non-agricultural area
+        area: 0.48
+
