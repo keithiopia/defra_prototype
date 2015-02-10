@@ -1,18 +1,18 @@
 .land-table {
-  thead {
-
+  td, th {
+    vertical-align: top;
   }
 
   // column widths
   .parcel-reference {
-    width: 20%
-  }
-
-  .land-use {
-    width: 14%;
+    width: 18%
   }
 
   .land-cover {
+    width: 18%;
+  }
+
+  .land-use {
     width: 18%;
   }
 
@@ -29,7 +29,7 @@
   }
 
   .edit {
-    widows: 10%;
+    widows: 8%;
   }
 
   // CPH header rows
@@ -38,7 +38,7 @@
   }
 
   .parcel-name {
-    vertical-align: top;
+    // border-bottom-color: $black;
   }
 
   .parcel-ref {
@@ -47,8 +47,13 @@
   }
 
   // total rows
-  .total td {
-    font-weight: bold;
+  .total {
+    td, th {
+      // border-bottom-color: $black;
+    }
+    td {
+      font-weight: bold;
+    }
   }
 
 }
