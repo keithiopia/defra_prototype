@@ -1,0 +1,75 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+
+  <div class="panel-indent" id="give-access">
+    <h2 class="heading-small">Is someone helping you with this application?</h2>
+    <p>You can give agents or other people you trust access to this business.</p>
+    <p class="button">Give someone access</p> <a href="#give-access" class="js-toggle">Not now</a>
+  </div>
+
+
+  <h2 class="heading-medium">1. Check you are eligible for Rural Payments</h2>
+
+
+
+  <h2 class="heading-medium">2. Check your land parcels</h2>
+
+  <div>
+      <p>0 out of 13 parcels have been checked so far.</p>
+      <p><a href="/land">Check your land parcels</a></p>
+  </div>
+
+  <h2 class="heading-medium">3. Apply for schemes</h2>
+
+  <p>You can only apply for schemes between 10 April and 10 June 2015.</p>
+
+  <p><a href="scheme-apply">Find out which schemes you might be eligible for</a></p>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+  <%= partial "partial-map", :locals => { :map => 'business'} %>
+
+  <div class="font-xsmall">
+    <h2 class="heading-small">Business details</h2>
+    <p>
+      Bodmin Agr Ltd.<br>
+      Monument Way <br>
+      Bodmin <br>
+      PL31 1NZ <br>
+      United Kingdom
+    </p>
+
+    <p>
+      Email: <a href="">info@bodminagrltd.co.uk</a> <br>
+      Landline: 0300 790 6802<br>
+      Mobile: 0300 123 0798<br>
+    </p>
+
+    <h2 class="heading-small">Manage business</h2>
+
+    <ul class="action-list">
+      <li><a href="business-details">View business details</a></li>
+      <li><a href="#">Manage access to this business</a></li>
+      <li><a href="#">Tell us this business is closed</a></li>
+    </ul>
+
+
+  </div>
+
+<% end %>
