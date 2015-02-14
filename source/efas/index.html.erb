@@ -1,0 +1,81 @@
+---
+layout: layout-full-width
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Ecological Focus Areas</h1>
+    </hgroup>
+  </header>
+
+  <p class="text">The table below shows your Ecological Focus Areas (EFAs) and their adjusted areas.</p>
+
+  <p class="text">If you don't want to use something as an EFA (for example if it's already being used for another scheme), you can disable it.</p>
+
+  <form class="form-table" method="post" action="/">
+
+  <table>
+    <thead>
+      <tr>
+        <th class="parcel-reference">Parcel</th>
+        <th class="land-use">EFA</th>
+        <th></th>
+        <th class="land-area numeric">EFA area</th>
+        <th class="edit"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Start Parcel -->
+      <tr>
+        <th rowspan="3" scope="row" class="parcel-name">Top field<br /><span class="parcel-ref">SR123456</span></th>
+        <td>Hedge (15.02m)</td>
+        <td class="numeric"> <a href="" class="secondary-text">adjust length</a></td>
+        <td class="numeric">0.32 ha</td>
+        <td><a href="" class="secondary-text">disable</a></td>
+      </tr>
+      <tr>
+        <td>Hedge (12.23m)</td>
+        <td class="numeric"> <a href="" class="secondary-text">adjust length</a></td>
+        <td class="numeric">0.24 ha</td>
+        <td><a href="" class="secondary-text">disable</a></td>
+      </tr>
+      <tr>
+        <td>Clover</td>
+        <td class="numeric"></td>
+        <td class="numeric">5.20 ha</td>
+        <td><a href="" class="secondary-text">disable</a> &nbsp; &nbsp;</td>
+      </tr>
+
+      <!-- Start Parcel -->
+      <tr>
+        <th rowspan="2" scope="row" class="parcel-name">Bottom field<br /><span class="parcel-ref">SR234567</span></th>
+        <td>Buffer strip (32.24m)</td>
+        <td class="numeric"> <a href="" class="secondary-text">adjust length</a></td>
+        <td class="numeric">0.45 ha</td>
+        <td><a href="" class="secondary-text">disable</a></td>
+      </tr>
+
+      <tr>
+        <td>Tree</td>
+        <td class="numeric"></td>
+        <td class="numeric">0.30 ha</td>
+        <td><a href="" class="secondary-text">disable</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+    </form>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+<% end %>

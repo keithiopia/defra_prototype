@@ -1,0 +1,104 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1><%= data.business.name %></h1>
+    </hgroup>
+  </header>
+
+
+  <h2 class="heading-large">Basic Payment Scheme</h2>
+
+
+
+
+  <div class="bps-apply">
+    <p>You must apply for this scheme before 16 May 2015.</p>
+
+
+
+
+<!--
+  <div class="bps-applied">
+    <p>You applied for this scheme on 16 April 2015.</p>
+
+    <p>You still need to:
+
+    <ul class="list-bullet">
+      <li>submit evidence that you are a <a href="">new farmer<a/></li>
+      <li>submit evidence that you are a <a href="">young farmer</a></li>
+    </ul>
+
+  </div>
+-->
+
+
+
+
+    <h2 class="heading-medium">Basic eligibility met</h2>
+
+    <p>This business is eligible for this scheme.</p>
+
+  <!--
+    <div class="bps-ineligible">
+      <p>You <b class="alert-text">cannot apply</b> for this scheme right now because:</p>
+
+      <ul class="list-bullet">
+        <li>the application window doesn't open until 1 April</li>
+        <li>you haven't <a href="">checked all your land parcels</a></li>
+        <li>this business isn't eligible for rural payments</li>
+        <li>you don't have enough land and entitlements</li>
+      </ul>
+    </div>
+  -->
+
+
+
+    <div class="greening">
+
+      <h2 class="heading-medium">Greening requirements not met</h2>
+
+      <p>30% of the basic payment is dependant on meeting greening requirements.
+      This business does not currently meet these requirements because:</p>
+
+      <ul class="list-bullet">
+        <li>less than 5% of it's non-organic arable land has been designated as EFAs</li>
+        <li>it doesn't meet the crop diversification rules</li>
+      </ul>
+
+      <h3 class="heading-small">What you can do</h3>
+
+      <ul class="list-bullet">
+        <li><a href="">add more EFAs to your land</a></li>
+        <li><a href="">use EFAs from your organic land</a></li>
+        <li><a href="">request an excemption from the crop-diversification rules</a></li>
+      </ul>
+
+    </div>
+
+
+<!--
+    <h2 class="heading-medium">Under 40 or new to farming?</h2>
+
+    <p>If you're under 40 or new to farming you can get extra money from this scheme.
+    You'll need to <a href="">submit evidence</a> to get the extra payment.</p>
+-->
+
+    <p><a href="" class="button">Apply for this scheme</a></p>
+
+  </div>
+
+
+<% end %>
+
+<% content_for :column2 do %>
+
+<% end %>
