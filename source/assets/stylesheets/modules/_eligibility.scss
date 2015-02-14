@@ -28,3 +28,17 @@
     border-top: 2px solid $black;
   }
 }
+
+
+
+.met, .not-med{
+  text-transform: uppercase;
+  color: $white;
+}
+
+.met{
+  background: $green;
+}
+.not-met{
+  background: $mellow-red;
+}
