@@ -1,0 +1,65 @@
+.efa-table {
+  td, th {
+    vertical-align: middle;
+  }
+
+  // column widths
+  .parcel {
+    width: 20%
+  }
+
+  .feature {
+    width: 34%;
+  }
+
+  .feature-area {
+    width: 12%;
+  }
+
+  .feature-length {
+    width: 12%;
+  }
+
+  .efa-length {
+    width: 12%;
+  }
+
+  .efa-area {
+    width: 10%;
+    padding-right: 0;
+  }
+
+
+
+
+
+  .parcel-name {
+    vertical-align: top;
+  }
+
+  .form-control {
+    @include core-16;
+    width: auto;
+  }
+
+
+  .parcel-ref {
+    font-weight: normal;
+    color: $secondary-text-colour;
+  }
+
+  // total rows
+  .total {
+    td, th {
+      //border-top: 2px $black;
+    }
+    td {
+      //border-top: 2px $black;
+    }
+  }
+
+  .separator{
+    border-bottom: 2px solid $black;
+  }
+
+}
