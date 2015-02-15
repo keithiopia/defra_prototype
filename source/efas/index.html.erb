@@ -10,13 +10,12 @@ layout: layout-full-width
 
   <header class="page-header">
     <hgroup>
-      <h1>Ecological Focus Areas</h1>
+      <h1>Ecological Focus Areas (EFAs)</h1>
     </hgroup>
   </header>
 
-  <p class="text">The table below shows your Ecological Focus Areas (EFAs) and their adjusted areas.</p>
+  <p class="text lede">These are the features on your land that you can use as EFAs.</p>
 
-  <p class="text">If you don't want to use something as an EFA (for example if it's already being used for another scheme), you can disable it.</p>
 
   <form class="form-table" method="post" action="/">
 
@@ -24,8 +23,8 @@ layout: layout-full-width
     <thead>
       <tr>
         <th class="parcel-reference">Parcel</th>
-        <th class="land-use">EFA</th>
-        <th></th>
+        <th class="land-use">Feature</th>
+        <th class="numeric">EFA length</th>
         <th class="land-area numeric">EFA area</th>
         <th class="edit"></th>
       </tr>
@@ -36,13 +35,13 @@ layout: layout-full-width
       <tr>
         <th rowspan="3" scope="row" class="parcel-name">Top field<br /><span class="parcel-ref">SR123456</span></th>
         <td>Hedge (15.02m)</td>
-        <td class="numeric"> <a href="" class="secondary-text">adjust length</a></td>
+        <td class="numeric"> <input type="text" class="form-control" size=5 value="15.02"> m </td>
         <td class="numeric">0.32 ha</td>
         <td><a href="" class="secondary-text">disable</a></td>
       </tr>
       <tr>
         <td>Hedge (12.23m)</td>
-        <td class="numeric"> <a href="" class="secondary-text">adjust length</a></td>
+        <td class="numeric"> <input type="text" class="form-control" size=5 value="15.02"> m </td>
         <td class="numeric">0.24 ha</td>
         <td><a href="" class="secondary-text">disable</a></td>
       </tr>
@@ -57,7 +56,7 @@ layout: layout-full-width
       <tr>
         <th rowspan="2" scope="row" class="parcel-name">Bottom field<br /><span class="parcel-ref">SR234567</span></th>
         <td>Buffer strip (32.24m)</td>
-        <td class="numeric"> <a href="" class="secondary-text">adjust length</a></td>
+        <td class="numeric"> <input type="text" class="form-control" size=5 value="15.02"> m </td>
         <td class="numeric">0.45 ha</td>
         <td><a href="" class="secondary-text">disable</a></td>
       </tr>
@@ -68,10 +67,51 @@ layout: layout-full-width
         <td class="numeric">0.30 ha</td>
         <td><a href="" class="secondary-text">disable</a></td>
       </tr>
+
+
+
+      <tr class="total">
+        <td colspan=2>&nbsp;</td>
+        <th class="numeric">Total area of EFAs (weighted)</th>
+        <td class="numeric">6.51 ha</td>
+        <td></td>
+      </tr>
+
+      <tr class="total">
+        <td colspan=2>&nbsp;</td>
+        <th class="numeric">Total area of arable land</th>
+        <td class="numeric">65.42 ha</td>
+        <td></td>
+      </tr>
+
+      <tr class="total">
+        <td colspan=2>&nbsp;</td>
+        <th class="numeric">EFAs as a percentage of arable land</th>
+        <td class="numeric">8.23%</td>
+        <td></td>
+      </tr>
+
+
     </tbody>
   </table>
 
-    </form>
+  </form>
+
+
+    <p class="text">Before applying for the Basic Payment Scheme you should disable any features you don't want to use as EFAs and adjust the EFA length where appropriate. <a href="">Find out more about adjusting your EFAs</a>.</p>
+
+<!--
+
+  <p class="text">If you don't want to use something as an EFA (for example if it's already being used for another scheme), you can disable it.</p>
+
+  <p class="text">Not all sections of hedges or buffer strips are eligible as EFAs. You should adjust the EFA length accordingly.</p>
+
+
+  <dl class="text">
+    <dt class="bold-small">EFA length</dt>
+    <dd>The length to use as an EFA. You should adjust this down if some sections are ineligible.<dd>
+  </dl>
+-->
 
 
 <% end %>
