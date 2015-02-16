@@ -10,28 +10,52 @@ layout: layout-full-width
 
   <header class="page-header">
     <hgroup>
-      <h1>Check Ecological Focus Areas</h1>
+      <h1>Ecological Focus Areas (EFAs)</h1>
     </hgroup>
   </header>
 
   <!--<p class="heading-medium">Your total EFA area is 6.7 per cent of your arable land</p>-->
 
-  <p class="heading-medium">Your total EFA area is 4.2 per cent of your arable land</p>
+  <h2 class="heading-medium">Your total EFA area is 4.2% of your arable land</h2>
 
-  <p class="text">Under new EU regulations, farmers must ensure 5 per cent of their land is set aside as an Ecological Focus Area (EFA), instead of being used for farming.</p>
+  <p class="text">This does not meet the 5% greening requirement.</p>
+  <p>
+    <a href="/land">Add more EFAs to your land</a>.
+  </p>
 
-  <ul class="list-bullet">
-    <li><a href="/efa-info">Find out more about EFAs and how they're calculated</a></li>
-    <li><a href="/land">Add more EFAs to your land parcels</a></li>
+
+  <h2 class="heading-medium">Check your Ecological Focus Areas</h2>
+
+  <p class="text">
+    Use the table to deselect any features that you can't use as an EFA
+    or change the EFA length of any hedges.
+  </p>
+
+
+  <details class="text">
+    <summary>How to calculate the EFA length of a hedge</summary>
+    <div class="panel-indent">
+
+      <p>
+        The assumed EFA length is equivalent to one side of the hedge.
+      </p>
+      <p>
+        Increase this amount if you want to use the other side of the hedge as well,
+        or decrease the amount if parts of the hedge are not next to arable land.
+      </p>
+
+    </div>
+
+  </details>
+
+
+<!--
+
+  <ul>
+    <li></li>
+    <li></li>
   </ul>
-
-  <p>Use the table below to:</p>
-
-  <ul class="list-bullet">
-    <li>deselect any features that you can't use as an EFA</li>
-    <li>adjust the length of features that you can only use part of</li>
-  </ul>
-
+-->
 
 
   <form class="" method="post" action="/">
@@ -41,60 +65,64 @@ layout: layout-full-width
       <tr>
         <th class="parcel">Parcel</th>
         <th class="feature">Ecological Focus Area (EFA)</th>
-        <th class="feature-length numeric">Length</th>
-        <th class="feature-area numeric">Area</th>
-        <th class="efa-length numeric">EFA length</th>
-        <!--<th class="multiplier">EFA multiplier</th>-->
-        <th class="efa-area numeric">EFA area</th>
+        <th class="feature-length numeric">Length (m)</th>
+        <th class="feature-area numeric">Area (ha)</th>
+        <th class="efa-length numeric">EFA length (m)</th>
+        <th class="efa-area numeric">EFA area (ha)</th>
       </tr>
     </thead>
 
     <tbody>
       <!-- Start Parcel -->
-      <tr>
-        <th rowspan="3" scope="row" class="parcel-name"><a href="">Top field</a><br /><span class="parcel-ref">SR123456</span></th>
-        <td><label><input type="checkbox" checked> Hedge</label></td>
-        <td class="numeric"> 15.02 m </td>
+      <tr class="highlight">
+        <th rowspan="3" scope="row" class="parcel-name">Top field<br /><span class="parcel-ref">SR123456</span></th>
+        <td><label><input type="checkbox" checked class="js-select-row"> Hedge</label></td>
+        <td class="numeric"> 15.02 </td>
         <td class="numeric"> n/a </td>
-        <td class="numeric"> <input type="text" class="form-control" size=5 value="15.02"> m </td>
-        <td class="efa-area numeric">0.32 ha</td>
+        <td class="numeric"> <input type="text" class="form-control" size=5 value="15.02"></td>
+        <td class="efa-area numeric">0.32</td>
       </tr>
-      <tr>
-        <td><label><input type="checkbox" checked> Hedge</label></td>
-        <td class="numeric"> 12.23 m </td>
+      <tr class="highlight">
+        <td><label><input type="checkbox" checked class="feature-selected js-select-row"> Hedge</label></td>
+        <td class="numeric"> 12.23 </td>
         <td class="numeric"> n/a </td>
-        <td class="numeric"> <input type="text" class="form-control" size=5 value="12.23"> m </td>
-        <td class="efa-area numeric">0.24 ha</td>
+        <td class="numeric"> <input type="text" class="form-control" size=5 value="12.23"> </td>
+        <td class="efa-area numeric">0.24</td>
       </tr>
-      <tr>
-        <td><label><input type="checkbox" checked> Peas</label></td>
+      <tr class="highlight">
+        <td><label><input type="checkbox" checked class="js-select-row"> Peas</label></td>
         <td class="numeric">n/a</td>
-        <td class="numeric"> 6.4 ha </td>
+        <td class="numeric"> 6.4 </td>
         <td class="numeric">n/a</td>
-        <td class="efa-area numeric">5.20 ha</td>
+        <td class="efa-area numeric">5.20</td>
       </tr>
 
       <!-- Start Parcel -->
-      <tr>
-        <th rowspan="2" scope="row" class="parcel-name"><a href="">Bottom field<a/><br /><span class="parcel-ref">SR234567</span></th>
-        <td><label><input type="checkbox" checked> Buffer strip</label></td>
-        <td class="numeric"> 32.24 m </td>
+      <tr class="highlight">
+        <th rowspan="2" scope="row" class="parcel-name">Bottom field<br /><span class="parcel-ref">SR234567</span></th>
+        <td><label><input type="checkbox" checked class="js-select-row"> Buffer strip</label></td>
         <td class="numeric"> n/a </td>
-        <td class="numeric"> <input type="text" class="form-control" size=5 value="32.24"> m </td>
-        <td class="efa-area numeric">0.45 ha</td>
+        <td class="numeric"> 0.5 </td>
+        <td class="numeric"> n/a </td>
+        <td class="efa-area numeric">0.45</td>
       </tr>
 
-      <tr class="separator">
-        <td><label><input type="checkbox" checked> Radishes</label></td>
+      <tr class="separator highlight">
+        <td><label><input type="checkbox" checked class="js-select-row"> Radishes</label></td>
         <td class="numeric">n/a</td>
-        <td class="numeric"> 1.2 ha </td>
+        <td class="numeric"> 1.2 </td>
         <td class="numeric">n/a</td>
-        <td class="efa-area numeric">0.30 ha</td>
+        <td class="efa-area numeric">0.30</td>
       </tr>
 
       <tr class="total">
-        <th class="numeric" colspan=5>Total EFA area as a percentage of arable land</th>
-        <td class="efa-area numeric"><span class="bold-medium">4.2%</span></td>
+        <th class="numeric" colspan=5>Total EFA area as a percentage of arable land:</th>
+        <td class="efa-area numeric">
+          <div id="efa-percent" class="bold-medium js-hidden">4.2%</div>
+          <span id="calculate">
+            <span class="calculate-button js-toggle" data-hide="#calculate" data-show="#efa-percent">Calculate</span>
+          </span>
+        </td>
       </tr>
 
     </tbody>
