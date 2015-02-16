@@ -1,0 +1,131 @@
+---
+layout: layout-2-1-columns
+---
+
+<% content_for :breadcrumbs do %>
+  <p id="breadcrumb"><a href="/business/overview">Back to <%= data.business.name %></a></p>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Apply for basic payment scheme</h1>
+    </hgroup>
+  </header>
+
+  <h2 class="heading-medium">Basic eligibility</h2>
+
+  <div class="check-list">
+    <div class="done">
+      <h3 class="heading-small">Land and entitlments</h3>
+
+      <p><%= data.business.name %> has</p>
+
+      <ul class="list-bullet">
+        <li>over 5ha of land</li>
+        <li>over 5 entitlements</li>
+      </ul>
+    </div>
+
+    <div class="not-met">
+      <h3 class="heading-small">Land and entitlments</h3>
+
+      <p><%= data.business.name %> does not have enough entitlements.</p>
+
+      <p>If <%= data.business.name %> is owned by someone under 40 years old, or is new to farming you may be able to <a href="#">claim entitlements from the national reserve</a>.</p>
+
+      <p><a href="#">Transfer entitlements bought from another business</a>.</p>
+
+    </div>
+    <div class="done">
+      <h3 class="heading-small">Active farmer</h3>
+
+      <p><%= data.business.name %> is an active farming business.</p>
+    </div>
+
+    <div class="in-progress">
+      <h3 class="heading-small">Active farmer</h3>
+
+      <p>You need to <a href="#">tell us more about <%= data.business.name %>'s business activities</a>.</p>
+    </div>
+
+    <div class="not-met">
+      <h3 class="heading-small">Active farmer</h3>
+
+      <p><%= data.business.name %> isn't eligible because its main activity isn't farming. If you think it is eligible, or is exempt from the rules, call 03000 200 301.</p>
+    </div>
+
+    <div class="done">
+      <h3 class="heading-small">Land use</h3>
+
+      <p>100% of <%= data.business.name %>'s land use for 2015 has been declared.</p>
+    </div>
+
+    <div class="not-met">
+      <h3 class="heading-small">Land use</h3>
+
+      <p>You need to declare 100% of <a href="#"><%= data.business.name %>'s land use</a> before you can apply.</p>
+
+    </div>
+  </div>
+
+  <h2 class="heading-medium">Greening</h2>
+
+  <div class="check-list">
+    <div class="in-progress">
+      <h3 class="heading-small">Not enough land</h3>
+
+      <p>You need to declare the land use for 100% of <%= data.business.name %>'s land before we can calculate your greening requirements.</p>
+
+      <p><a href="#">Update your land use</a>.</p>
+    </div>
+    <div class="done">
+      <h3 class="heading-small">Crop diversification</h3>
+      <p>There are more than 3 eligibile crops being grown.</p>
+    </div>
+    <div class="not-met">
+      <h3 class="heading-small">Crop diversification</h3>
+      <p>As you have over 15ha of land you must grow more than 3 crops covering 90% of your land.</p>
+
+      <h3 class="heading-small">What you can do</h3>
+
+      <ul class="list-bullet">
+        <li><a href="#">update your land use</a></li>
+        <li><a href="#">request an exemption from the crop diversification rules</a></li>
+        <li>read more about the <a href="#">crop diversification requirements</a></li>
+      </ul>
+    </div>
+    <div class="done">
+      <h3 class="heading-small">Ecological focus areas (EFAs)</h3>
+      <p>Over 5% of <%= data.business.name %>'s land has been declared as EFAs.</p>
+
+      <p><a href="#">Select which EFAs to use</a>.</p>
+    </div>
+    <div class="not-met">
+      <h3 class="heading-small">Ecological focus areas (EFAs)</h3>
+      <p>Less than 5% of <%= data.business.name %>'s land has been declared as EFAs.</p>
+
+      <h3 class="heading-small">What you can do</h3>
+
+      <ul class="list-bullet">
+        <li><a href="#">select which EFAs to use</a></li>
+        <li><a href="#">use EFAs from your organic land</a></li>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="heading-medium">Apply for basic payment scheme</h2>
+
+    <p>As <%= data.business.name %> meets the requirements you may proceed with your application.</p>
+
+    <p>You must apply for BPS before 16 May 2015.</p>
+
+    <p><a class="button" href="/bps-application/application-summary">Apply for BPS</a></p>
+  </div>
+
+<% end %>
+
+<% content_for :column2 do %>
+
+<% end %>
