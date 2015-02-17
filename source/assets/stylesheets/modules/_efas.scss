@@ -63,14 +63,20 @@
     color: $secondary-text-colour;
   }
 
-  .separator{
-    border-bottom: 2px solid $black;
+  .total {
+
+    td, th{
+      border-top: 2px solid $black; 
+    }
+
+    .calculate-button{
+      @include button($grey-3);
+      margin: 0 0 5px 0
+    }
+
   }
 
-  .total .calculate-button{
-    @include button($grey-3);
-    margin: 0 0 5px 0
-  }
+
 
   #efa-percent{
     margin-bottom: 2px;

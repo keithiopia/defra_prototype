@@ -69,22 +69,31 @@ parcels:
       - use:    Hedge
         type:   hedge
         bps:    true
-        efa:    true
+        efa:    hedge
         cover:  Boundary feature
-        area:   0.56
+        featureLength: 152.6
+
+      - use:    Hedge
+        type:   hedge
+        bps:    true
+        efa:    hedge
+        cover:  Boundary feature
+        featureLength: 78.2
 
       - use:    Buffer strip
         type:   line
         bps:    true
-        efa:    true
+        efa:    bufferStrip
         cover:  Boundary feature
-        area:   0.67
+        featureLength: 146.2
+        area:   0.01
 
-      - use:
+      - use:    Clover
         type:   shape
-        cover:  Arable land
         bps:    true
-        area:   4.32
+        efa:    nitrogen
+        cover:  Boundary feature
+        area:   4.45
 
   - name:       The Fen
     status:     unchecked
@@ -125,6 +134,20 @@ parcels:
         cover:  Arable land
         bps:    true
         area:   4.32
+
+      - use:    Hedge
+        type:   hedge
+        bps:    true
+        efa:    hedge
+        cover:  Boundary feature
+        featureLength: 46.2
+
+      - use:    Hedge
+        type:   hedge
+        bps:    true
+        efa:    hedge
+        cover:  Boundary feature
+        featureLength: 46.2
 
   - name:
     status:     unchecked
