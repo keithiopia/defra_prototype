@@ -1,0 +1,88 @@
+.efa-table {
+  td, .form-control {
+    vertical-align: middle;
+    color: $secondary-text-colour;
+  }
+
+  .total td{
+    color: $text-colour;
+  }
+
+  tr.highlight{
+    td, th, .form-control{
+      color: $text-colour;
+    }
+  }
+
+  // column widths
+  .parcel {
+    width: 20%
+  }
+
+  .feature {
+    width: 30%;
+  }
+
+  .feature-length {
+    width: 12%;
+  }
+
+  .feature-area {
+    width: 12%;
+  }
+
+  .efa-length {
+    width: 14%;
+  }
+
+  .efa-area {
+    width: 12%;
+    padding-right: 0;
+  }
+
+
+
+
+
+  .parcel-name {
+    vertical-align: top;
+  }
+
+  .form-control {
+    @include core-16;
+    width: auto;
+  }
+
+
+  .parcel-ref {
+    font-weight: normal;
+    color: $secondary-text-colour;
+  }
+
+  .deselected td{
+    color: $secondary-text-colour;
+  }
+
+  .separator{
+    border-bottom: 2px solid $black;
+  }
+
+  .total .calculate-button{
+    @include button($grey-3);
+    margin: 0 0 5px 0
+  }
+
+  #efa-percent{
+    margin-bottom: 2px;
+  }
+
+}
+
+
+
+.icon-tick{
+  width: 30px;
+  height: 30px;
+  background-image: url(/assets/images/check-list-done.png);
+  background-size:  100%;
+}
