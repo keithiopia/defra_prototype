@@ -8,7 +8,7 @@ layout: layout-2-1-columns
 
 <% content_for :column1 do %>
 
-  <header class="page-header">
+  <header class="page-header" id="scheme-eligibility">
     <hgroup>
       <h1>Apply for basic payment scheme</h1>
     </hgroup>
@@ -17,8 +17,8 @@ layout: layout-2-1-columns
   <h2 class="heading-medium">Basic eligibility</h2>
 
   <div class="check-list">
-    <div class="done">
-      <h3 class="heading-small">Land and entitlments</h3>
+    <div class="done js-hidden" id="land-entitlements-pass">
+      <h3 class="heading-small">Land and entitlements</h3>
 
       <p><%= data.business.name %> has</p>
 
@@ -28,8 +28,8 @@ layout: layout-2-1-columns
       </ul>
     </div>
 
-    <div class="not-met">
-      <h3 class="heading-small">Land and entitlments</h3>
+    <div class="not-met js-hidden" id="land-entitlements-fail">
+      <h3 class="heading-small">Land and entitlements</h3>
 
       <p><%= data.business.name %> does not have enough entitlements.</p>
 
@@ -38,31 +38,31 @@ layout: layout-2-1-columns
       <p><a href="#">Transfer entitlements bought from another business</a>.</p>
 
     </div>
-    <div class="done">
+    <div class="done js-hidden" id="active-farmer-pass">
       <h3 class="heading-small">Active farmer</h3>
 
       <p><%= data.business.name %> is an active farming business.</p>
     </div>
 
-    <div class="in-progress">
+    <div class="in-progress js-hidden" id="active-farmer-undefined">
       <h3 class="heading-small">Active farmer</h3>
 
       <p>You need to <a href="#">tell us more about <%= data.business.name %>'s business activities</a>.</p>
     </div>
 
-    <div class="not-met">
+    <div class="not-met js-hidden" id="active-farmer-fail">
       <h3 class="heading-small">Active farmer</h3>
 
       <p><%= data.business.name %> isn't eligible because its main activity isn't farming. If you think it is eligible, or is exempt from the rules, call 03000 200 301.</p>
     </div>
 
-    <div class="done">
+    <div class="done js-hidden" id="land-use-pass">
       <h3 class="heading-small">Land use</h3>
 
       <p>100% of <%= data.business.name %>'s land use for 2015 has been declared.</p>
     </div>
 
-    <div class="not-met">
+    <div class="not-met js-hidden" id="land-use-fail">
       <h3 class="heading-small">Land use</h3>
 
       <p>You need to declare 100% of <a href="#"><%= data.business.name %>'s land use</a> before you can apply.</p>
@@ -73,20 +73,20 @@ layout: layout-2-1-columns
   <h2 class="heading-medium">Greening</h2>
 
   <div class="check-list">
-    <div class="in-progress">
+    <div class="in-progress js-hidden" id="greening-land-use-fail">
       <h3 class="heading-small">Not enough land</h3>
 
-      <p>You need to declare the land use for 100% of <%= data.business.name %>'s land before we can calculate your greening requirements.</p>
+      <p>You need to declare the land use for 80% of <%= data.business.name %>'s land before we can calculate your greening requirements.</p>
 
       <p><a href="#">Update your land use</a>.</p>
     </div>
-    <div class="done">
+    <div class="done js-hidden" id="crop-diversification-pass">
       <h3 class="heading-small">Crop diversification</h3>
-      <p>There are more than 3 eligibile crops being grown.</p>
+      <p>There are more than <span class="crop-diversification-number">3</span> eligibile crops being grown.</p>
     </div>
-    <div class="not-met">
+    <div class="not-met js-hidden" id="crop-diversification-fail">
       <h3 class="heading-small">Crop diversification</h3>
-      <p>As you have over 15ha of land you must grow more than 3 crops covering 90% of your land.</p>
+      <p>As you have over 15ha of land you must grow more than  <span class="crop-diversification-number">3</span> crops covering 90% of your land.</p>
 
       <h3 class="heading-small">What you can do</h3>
 
@@ -96,13 +96,13 @@ layout: layout-2-1-columns
         <li>read more about the <a href="#">crop diversification requirements</a></li>
       </ul>
     </div>
-    <div class="done">
+    <div class="done js-hidden" id="efa-pass">
       <h3 class="heading-small">Ecological focus areas (EFAs)</h3>
       <p>Over 5% of <%= data.business.name %>'s land has been declared as EFAs.</p>
 
       <p><a href="#">Select which EFAs to use</a>.</p>
     </div>
-    <div class="not-met">
+    <div class="not-met js-hidden" id="efa-fail">
       <h3 class="heading-small">Ecological focus areas (EFAs)</h3>
       <p>Less than 5% of <%= data.business.name %>'s land has been declared as EFAs.</p>
 
