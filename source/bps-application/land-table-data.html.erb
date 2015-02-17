@@ -14,7 +14,7 @@ end
 
 
 <% content_for :breadcrumbs do %>
-  <%= partial "partial-breadcrumbs-business" %>
+  <p id="breadcrumb"><a href="/bps-application">Back to application summary</a></p>
 <% end %>
 
 <% content_for :column1 do %>
@@ -71,7 +71,7 @@ end
       %>
 
       <!-- Start Parcel -->
-      <tr>
+      <tr id="parcel-<%= _parcel_id %>-<%= i %>">
         <% if i == 0 then %>
         <th rowspan="<%= _use_count + 1 %>" scope="row" class="parcel-name">
           <% if parcel.name != "" then %>
@@ -88,15 +88,17 @@ end
         <td>&nbsp;</td>
       </tr>
       <% end %>
-      <tr class="total">
+      <tr class="total" id="parcel-<%= _parcel_id %>-total">
         <td>&nbsp;</td>
-        <th id="parcel-<%= _parcel_id %>-total">Eligible area (ha)</th>
+        <th id="parcel-<%= _parcel_id %>-total-eligible-area">Eligible area (ha)</th>
         <td class="numeric" headers="parcel-<%= _parcel_id %>-total"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
         <th id="parcel-<%= _parcel_id %>-activated">Activated area (ha)</th>
-        <td class="numeric" headers="parcel-<%= _parcel_id %>-activated"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
-        <td><a href="#">Edit</a></td>
+        <td class="numeric" headers="parcel-<%= _parcel_id %>-activated">
+          <span class="js-entitlements-display" id="parcel-<%= _parcel_id %>-display"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></span>
+          <input class="form-control js-entitlements-input js-hidden" type="text" value="<%= sprintf('%.2f', parcel.eligible_area.to_f) %>" id="parcel-<%= _parcel_id %>-input" />
+        </td>
+        <td><a href="#" class="js-toggle-entitlements" data-toggle="show">Edit</a></td>
       </tr>
-      <% puts parcel %>
       <% end %>
     </tbody>
   </table>
@@ -109,7 +111,7 @@ end
         <th class="land-use">Total eligible area</th>
         <th class="land-area numeric"><%= sprintf('%.2f', max_area) %></th>
         <th class="notes">Total activated area</th>
-        <th class="active-entitlements numeric"><%= sprintf('%.2f', max_area) %></th>
+        <th class="active-entitlements numeric" id="active-entitlements-total"><%= sprintf('%.2f', max_area) %></th>
         <th class="edit">&nbsp;</th>
       </tr>
       <tr class="total">
@@ -123,7 +125,6 @@ end
       </tr>
     </tbody>
   </table>
-
 
   <p><a href="#" class="button">Save and continue</a></p>
 

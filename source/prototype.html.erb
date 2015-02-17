@@ -51,20 +51,63 @@ layout: layout-2-1-columns
     <li><a href="land-long">Version with filtering, for businesses with lots of land parcels</a></li>
   </ul>
 
-  <h2 class="heading-medium">Business Activities</h2>
+  <h2 class="heading-medium" id="eligibility">Eligibility</h2>
+
+  <h3 class="heading-small">Land and entitlements</h3>
 
   <ul class="list-bullet">
-    <li><a href="#" id="js-set-land-yes">Set land to &gt;5ha</a></li>
-    <li><a href="#" id="js-set-land-no">Set land to &lt;5ha</a></li>
-    <li><a href="#" id="js-set-entitlements-yes">Set entitlements to &gt;5</a></li>
-    <li><a href="#" id="js-set-entitlements-no">Set entitlements to &lt;5</a></li>
-    <li><a href="#" id="js-clear-cookies">Clear cookies</a></li>
-
+    <li><a href="#" class="js-set-land" data-value="3">Set land to 3ha</a></li>
+    <li><a href="#" class="js-set-land" data-value="5">Set land to 5ha</a></li>
+    <li><a href="#" class="js-set-land" data-value="10">Set land to 10ha</a></li>
+    <li><a href="#" class="js-set-land" data-value="15">Set land to 15ha</a></li>
+    <li><a href="#" class="js-set-land" data-value="30">Set land to 30ha</a></li>
+    <li><a href="#" class="js-set-entitlements" data-value="3">Set entitlements to 3</a></li>
+    <li><a href="#" class="js-set-entitlements" data-value="5">Set entitlements to 5</a></li>
+    <li><a href="#" class="js-set-entitlements" data-value="10">Set entitlements to 10</a></li>
+    <li><a href="#" class="js-set-entitlements" data-value="15">Set entitlements to 15</a></li>
+    <li><a href="#" class="js-set-entitlements" data-value="30">Set entitlements to 30</a></li>
   </ul>
 
+  <h3 class="heading-small">Business activities</h3>
+
   <ul class="list-bullet">
-    <li><a href="business-january">Business page January version</a></li>
-    <li><a href="business-activities">Business activities page</a></li>
+    <li><a href="#" class="js-set-activities" data-value="null">Set activities to null</a></li>
+    <li><a href="#" class="js-set-activities" data-value="yes">Set activities to true</a></li>
+    <li><a href="#" class="js-set-activities" data-value="no">Set activities to false</a></li>
+  </ul>
+
+  <h3 class="heading-small">Declared land use</h3>
+
+  <ul class="list-bullet">
+    <li><a href="#" class="js-set-land-use" data-value="30">Set land use to 30%</a></li>
+    <li><a href="#" class="js-set-land-use" data-value="50">Set land use to 50%</a></li>
+    <li><a href="#" class="js-set-land-use" data-value="80">Set land use to 80%</a></li>
+    <li><a href="#" class="js-set-land-use" data-value="100">Set land use to 100%</a></li>
+  </ul>
+
+  <h3 class="heading-small">Number of crops</h3>
+
+  <ul class="list-bullet">
+    <li><a href="#" class="js-set-number-crops" data-value="1">Set number of crops to 1</a></li>
+    <li><a href="#" class="js-set-number-crops" data-value="2">Set number of crops to 2</a></li>
+    <li><a href="#" class="js-set-number-crops" data-value="3">Set number of crops to 3</a></li>
+    <li><a href="#" class="js-set-number-crops" data-value="5">Set number of crops to 5</a></li>
+  </ul>
+
+  <h3 class="heading-small">Declared EFAs</h3>
+
+  <ul class="list-bullet">
+    <li><a href="#" class="js-set-efas" data-value="3">Set declared EFAs to 3%</a></li>
+    <li><a href="#" class="js-set-efas" data-value="5">Set declared EFAs to 5%</a></li>
+    <li><a href="#" class="js-set-efas" data-value="10">Set declared EFAs to 10%</a></li>
+  </ul>
+
+  <h3 class="heading-small">Override</h3>
+  <p><a href="#" class="js-show-all-options">Show all options</a></p>
+
+  <h3 class="heading-small">Clear cookies</h3>
+  <ul class="list-bullet">
+    <li><a href="#" class="js-clear-cookies">Clear cookies</a></li>
   </ul>
 
 <% end %>
