@@ -63,7 +63,16 @@ function checkEligibility() {
       activeFarmer = GOVUK.getCookie('activitiesCookie'),
       declaredLand = GOVUK.getCookie('declaredLandCookie'),
       numberCrops  = GOVUK.getCookie('numberCropsCookie'),
-      declaredEFAs = GOVUK.getCookie('declaredEFAsCookie');
+      declaredEFAs = GOVUK.getCookie('declaredEFAsCookie')
+      showAll      = GOVUK.getCookie('showAllCookie');
+
+  // override
+  if (showAll == "true") {
+    console.log('showAll');
+    $('.js-hidden').removeClass('js-hidden');
+    return true;
+  }
+
 
   // set defaults
   if (totalLand == null) totalLand = 0;
@@ -227,6 +236,13 @@ $('.js-set-efas').on('click', function(e) {
 
   alert('Declared EFAs set to ' + $el.data('value')+'%');
 });
+
+$('.js-show-all-options').on('click', function(e) {
+  e.preventDefault();
+  GOVUK.setCookie('showAllCookie', true);
+
+  alert('Show all options set');
+})
 
 
 $('.js-clear-cookies').on('click', function(e) {
