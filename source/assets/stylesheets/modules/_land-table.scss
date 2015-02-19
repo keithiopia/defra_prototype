@@ -29,7 +29,7 @@
   }
 
   .edit {
-    widows: 8%;
+    width: 8%;
   }
 
   // CPH header rows
@@ -38,7 +38,7 @@
   }
 
   .parcel-name {
-    // border-bottom-color: $black;
+    border-bottom-color: $black;
   }
 
   .parcel-ref {
@@ -46,13 +46,24 @@
     color: $secondary-text-colour;
   }
 
+  .active-entitlements-edit {
+    font-weight: normal;
+  }
+
   // total rows
   .total {
     td, th {
-      // border-bottom-color: $black;
+      border-bottom-color: $black;
     }
     td {
       font-weight: bold;
+    }
+  }
+
+  .ineligible {
+    td {
+      color: $secondary-text-colour;
+      background-color: $highlight-colour;
     }
   }
 
@@ -60,6 +71,7 @@
     text-align: right;
     font-size: 16px;
     width: 100%;
+    margin: -10px 0;
   }
 
 }

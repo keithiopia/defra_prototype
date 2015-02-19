@@ -4,8 +4,7 @@ var showInput = function($el) {
     $display = $row.find('.js-entitlements-display');
 
   $display.addClass('js-hidden');
-  $input.removeClass('js-hidden');
-
+  $input.removeClass('js-hidden').focus();
   $el.text('Save').data('toggle', 'hide');
 }
 
