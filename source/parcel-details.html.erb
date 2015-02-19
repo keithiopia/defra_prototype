@@ -10,8 +10,8 @@ definedArea = 0
 eligibleArea = 0
 if parcel.uses
   parcel.uses.each do |f|
-    definedArea += f.area
-    eligibleArea += f.area if f.bps
+    definedArea += f.area if f.area
+    eligibleArea += f.area if f.bps and f.area
   end
 end
 definedArea = definedArea.round(2)
@@ -95,10 +95,10 @@ end
           <% end %>
         </td>
         <td class="area">
-          <% if f.area > 0 %>
+          <% if f.area %>
             <%= f.area %>ha
           <% elsif %>
-
+              n/a
           <% end %>
         </td>
         <td class="remove"><a href="/<%= parcel.id %>/remove-feature?land-use=<%= f.use %>&land-use-type=<%= f.type %>" title="Remove this feature">Remove</a></td>

@@ -2,6 +2,50 @@
 layout: layout-full-width
 ---
 
+<%
+
+# CALCULATE TOTAL AREAS #
+
+totalArea = 0
+totalEligibleArea = 0
+totalefaArea = 0
+
+data.business.parcels.each do |f|
+
+  # Add parcel areas
+  totalArea += f.area
+  if f.uses
+    f.uses.each do |f|
+
+      # Add BPS eligible areas
+      if f.area
+        totalEligibleArea += f.area if f.bps
+      end
+      
+      # Calculate and add EFA areas
+      if f.efa
+        case f.efa
+          when "hedge"
+            efaArea = 10 * f.featureLength / 10000
+          when "bufferStrip"
+            efaArea = 9 * f.featureLength / 10000
+          when "nitrogen"
+            efaArea = 0.3 * f.area
+          else
+            efaArea = f.area
+        end
+        totalefaArea += efaArea
+      end
+
+    end
+  end
+end
+
+efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
+
+%>
+
+
 <% content_for :breadcrumbs do %>
   <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
 <% end %>
@@ -14,11 +58,13 @@ layout: layout-full-width
     </hgroup>
   </header>
 
-  <!--<p class="heading-medium">Your total EFA area is 6.7 per cent of your arable land</p>-->
+  <h2 class="heading-medium">Your total EFA area is currently <%= efaTarget.round(2) %>% of your arable land</h2>
 
-  <h2 class="heading-medium">Your total EFA area is 4.2% of your arable land</h2>
-
+<% if efaTarget < 5 %>
   <p class="text">This does not meet the 5% greening requirement.</p>
+<% else %>
+  <p class="text">This meets the 5% greening requirement.</p>
+<% end %>
 
   <ul class="list-bullet">
     <li>
@@ -56,15 +102,6 @@ layout: layout-full-width
   </details>
 
 
-<!--
-
-  <ul>
-    <li></li>
-    <li></li>
-  </ul>
--->
-
-
   <form class="" method="post" action="/">
 
   <table class="efa-table">
@@ -78,54 +115,82 @@ layout: layout-full-width
         <th class="efa-area numeric">EFA area (ha)</th>
       </tr>
     </thead>
-
     <tbody>
-      <!-- Start Parcel -->
-      <tr class="highlight">
-        <th rowspan="3" scope="row" class="parcel-name">Top field<br /><span class="parcel-ref">SR123456</span></th>
-        <td><label><input type="checkbox" checked class="js-select-row"> Hedge</label></td>
-        <td class="numeric"> 15.02 </td>
-        <td class="numeric"> n/a </td>
-        <td class="numeric"> <input type="text" class="form-control" size=5 value="15.02"></td>
-        <td class="efa-area numeric">0.32</td>
-      </tr>
-      <tr class="highlight">
-        <td><label><input type="checkbox" checked class="feature-selected js-select-row"> Hedge</label></td>
-        <td class="numeric"> 12.23 </td>
-        <td class="numeric"> n/a </td>
-        <td class="numeric"> <input type="text" class="form-control" size=5 value="12.23"> </td>
-        <td class="efa-area numeric">0.24</td>
-      </tr>
-      <tr class="highlight">
-        <td><label><input type="checkbox" checked class="js-select-row"> Peas</label></td>
-        <td class="numeric">n/a</td>
-        <td class="numeric"> 6.4 </td>
-        <td class="numeric">n/a</td>
-        <td class="efa-area numeric">5.20</td>
-      </tr>
 
-      <!-- Start Parcel -->
-      <tr class="highlight">
-        <th rowspan="2" scope="row" class="parcel-name">Bottom field<br /><span class="parcel-ref">SR234567</span></th>
-        <td><label><input type="checkbox" checked class="js-select-row"> Buffer strip</label></td>
-        <td class="numeric"> n/a </td>
-        <td class="numeric"> 0.5 </td>
-        <td class="numeric"> n/a </td>
-        <td class="efa-area numeric">0.45</td>
-      </tr>
+      <% 
+      data.business.parcels.each do |p|
 
-      <tr class="separator highlight">
-        <td><label><input type="checkbox" checked class="js-select-row"> Radishes</label></td>
-        <td class="numeric">n/a</td>
-        <td class="numeric"> 1.2 </td>
-        <td class="numeric">n/a</td>
-        <td class="efa-area numeric">0.30</td>
+          numEFAs = 0
+          if p.uses
+            p.uses.each do |u|
+              numEFAs += 1 if u.efa         
+            end
+          end
+
+          if numEFAs > 0
+            efaNum = 1
+            p.uses.each do |u|
+              if u.efa
+      %>
+
+      <tr class="highlight">
+
+        <% if efaNum == 1 %>
+        <th rowspan="<%= numEFAs %>" scope="row" class="parcel-name">
+          <%= (p.name ? p.name : "Untitled") %><br />
+          <span class="parcel-ref"><%= p.id %></span>
+        </th>
+        <% end %>
+
+        <td><label><input type="checkbox" checked class="feature-selected js-select-row"> 
+
+          <%= u.use %>
+
+        </label></td>
+        <td class="numeric"> 
+          <%= (u.featureLength ? u.featureLength : "n/a") %> 
+        </td>
+        <td class="numeric">
+          <%= (u.area ? u.area : "n/a") %> 
+        </td>
+        <td class="numeric"> 
+          <% if u.featureLength %>
+          <input type="text" class="form-control" size=5 value="<%= u.featureLength %>"> 
+          <% else %>
+            n/a
+          <% end %>
+        </td>
+        <td class="efa-area numeric">
+
+          <%
+            case u.efa
+              when "hedge"
+                efaArea = 10 * u.featureLength / 10000
+              when "bufferStrip"
+                efaArea = 9 * u.featureLength / 10000
+              when "nitrogen"
+                efaArea = 0.3 * u.area
+              else
+                efaArea = u.area
+            end
+          %>
+          <%= efaArea.round(2) %>
+
+        </td>
       </tr>
+      <%
+
+              efaNum +=1 
+            end      
+          end
+        end
+      end 
+      %>
 
       <tr class="total">
         <th class="numeric" colspan=5>Total EFA area as a percentage of arable land:</th>
         <td class="efa-area numeric">
-          <div id="efa-percent" class="bold-medium js-hidden">4.2%</div>
+          <div id="efa-percent" class="bold-medium js-hidden"><%= efaTarget.round(2) %>%</div>
           <span id="calculate">
             <span class="calculate-button js-toggle" data-hide="#calculate" data-show="#efa-percent">Calculate</span>
           </span>
