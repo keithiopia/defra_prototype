@@ -13,7 +13,7 @@ parcels:
         efa:  n
         eligible: y
       - use:  Non-agricultural area
-        area: 0
+        area: 0.09
         efa:  n
         eligible: n
   - name: FREDS

@@ -4,16 +4,16 @@
   }
 
   // column widths
-  .parcel-reference {
-    width: 18%
+  .pacel-name {
+    width: 14%;
   }
 
-  .land-cover {
-    width: 18%;
+  .parcel-ref {
+    width: 14%
   }
 
   .land-use {
-    width: 18%;
+    width: 22%;
   }
 
   .land-area {
@@ -21,7 +21,7 @@
   }
 
   .notes {
-    width: 18%;
+    width: 22%;
   }
 
   .active-entitlements {
@@ -42,8 +42,13 @@
   }
 
   .parcel-ref {
-    font-weight: normal;
-    color: $secondary-text-colour;
+    border-bottom-color: $black;
+  }
+
+  thead {
+    .parcel-ref, .parcel-name {
+      border-bottom-color: $border-colour;
+    }
   }
 
   .active-entitlements-edit {
@@ -64,6 +69,11 @@
     td {
       color: $secondary-text-colour;
       background-color: $highlight-colour;
+    }
+
+    .parcel-ref {
+      color: $black;
+      background-color: transparent;
     }
   }
 
