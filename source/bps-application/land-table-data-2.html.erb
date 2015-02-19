@@ -1,0 +1,139 @@
+---
+layout: layout-full-width
+---
+
+<%
+
+# Calculate totals
+max_area = 0
+data.land_table_2.parcels.each do |parcel|
+  max_area += parcel.eligible_area.to_f
+end
+
+%>
+
+
+<% content_for :breadcrumbs do %>
+  <p id="breadcrumb"><a href="/bps-application">Back to application summary</a></p>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Activate your entitlements</h1>
+    </hgroup>
+  </header>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p>Assign your entitlements to your eligible land.</p>
+    </div>
+  </div>
+
+  <table class="land-table">
+    <thead>
+      <tr>
+        <th class="parcel-reference">Parcel reference</th>
+        <th class="land-cover">Land cover</th>
+        <th class="land-use">Land use</th>
+        <th class="land-area numeric">Area (<abbr title="hectares">ha</abbr>)</th>
+        <th class="notes">Notes</th>
+        <th class="active-entitlements numeric">&nbsp;</th>
+        <th class="edit">&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%
+      new_cph = ""
+
+      data.land_table_2.parcels.each do |parcel|
+
+        _parcel_id = parcel.id.gsub(/\s+/, "").downcase
+        if (parcel.cph != new_cph) then
+      %>
+      <!-- Start CPH -->
+      <tr class="cph-header">
+        <th colspan="7">CPH <%= parcel.cph %></th>
+      </tr>
+      <%
+        end
+
+        new_cph = parcel.cph;
+      %>
+
+      <%
+        # count uses
+        _use_count = parcel.uses.length
+
+        parcel.uses.each_with_index do |land_use, i|
+      %>
+
+      <!-- Start Parcel -->
+      <tr id="parcel-<%= _parcel_id %>-<%= i %>"<% if land_use.eligible == "n" %> class="ineligible"<% end %>>
+        <% if i == 0 then %>
+        <th rowspan="<%= _use_count + 2 %>" scope="row" class="parcel-name">
+          <% if parcel.name != "" then %>
+            <%= parcel.name %><br />
+          <% end %>
+          <span class="parcel-ref"><%= parcel.id %></span>
+        </th>
+        <% end %>
+        <td><%= land_use.cover %></td>
+        <td><%= land_use.use %></td>
+        <td class="numeric"><%= sprintf('%.2f', land_use.area.to_f) %></td>
+        <td><% if land_use.eligible == "n" %>Ineligible<% else %>&nbsp;<% end %></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <% end %>
+      <tr class="total">
+        <td>&nbsp;</td>
+        <th id="parcel-<%= _parcel_id %>-total">Parcel size (ha)</th>
+        <td class="numeric"><%= sprintf('%.2f', parcel.area.to_f) %></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="total">
+        <td>&nbsp;</td>
+        <th id="parcel-<%= _parcel_id %>-total-eligible-area">Verified eligible area (ha)</th>
+        <td class="numeric" headers="parcel-<%= _parcel_id %>-total"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
+        <th id="parcel-<%= _parcel_id %>-activated">Activated area (ha)</th>
+        <td class="numeric" headers="parcel-<%= _parcel_id %>-activated">
+          <span class="js-entitlements-display" id="parcel-<%= _parcel_id %>-display"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></span>
+          <input class="form-control js-entitlements-input js-hidden" type="text" value="<%= sprintf('%.2f', parcel.eligible_area.to_f) %>" id="parcel-<%= _parcel_id %>-input" />
+        </td>
+        <td><a href="#" class="js-toggle-entitlements active-entitlements-edit" data-toggle="show">Edit</a></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <table class="land-table">
+    <tbody>
+      <tr class="total">
+        <th class="parcel-reference">&nbsp;</th>
+        <th class="land-cover">&nbsp;</th>
+        <th class="land-use">Total eligible area (ha)</th>
+        <th class="land-area numeric"><%= sprintf('%.2f', max_area) %></th>
+        <th class="notes">Total activated area (ha)</th>
+        <th class="active-entitlements numeric" id="active-entitlements-total"><%= sprintf('%.2f', max_area) %></th>
+        <th class="edit">&nbsp;</th>
+      </tr>
+      <tr class="total">
+        <th class="parcel-reference">&nbsp;</th>
+        <th class="land-cover">&nbsp;</th>
+        <th class="land-use">Available entitlements</th>
+        <th class="land-area numeric">245.00</th>
+        <th class="notes">Activated entitlements</th>
+        <th class="active-entitlements numeric"><%= sprintf('%.2f', max_area) %></th>
+        <th class="edit">&nbsp;</th>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a href="#" class="button">Save and continue</a></p>
+
+<% end %>

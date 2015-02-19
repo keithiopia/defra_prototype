@@ -1,0 +1,486 @@
+name: J&R MORRIS & SON
+sbi: 106221627
+
+parcels:
+  - name: BYF
+    id:   SU1234 8747
+    cph:  02/123/1234
+    area: 3.09
+    eligible_area: 3
+    uses:
+      - use:  Spring wheat
+        area: 3
+        efa:  n
+        eligible: y
+      - use:  Non-agricultural area
+        area: 0
+        efa:  n
+        eligible: n
+  - name: FREDS
+    id:   SU1234 9365
+    cph:  02/123/1234
+    area: 6.67
+    eligible_area: 6.61
+    uses:
+      - use:  Spring wheat
+        area: 5.71
+        efa:  n
+        eligible: y
+      - use:  Temporary grass
+        area: 0.9
+        efa:  n
+        eligible: y
+  - name: POORSLOT
+    id:   SU1235 2843
+    cph:  02/123/1234
+    area: 4.97
+    eligible_area: 4.97
+    uses:
+      - use:  Spring wheat
+        area: 4.97
+        efa:  n
+        eligible: y
+  - name: CATH
+    id:   SU1235 4938
+    cph:  02/123/1234
+    area: 3.72
+    eligible_area: 3.72
+    uses:
+      - use:  Spring wheat
+        area: 3.72
+        efa:  n
+        eligible: y
+  - name: SMITH
+    id:   SU1235 7641
+    cph:  02/123/1234
+    area: 16.91
+    eligible_area: 16.89
+    uses:
+      - use:  Spring wheat
+        area: 16.82
+        efa:  n
+        eligible: y
+      - use:  Buffer strip
+        area: 0.01
+        efa:  y
+        eligible: y
+  - name: PLANK
+    id:   SU1235 0143
+    cph:  02/123/1234
+    area: 9.36
+    eligible_area: 9.36
+    uses:
+      - use:  Spring barley
+        area: 3.86
+        efa:  n
+        eligible: y
+      - use:  Spring barley
+        area: 5.5
+        efa:  n
+        eligible: y
+  - name: BSH
+    id:   SU1235 3947
+    cph:  02/123/1234
+    area: 5.03
+    eligible_area: 4.83
+    uses:
+      - use:  Spring barley
+        area: 4.8
+        efa:  n
+        eligible: y
+  - name: GROUSE
+    id:   SU1235 5861
+    cph:  02/123/1234
+    area: 3.23
+    eligible_area: 3.23
+    uses:
+      - use:  Permanent grass
+        area: 3.21
+        efa:  n
+        eligible: y
+  - name: CASTLE
+    id:   SU1235 7969
+    cph:  02/123/1234
+    area: 6.9
+    eligible_area: 6.9
+    uses:
+      - use:  Temporary grass
+        area: 6.9
+        efa:  n
+        eligible: y
+  - name: LAWN
+    id:   SU1235 9599
+    cph:  02/123/1234
+    area: 0.47
+    eligible_area: 0.47
+    uses:
+      - use:  Permanent grass
+        area: 0.2
+        efa:  n
+        eligible: y
+  - name: TIME
+    id:   SU1236 1091
+    cph:  02/123/1234
+    area: 14.28
+    eligible_area: 14.28
+    uses:
+      - use:  Temporary grass
+        area: 14.23
+        efa:  n
+        eligible: y
+  - name: CHRCH
+    id:   SU1236 1658
+    cph:  02/123/1234
+    area: 4.88
+    eligible_area: 4.88
+    uses:
+      - use:  Temporary grass
+        area: 4.83
+        efa:  n
+        eligible: y
+  - name: NRCORNER
+    id:   SU1236 1720
+    cph:  02/123/1234
+    area: 4.71
+    eligible_area: 4.71
+    uses:
+      - use:  Oilseed - spring
+        area: 4.71
+        efa:  n
+        eligible: y
+  - name: PHIL
+    id:   SU1236 3645
+    cph:  02/123/1234
+    area: 7.19
+    eligible_area: 7.19
+    uses:
+      - use:  Permanent grass
+        area: 7.14
+        efa:  n
+        eligible: y
+  - name: HILL
+    id:   SU1236 3867
+    cph:  02/123/1234
+    area: 5.74
+    eligible_area: 5.74
+    uses:
+      - use:  Temporary grass
+        area: 5.74
+        efa:  n
+        eligible: y
+  - name: MID
+    id:   SU1236 4225
+    cph:  02/123/1234
+    area: 5.35
+    eligible_area: 5.35
+    uses:
+      - use:  Oilseed - spring
+        area: 5.35
+        efa:  n
+        eligible: y
+  - name: JANE
+    id:   SU1236 5930
+    cph:  02/123/1234
+    area: 2.82
+    eligible_area: 2.82
+    uses:
+      - use:  Oilseed - spring
+        area: 2.82
+        efa:  n
+        eligible: y
+  - name: CLERK
+    id:   SU1236 6081
+    cph:  02/123/1234
+    area: 6.41
+    eligible_area: 6.2
+    uses:
+      - use:  Temporary grass
+        area: 5.58
+        efa:  n
+        eligible: y
+  - name: TOM
+    id:   SU1236 6559
+    cph:  02/123/1234
+    area: 4.56
+    eligible_area: 4.56
+    uses:
+      - use:  Permanent grass
+        area: 4.51
+        efa:  n
+        eligible: y
+  - name: LAWN
+    id:   SU1236 9816
+    cph:  02/123/1234
+    area: 1.93
+    eligible_area: 1.93
+    uses:
+      - use:  Permanent grass
+        area: 1.9
+        efa:  n
+        eligible: y
+  - name: TOP
+    id:   SU1237 1323
+    cph:  02/123/1234
+    area: 7.41
+    eligible_area: 7.41
+    uses:
+      - use:  Spring wheat
+        area: 7.41
+        efa:  n
+        eligible: y
+  - name: 3RD
+    id:   SU1237 4042
+    cph:  02/123/1234
+    area: 12.01
+    eligible_area: 12
+    uses:
+      - use:  Spring wheat
+        area: 12
+        efa:  n
+        eligible: y
+      - use:  Non-agricultural area
+        area: 0
+        efa:  n
+        eligible: n
+  - name: 3RD
+    id:   SU1237 6127
+    cph:  02/123/1234
+    area: 11.01
+    eligible_area: 11.01
+    uses:
+      - use:  Oilseed - spring
+        area: 11
+        efa:  n
+        eligible: y
+  - name: 1ST
+    id:   SU1237 8618
+    cph:  02/123/1234
+    area: 6.88
+    eligible_area: 6.82
+    uses:
+      - use:  Temporary grass
+        area: 6.82
+        efa:  n
+        eligible: y
+  - name: LARGE
+    id:   SU1238 0575
+    cph:  02/123/1234
+    area: 7.03
+    eligible_area: 6.95
+    uses:
+      - use:  Permanent grass
+        area: 6.95
+        efa:  n
+        eligible: y
+  - name: ALLOT
+    id:   SU1238 1350
+    cph:  02/123/1234
+    area: 1.8
+    eligible_area: 1.8
+    uses:
+      - use:  Permanent grass
+        area: 1.8
+        efa:  n
+        eligible: y
+  - name: DAIRY
+    id:   SU1238 4590
+    cph:  02/123/1234
+    area: 4.91
+    eligible_area: 4.8
+    uses:
+      - use:  Temporary grass
+        area: 4.8
+        efa:  n
+        eligible: y
+      - use:  Buffer strip
+        area: 0.06
+        efa:  y
+        eligible: y
+  - name: BRIDGET
+    id:   SU1238 7884
+    cph:  02/123/1234
+    area: 1.68
+    eligible_area: 1.68
+    uses:
+      - use:  Oilseed - spring
+        area: 1.68
+        efa:  n
+        eligible: y
+      - use:  Buffer strip
+        area: 0.01
+        efa:  y
+        eligible: y
+      - use:  Oilseed - spring
+        area: 9.21
+        efa:  n
+        eligible: y
+  - name: BARN
+    id:   SU1239 0602
+    cph:  02/123/1234
+    area: 1.6
+    eligible_area: 1.57
+    uses:
+      - use:  Permanent grass
+        area: 1.57
+        efa:  n
+        eligible: y
+  - name: CRICKET
+    id:   SU1239 2222
+    cph:  02/123/1234
+    area: 2.77
+    eligible_area: 2.77
+    uses:
+      - use:  Permanent grass
+        area: 2.77
+        efa:  n
+        eligible: y
+  - name: TOPGRND
+    id:   SU1239 2307
+    cph:  02/123/1234
+    area: 1.46
+    eligible_area: 1.46
+    uses:
+      - use:  Permanent grass
+        area: 1.46
+        efa:  n
+        eligible: y
+      - use:  Maize
+        area: 5.79
+        efa:  n
+        eligible: y
+      - use: Hedge
+        area: 0.06
+        efa: y
+        eligible: y
+      - use:  Hedge
+        area: 0.015
+        efa:  y
+        eligible: y
+      - use:  Hedge
+        area: 0.02
+        efa:  y
+        eligible: y
+  - name: WHITE
+    id:   SU1239 6729
+    cph:  02/123/1234
+    area: 1.84
+    eligible_area: 1.84
+    uses:
+      - use:  Permanent grass
+        area: 1.84
+        efa:  n
+        eligible: y
+  - name: WHITEGATE
+    id:   SU1239 6810
+    cph:  02/123/1234
+    area: 6.69
+    eligible_area: 6.69
+    uses:
+      - use:  Oilseed - spring
+        area: 6.69
+        efa:  n
+        eligible: y
+  - name: POND
+    id:   SU1240 9092
+    cph:  02/123/1234
+    area: 3.45
+    eligible_area: 3.41
+    uses:
+      - use:  Temporary grass
+        area: 3.41
+        efa:  n
+        eligible: y
+  - name: BIGPOND
+    id:   SU1241 1272
+    cph:  02/123/1234
+    area: 9.8
+    eligible_area: 9.8
+    uses:
+      - use:  Temporary grass
+        area: 9.6
+        efa:  n
+        eligible: y
+  - name: HMF
+    id:   SU1241 2790
+    cph:  02/123/1234
+    area: 3.44
+    eligible_area: 3.44
+    uses:
+      - use:  Oilseed - spring
+        area: 3.34
+        efa:  n
+        eligible: y
+  - name: FR
+    id:   SU1241 2976
+    cph:  02/123/1234
+    area: 0.34
+    eligible_area: 0
+    uses:
+      - use:  Woodland block
+        area: 0
+        efa:  n
+        eligible: n
+  - name: CASTLE
+    id:   SU1241 4250
+    cph:  02/123/1234
+    area: 12.43
+    eligible_area: 12.43
+    uses:
+      - use:  Fallow
+        area: 12.43
+        efa:  y
+        eligible: y
+  - name: 30 ACRE
+    id:   SU1241 6165
+    cph:  02/123/1234
+    area: 8.93
+    eligible_area: 8.79
+    uses:
+      - use:  Beans
+        area: 8.79
+        efa:  y
+        eligible: y
+  - name: 20 ACRE
+    id:   SU1241 6933
+    cph:  02/123/1234
+    area: 11.55
+    eligible_area: 11.51
+    uses:
+      - use:  Temporary grass
+        area: 11.31
+        efa:  n
+        eligible: y
+  - name: BALLOON
+    id:   SU1241 7807
+    cph:  02/123/1234
+    area: 6.03
+    eligible_area: 6.03
+    uses:
+      - use:  Temporary grass
+        area: 6.03
+        efa:  n
+        eligible: y
+      - use:  Temporary grass
+        area: 3.77
+        efa:  n
+        eligible: y
+  - name: PAUL
+    id:   SU1242 1829
+    cph:  02/123/1234
+    area: 6.18
+    eligible_area: 6.18
+    uses:
+      - use:  Oilseed - spring
+        area: 6.18
+        efa:  n
+        eligible: y
+  - name: TPCASTLE
+    id:   SU1242 2405
+    cph:  02/123/1234
+    area: 4.53
+    eligible_area: 4.53
+    uses:
+      - use:  Temporary grass
+        area: 4.43
+        efa:  n
+        eligible: y
