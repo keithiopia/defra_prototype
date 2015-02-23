@@ -54,52 +54,26 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
 
   <header class="page-header">
     <hgroup>
-      <h1>Ecological Focus Areas (EFAs)</h1>
+      <h1>Ecological focus areas (EFAs)</h1>
     </hgroup>
   </header>
 
-  <h2 class="heading-medium">Your total EFA area is currently <%= efaTarget.round(2) %>% of your arable land</h2>
+  <h2 class="heading-medium"><%= efaTarget.round(2) %>% of your arable land qualifies as an ecological focus area.</h2>
 
 <% if efaTarget < 5 %>
-  <p class="text">This does not meet the 5% greening requirement.</p>
+  <p class="text">You need another <%= 5 - efaTarget.round(2) %>% EFAs before you meet the greening requirement of 5%. <a href="/land">Add more EFAs to your land</a>.</p>
 <% else %>
-  <p class="text">This meets the 5% greening requirement.</p>
+  <p class="text">You meet the greening requirement of having at least 5% EFAs.</p>
 <% end %>
 
-  <ul class="list-bullet">
-    <li>
-      <a href="/land">Find out more about EFAs</a>
-    </li>
-    <li>
-      <a href="/land">Add more EFAs to your land</a>
-    </li>
-  </ul>
+ 
 
 
-  <h2 class="heading-medium">Check your Ecological Focus Areas</h2>
+  <h2 class="heading-medium">Check your ecological focus areas</h2>
 
   <p class="text">
-    Use the table to deselect features that you can't use as an EFA
-    or change the EFA length of hedges.
+    Deselect features or land uses that you're already using to claim from other schemes.
   </p>
-
-
-  <details class="text">
-    <summary>How to calculate the EFA length of a hedge</summary>
-    <div class="panel-indent">
-
-      <p>
-        Include parts of each side of the hedge that you manage.<br>
-        Don't include parts of the hedge that are not next to arable land.<br>
-      </p>
-      <p>
-        If you've drawn the same hedge twice in neighbouring parcels only include one side of each.
-        We've assumed this for the initial calculation.
-      </p>
-
-    </div>
-
-  </details>
 
 
   <form class="" method="post" action="/">
@@ -188,7 +162,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
       %>
 
       <tr class="total">
-        <th class="numeric" colspan=5>Total EFA area as a percentage of arable land:</th>
+        <th class="numeric" colspan=5>Total EFA area:</th>
         <td class="efa-area numeric">
           <div id="efa-percent" class="bold-medium js-hidden"><%= efaTarget.round(2) %>%</div>
           <span id="calculate">
