@@ -21,7 +21,7 @@ data.business.parcels.each do |f|
       if f.area
         totalEligibleArea += f.area if f.bps
       end
-      
+
       # Calculate and add EFA areas
       if f.efa
         case f.efa
@@ -66,7 +66,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
   <p class="text">You meet the greening requirement of having at least 5% EFAs.</p>
 <% end %>
 
- 
+
 
 
   <h2 class="heading-medium">Check your ecological focus areas</h2>
@@ -85,19 +85,21 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
         <th class="feature">Ecological Focus Area (EFA)</th>
         <th class="feature-length numeric">Length (m)</th>
         <th class="feature-area numeric">Area (ha)</th>
+        <!--
         <th class="efa-length numeric">EFA length (m)</th>
+      -->
         <th class="efa-area numeric">EFA area (ha)</th>
       </tr>
     </thead>
     <tbody>
 
-      <% 
+      <%
       data.business.parcels.each do |p|
 
           numEFAs = 0
           if p.uses
             p.uses.each do |u|
-              numEFAs += 1 if u.efa         
+              numEFAs += 1 if u.efa
             end
           end
 
@@ -116,24 +118,26 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
         </th>
         <% end %>
 
-        <td><label><input type="checkbox" checked class="feature-selected js-select-row"> 
+        <td><label><input type="checkbox" checked class="feature-selected js-select-row">
 
           <%= u.use %>
 
         </label></td>
-        <td class="numeric"> 
-          <%= (u.featureLength ? u.featureLength : "n/a") %> 
+        <td class="numeric">
+          <%= (u.featureLength ? u.featureLength : "n/a") %>
         </td>
         <td class="numeric">
-          <%= (u.area ? u.area : "n/a") %> 
+          <%= (u.area ? u.area : "n/a") %>
         </td>
-        <td class="numeric"> 
+        <!--
+        <td class="numeric">
           <% if u.featureLength %>
-          <input type="text" class="form-control" size=5 value="<%= u.featureLength %>"> 
+          <input type="text" class="form-control" size=5 value="<%= u.featureLength %>">
           <% else %>
             n/a
           <% end %>
         </td>
+      -->
         <td class="efa-area numeric">
 
           <%
@@ -154,19 +158,19 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
       </tr>
       <%
 
-              efaNum +=1 
-            end      
+              efaNum +=1
+            end
           end
         end
-      end 
+      end
       %>
 
       <tr class="total">
-        <th class="numeric" colspan=5>Total EFA area:</th>
+        <th class="numeric" colspan=4>Total EFA area:</th>
         <td class="efa-area numeric">
           <div id="efa-percent" class="bold-medium js-hidden"><%= efaTarget.round(2) %>%</div>
           <span id="calculate">
-            <span class="calculate-button js-toggle" data-hide="#calculate" data-show="#efa-percent">Calculate</span>
+            <span class="calculate-button js-toggle" data-hide="#calculate" data-show="#efa-percent">Update total</span>
           </span>
         </td>
       </tr>
