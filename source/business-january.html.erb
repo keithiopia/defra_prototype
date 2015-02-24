@@ -15,34 +15,43 @@ layout: layout-2-1-columns
   </header>
 
   <div id="eligibility">
-    <h2 class="heading-medium">Business eligibilty</h2>
+    <h2 class="heading-medium">Check business eligibilty</h2>
 
     <div class="check-list">
       <div class="done" id="land-yes">
-        <p>This business has enough eligible land.</p>
+        <p>This business is eligible for the basic payment scheme.</p>
+      </div>
+    </div>
+<!--
+    <div class="check-list">
+      <div class="done" id="land-yes">
+        <p>This business has enough eligible land</p>
       </div>
       <div class="not-met" id="land-no">
-        <p>This business doesn't have enough eligible land.</p>
+        <p>This business doesn't have enough eligible land</p>
       </div>
 
       <div class="done" id="entitlements-yes">
-        <p>This business has enough entitlements.</p>
+        <p>This business has enough entitlements</p>
       </div>
       <div class="not-met" id="entitlements-no">
-        <p>This business doesn't have enough entitlements.</p>
+        <p>This business doesn't have enough entitlements</p>
       </div>
 
       <div class="in-progress" id="activities-undefined">
         <p><a href="business-activities">Tell us more about your business activities</a>.</p>
       </div>
       <div class="done" id="activities-yes">
-        <p>This business is eligible for rural payments.</p>
+        <p>This business's main activity is farming</p>
       </div>
       <div class="not-met" id="activities-no">
         <p>This business isn't eligible because its main activity isn't farming. If you think it is eligible, or is exempt from the rules, call 03000 200 301.</p>
       </div>
     </div>
+  -->
   </div>
+
+<!--
 
   <h2 class="heading-medium">Give someone access to this business</h2>
 
@@ -69,6 +78,31 @@ layout: layout-2-1-columns
     </div>
   </div>
 
+
+-->
+
+  <h2 class="heading-medium">Check your land parcels</h2>
+
+  <div class="check-list">
+    <div class="done">
+      <p>You have checked all your land parcels. <a href="/land">View your land parcels</a>.</p>
+    </div>
+  </div>
+
+ <!-- <p><a href="/land">View your land parcels</a></p> -->
+
+
+  <h2 class="heading-medium">Apply for the basic payment scheme</h2>
+
+  <div class="check-list">
+    <div class="not-met">
+      <p>You must apply by 15 May 2015.</p>
+    </div>
+  </div>
+
+  <p><a href="/bps-application/scheme-eligibility" class="button">Apply for the basic payment scheme</a></p>
+
+
 <% end %>
 
 <% content_for :column2 do %>
@@ -89,6 +123,7 @@ layout: layout-2-1-columns
 
     <ul class="action-list">
       <li><a href="business-details">View business details</a></li>
+      <li><a href="#">Manage access to this business</a></li>
     </ul>
 
 

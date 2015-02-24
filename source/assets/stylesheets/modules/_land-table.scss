@@ -13,7 +13,7 @@
   }
 
   .land-use {
-    width: 22%;
+    width: 24%;
   }
 
   .land-area {
@@ -21,7 +21,7 @@
   }
 
   .notes {
-    width: 22%;
+    width: 20%;
   }
 
   .active-entitlements {
@@ -67,8 +67,8 @@
 
   .ineligible {
     td {
-      color: $secondary-text-colour;
-      background-color: $highlight-colour;
+      //color: $secondary-text-colour;
+      //background-color: $highlight-colour;
     }
 
     .parcel-ref {

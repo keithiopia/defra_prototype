@@ -71,21 +71,21 @@ parcels:
         bps:    true
         efa:    hedge
         cover:  Boundary feature
-        featureLength: 152.6
+        featureLength: 152.64
 
       - use:    Hedge
         type:   hedge
         bps:    true
         efa:    hedge
         cover:  Boundary feature
-        featureLength: 78.2
+        featureLength: 78.23
 
       - use:    Buffer strip
         type:   line
         bps:    true
         efa:    bufferStrip
         cover:  Boundary feature
-        featureLength: 146.2
+        featureLength: 146.22
         area:   0.01
 
       - use:    Clover
@@ -140,14 +140,14 @@ parcels:
         bps:    true
         efa:    hedge
         cover:  Boundary feature
-        featureLength: 46.2
+        featureLength: 46.26
 
       - use:    Hedge
         type:   hedge
         bps:    true
         efa:    hedge
         cover:  Boundary feature
-        featureLength: 46.2
+        featureLength: 46.23
 
   - name:
     status:     unchecked
