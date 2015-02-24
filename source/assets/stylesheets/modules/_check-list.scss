@@ -12,7 +12,7 @@
 
     @include device-pixel-ratio() {
       background-image: url(/assets/images/check-list-in-progress-2x.png);
-      background-size: 50px 50px;
+      background-size: 4%;
     }
 
     &.not-met {
@@ -20,7 +20,7 @@
 
       @include device-pixel-ratio() {
         background-image: url(/assets/images/check-list-not-met-2x.png);
-        background-size: 50px 50px;
+        background-size: 4%;
       }
     }
 
@@ -29,7 +29,7 @@
 
       @include device-pixel-ratio() {
         background-image: url(/assets/images/check-list-in-progress-2x.png);
-        background-size: 50px 50px;
+        background-size: 4%;
       }
     }
 
@@ -38,7 +38,7 @@
 
       @include device-pixel-ratio() {
         background-image: url(/assets/images/check-list-done-2x.png);
-        background-size: 50px 50px;
+        background-size: 4%;
       }
     }
   }
