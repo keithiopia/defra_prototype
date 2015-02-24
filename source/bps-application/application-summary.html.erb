@@ -8,56 +8,52 @@ layout: layout-full-width
 
 <% content_for :column1 do %>
 
-  <header class="page-header">
-    <hgroup>
-      <h1>Basic payment application</h1>
-    </hgroup>
-  </header>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <header class="page-header">
+      <hgroup>
+        <h1>Basic payment scheme application</h1>
+      </hgroup>
+    </header>
+
+    <p class="lede">Check that this information is correct before submitting your basic payment scheme application.</p>
+  </div>
+</div>
 
   <h2 class="summary-item-heading">Business details</h2>
 
   <p class="summary-item-top-level-action">
-    <a href="" class="summary-change-link">Edit <span class="visuallyhidden"> business details</span></a>
+    <a href="" class="summary-change-link">Change <span class="visuallyhidden"> business details</span></a>
   </p>
 
   <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
     <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
+        <th class="summary-item-field-name" scope="row">
           <span>Business name</span>
-        </td>
+        </th>
         <td class="summary-item-field-content">
           Bodmin Agri Ltd.
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
+        <th class="summary-item-field-name" scope="row">
           <span>SBI</span>
-        </td>
+        </th>
         <td class="summary-item-field-content">
           1234567890
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
+        <th class="summary-item-field-name" scope="row">
           <span>Business address</span>
-        </td>
+        </th>
         <td class="summary-item-field-content">
           Bodmin Agr Ltd.<br />
           Monument Way<br />
@@ -65,180 +61,193 @@ layout: layout-full-width
           PL31 1NZ<br />
           United Kingdom
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>Business activities</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Primary business activity</span>
+        </th>
         <td class="summary-item-field-content">
-          Active farming business
+          Farming &ndash; eligible for BPS
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
     </tbody>
   </table>
 
-  <h2 class="summary-item-heading">Currency</h2>
+  <h2 class="summary-item-heading">Finance</h2>
 
   <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
     <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
+        <th class="summary-item-field-name" scope="row">
           <span>Currency to be paid in</span>
-        </td>
+        </th>
         <td class="summary-item-field-content">
-          Pounds
+          Pounds (&pound;)
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           <a href="">Change<span class="visuallyhidden"> currency</span></a>
         </td>
       </tr>
-    </tbody>
-  </table>
-
-  <h2 class="summary-item-heading">Young farmer</h2>
-
-  <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
-    <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>Young farmer payment applied for</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Apply for young farmer payment</span>
+        </th>
         <td class="summary-item-field-content">
           No
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           <a href="">Change<span class="visuallyhidden"> currency</span></a>
         </td>
       </tr>
+      <tr class="summary-item-row">
+        <th class="summary-item-field-name" scope="row">
+          <span>Apply for new entitlements</span>
+        </th>
+        <td class="summary-item-field-content">
+          No
+        </td>
+        <td class="summary-item-field-action">
+          <a href="">Change<span class="visuallyhidden"> new entitlements application</span></a>
+        </td>
+      </tr>
     </tbody>
   </table>
 
-  <h2 class="summary-item-heading">Land and entitlements</h2>
+  <h2 class="summary-item-heading">Land</h2>
 
   <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
     <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>Total land</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Is any of this land coded SA2/SA3?</span>
+        </th>
         <td class="summary-item-field-content">
-          300.00ha
+          <span class="text-warning">Answer required</span>
         </td>
-        <td class="summary-item-action-field">
-          &nbsp;
-        </td>
-      </tr>
-      <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>Available entitlements</span>
-        </td>
-        <td class="summary-item-field-content">
-          300.00
-        </td>
-        <td class="summary-item-action-field">
-          &nbsp;
+        <td class="summary-item-field-action">
+          <a href="#">Change <span class="visually hidden">SA2/SA3 declaration</span></a>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <table class="summary-land-entitlements">
+    <thead>
+      <tr>
+        <th class="region">Region</th>
+        <th class="total-area numeric">Total area (ha)</th>
+        <th class="eligible-area numeric">Eligible area (ha)</th>
+        <th class="total-entitlements numeric">Total entitlements</th>
+        <th class="activated-entitlements numeric">Activated entitlements</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Non-severely disadvantaged area (Non-SDA)</th>
+        <td class="numeric">250.23</td>
+        <td class="numeric">225.43</td>
+        <td class="numeric">230.00</td>
+        <td class="numeric">225.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a href="/bps-application/land-table-data-2">Change your active entitlements</a></p>
 
   <h2 class="summary-item-heading">Greening</h2>
 
   <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
     <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
+        <th class="summary-item-field-name" scope="row">
           <span>Crop diversification requirement</span>
-        </td>
+        </th>
         <td class="summary-item-field-content">
           Met
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>EFA cover</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Arable land cover</span>
+        </th>
         <td class="summary-item-field-content">
-          5%
+          230.00ha
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
+      <tr class="summary-item-row">
+        <th class="summary-item-field-name" scope="row">
+          <span>Required EFA cover</span>
+        </th>
+        <td class="summary-item-field-content">
+          11.50ha (5%)
+        </td>
+        <td class="summary-item-field-action">
+          &nbsp;
+        </td>
+      </tr>
+      <tr class="summary-item-row">
+        <th class="summary-item-field-name" scope="row">
+          <span>Declared EFA cover</span>
+        </th>
+        <td class="summary-item-field-content">
+          15.32ha (6.7%)
+        </td>
+        <td class="summary-item-field-action">
+          &nbsp;
+        </td>
+      </tr>
+      <tr class="summary-item-row">
+        <th class="summary-item-field-name" scope="row">
+          <span>Use organic land for EFAs</span>
+        </th>
+        <td class="summary-item-field-content">
+          No
+        </td>
+        <td class="summary-item-field-action">
+          <a href="#">Change <span class="visuallyhidden">organic land exemption</span></a>
+        </td>
+      </tr>
+      <tr class="summary-item-row">
+        <th class="summary-item-field-name" scope="row">
+          <span>Exempt from crop diversification</span>
+        </th>
+        <td class="summary-item-field-content">
+          No
+        </td>
+        <td class="summary-item-field-action">
+          <a href="#">Change <span class="visuallyhidden">crop diversification exemption</span></a>
+        </td>
+      </tr>
+
     </tbody>
   </table>
+
+  <p><a href="/efas">Check your EFAs</a></p>
 
   <h2 class="summary-item-heading">Cross compliance</h2>
 
   <p class="summary-item-top-level-action">
-    <a href="" class="summary-change-link">Edit <span class="visuallyhidden"> cross compliance</span></a>
+    <a href="" class="summary-change-link">Change <span class="visuallyhidden"> cross compliance</span></a>
   </p>
 
   <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
     <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>Statutory management requirements (SMRs)</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Statutory management requirements (SMR)</span>
+        </th>
         <td class="summary-item-field-content">
           <ul class="list-bullet">
             <li>SMR1 – Nitrate vulnerable zones</li>
@@ -247,54 +256,54 @@ layout: layout-full-width
             <li>SMR12 – Welfare of pigs</li>
           </ul>
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>Good management requirements (GMACS)</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Good agriculture and environment conditions (GAEC)</span>
+        </th>
         <td class="summary-item-field-content">
           None
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
     </tbody>
   </table>
 
-  <h2 class="summary-item-heading">SA2/SA3</h2>
+  <h2 class="summary-item-heading">Land in other countries</h2>
 
   <p class="summary-item-top-level-action">
-    <a href="" class="summary-change-link">Edit <span class="visuallyhidden"> SA2/SA3</span></a>
+    <a href="" class="summary-change-link">Change <span class="visuallyhidden"> cross border declaration</span></a>
   </p>
 
   <table class="summary-item-body">
-    <thead class="summary-item-field-headings">
-      <tr>
-        <th scope="col">
-          Name
-        </th>
-        <th scope="col">
-          Content
-        </th>
-      </tr>
-    </thead>
     <tbody class="summary-item">
       <tr class="summary-item-row">
-        <td class="summary-item-field-name">
-          <span>SA2/SA3</span>
-        </td>
+        <th class="summary-item-field-name" scope="row">
+          <span>Does this business have any land in other countries?</span>
+        </th>
         <td class="summary-item-field-content">
-          <a href="#">Answer required</a>
+          No
         </td>
-        <td class="summary-item-action-field">
+        <td class="summary-item-field-action">
           &nbsp;
         </td>
       </tr>
     </tbody>
   </table>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p>You can't amend or withdraw your application until a later date. Are you sure you want to submit now?</p>
+
+      <p><a href="#" class="button button-get-started">Submit your application</a></p>
+
+    </div>
+  </div>
 
 <% end %>
