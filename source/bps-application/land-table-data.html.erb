@@ -51,7 +51,14 @@ end
     # count uses
     _use_count = parcel.uses.length
 
+    activated_area = 0
+
     parcel.uses.each_with_index do |land_use, i|
+
+      if land_use.eligible == "y"
+        activated_area += land_use.area
+      end
+
       if j == 0 && i == 0 then
   %>
 
@@ -97,8 +104,8 @@ end
         <td class="numeric" headers="parcel-<%= _parcel_id %>-total"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
         <th id="parcel-<%= _parcel_id %>-activated">Activated area (ha)</th>
         <td class="numeric" headers="parcel-<%= _parcel_id %>-activated">
-          <span class="js-entitlements-display" id="parcel-<%= _parcel_id %>-display"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></span>
-          <input class="form-control js-entitlements-input js-hidden" type="text" value="<%= sprintf('%.2f', parcel.eligible_area.to_f) %>" id="parcel-<%= _parcel_id %>-input" />
+          <span class="js-entitlements-display" id="parcel-<%= _parcel_id %>-display"><%= sprintf('%.2f', activated_area.to_f) %></span>
+          <input class="form-control js-entitlements-input js-hidden" type="text" value="<%= sprintf('%.2f', activated_area.to_f) %>" id="parcel-<%= _parcel_id %>-input" />
         </td>
         <td><a href="#" class="js-toggle-entitlements active-entitlements-edit" data-toggle="show">Edit</a></td>
       </tr>
