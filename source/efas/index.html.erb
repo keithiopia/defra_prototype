@@ -47,7 +47,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
 
 
 <% content_for :breadcrumbs do %>
-  <%= partial(:'partial-breadcrumbs', :locals => { breadcrumb: [{ title: "Home", url: "/" }, { title: data.business.name, url: "/business"}] }) %>
+  <p id="breadcrumb"><a href="/bps-application/scheme-eligibility">Back to apply for basic payment scheme</a></p>
 <% end %>
 
 <% content_for :column1 do %>
