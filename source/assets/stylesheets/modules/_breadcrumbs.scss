@@ -32,4 +32,8 @@
       }
     }
   }
+
+  @if $is-print == true {
+    display: none;
+  }
 }

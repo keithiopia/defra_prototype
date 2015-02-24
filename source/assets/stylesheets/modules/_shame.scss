@@ -86,7 +86,12 @@ select.link-style{
     a{
       color: white;
     }
+
+    @if $is-print == true {
+      display: none;
+    }
   }
+
 }
 
 // Validation error message box

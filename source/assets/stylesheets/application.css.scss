@@ -62,3 +62,9 @@
 .js-enabled .js-hidden {
   display: none;
 }
+
+.phase-banner {
+  @if $is-print == true {
+    display: none;
+  }
+}
