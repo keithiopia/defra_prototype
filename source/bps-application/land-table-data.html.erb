@@ -7,9 +7,15 @@ layout: layout-full-width
 # Calculate totals
 max_eligibile_area = 0
 total_area = 0
+max_activated_area = 0
+
 data.land_table_2.parcels.each do |parcel|
   max_eligibile_area += parcel.eligible_area.to_f
   total_area+= parcel.area.to_f
+
+  parcel.uses.each do |use|
+    max_activated_area += use.area.to_f
+  end
 end
 
 %>
@@ -113,32 +119,29 @@ end
     </tbody>
   </table>
 
-  <he class="heading-medium">Total</he>
+  <h3 class="heading-medium">Total</h3>
 
-  <table class="land-table">
-    <tbody>
-      <tr class="total">
-        <th class="parcel-reference">&nbsp;</th>
-        <th class="land-cover">&nbsp;</th>
-        <th class="land-use">Total holding area (ha)</th>
-        <th class="land-area numeric"><%= sprintf('%.2f', total_area) %></th>
-        <th class="notes">Total available entitlements</th>
-        <th class="active-entitlements numeric" id="active-entitlements-total">250.00</th>
-        <th class="edit">&nbsp;</th>
+  <table class="summary-land-entitlements">
+    <thead>
+      <tr>
+        <th class="region">Region</th>
+        <th class="total-area numeric">Total area (ha)</th>
+        <th class="eligible-area numeric">Eligible area (ha)</th>
+        <th class="total-entitlements numeric">Total entitlements</th>
+        <th class="activated-entitlements numeric">Activated entitlements</th>
       </tr>
+    </thead>
     <tbody>
-      <tr class="total">
-        <th class="parcel-reference">&nbsp;</th>
-        <th class="land-cover">&nbsp;</th>
-        <th class="land-use">Total eligible area (ha)</th>
-        <th class="land-area numeric"><%= sprintf('%.2f', max_eligibile_area) %></th>
-        <th class="notes">Total activated area (ha)</th>
-        <th class="active-entitlements numeric" id="active-entitlements-total"><%= sprintf('%.2f', max_eligibile_area) %></th>
-        <th class="edit">&nbsp;</th>
+      <tr>
+        <th scope="row">Non-severely disadvantaged area (Non-SDA)</th>
+        <td class="numeric"><%= sprintf('%.2f', total_area) %></td>
+        <td class="numeric"><%= sprintf('%.2f', max_eligibile_area) %></td>
+        <td class="numeric"><%= sprintf('%.2f', max_activated_area) %></td>
+        <td class="numeric" id="active-entitlements-total"><%= sprintf('%.2f', max_activated_area) %></td>
       </tr>
     </tbody>
   </table>
 
-  <p><a href="#" class="button">Save and continue</a></p>
+  <p><a href="/bps-application/application-summary" class="button">Save</a></p>
 
 <% end %>
