@@ -62,7 +62,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
 
 <% if efaTarget < 5 %>
   <p class="text"><span class="visuallyhidden">SitiAgri g14</span>Based on the information you've given us, you don't meet EFA rules because you need to show more Ecological Focus Area.</p>
-  
+
   <p class="text">You need another <%= 5 - efaTarget.round(2) %>% EFAs before you meet the greening requirement.</p>
   <p class="text"><a href="/land">Add more EFAs to your land</a>.</p>
 <% else %>
@@ -185,7 +185,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
   </form>
 
 
-<p><a href="" class="button">Save changes</a></p>
+<p><a href="/bps-application/scheme-eligibility" class="button">Save</a></p>
 
 <% end %>
 
