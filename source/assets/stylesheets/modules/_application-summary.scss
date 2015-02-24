@@ -35,14 +35,14 @@
 
 %summary-item-body {
   width: 100%;
-  margin: 0 0 15px 0;
-  border-bottom: 1px solid $grey-3;
+  margin: 0 0 $gutter 0;
+  border-bottom: 1px solid $border-colour;
 }
 
 p.summary-item-body {
   @extend %summary-item-body;
   @include core-19;
-  border-top: 1px solid $grey-3;
+  border-top: 1px solid $border-colour;
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 100%;
@@ -51,7 +51,7 @@ p.summary-item-body {
 %summary-item-row {
   @include core-19;
   text-align: right;
-  border-top: 1px solid $grey-3;
+  border-top: 1px solid $border-colour;
 }
 
 table.summary-item-body {
@@ -70,7 +70,6 @@ table.summary-item-body {
     }
 
     td {
-      @include core-19;
       padding-top: 10px;
       padding-bottom: 10px;
       vertical-align: top;
@@ -79,13 +78,13 @@ table.summary-item-body {
 }
 
 %summary-item-field {
-  vertical-align: middle;
+  vertical-align: top;
   text-align: left;
 }
 
 .summary-item-field-name {
   @extend %summary-item-field;
-  width: 50%;
+  width: 45%;
   padding-right: 25px;
 }
 
@@ -100,7 +99,7 @@ table.summary-item-body {
 
 .summary-item-field-content {
   @extend %summary-item-field;
-  width: 50%;
+  width: 45%;
   padding-left: 25px;
 
   ul {
@@ -112,17 +111,22 @@ table.summary-item-body {
 
 .summary-item-field-action {
   @extend %summary-item-field;
+  width: 10%;
   padding-left: 20px;
+  padding-right: 0;
+  text-align: right;
 }
 
 .summary-item-row-incomplete {
   @extend %summary-item-row;
 
-  .summary-item-name-field {
+  .summary-item-field-name {
+
     span {
       padding-left: 10px;
       border-left: 3px solid $orange;
     }
+
   }
 
   .summary-item-field-content {
@@ -131,4 +135,28 @@ table.summary-item-body {
       color: $orange;
     }
   }
+}
+
+.text-warning {
+  color: $red;
+  a {
+    color: $red;
+  }
+
+  &:before {
+    @include border-radius(50%);
+    background-color: $red;
+    content: '!';
+    color: $white;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    height: 1em;
+    line-height: 1;
+    margin-right: 5px;
+    padding: 2px;
+    text-align: center;
+    width: 1em;
+  }
+
 }
