@@ -3,7 +3,7 @@ layout: layout-full-width
 ---
 
 <% content_for :breadcrumbs do %>
-  <%= partial "partial-breadcrumbs-business" %>
+  <p id="breadcrumb"><a href="/bps-application/application-warnings">Back to application warnings</a></p>
 <% end %>
 
 <% content_for :column1 do %>
@@ -67,10 +67,10 @@ layout: layout-full-width
       </tr>
       <tr class="summary-item-row">
         <th class="summary-item-field-name" scope="row">
-          <span>Primary business activity</span>
+          <span>'Active farmer' requirements</span>
         </th>
         <td class="summary-item-field-content">
-          Farming &ndash; eligible for BPS
+          Met
         </td>
         <td class="summary-item-field-action">
           &nbsp;
@@ -79,7 +79,7 @@ layout: layout-full-width
     </tbody>
   </table>
 
-  <h2 class="summary-item-heading">Finance</h2>
+  <h2 class="summary-item-heading">Payment</h2>
 
   <table class="summary-item-body">
     <tbody class="summary-item">
@@ -105,6 +105,24 @@ layout: layout-full-width
           <a href="">Change<span class="visuallyhidden"> currency</span></a>
         </td>
       </tr>
+    </tbody>
+  </table>
+
+  <h2 class="summary-item-heading">Land and entitlements</h2>
+
+  <table class="summary-item-body">
+    <tbody class="summary-item">
+      <tr class="summary-item-row">
+        <th class="summary-item-field-name" scope="row">
+          <span>Is any of this land coded SA2/SA3?</span>
+        </th>
+        <td class="summary-item-field-content">
+          No
+        </td>
+        <td class="summary-item-field-action">
+          <a href="#">Change <span class="visually hidden">SA2/SA3 declaration</span></a>
+        </td>
+      </tr>
       <tr class="summary-item-row">
         <th class="summary-item-field-name" scope="row">
           <span>Apply for new entitlements</span>
@@ -114,24 +132,6 @@ layout: layout-full-width
         </td>
         <td class="summary-item-field-action">
           <a href="">Change<span class="visuallyhidden"> new entitlements application</span></a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2 class="summary-item-heading">Land</h2>
-
-  <table class="summary-item-body">
-    <tbody class="summary-item">
-      <tr class="summary-item-row">
-        <th class="summary-item-field-name" scope="row">
-          <span>Is any of this land coded SA2/SA3?</span>
-        </th>
-        <td class="summary-item-field-content">
-          <!--<span class="text-warning">Answer required</span>-->No
-        </td>
-        <td class="summary-item-field-action">
-          <a href="#">Change <span class="visually hidden">SA2/SA3 declaration</span></a>
         </td>
       </tr>
     </tbody>
@@ -158,7 +158,7 @@ layout: layout-full-width
     </tbody>
   </table>
 
-  <p><a href="/bps-application/land-table-data-2">Change your active entitlements</a></p>
+  <p><a href="/bps-application/land-table-data">Change your active entitlements</a></p>
 
   <h2 class="summary-item-heading">Greening</h2>
 
