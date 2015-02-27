@@ -35,9 +35,11 @@ end
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <p>Select how many entitlements you'd like to use for each of your land parcels.</p>
 
-      <p>The table shows your parcel size, as well as the amount of eligible land currenly verified by the RPA.</p>
+      <p>The table shows your parcel size, as well as the amount of eligible land currently confirmed by the RPA.</p>
+
+      <p>Changes that haven't been verified (digitized) by the RPA won't be counted in the confirmed eligible area.</p>
+
     </div>
   </div>
 
@@ -106,7 +108,7 @@ end
         <td>&nbsp;</td>
       </tr>
       <tr class="total">
-        <th id="parcel-<%= _parcel_id %>-total-eligible-area">Eligible area (verified)</th>
+        <th id="parcel-<%= _parcel_id %>-total-eligible-area">Confirmed eligible area</th>
         <td class="numeric" headers="parcel-<%= _parcel_id %>-total"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
         <th id="parcel-<%= _parcel_id %>-activated">Activated area (ha)</th>
         <td class="numeric" headers="parcel-<%= _parcel_id %>-activated">
