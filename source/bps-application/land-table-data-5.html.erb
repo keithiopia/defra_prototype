@@ -37,10 +37,6 @@ end
     Use the table to set the activated area for each land parcel.
   </p>
 
-  <p class="text">
-    Note that unverified eligible areas may change.
-  </p>
-
   <%
     new_cph = ""
 
@@ -88,22 +84,24 @@ end
 
 
       <% if i == 0 then %>
-      <tr class="parcel-row">
+      <tr class="parcel-row <% if parcel.warning %>warning<% end %>">
 
         <th><%= parcel.name %></th>
         <td class="parcel-ref"><%= parcel.id %></td>
         <td class=""><%= sprintf('%.2f', parcel.area.to_f) %></td>
         <td class="eligible-area-1"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
-        <td class="eligible-area-3">
+        <td class="eligible-area-3 warning">
           <% if activated_area != parcel.eligible_area %>
 
           <!--Unverified. Previous value: <%= sprintf('%.2f', parcel.eligible_area.to_f) %>-->
 
           <% end %>
 
+          <%= parcel.warning %>
+
         </td>
         <td class="last">
-          <input class="form-control" type="text" size="5" value="<%= sprintf('%.2f', activated_area.to_f) %>">&nbsp;
+          <input class="form-control<% if parcel.warning %> form-control-error<% end %>" type="text" size="5" value="<%= sprintf('%.2f', activated_area.to_f) %>">&nbsp;
 
           <span href="" class="link-style js-toggle show-<%= _parcel_id %>" data-show=".hide-<%= _parcel_id %>, .for-parcel-<%= _parcel_id %>" data-hide=".show-<%= _parcel_id %>">Show land uses</span>
 
@@ -161,6 +159,7 @@ end
         <td class=""><%= sprintf('%.2f', max_activated_area) %></td>
         <td class="" id="active-entitlements-total"><%= sprintf('%.2f', max_eligibile_area) %></td>
       </tr>
+      <!--
       <tr>
         <td>Severely disadvantaged area (SDA)</td>
         <td class="">0.0</td>
@@ -179,6 +178,7 @@ end
         <td colspan="4" class=""></td>
         <td class="bold-medium"><%= sprintf('%.2f', max_eligibile_area) %></td>
       </tr>
+    -->
     </tbody>
   </table>
 

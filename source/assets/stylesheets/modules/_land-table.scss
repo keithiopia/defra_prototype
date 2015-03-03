@@ -155,8 +155,10 @@
     margin-top: 5px;
   }
 
-}
 
+
+
+}
 
 table .last{
   padding-right: 0;
@@ -168,5 +170,18 @@ table .last{
 
 .summary-land-entitlements .total{
     border-top: 2px solid $black;
+}
+
+.form-control-error {
+  border-color: #DF3034;
+  outline: 2px solid #DF3034;
+}
+
+.warning{
+  color: $mellow-red;
+  text-align: right;
+  font-weight: bold;
+  line-height: 1;
+font-size: 15px;
 }
 
