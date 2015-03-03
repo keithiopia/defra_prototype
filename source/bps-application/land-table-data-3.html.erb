@@ -1,0 +1,202 @@
+---
+layout: layout-full-width
+---
+
+<%
+
+# Calculate totals
+max_eligibile_area = 0
+total_area = 0
+max_activated_area = 0
+
+data.land_table_2.parcels.each do |parcel|
+  max_eligibile_area += parcel.eligible_area.to_f
+  total_area+= parcel.area.to_f
+
+  parcel.uses.each do |use|
+    max_activated_area += use.area.to_f
+  end
+end
+
+%>
+
+
+<% content_for :breadcrumbs do %>
+  <p id="breadcrumb"><a href="/bps-application/application-summary">Back to application summary</a></p>
+<% end %>
+
+<% content_for :column1 do %>
+
+  <header class="page-header">
+    <hgroup>
+      <h1>Activate your entitlements</h1>
+    </hgroup>
+  </header>
+
+
+  <p class="text lede">
+    Use the table to set the activated area for each land parcel.
+  </p>
+
+  <p class="text">
+    Note that unverified eligible areas may change.
+  </p>
+
+
+    <!-- Start CPH -->
+    <h3 class="heading-medium">CPH: 03/045/0091</h3>
+
+
+  <table class="form-table land-table-3">
+    <thead>
+
+      <tr>
+        <th class="parcel-name">Parcel</th>
+        <th class="parcel-ref">ID</th>
+        <th class="parcel-area">Total area (ha)</th>
+        <th colspan="2">Eligible area (ha)</th>
+        <th class="activated-area last">Activated area (ha)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Start Parcel SU1234_8747 -->
+      <tr class="parcel-row">
+        <th>BYF</th>
+        <td class="parcel-ref">SU1234 8747</td>
+        <td class="">3.09</td>
+        <td class="eligible-area-1">3.00</td>
+        <td class="eligible-area-2"></td>
+        <td class="last">
+          <input class="form-control" type="text" size="5" value="3.00">&nbsp;
+
+          <span href="" class="link-style js-toggle show-SU1234_8747" data-show=".hide-SU1234_8747, .for-parcel-SU1234_8747" data-hide=".show-SU1234_8747">Show land uses</span>
+
+          <span href="" class="link-style hide-SU1234_8747 js-toggle js-hidden" data-show=".show-SU1234_8747" data-hide=".for-parcel-SU1234_8747, .hide-SU1234_8747" >Hide land uses</span>
+
+        </td>
+      <tr>
+
+      <tr class="land-use-row for-parcel-SU1234_8747 js-hidden first-row">
+        <td colspan="3"></td>
+        <th colspan="2">
+         Land use
+        </th>
+        <th>Area (ha)</th>
+      </tr>
+
+      <tr class="land-use-row for-parcel-SU1234_8747 js-hidden">
+        <td colspan="3"></td>
+        <td colspan="2">
+         Winter wheat
+        </td>
+        <td class="decimal">2.00</td>
+      </tr>
+
+      <tr class="land-use-row for-parcel-SU1234_8747 js-hidden last-row">
+        <td colspan="3"></td>
+        <td colspan="2">
+          Hard standings (ineligible)
+        </td>
+        <td class="decimal">1.00</td>
+      </tr>
+
+
+      <!-- Start Parcel -->
+      <tr class="parcel-row">
+        <th>FREDS</th>
+        <td class="parcel-ref">SU1234 9365</td>
+        <td class="">6.67</td>
+        <td class="eligible-area-1">6.65</td>
+        <td class="eligible-area-2">
+            Unverified. Previous value: 6.12ha
+        </td>
+        <td class="last">
+
+          <input class="form-control" type="text" size="5" value="6.65">&nbsp;
+
+          <span href="" class="link-style js-toggle show-SU1234_9365" data-show=".hide-SU1234_9365, .for-parcel-SU1234_9365" data-hide=".show-SU1234_9365">Show land uses</span>
+
+          <span href="" class="link-style hide-SU1234_9365 js-toggle js-hidden" data-show=".show-SU1234_9365" data-hide=".for-parcel-SU1234_9365, .hide-SU1234_9365" >Hide land uses</span>
+        </td>
+      <tr>
+
+      <tr class="land-use-row for-parcel-SU1234_9365 js-hidden first-row">
+        <td colspan="3"></td>
+        <th colspan="2">
+         Land use
+        </th>
+        <th>Area (ha)</th>
+      </tr>
+
+      <tr class="land-use-row for-parcel-SU1234_9365 js-hidden">
+        <td colspan="3"></td>
+        <td colspan="2">
+         Spring wheat
+        </td>
+        <td>6.65</td>
+      </tr>
+
+      <tr class="land-use-row for-parcel-SU1234_9365 js-hidden last-row">
+        <td colspan="3"></td>
+        <td colspan="2">
+          Temporary grass (ineligible)
+        </td>
+        <td>0.02</td>
+      </tr>
+
+
+
+
+
+
+
+    </tbody>
+  </table>
+
+
+  <h3 class="heading-medium">Totals</h3>
+
+  <table class="summary-land-entitlements">
+    <thead>
+      <tr>
+        <th class="region">Region</th>
+        <th class="total-area ">Total area (ha)</th>
+        <th class="eligible-area ">Activated area (ha)</th>
+        <th class="total-entitlements ">Total entitlements</th>
+        <th class="activated-entitlements ">Activated entitlements</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Non-severely disadvantaged area (Non-SDA)</td>
+        <td class="">12.6</td>
+        <td class="">12.3</td>
+        <td class="">12.4</td>
+        <td class="" id="active-entitlements-total">12.3</td>
+      </tr>
+      <tr>
+        <td>Severely disadvantaged area (SDA)</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="" id="active-entitlements-total">0.0</td>
+      </tr>
+      <tr>
+        <td>Mooreland</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="" id="active-entitlements-total">0.0</td>
+      </tr>
+      <tr class="total">
+        <td colspan="4" class=""></td>
+        <td class="bold-medium">12.3</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <p><a href="/bps-application/application-summary" class="button">Save</a></p>
+
+<% end %>

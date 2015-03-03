@@ -43,4 +43,11 @@ $(document).ready(function() {
     }
   });
 
+
+
+  $('.land-table-3 .parcel-row .link-style').on('click', function(e) {
+    $(this).closest(".parcel-row").toggleClass("open");
+  });
+
 });
+

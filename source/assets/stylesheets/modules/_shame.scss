@@ -116,3 +116,13 @@ select.link-style{
   display: none;
 }
 
+
+
+.link-style{
+  color: $link-colour;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover{
+    color: $link-hover-colour;
+  }
+}

@@ -85,3 +85,84 @@
   }
 
 }
+
+//
+
+.land-table-3{
+
+  .areas{
+    text-align: center;
+  }
+
+    // column widths
+  .pacel-name {
+    //width: 10%;
+  }
+
+  .parcel-ref {
+    width: 17%
+  }
+
+  .parcel-area {
+    width: 16%;
+  }
+
+  .eligible-area-1 {
+    width: 5%;
+  }
+
+  .eligible-area-2 {
+    width: 27%;
+  }
+
+  .activated-area {
+    width: 20%;
+  }
+
+  .show-land-uses{
+    width: 12%;
+    padding-right: 0;
+    text-align: right;
+  }
+
+
+  .parcel-row.open td,
+  .parcel-row.open th{
+    border-top: 2px solid $black;
+  }
+
+  .first-row td,  .first-row th{
+    //border-top: 2px solid $black;
+  }
+  .last-row td{
+    border-bottom: 2px solid $black;
+
+    //border-bottom: 1px solid $border-colour;
+    //padding-bottom: 20px;
+  }
+
+  td.parcel-ref,
+  td.eligible-area-2{
+    color: $secondary-text-colour;
+  }
+
+  .link-style{
+    float: right;
+    margin-top: 5px;
+  }
+
+}
+
+
+table .last{
+  padding-right: 0;
+}
+
+.decimal{
+  text-align: "." start;
+}
+
+.summary-land-entitlements .total{
+    border-top: 2px solid $black;
+}
+
