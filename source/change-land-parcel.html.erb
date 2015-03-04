@@ -10,7 +10,7 @@ layout: layout-2-1-columns
 
   <header class="page-header">
     <hgroup>
-      <h1>Change land parcel boundary</h1>
+      <h1>Split, merge or edit the land parcel shape</h1>
     </hgroup>
   </header>
 
@@ -19,12 +19,17 @@ layout: layout-2-1-columns
   <form class="form">
     <div class="form-group">
       <label for="parcel-split" class="block-label">
-        <input type="radio" name="parcel" id="parcel-split" value="yes" class="js-toggle" data-show="#parcel-split-button" data-hide="#parcel-merge-button, #parcel-change-button">
+        <input type="radio" name="parcel" id="parcel-split" value="yes" class="js-toggle" data-show="#parcel-split-button" data-hide="#parcel-merge-button, #parcel-edit-button">
         Split the land parcel in two
       </label>
-      <label for="parcel-merge" class="block-label selected">
-        <input type="radio" name="parcel" id="parcel-merge" value="no" class="js-toggle" data-show="#parcel-merge-button" data-hide="#parcel-split-button, #parcel-change-button">
-        Merge the land parcel with another one
+      <label for="parcel-merge" class="block-label">
+        <input type="radio" name="parcel" id="parcel-merge" value="no" class="js-toggle" data-show="#parcel-merge-button" data-hide="#parcel-split-button, #parcel-edit-button">
+        Merge the land parcel with other ones
+      </label>
+
+      <label for="parcel-edit" class="block-label">
+        <input type="radio" name="parcel" id="parcel-edit" value="no" class="js-toggle" data-show="#parcel-edit-button" data-hide="#parcel-split-button, #parcel-merge-button">
+        Edit the boundary of the land parcel
       </label>
     </div>
 
@@ -34,6 +39,10 @@ layout: layout-2-1-columns
 
     <div class="form-group js-hidden" id="parcel-merge-button">
       <a href="change-land-parcel-merge" class="button">Continue</a>
+    </div>
+
+    <div class="form-group js-hidden" id="parcel-edit-button">
+      <a href="change-land-parcel-edit" class="button">Continue</a>
     </div>
   </form>
 
