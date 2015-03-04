@@ -75,9 +75,14 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
 
   <h2 class="heading-medium">Check your ecological focus areas</h2>
 
-  <p class="text">
-    Deselect features or land uses that are being used in other schemes eg countryside stewardship.
-  </p>
+  <ol class="list-number text">
+    <li>Deselect features or land uses that are being used in other schemes</li>
+    <li>Adjust the EFA length of hedges if necessary</li>
+  </ol>
+
+
+  <p class="text">The default EFA length of a hedge is assumed to be equal to the length of one side of the hedge.
+    If parts of the hedge are ineligible, or you want to claim for both sides you will need to adjust this length.</p>
 
 
   <form class="" method="post" action="/">
@@ -89,9 +94,9 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
         <th class="feature">Ecological focus area (EFA)</th>
         <th class="feature-length numeric">Length (m)</th>
         <th class="feature-area numeric">Area (ha)</th>
-        <!--
+
         <th class="efa-length numeric">EFA length (m)</th>
-      -->
+
         <th class="efa-area numeric">EFA area (ha)</th>
       </tr>
     </thead>
@@ -133,15 +138,15 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
         <td class="numeric">
           <%= (u.area ? u.area : "n/a") %>
         </td>
-        <!--
+
         <td class="numeric">
           <% if u.featureLength %>
-          <input type="text" class="form-control" size=5 value="<%= u.featureLength %>">
+          <input type="text" class="form-control" size=8 value="<%= u.featureLength %>">
           <% else %>
             n/a
           <% end %>
         </td>
-      -->
+
         <td class="efa-area numeric">
 
           <%
@@ -170,7 +175,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
       %>
 
       <tr class="total">
-        <th class="numeric" colspan=4>Total EFA area:</th>
+        <th class="numeric" colspan=5>Total EFA area:</th>
         <td class="efa-area numeric">
           <div id="efa-percent" class="bold-medium js-hidden"><%= efaTarget.round(2) %>%</div>
           <span id="calculate">
