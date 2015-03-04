@@ -46,7 +46,10 @@ end
     if (parcel.cph != new_cph) then
   %>
     <!-- Start CPH -->
-    <h3 class="heading-medium">CPH: <%= parcel.cph %></h3>
+    <h3 class="heading-medium">
+      CPH: <%= parcel.cph %>
+      <div class="secondary-textx font-small">Non-severely disadvantaged area</div>
+    </h3>
   <%
     end
     new_cph = parcel.cph;
