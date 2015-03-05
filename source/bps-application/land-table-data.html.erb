@@ -33,15 +33,9 @@ end
     </hgroup>
   </header>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <p>The table shows your parcel size, as well as the amount of eligible land currently confirmed by the RPA.</p>
-
-      <p>Changes that haven't been verified (digitized) by the RPA won't be counted in the confirmed eligible area.</p>
-5
-    </div>
-  </div>
+  <p class="text lede">
+    Use the table to set the activated area for each land parcel.
+  </p>
 
   <%
     new_cph = ""
@@ -52,7 +46,10 @@ end
     if (parcel.cph != new_cph) then
   %>
     <!-- Start CPH -->
-    <h3 class="heading-medium">CPH <%= parcel.cph %></h3>
+    <h3 class="heading-medium">
+      CPH: <%= parcel.cph %>
+      <div class="font-small">Non-severely disadvantaged area</div>
+    </h3>
   <%
     end
     new_cph = parcel.cph;
@@ -70,80 +67,128 @@ end
       if j == 0 && i == 0 then
   %>
 
-  <table class="land-table">
+  <table class="form-table land-table-3">
     <thead>
+
       <tr>
-        <th class="parcel-name">Parcel name</th>
-        <th class="parcel-ref">Parcel ID</th>
-        <th class="land-use">Land use</th>
-        <th class="land-area numeric">Area (<abbr title="hectares">ha</abbr>)</th>
-        <th class="notes">Notes</th>
-        <th class="active-entitlements numeric">&nbsp;</th>
-        <th class="edit">&nbsp;</th>
+        <th class="parcel-name">Parcel</th>
+        <th class="parcel-ref">ID</th>
+        <th class="parcel-area">Parcel size (ha)</th>
+        <th>Eligible area (ha)<br>
+            verified by RPA
+        </th>
+        <th>Eligible area (ha)<br>
+            proposed by you
+        </th>
+        <th class="activated-area last">Activated area (ha)</th>
       </tr>
     </thead>
 
     <tbody>
     <% end %>
       <!-- Start Parcel -->
-      <tr id="parcel-<%= _parcel_id %>-<%= i %>"<% if land_use.eligible == "n" %> class="ineligible"<% end %>>
-        <% if i == 0 then %>
-        <th rowspan="<%= _use_count + 2 %>" scope="row" class="parcel-name">
-          <%= parcel.name %>
+
+
+
+
+      <% if i == 0 then %>
+      <tr class="parcel-row <% if parcel.warning %>warning<% end %>">
+
+        <th><%= parcel.name %></th>
+        <td class="parcel-ref"><%= parcel.id %></td>
+        <td class=""><%= sprintf('%.2f', parcel.area.to_f) %></td>
+        <td class="eligible-area-1"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
+        <td class="eligible-area-2">
+<!--
+          <%= parcel.warning %>
+        -->
+
+        <%= sprintf('%.2f', activated_area.to_f) %>
+
+        </td>
+        <td class="last">
+          <input class="form-control<% if parcel.warning %> form-control-error<% end %>" type="text" size="5" value="<%= sprintf('%.2f', activated_area.to_f) %>">&nbsp;
+
+          <span href="" class="link-style js-toggle show-<%= _parcel_id %>" data-show=".hide-<%= _parcel_id %>, .for-parcel-<%= _parcel_id %>" data-hide=".show-<%= _parcel_id %>">Show land uses</span>
+
+          <span href="" class="link-style hide-<%= _parcel_id %> js-toggle js-hidden" data-show=".show-<%= _parcel_id %>" data-hide=".for-parcel-<%= _parcel_id %>, .hide-<%= _parcel_id %>" >Hide land uses</span>
+
+        </td>
+      </tr>
+
+      <tr class="land-use-row for-parcel-<%= _parcel_id %> js-hidden first-row">
+        <td colspan="3"></td>
+        <th colspan="2">
+         Land use
         </th>
-        <td rowspan="<%= _use_count + 2 %>" class="parcel-ref"><%= parcel.id %></td>
-        <% end %>
-        <td><%= land_use.use %></td>
-        <td class="numeric"><%= sprintf('%.2f', land_use.area.to_f) %></td>
-        <td><% if land_use.eligible == "n" %>Ineligible for BPS<% else %>&nbsp;<% end %></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <th>Area (ha)</th>
       </tr>
       <% end %>
-      <tr class="total">
-        <th id="parcel-<%= _parcel_id %>-total">Parcel size</th>
-        <td class="numeric"><%= sprintf('%.2f', parcel.area.to_f) %></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr class="total">
-        <th id="parcel-<%= _parcel_id %>-total-eligible-area">Confirmed eligible area</th>
-        <td class="numeric" headers="parcel-<%= _parcel_id %>-total"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
-        <th id="parcel-<%= _parcel_id %>-activated">Activated area (ha)</th>
-        <td class="numeric" headers="parcel-<%= _parcel_id %>-activated">
-          <span class="js-entitlements-display" id="parcel-<%= _parcel_id %>-display"><%= sprintf('%.2f', activated_area.to_f) %></span>
-          <input class="form-control js-entitlements-input js-hidden" type="text" value="<%= sprintf('%.2f', activated_area.to_f) %>" id="parcel-<%= _parcel_id %>-input" />
+
+      <tr class="land-use-row for-parcel-<%= _parcel_id %> js-hidden <% if i == _use_count - 1 %> last-row<% end %>">
+        <td colspan="3"></td>
+        <td colspan="2">
+         <%= land_use.use %> <% if land_use.eligible == "n" %>(ineligible)<% else %><% end %>
         </td>
-        <td><a href="#" class="js-toggle-entitlements active-entitlements-edit" data-toggle="show">Edit</a></td>
+        <td class="decimal">
+          <%= sprintf('%.2f', land_use.area.to_f) %>
+        </td>
       </tr>
+
+
+
+
+      <% end %>
+
+
       <% end %>
     </tbody>
   </table>
 
-  <h3 class="heading-medium">Total</h3>
+  <h3 class="heading-medium">Totals</h3>
 
   <table class="summary-land-entitlements">
     <thead>
       <tr>
         <th class="region">Region</th>
-        <th class="total-area numeric">Total area (ha)</th>
-        <th class="eligible-area numeric">Eligible area (ha)</th>
-        <th class="total-entitlements numeric">Total entitlements</th>
-        <th class="activated-entitlements numeric">Activated entitlements</th>
+        <th class="total-area ">Total area (ha)</th>
+        <th class="eligible-area ">Activated area (ha)</th>
+        <th class="total-entitlements ">Total entitlements</th>
+        <th class="activated-entitlements ">Activated entitlements</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Non-severely disadvantaged area (Non-SDA)</th>
-        <td class="numeric"><%= sprintf('%.2f', total_area) %></td>
-        <td class="numeric"><%= sprintf('%.2f', max_eligibile_area) %></td>
-        <td class="numeric"><%= sprintf('%.2f', max_activated_area) %></td>
-        <td class="numeric" id="active-entitlements-total"><%= sprintf('%.2f', max_activated_area) %></td>
+        <td>Non-severely disadvantaged area (Non-SDA)</td>
+        <td class=""><%= sprintf('%.2f', total_area) %></td>
+        <td class=""><%= sprintf('%.2f', max_eligibile_area) %></td>
+        <td class=""><%= sprintf('%.2f', max_activated_area) %></td>
+        <td class="" id="active-entitlements-total"><%= sprintf('%.2f', max_eligibile_area) %></td>
       </tr>
+      <!--
+      <tr>
+        <td>Severely disadvantaged area (SDA)</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="" id="active-entitlements-total">0.0</td>
+      </tr>
+      <tr>
+        <td>Mooreland</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="">0.0</td>
+        <td class="" id="active-entitlements-total">0.0</td>
+      </tr>
+      <tr class="total">
+        <td colspan="4" class=""></td>
+        <td class="bold-medium"><%= sprintf('%.2f', max_eligibile_area) %></td>
+      </tr>
+    -->
     </tbody>
   </table>
 
-  <p><a href="/bps-application/application-summary" class="button">Save</a></p>
+
+  <p><a href="/bps-application/application-summary" class="button">Save changes</a></p>
 
 <% end %>
