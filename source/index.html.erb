@@ -1,85 +1,156 @@
 ---
-layout: layout-2-1-columns
+layout: layout-full-width
 ---
 
 <% content_for :column1 do %>
 
-  <header class="page-header">
+  <header class="page-header no-breadcrumb">
     <hgroup>
       <h1>Rural payments</h1>
     </hgroup>
   </header>
 
-<!--
 
-  <h2 class="heading-medium">Messages</h2>
-
-  <ul class="message-list">
-    <li>
-      <span class="delete"><a href="">delete</a></span>
-      <strong class="message-date">5 Sep 2014</strong>
-      <details>
-        <summary>Welcome to Rural Payments</summary>
-
-        <p>Welcome John Smith,</p>
-
-        <p>
-          You can use this service to apply for Rural Payments schemes.
-          You'll find any important messages here when you sign in.
-        </p>
-
-        <p>Regards,</p>
-
-        <p>The Rural Payments team</p>
-      </details>
-    </li>
-  </ul>
-
--->
-
-<h2 class="heading-medium">Businesses</h2>
-
-<!--
-  <ul class="business-list">
-    <li><a href="business" class="bold-small">Bodmin Agr Ltd</a> Monument Way, Bodmin PL31 1NZ</li>
-  </ul>
--->
-
-  <p>You currently have access to 1 business.</p>
-
-  <table class="business-list js-row-link">
-    <thead>
-      <tr>
-        <th class="name"><!--Name--></th>
-        <th class="address"></th>
-        <th class="progress"><!--Progress--></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="name"><a href="business">Bodmin Agr Ltd</a></td>
-        <td class="address">Monument Way, Bodmin PL31 1NZ</td>
-        <td class="progress"><!--Not started--></td>
-      </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><a href="add-business">Add a business</a></p>
-
-<% end %>
-
-<% content_for :column2 do %>
-
-  <div>
-
-    <ul>
-      <li><a href="account">Update your details</a></li>
+    <ul class="account-links">
       <li><a href="">Sign out</a></li>
+      <li class="details"><a href="account">Your details</a></li>
     </ul>
 
-  </div>
+ <div class="tabs">
+
+      <div class="tabs-nav">
+
+        <ul class="tabs-list">
+          <li class="active"><a href="#businesses">Businesses</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#messages">Messages</a></li>
+        </ul>
+
+      </div>
+
+      <div class="tabs-content">
+
+        <div class="tabs-panel" id="businesses">
+
+        <div class="grid-row">
+
+          <div class="column-two-thirds">
+
+
+            <h2 class="heading-large">Businesses</h2>
+
+
+            <p>These are the businesses you manage:</p>
+
+            <ul class="business-list">
+              <li>
+                <a class="bold-medium" href="/businessxx">Bodmin Agri Ltd.</a>
+                <div class="secondary-text">Monument Way, Bodmin PL31 1NZ</div>
+              </li>
+            </ul>
+
+            <p><a class="" href="add-businessxx">Add another business</a></p>
+
+
+          </div>
+
+        </div>
+
+        </div>
+
+        <div class="tabs-panel" id="applications">
+
+          <div class="grid-row">
+
+            <div class="column-two-thirds">
+
+              <h2 class="heading-large">Applications</h2>
+
+              <p>These are your scheme applications:</p>
+
+              <table>
+
+                <caption class="visuallyhidden">Busness applications listing</caption>
+
+                <thead>
+
+                  <tr>
+                    <th scope="col">Business</th>
+                    <th scope="col">Status</th>
+                    <th class="action" scope="col"><span class="visuallyhidden">Action</span></th>
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td scope="row" data-title="Business">Beech Farm</td>
+                    <td data-title="Status">In Progress</td>
+                    <td class="action last"><a href="/">Continue <span class="visuallyhidden">Beech Farm</span></a></td>
+                  </tr>
+
+                  <tr>
+                    <td scope="row" data-title="Business">Red Farm</td>
+                    <td data-title="Status">In Progress</td>
+                    <td class="action last"><a href="/">Continue <span class="visuallyhidden">Red Farm</span></a></td>
+                  </tr>
+
+                  <tr>
+                    <td scope="row" data-title="Business">Ashbury Company</td>
+                    <td data-title="Status">Submitted</td>
+                    <td class="action last"><a href="/">View <span class="visuallyhidden">Ashbury Company</span></a></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tabs-panel" id="messages">
+
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+
+          <h2 class="heading-large">Messages</h2>
+
+
+          <p>You have 1 new message:</p>
+
+           <ul class="message-list">
+              <li>
+                <span class="delete"><a href="">delete</a></span>
+                <strong class="message-date">5 Sep 2014</strong>
+                <details>
+                  <summary>Welcome to Rural Payments</summary>
+
+                  <p>Welcome John Smith,</p>
+
+                  <p>
+                    You can use this service to apply for Rural Payments schemes.
+                    You'll find any important messages here when you sign in.
+                  </p>
+
+                  <p>Regards,</p>
+
+                  <p>The Rural Payments team</p>
+                </details>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
 <% end %>
-
