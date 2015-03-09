@@ -74,14 +74,18 @@ end
       <tr>
         <th class="parcel-name">Parcel</th>
         <th class="parcel-ref">ID</th>
-        <th class="parcel-area">Parcel size (ha)</th>
-        <th>Eligible area <br>
+        <th class="land-uses">Land uses
+
+        </th>
+        <th class="parcel-area numeric">Parcel size (ha)</th>
+        <th class="eligible-area-1 numeric">Eligible area <br>
             verified by RPA (ha)
         </th>
-        <th>Eligible area <br>
+        <th class="eligible-area-2 numeric">Eligible area <br>
             you've declared this year (ha)
         </th>
-        <th class="activated-area last">Activated area (ha)</th>
+        <th class="activated-area numeric">Activated area (ha)</th>
+        <th class="edit-activated-area last"></th>
       </tr>
     </thead>
 
@@ -97,43 +101,71 @@ end
 
         <th><%= parcel.name %></th>
         <td class="parcel-ref"><%= parcel.id %></td>
-        <td class=""><%= sprintf('%.2f', parcel.area.to_f) %></td>
-        <td class="eligible-area-1"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
-        <td class="eligible-area-2">
-<!--
-          <%= parcel.warning %>
-        -->
+        <td>
+
+          <span href="" class="link-style js-toggle show-<%= _parcel_id %>" data-show=".hide-<%= _parcel_id %>, .for-parcel-<%= _parcel_id %>" data-hide=".show-<%= _parcel_id %>">Show</span>
+
+          <span href="" class="link-style hide-<%= _parcel_id %> js-toggle js-hidden" data-show=".show-<%= _parcel_id %>" data-hide=".for-parcel-<%= _parcel_id %>, .hide-<%= _parcel_id %>" >Hide</span>
+
+
+
+        </td>
+        <td class="numeric"><%= sprintf('%.2f', parcel.area.to_f) %></td>
+        <td class="eligible-area-1 numeric"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></td>
+        <td class="eligible-area-2 numeric">
+
 
         <%= sprintf('%.2f', activated_area.to_f) %>
 
-        </td>
-        <td class="last">
-          <input class="form-control<% if parcel.warning %> form-control-error<% end %>" type="text" size="5" value="<%= sprintf('%.2f', activated_area.to_f) %>">&nbsp;
 
-          <span href="" class="link-style js-toggle show-<%= _parcel_id %>" data-show=".hide-<%= _parcel_id %>, .for-parcel-<%= _parcel_id %>" data-hide=".show-<%= _parcel_id %>">Show land uses</span>
-
-          <span href="" class="link-style hide-<%= _parcel_id %> js-toggle js-hidden" data-show=".show-<%= _parcel_id %>" data-hide=".for-parcel-<%= _parcel_id %>, .hide-<%= _parcel_id %>" >Hide land uses</span>
 
         </td>
+
+
+
+        <td class="numeric<% if parcel.warning %> warning<% end %>" headers="parcel-<%= _parcel_id %>-activated">
+          <span class="js-entitlements-display" id="parcel-<%= _parcel_id %>-display"><%= sprintf('%.2f', parcel.eligible_area.to_f) %></span>
+          <input class="form-control js-entitlements-input js-hidden" type="text" size="5" value="<%= sprintf('%.2f', parcel.eligible_area.to_f) %>" id="parcel-<%= _parcel_id %>-input" />
+
+          <% if parcel.warning %>
+            <div><%= parcel.warning %></div>
+          <% end %>
+        </td>
+
+        <td class="edit-activated-area last">
+          <a href="#" class="js-toggle-entitlements" data-toggle="show">Edit</a>
+
+        </td>
+
+
+
+
+
       </tr>
 
+<!--
       <tr class="land-use-row for-parcel-<%= _parcel_id %> js-hidden first-row">
-        <td colspan="3"></td>
-        <th colspan="2">
+        <td colspan="2"></td>
+        <th colspan="3">
          Land use
         </th>
-        <th>Area (ha)</th>
+        <th class="numeric">
+          Area (ha)
+        </th>
+        <th colspan="2">&nbsp;</th>
       </tr>
+    -->
       <% end %>
 
       <tr class="land-use-row for-parcel-<%= _parcel_id %> js-hidden <% if i == _use_count - 1 %> last-row<% end %>">
-        <td colspan="3"></td>
-        <td colspan="2">
+        <td colspan="2"></td>
+        <td colspan="3">
          <%= land_use.use %> <% if land_use.eligible == "n" %>(ineligible)<% else %><% end %>
         </td>
-        <td class="decimal">
+        <td class="numeric">
           <%= sprintf('%.2f', land_use.area.to_f) %>
         </td>
+        <td colspan="2">&nbsp;</td>
       </tr>
 
 
