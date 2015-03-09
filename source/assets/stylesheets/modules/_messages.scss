@@ -5,8 +5,8 @@
   border-top: 1px solid $border-colour;
   padding-top: 5px;
   > li{
-    @include core-16;
-    color: $secondary-text-colour;
+    //@include core-16;
+    //color: $secondary-text-colour;
     border-bottom: 1px solid $border-colour;
     padding: 5px 0 8px 0;
     .message{
@@ -14,13 +14,14 @@
     }
     .message-date{
       display: inline-block;
-      vertical-align: top;
+      float: right;
+      margin-top:  4px;
       width: 120px;
     }
     .delete{
       display: block;
       float: right;
-      font-size: 16px;
+      margin-top: 2px;
       a{
         color: $secondary-text-colour;
       }
@@ -29,9 +30,13 @@
       display: inline-block;
       color: $text-colour;
       margin-bottom: 0;
-      max-width: 400px;
+      //max-width: 400px;
 
       summary::-webkit-details-marker { display:none; }
+
+      summary{
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -40,4 +45,11 @@ table.messages {
   .date {
     text-align: right;
   }
+}
+
+
+.tag{
+  background: $mellow-red;
+  color: $white;
+
 }
