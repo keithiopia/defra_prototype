@@ -34,8 +34,9 @@ end
   </header>
 
   <p class="text lede">
-    Use the table to set the activated area for each land parcel.
+    Select how many entitlements you want to activate for each parcel.
   </p>
+  <p class="text">If the amount of eligible area verified by RPA is different to the amount of area you've declared it means your land hasn't been verified (digitised) by the RPA yet.</p>
 
   <%
     new_cph = ""
@@ -48,7 +49,7 @@ end
     <!-- Start CPH -->
     <h3 class="heading-medium">
       CPH: <%= parcel.cph %>
-      <div class="font-small">Non-severely disadvantaged area</div>
+      <div class="font-small">Non-severely disadvantaged area (Non-SDA)</div>
     </h3>
   <%
     end
@@ -74,11 +75,11 @@ end
         <th class="parcel-name">Parcel</th>
         <th class="parcel-ref">ID</th>
         <th class="parcel-area">Parcel size (ha)</th>
-        <th>Eligible area (ha)<br>
-            verified by RPA
+        <th>Eligible area <br>
+            verified by RPA (ha)
         </th>
-        <th>Eligible area (ha)<br>
-            proposed by you
+        <th>Eligible area <br>
+            you've declared this year (ha)
         </th>
         <th class="activated-area last">Activated area (ha)</th>
       </tr>
