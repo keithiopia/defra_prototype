@@ -95,7 +95,7 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
         <th class="feature-length numeric">Length (m)</th>
         <th class="feature-area numeric">Area (ha)</th>
 
-        <th class="efa-length numeric">EFA length (m)</th>
+        <th class="efa-length numeric"><!--EFA length (m)--></th>
 
         <th class="efa-area numeric">EFA area (ha)</th>
       </tr>
@@ -141,7 +141,12 @@ efaTarget = ((totalefaArea / totalEligibleArea) * 100).round(2)
 
         <td class="numeric">
           <% if u.featureLength %>
+          <!--
           <input type="text" class="form-control" size=8 value="<%= u.featureLength %>">
+          -->
+          <label><input type="checkbox"> Claim both sides</input></label>
+
+
           <% else %>
             n/a
           <% end %>
