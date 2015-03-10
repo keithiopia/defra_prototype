@@ -6,7 +6,7 @@ require "rack/contrib/try_static"
 require "rack/rewrite"
 
 # Build the static site when the app boots
-`bundle exec middleman build`
+# `bundle exec middleman build`
 
 # Enable proper HEAD responses
 use Rack::Head
