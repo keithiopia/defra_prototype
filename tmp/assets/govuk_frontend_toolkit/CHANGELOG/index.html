@@ -1,0 +1,110 @@
+<h1 id="section">3.1.0</h1>
+
+<ul>
+  <li>Fix: outdent to add right margin rather than only left</li>
+  <li>Fix: add missing semi-colons in JavaScript files</li>
+  <li>Fix: use box-sizing mixin in column mixin to support more browsers</li>
+  <li>Add: ability to specify float direction on column mixin</li>
+  <li>Add: Sass-lint tests</li>
+</ul>
+
+<h1 id="section-1">3.0.1</h1>
+
+<ul>
+  <li>Fix a bug with the npm publishing. npm requires a version change to publish a package.</li>
+</ul>
+
+<h1 id="section-2">3.0.0</h1>
+
+<ul>
+  <li>Change publishing method to not use git submodules in govuk_frontend_toolkit_npm.
+This is a major version bump because it will move the toolkit from
+<code>./node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/</code>
+to <code>./node_modules/govuk_frontend_toolkit/</code>, which will break relative imports in Sass.</li>
+  <li>Fix typo in Sass comment</li>
+</ul>
+
+<h1 id="section-3">2.0.1</h1>
+
+<ul>
+  <li>Fix new grid helpers to ensure content using %site-width-container is centred in IE.</li>
+</ul>
+
+<h1 id="section-4">2.0.0</h1>
+
+<ul>
+  <li>Add support for selection-button events to be document-level https://github.com/alphagov/govuk_frontend_toolkit/pull/139</li>
+  <li>The <code>GOVUK.selectionButtons</code> interface is now deprecated. Details are in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#deprecated-functionality">README</a>.</li>
+</ul>
+
+<h1 id="section-5">1.7.0</h1>
+
+<ul>
+  <li>Create new grid helpers for creating grid layouts</li>
+  <li>The old grid mixins; <code>@outer-block</code> and <code>@inner-block</code> are now deprecated</li>
+</ul>
+
+<h1 id="section-6">1.6.2</h1>
+
+<ul>
+  <li>Reset font family for print stylesheets to fix print errors in browsers and printers</li>
+</ul>
+
+<h1 id="section-7">1.6.1</h1>
+
+<ul>
+  <li>Fix visited link colour to be a colour which passes contrast</li>
+</ul>
+
+<h1 id="section-8">1.6.0</h1>
+
+<ul>
+  <li>abstraction of the core typography mixins into single core mixin</li>
+  <li>reference to composer module added to README</li>
+  <li>selection buttons added to manifest for localSpecRunner</li>
+  <li>test for sass compilation</li>
+  <li>fix for selection buttons</li>
+</ul>
+
+<h1 id="section-9">1.5.0</h1>
+
+<ul>
+  <li>polyfill for Function.prototype.bind added</li>
+  <li>selection-buttons script added</li>
+  <li>local runner added for Jasmine tests</li>
+</ul>
+
+<h1 id="section-10">1.4.0</h1>
+
+<ul>
+  <li>New phase banner styles</li>
+  <li>Removed trailing commas</li>
+  <li>Redrawn important icon</li>
+</ul>
+
+<h1 id="section-11">1.3.0</h1>
+
+<ul>
+  <li>Adds weighting to multivariant testing</li>
+</ul>
+
+<h1 id="section-12">1.2.0</h1>
+
+<ul>
+  <li>add three quarters variable to measurements</li>
+  <li>improvements to CSS3 mixins</li>
+  <li>set inner block mixin to use either padding or margin</li>
+  <li>increase button padding to match alphagov/static defaults</li>
+</ul>
+
+<h1 id="section-13">1.1.0</h1>
+
+<p>Add icons from alphagov/static</p>
+
+<h1 id="section-14">1.0.1</h1>
+
+<p>Fix contrast on phase banner</p>
+
+<h1 id="section-15">1.0.0</h1>
+
+<p>Considered stable</p>

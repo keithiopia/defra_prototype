@@ -1,0 +1,1 @@
+!function(){var n=$("#form-land-query"),e=n.find(".button"),i=n.find("input:radio");i.change(function(){var n=!1;i.each(function(){return this.checked?(n=!0,!1):void 0}),n&&e.removeAttr("disabled"),$("button[type=submit]").on("click",function(n){n.preventDefault(),window.location.href=$("#radio-1").is(":checked")?"query-sbi":"query"})})}();
